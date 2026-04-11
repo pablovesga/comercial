@@ -1,14 +1,6 @@
 {
-  "total": 1,
-  "activas": 1,
-  "propuestas": [
-    {
-      "slug": "template",
-      "titulo": "Plantilla de Propuesta",
-      "cliente": "Cliente Ejemplo",
-      "fecha": "2026-04-11",
-      "estado": "activa",
-      "descripcion": "Esta es la plantilla base para crear nuevas propuestas. Duplícala y personaliza."
-    }
-  ]
+  "generado": "2026-04-11T20:12:43.878789Z",
+  "total": 0,
+  "activas": 0,
+  "propuestas": []
 }
