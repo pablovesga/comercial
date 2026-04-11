@@ -1,0 +1,11 @@
+{
+  "slug": "template",
+  "titulo": "Nombre del Proyecto",
+  "cliente": "Nombre del Cliente",
+  "fecha": "2026-04-11",
+  "estado": "activa",
+  "descripcion": "Descripción breve de la propuesta para mostrar en el listado.",
+  "monto": "",
+  "moneda": "COP",
+  "tags": ["desarrollo web", "automatización"]
+}

@@ -1,0 +1,106 @@
+name: Sincronizar Propuestas → Hoja de Vida
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'propuestas/**/meta.json'
+      - 'propuestas/**/index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Rebuild índice y actualizar HV
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generar index.json de propuestas
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, glob
+          from datetime import datetime
+
+          metas = []
+          for path in sorted(glob.glob("propuestas/*/meta.json")):
+              slug = path.split("/")[1]
+              if slug == "template":
+                  continue
+              with open(path) as f:
+                  meta = json.load(f)
+              meta["slug"] = slug
+              metas.append(meta)
+
+          # Ordenar por fecha descendente
+          metas.sort(key=lambda x: x.get("fecha", ""), reverse=True)
+
+          activas = sum(1 for m in metas if m.get("estado") == "activa")
+
+          index = {
+              "generado": datetime.utcnow().isoformat() + "Z",
+              "total": len(metas),
+              "activas": activas,
+              "propuestas": metas
+          }
+
+          with open("propuestas/index.json", "w", encoding="utf-8") as f:
+              json.dump(index, f, ensure_ascii=False, indent=2)
+
+          print(f"✅ index.json generado: {len(metas)} propuestas, {activas} activas")
+          PYEOF
+
+      - name: Inyectar propuestas en Hoja de Vida (bloque HTML)
+        run: |
+          python3 - <<'PYEOF'
+          import json, re
+
+          with open("propuestas/index.json") as f:
+              data = json.load(f)
+
+          propuestas = data.get("propuestas", [])
+
+          if not propuestas:
+              bloque = '<p style="color:var(--muted);font-size:.9rem">Las propuestas se cargan automáticamente cuando se agregan al repositorio.</p>'
+          else:
+              cards = []
+              for p in propuestas:
+                  estado_class = p.get("estado", "activa")
+                  cards.append(f'''    <a href="../propuestas/{p["slug"]}/" class="prop-card" style="color:inherit;text-decoration:none">
+                <h4>{p["titulo"]}</h4>
+                <div class="prop-meta">{p["cliente"]} · {p["fecha"]}</div>
+                <span class="prop-status {estado_class}">{estado_class}</span>
+              </a>''')
+              bloque = '<div class="prop-grid">\n' + '\n'.join(cards) + '\n    </div>'
+
+          with open("hoja-de-vida/index.html", "r", encoding="utf-8") as f:
+              content = f.read()
+
+          new_content = re.sub(
+              r'<!-- AUTO:PROPUESTAS:START -->.*?<!-- AUTO:PROPUESTAS:END -->',
+              f'<!-- AUTO:PROPUESTAS:START -->\n    {bloque}\n    <!-- AUTO:PROPUESTAS:END -->',
+              content,
+              flags=re.DOTALL
+          )
+
+          with open("hoja-de-vida/index.html", "w", encoding="utf-8") as f:
+              f.write(new_content)
+
+          print(f"✅ Hoja de vida actualizada con {len(propuestas)} propuestas")
+          PYEOF
+
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add propuestas/index.json hoja-de-vida/index.html
+          if git diff --staged --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "chore: sync propuestas → hoja de vida [skip ci]"
+            git push
+          fi

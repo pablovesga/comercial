@@ -1,0 +1,121 @@
+name: Recibir Propuesta desde Otro Repositorio
+
+# Otros repositorios pueden disparar este workflow vía repository_dispatch
+# usando: gh api repos/pablovesga/comercial/dispatches -f event_type=nueva-propuesta
+# con payload: { "slug": "...", "titulo": "...", "cliente": "...", ... }
+
+on:
+  repository_dispatch:
+    types: [nueva-propuesta, actualizar-propuesta]
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Slug único de la propuesta (ej: cliente-proyecto-2026)'
+        required: true
+      titulo:
+        description: 'Título de la propuesta'
+        required: true
+      cliente:
+        description: 'Nombre del cliente'
+        required: true
+      estado:
+        description: 'Estado: activa | enviada | ganada | cerrada'
+        default: 'activa'
+      descripcion:
+        description: 'Descripción breve'
+        required: false
+      fecha:
+        description: 'Fecha (YYYY-MM-DD), vacío = hoy'
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  recibir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extraer payload
+        id: payload
+        run: |
+          # Soporta tanto repository_dispatch como workflow_dispatch
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "slug=${{ github.event.client_payload.slug }}" >> $GITHUB_OUTPUT
+            echo "titulo=${{ github.event.client_payload.titulo }}" >> $GITHUB_OUTPUT
+            echo "cliente=${{ github.event.client_payload.cliente }}" >> $GITHUB_OUTPUT
+            echo "estado=${{ github.event.client_payload.estado || 'activa' }}" >> $GITHUB_OUTPUT
+            echo "descripcion=${{ github.event.client_payload.descripcion }}" >> $GITHUB_OUTPUT
+            echo "fecha=${{ github.event.client_payload.fecha || '' }}" >> $GITHUB_OUTPUT
+            echo "html_url=${{ github.event.client_payload.html_url }}" >> $GITHUB_OUTPUT
+          else
+            echo "slug=${{ inputs.slug }}" >> $GITHUB_OUTPUT
+            echo "titulo=${{ inputs.titulo }}" >> $GITHUB_OUTPUT
+            echo "cliente=${{ inputs.cliente }}" >> $GITHUB_OUTPUT
+            echo "estado=${{ inputs.estado }}" >> $GITHUB_OUTPUT
+            echo "descripcion=${{ inputs.descripcion }}" >> $GITHUB_OUTPUT
+            echo "fecha=${{ inputs.fecha }}" >> $GITHUB_OUTPUT
+            echo "html_url=" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Crear/actualizar propuesta
+        run: |
+          python3 - <<PYEOF
+          import json, os, shutil
+          from datetime import date
+
+          slug = "${{ steps.payload.outputs.slug }}"
+          titulo = "${{ steps.payload.outputs.titulo }}"
+          cliente = "${{ steps.payload.outputs.cliente }}"
+          estado = "${{ steps.payload.outputs.estado }}" or "activa"
+          descripcion = "${{ steps.payload.outputs.descripcion }}"
+          fecha = "${{ steps.payload.outputs.fecha }}" or str(date.today())
+          html_url = "${{ steps.payload.outputs.html_url }}"
+
+          folder = f"propuestas/{slug}"
+          os.makedirs(folder, exist_ok=True)
+
+          meta = {
+              "slug": slug,
+              "titulo": titulo,
+              "cliente": cliente,
+              "fecha": fecha,
+              "estado": estado,
+              "descripcion": descripcion,
+          }
+
+          with open(f"{folder}/meta.json", "w", encoding="utf-8") as f:
+              json.dump(meta, f, ensure_ascii=False, indent=2)
+
+          # Si el repo origen envió una URL de HTML, la embebemos como iframe
+          if html_url:
+              html = f'''<!DOCTYPE html>
+          <html><head><meta charset="UTF-8"><title>{titulo}</title></head>
+          <body style="margin:0">
+          <iframe src="{html_url}" style="width:100%;height:100vh;border:none"></iframe>
+          </body></html>'''
+          elif not os.path.exists(f"{folder}/index.html"):
+              # Copiar template si no existe
+              shutil.copy("propuestas/template/index.html", f"{folder}/index.html")
+
+          if html_url:
+              with open(f"{folder}/index.html", "w", encoding="utf-8") as f:
+                  f.write(html)
+
+          print(f"✅ Propuesta '{slug}' guardada")
+          PYEOF
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add propuestas/
+          git diff --staged --quiet || git commit -m "feat: propuesta '${{ steps.payload.outputs.slug }}' recibida [skip ci]"
+          git push
+
+      - name: Disparar sync
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: sync-internal

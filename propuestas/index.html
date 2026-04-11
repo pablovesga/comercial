@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propuestas Comerciales — Pablo Vesga</title>
+  <style>
+    :root {
+      --bg: #0a0e1a; --surface: #111827; --card: #1a2235;
+      --accent: #3b82f6; --accent2: #8b5cf6; --green: #10b981;
+      --yellow: #f59e0b; --text: #f1f5f9; --muted: #94a3b8; --border: #1e2d45;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; }
+    a { color:var(--accent); text-decoration:none; }
+
+    nav {
+      position:sticky; top:0; z-index:100;
+      background:rgba(10,14,26,.88); backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 2rem; height:60px;
+    }
+    .logo { font-weight:700; color:var(--accent); }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:var(--muted); font-size:.9rem; }
+    nav a:hover { color:var(--text); }
+
+    .page { max-width:1000px; margin:0 auto; padding:3rem 2rem; }
+    .back-link { display:inline-flex; align-items:center; gap:.4rem; color:var(--muted); font-size:.85rem; margin-bottom:1.5rem; }
+    h1 { font-size:2rem; font-weight:800; margin-bottom:.5rem; }
+    .sub { color:var(--muted); margin-bottom:2.5rem; }
+
+    .filters { display:flex; gap:.75rem; margin-bottom:2rem; flex-wrap:wrap; }
+    .filter-btn {
+      padding:.4rem 1rem; border-radius:999px; font-size:.82rem;
+      cursor:pointer; border:1px solid var(--border);
+      background:transparent; color:var(--muted); transition:all .2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background:rgba(59,130,246,.15); border-color:rgba(59,130,246,.4); color:var(--accent);
+    }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; }
+    .prop-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:12px; padding:1.5rem;
+      transition:all .2s; display:flex; flex-direction:column; gap:.75rem;
+    }
+    .prop-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 30px rgba(59,130,246,.1); }
+    .prop-card h3 { font-size:1rem; font-weight:700; }
+    .prop-meta { color:var(--muted); font-size:.82rem; display:flex; gap:1rem; flex-wrap:wrap; }
+    .prop-desc { color:var(--muted); font-size:.87rem; line-height:1.6; }
+    .prop-footer { display:flex; justify-content:space-between; align-items:center; margin-top:auto; }
+    .status {
+      padding:.2rem .7rem; border-radius:999px; font-size:.72rem; font-weight:600;
+    }
+    .status.activa { background:rgba(16,185,129,.15); color:var(--green); border:1px solid rgba(16,185,129,.3); }
+    .status.enviada { background:rgba(59,130,246,.15); color:var(--accent); border:1px solid rgba(59,130,246,.3); }
+    .status.cerrada { background:rgba(148,163,184,.1); color:var(--muted); border:1px solid var(--border); }
+    .status.ganada { background:rgba(245,158,11,.15); color:var(--yellow); border:1px solid rgba(245,158,11,.3); }
+    .ver-btn {
+      font-size:.8rem; color:var(--accent); display:flex; align-items:center; gap:.3rem;
+    }
+
+    .empty { text-align:center; padding:4rem; color:var(--muted); }
+
+    footer { text-align:center; padding:2.5rem; color:var(--muted); font-size:.85rem; border-top:1px solid var(--border); margin-top:4rem; }
+    footer a { color:var(--accent); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">PV · Comercial</div>
+  <ul>
+    <li><a href="../hoja-de-vida/">Hoja de Vida</a></li>
+    <li><a href="./">Propuestas</a></li>
+    <li><a href="../presentaciones/">Presentaciones</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <a href="../" class="back-link">← Inicio</a>
+  <h1>Propuestas Comerciales</h1>
+  <p class="sub">Propuestas técnicas y económicas para clientes y socios.</p>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Todas</button>
+    <button class="filter-btn" data-filter="activa">Activas</button>
+    <button class="filter-btn" data-filter="enviada">Enviadas</button>
+    <button class="filter-btn" data-filter="ganada">Ganadas</button>
+    <button class="filter-btn" data-filter="cerrada">Cerradas</button>
+  </div>
+
+  <div class="grid" id="grid">
+    <div class="empty">Cargando propuestas…</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Pablo Vesga · <a href="mailto:pablo@pablovesga.com">pablo@pablovesga.com</a></p>
+</footer>
+
+<script>
+  let allPropuestas = [];
+
+  async function init() {
+    try {
+      const r = await fetch('index.json');
+      if (r.ok) {
+        const data = await r.json();
+        allPropuestas = data.propuestas || [];
+        render('all');
+      } else {
+        document.getElementById('grid').innerHTML = '<div class="empty">No hay propuestas cargadas aún. Agrega una carpeta en <code>propuestas/</code> con su <code>meta.json</code>.</div>';
+      }
+    } catch {
+      document.getElementById('grid').innerHTML = '<div class="empty">No se pudo cargar el índice de propuestas.</div>';
+    }
+  }
+
+  function render(filter) {
+    const grid = document.getElementById('grid');
+    const items = filter === 'all' ? allPropuestas : allPropuestas.filter(p => p.estado === filter);
+    if (items.length === 0) {
+      grid.innerHTML = '<div class="empty">No hay propuestas en esta categoría.</div>';
+      return;
+    }
+    grid.innerHTML = items.map(p => `
+      <a href="${p.slug}/" class="prop-card" style="color:inherit;text-decoration:none">
+        <h3>${p.titulo}</h3>
+        <div class="prop-meta">
+          <span>👤 ${p.cliente}</span>
+          <span>📅 ${p.fecha}</span>
+        </div>
+        ${p.descripcion ? `<div class="prop-desc">${p.descripcion}</div>` : ''}
+        <div class="prop-footer">
+          <span class="status ${p.estado}">${p.estado}</span>
+          <span class="ver-btn">Ver propuesta →</span>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render(btn.dataset.filter);
+    });
+  });
+
+  init();
+</script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo Vesga — Hoja de Vida</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #3b82f6;
+      --accent2: #8b5cf6;
+      --green: #10b981;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* LAYOUT */
+    .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+
+    /* SIDEBAR */
+    aside {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 2.5rem 1.75rem;
+      position: sticky; top: 0; height: 100vh;
+      overflow-y: auto;
+      display: flex; flex-direction: column; gap: 2rem;
+    }
+    .avatar {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+    }
+    .profile-name { font-size: 1.25rem; font-weight: 700; margin-top: .5rem; }
+    .profile-title { color: var(--accent); font-size: .85rem; margin-top: .2rem; }
+    .profile-loc { color: var(--muted); font-size: .82rem; margin-top: .4rem; }
+
+    .sidebar-section h4 {
+      font-size: .7rem; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--muted);
+      margin-bottom: .75rem;
+    }
+    .contact-item { display: flex; gap: .6rem; align-items: center; font-size: .85rem; margin-bottom: .5rem; color: var(--muted); }
+    .contact-item span { font-size: 1rem; }
+
+    .skill-item { margin-bottom: .6rem; }
+    .skill-label { display: flex; justify-content: space-between; font-size: .82rem; color: var(--muted); margin-bottom: .3rem; }
+    .skill-bar { height: 4px; background: var(--border); border-radius: 999px; overflow: hidden; }
+    .skill-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 999px; transition: width 1s ease; }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .tag {
+      background: rgba(59,130,246,.1);
+      border: 1px solid rgba(59,130,246,.2);
+      color: var(--accent);
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      font-size: .75rem;
+    }
+
+    /* MAIN */
+    main { padding: 3rem 2.5rem; max-width: 820px; }
+    nav.top {
+      display: flex; gap: 1rem; margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border); padding-bottom: 1rem;
+    }
+    nav.top a { color: var(--muted); font-size: .9rem; padding: .3rem .6rem; border-radius: 6px; }
+    nav.top a:hover, nav.top a.active { color: var(--text); background: var(--card); text-decoration: none; }
+
+    .section { margin-bottom: 3.5rem; }
+    .section-title {
+      font-size: 1.1rem; font-weight: 700;
+      border-left: 3px solid var(--accent);
+      padding-left: .75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* TIMELINE */
+    .timeline { display: flex; flex-direction: column; gap: 1.5rem; }
+    .tl-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      position: relative;
+    }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -1px; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      border-radius: 3px;
+    }
+    .tl-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .tl-role { font-weight: 700; font-size: 1rem; }
+    .tl-company { color: var(--accent); font-size: .9rem; margin-top: .15rem; }
+    .tl-date { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+    .tl-desc { color: var(--muted); font-size: .88rem; line-height: 1.65; margin-top: .75rem; }
+    .tl-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .75rem; }
+    .tl-tag {
+      background: rgba(16,185,129,.08);
+      border: 1px solid rgba(16,185,129,.2);
+      color: var(--green);
+      padding: .15rem .55rem;
+      border-radius: 999px;
+      font-size: .72rem;
+    }
+
+    /* PROYECTOS (inyectados automáticamente por el workflow) */
+    #propuestas-section .prop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .prop-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: all .2s;
+    }
+    .prop-card:hover { border-color: var(--accent); }
+    .prop-card h4 { font-size: .95rem; margin-bottom: .4rem; }
+    .prop-card .prop-meta { color: var(--muted); font-size: .8rem; margin-bottom: .5rem; }
+    .prop-status {
+      display: inline-block;
+      padding: .15rem .6rem;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 600;
+    }
+    .prop-status.activa { background: rgba(16,185,129,.15); color: var(--green); border: 1px solid rgba(16,185,129,.3); }
+    .prop-status.enviada { background: rgba(59,130,246,.15); color: var(--accent); border: 1px solid rgba(59,130,246,.3); }
+    .prop-status.cerrada { background: rgba(148,163,184,.1); color: var(--muted); border: 1px solid var(--border); }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: .4rem;
+      color: var(--muted); font-size: .85rem; margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--text); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: relative; height: auto; }
+    }
+    @media print {
+      aside { break-inside: avoid; }
+      .tl-item { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="avatar">PV</div>
+    <div>
+      <div class="profile-name">Pablo Vesga</div>
+      <div class="profile-title">Desarrollador · Consultor TI</div>
+      <div class="profile-loc">📍 Colombia</div>
+    </div>
+
+    <div class="sidebar-section">
+      <h4>Contacto</h4>
+      <div class="contact-item"><span>📧</span> pablo@pablovesga.com</div>
+      <div class="contact-item"><span>💻</span> <a href="https://github.com/pablovesga">github.com/pablovesga</a></div>
+      <div class="contact-item"><span>📞</span> +57 · · · · · · · ·</div>
+    </div>
+
+    <div class="sidebar-section">
+      <h4>Habilidades Técnicas</h4>
+
+      <div class="skill-item">
+        <div class="skill-label"><span>Python / FastAPI</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>JavaScript / Node</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>React / Next.js</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>IA / LLM / Claude API</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>DevOps / Docker / CI</span><span>75%</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h4>Tecnologías</h4>
+      <div class="tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">OpenAI</span>
+        <span class="tag">Linux</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h4>Idiomas</h4>
+      <div class="contact-item"><span>🇨🇴</span> Español — Nativo</div>
+      <div class="contact-item"><span>🇺🇸</span> Inglés — Intermedio</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <a href="../" class="back-link">← Volver al inicio</a>
+
+    <nav class="top">
+      <a href="#experiencia" class="active">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#propuestas">Propuestas</a>
+      <a href="#educacion">Educación</a>
+    </nav>
+
+    <!-- PERFIL -->
+    <div class="section">
+      <div class="section-title">Perfil Profesional</div>
+      <p style="color:var(--muted);line-height:1.8">
+        Desarrollador de software con experiencia en creación de soluciones digitales a medida para empresas en Colombia.
+        Especializado en automatización de procesos, inteligencia artificial aplicada y desarrollo de productos SaaS.
+        Me enfoco en entregar valor real con tecnología pragmática y código limpio.
+      </p>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div class="section" id="experiencia">
+      <div class="section-title">Experiencia</div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Desarrollador Independiente & Consultor</div>
+              <div class="tl-company">Proyectos propios / Clientes directos</div>
+            </div>
+            <div class="tl-date">2020 — Presente</div>
+          </div>
+          <div class="tl-desc">
+            Desarrollo de plataformas SaaS, automatización con IA, integración de LLMs en flujos empresariales.
+            Consultoría tecnológica para empresas que buscan digitalizar procesos clave.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Python</span>
+            <span class="tl-tag">FastAPI</span>
+            <span class="tl-tag">React</span>
+            <span class="tl-tag">Claude API</span>
+            <span class="tl-tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- Agrega más entradas aquí -->
+
+      </div>
+    </div>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <div class="section" id="proyectos">
+      <div class="section-title">Proyectos Destacados</div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Motor de Encuestas — IQI S.A.S</div>
+              <div class="tl-company">Plataforma de encuestas socioeconómicas</div>
+            </div>
+            <div class="tl-date">2025 — 2026</div>
+          </div>
+          <div class="tl-desc">
+            Sistema completo para gestión y análisis de encuestas socioeconómicas para empresas.
+            Incluye panel de administración, formularios dinámicos y reportes automatizados.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Python</span>
+            <span class="tl-tag">React</span>
+            <span class="tl-tag">PostgreSQL</span>
+            <span class="tl-tag">PDF generation</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">PropieApp</div>
+              <div class="tl-company">Gestión de propiedades</div>
+            </div>
+            <div class="tl-date">2025</div>
+          </div>
+          <div class="tl-desc">
+            Aplicación para administración de activos inmobiliarios con seguimiento de contratos, pagos y mantenimientos.
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">React Native</span>
+            <span class="tl-tag">Node.js</span>
+            <span class="tl-tag">Firebase</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PROPUESTAS — AUTOGENERADO POR GITHUB ACTIONS -->
+    <div class="section" id="propuestas">
+      <div id="propuestas-section">
+        <div class="section-title">Propuestas & Trabajos Recientes</div>
+        <!-- AUTO:PROPUESTAS:START -->
+        <p style="color:var(--muted);font-size:.9rem">Las propuestas se cargan automáticamente cuando se agregan al repositorio.</p>
+        <!-- AUTO:PROPUESTAS:END -->
+      </div>
+    </div>
+
+    <!-- EDUCACIÓN -->
+    <div class="section" id="educacion">
+      <div class="section-title">Educación & Certificaciones</div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Ingeniería / Tecnología</div>
+              <div class="tl-company">— Actualiza con tu título —</div>
+            </div>
+            <div class="tl-date">— año —</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Certificaciones Técnicas</div>
+              <div class="tl-company">Coursera · Platzi · Udemy</div>
+            </div>
+            <div class="tl-date">Continua</div>
+          </div>
+          <div class="tl-tags">
+            <span class="tl-tag">Machine Learning</span>
+            <span class="tl-tag">Cloud Computing</span>
+            <span class="tl-tag">Agile / Scrum</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  // Activar nav link según scroll
+  const sections = document.querySelectorAll('.section[id]');
+  const navLinks = document.querySelectorAll('nav.top a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Cargar propuestas desde JSON si existe
+  async function loadPropuestas() {
+    try {
+      const r = await fetch('../propuestas/index.json');
+      if (!r.ok) return;
+      const data = await r.json();
+      if (!data.propuestas || data.propuestas.length === 0) return;
+
+      const grid = document.createElement('div');
+      grid.className = 'prop-grid';
+
+      data.propuestas.forEach(p => {
+        const card = document.createElement('a');
+        card.href = `../propuestas/${p.slug}/`;
+        card.className = 'prop-card';
+        card.style.textDecoration = 'none'; card.style.color = 'inherit';
+        card.innerHTML = `
+          <h4>${p.titulo}</h4>
+          <div class="prop-meta">${p.cliente} · ${p.fecha}</div>
+          <span class="prop-status ${p.estado}">${p.estado}</span>
+        `;
+        grid.appendChild(card);
+      });
+
+      const container = document.querySelector('#propuestas-section');
+      const placeholder = container.querySelector('p');
+      if (placeholder) placeholder.remove();
+      container.appendChild(grid);
+    } catch {}
+  }
+  loadPropuestas();
+</script>
+</body>
+</html>

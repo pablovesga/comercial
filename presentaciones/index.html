@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentaciones — Pablo Vesga</title>
+  <style>
+    :root {
+      --bg:#0a0e1a; --surface:#111827; --card:#1a2235;
+      --accent:#3b82f6; --accent2:#8b5cf6;
+      --text:#f1f5f9; --muted:#94a3b8; --border:#1e2d45;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; }
+    a { color:var(--accent); text-decoration:none; }
+    nav {
+      position:sticky; top:0; z-index:100;
+      background:rgba(10,14,26,.88); backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 2rem; height:60px;
+    }
+    .logo { font-weight:700; color:var(--accent); }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:var(--muted); font-size:.9rem; }
+    nav a:hover { color:var(--text); }
+    .page { max-width:1000px; margin:0 auto; padding:3rem 2rem; }
+    .back-link { display:inline-flex; align-items:center; gap:.4rem; color:var(--muted); font-size:.85rem; margin-bottom:1.5rem; }
+    h1 { font-size:2rem; font-weight:800; margin-bottom:.5rem; }
+    .sub { color:var(--muted); margin-bottom:2.5rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; }
+    .card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:12px; overflow:hidden; transition:all .2s;
+    }
+    .card:hover { border-color:var(--accent); transform:translateY(-2px); }
+    .card-thumb {
+      height:160px; background:linear-gradient(135deg,#1e2d45,#111827);
+      display:flex; align-items:center; justify-content:center;
+      font-size:3rem;
+    }
+    .card-body { padding:1.25rem; }
+    .card-body h3 { font-size:1rem; font-weight:700; margin-bottom:.4rem; }
+    .card-body p { color:var(--muted); font-size:.85rem; line-height:1.6; }
+    .card-footer { padding:.75rem 1.25rem; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+    .card-date { color:var(--muted); font-size:.78rem; }
+    .ver { color:var(--accent); font-size:.82rem; }
+    footer { text-align:center; padding:2.5rem; color:var(--muted); font-size:.85rem; border-top:1px solid var(--border); margin-top:4rem; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="logo">PV · Comercial</div>
+  <ul>
+    <li><a href="../hoja-de-vida/">Hoja de Vida</a></li>
+    <li><a href="../propuestas/">Propuestas</a></li>
+    <li><a href="./">Presentaciones</a></li>
+  </ul>
+</nav>
+<div class="page">
+  <a href="../" class="back-link">← Inicio</a>
+  <h1>Presentaciones</h1>
+  <p class="sub">Decks interactivos para demos, pitches y reuniones.</p>
+  <div class="grid" id="grid">
+    <p style="color:var(--muted);grid-column:1/-1">Agrega presentaciones en la carpeta <code>presentaciones/</code> con su <code>meta.json</code>.</p>
+  </div>
+</div>
+<footer>© 2026 Pablo Vesga</footer>
+<script>
+  async function init() {
+    try {
+      const r = await fetch('index.json');
+      if (!r.ok) return;
+      const data = await r.json();
+      const grid = document.getElementById('grid');
+      if (!data.presentaciones?.length) return;
+      grid.innerHTML = data.presentaciones.map(p => `
+        <a href="${p.slug}/" class="card" style="color:inherit">
+          <div class="card-thumb">${p.icon || '🎯'}</div>
+          <div class="card-body">
+            <h3>${p.titulo}</h3>
+            <p>${p.descripcion || ''}</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-date">${p.fecha}</span>
+            <span class="ver">Ver →</span>
+          </div>
+        </a>
+      `).join('');
+    } catch {}
+  }
+  init();
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo Vesga — Portafolio Comercial</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #3b82f6;
+      --accent2: #8b5cf6;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,14,26,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); letter-spacing: .5px; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .9rem; transition: color .2s; }
+    nav a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+      padding: 7rem 2rem 5rem;
+      background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,.15) 0%, transparent 70%);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(59,130,246,.15);
+      border: 1px solid rgba(59,130,246,.3);
+      color: var(--accent);
+      padding: .3rem .9rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    h1 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+    h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.15rem; color: var(--muted); max-width: 520px;
+      line-height: 1.7; margin-bottom: 2.5rem;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .75rem 1.75rem; border-radius: 8px;
+      font-size: .95rem; font-weight: 600; cursor: pointer;
+      text-decoration: none; transition: all .2s;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      box-shadow: 0 0 20px rgba(59,130,246,.35);
+    }
+    .btn-primary:hover { background: #2563eb; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* GRID */
+    section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; }
+    .section-title span { color: var(--accent); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all .2s;
+      display: flex; flex-direction: column; gap: .75rem;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(59,130,246,.12);
+    }
+    .card-icon {
+      font-size: 2rem;
+      width: 52px; height: 52px;
+      background: rgba(59,130,246,.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card h3 { font-size: 1.1rem; font-weight: 700; }
+    .card p { color: var(--muted); font-size: .9rem; line-height: 1.6; }
+    .card .tag {
+      align-self: flex-start;
+      background: rgba(139,92,246,.15);
+      border: 1px solid rgba(139,92,246,.3);
+      color: #a78bfa;
+      padding: .2rem .7rem;
+      border-radius: 999px;
+      font-size: .75rem;
+      margin-top: auto;
+    }
+
+    /* STATS */
+    .stats { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 3rem 2rem; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+    .stat-label { color: var(--muted); font-size: .85rem; margin-top: .25rem; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">PV · Comercial</div>
+  <ul>
+    <li><a href="hoja-de-vida/">Hoja de Vida</a></li>
+    <li><a href="propuestas/">Propuestas</a></li>
+    <li><a href="presentaciones/">Presentaciones</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Portafolio Comercial 2026</div>
+  <h1>Pablo Vesga<br><span>Soluciones Digitales</span></h1>
+  <p>Desarrollo de software, automatización e inteligencia artificial para empresas que quieren crecer con tecnología.</p>
+  <div class="hero-cta">
+    <a href="hoja-de-vida/" class="btn btn-primary">Ver Hoja de Vida</a>
+    <a href="propuestas/" class="btn btn-outline">Ver Propuestas</a>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num" id="stat-propuestas">—</div>
+    <div class="stat-label">Propuestas activas</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" id="stat-presentaciones">—</div>
+    <div class="stat-label">Presentaciones</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">5+</div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+</div>
+
+<section>
+  <div class="section-title">¿Qué encontrarás <span>aquí?</span></div>
+  <div class="grid">
+    <a href="hoja-de-vida/" class="card">
+      <div class="card-icon">👤</div>
+      <h3>Hoja de Vida</h3>
+      <p>Perfil profesional, experiencia, proyectos ejecutados y habilidades técnicas.</p>
+      <span class="tag">Actualizada automáticamente</span>
+    </a>
+    <a href="propuestas/" class="card">
+      <div class="card-icon">📋</div>
+      <h3>Propuestas Comerciales</h3>
+      <p>Propuestas técnicas y económicas personalizadas para cada cliente o socio.</p>
+      <span class="tag">Por cliente</span>
+    </a>
+    <a href="presentaciones/" class="card">
+      <div class="card-icon">🎯</div>
+      <h3>Presentaciones</h3>
+      <p>Decks interactivos para demos, pitches y reuniones de negocio.</p>
+      <span class="tag">Interactivas</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pablo Vesga · <a href="mailto:pablo@pablovesga.com">pablo@pablovesga.com</a> · <a href="https://github.com/pablovesga">GitHub</a></p>
+</footer>
+
+<script>
+  // Carga conteo de propuestas desde el índice JSON si existe
+  async function loadStats() {
+    try {
+      const r = await fetch('propuestas/index.json');
+      if (r.ok) {
+        const data = await r.json();
+        document.getElementById('stat-propuestas').textContent = data.activas ?? data.total ?? '—';
+      }
+    } catch {}
+    try {
+      const r = await fetch('presentaciones/index.json');
+      if (r.ok) {
+        const data = await r.json();
+        document.getElementById('stat-presentaciones').textContent = data.total ?? '—';
+      }
+    } catch {}
+  }
+  loadStats();
+</script>
+</body>
+</html>
