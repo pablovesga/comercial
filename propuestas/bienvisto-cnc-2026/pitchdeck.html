@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvisto — Pitch Deck para CNC · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+/* ===================================================
+   VIEWPORT BASE — MANDATORY (viewport-base.css)
+   Garantiza que cada slide ocupe exactamente 100vh
+   =================================================== */
+html, body { height: 100%; overflow-x: hidden; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%;
+    overflow: hidden;
+    padding: var(--slide-padding);
+}
+
+/* ===================================================
+   DESIGN TOKENS — IDENTIDAD BIENVISTO
+   =================================================== */
+:root {
+    /* Paleta de marca */
+    --navy-900: #0A2240;
+    --navy-800: #0F3460;   /* Brand primary */
+    --navy-700: #1B4F8A;
+    --navy-600: #2563A0;
+    --sky-500:  #0EA5E9;   /* CTA / highlight */
+    --sky-400:  #38BDF8;
+    --sky-100:  #E0F2FE;
+    --amber-500: #F59E0B;  /* Excelencia / números clave */
+    --amber-400: #FCD34D;
+    --amber-100: #FEF3C7;
+    --success:  #10B981;
+    --neutral-50:  #F8FAFC;
+    --neutral-100: #F1F5F9;
+    --neutral-200: #E2E8F0;
+    --neutral-400: #94A3B8;
+    --neutral-700: #334155;
+    --neutral-900: #0F172A;
+    --white: #FFFFFF;
+
+    /* Tipografía — clamp() obligatorio */
+    --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --title-size:    clamp(2.4rem, 6vw, 5rem);
+    --h2-size:       clamp(1.8rem, 4.5vw, 3.4rem);
+    --h3-size:       clamp(1.3rem, 2.5vw, 2rem);
+    --body-size:     clamp(1rem, 1.6vw, 1.4rem);
+    --small-size:    clamp(0.875rem, 1.2vw, 1.1rem);
+    --mono-size:     clamp(0.875rem, 1.3vw, 1.2rem);
+    --stat-size:     clamp(2.8rem, 6.5vw, 5.5rem);
+
+    /* Espaciado */
+    --slide-padding: clamp(1.5rem, 4vw, 3.5rem);
+    --content-gap:   clamp(0.75rem, 2vw, 1.75rem);
+    --element-gap:   clamp(0.4rem, 1vw, 0.875rem);
+
+    /* Animación */
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur: 0.6s;
+}
+
+/* Breakpoints de altura */
+@media (max-height: 700px) {
+    :root {
+        --slide-padding: clamp(1rem, 3vw, 2rem);
+        --content-gap:   clamp(0.5rem, 1.5vw, 1rem);
+        --title-size:    clamp(2rem, 5.5vw, 3.5rem);
+        --h2-size:       clamp(1.6rem, 4vw, 2.6rem);
+        --stat-size:     clamp(2.2rem, 5.5vw, 4rem);
+    }
+}
+@media (max-height: 600px) {
+    :root {
+        --slide-padding: clamp(0.75rem, 2.5vw, 1.5rem);
+        --content-gap:   clamp(0.35rem, 1vw, 0.75rem);
+        --title-size:    clamp(1.8rem, 5vw, 3rem);
+        --body-size:     clamp(0.9rem, 1.4vw, 1.2rem);
+    }
+    .nav-dots, .keyboard-hint, .decorative { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
+    }
+    html { scroll-behavior: auto; }
+}
+
+/* ===================================================
+   RESET & BASE
+   =================================================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: var(--font-sans);
+    background: var(--navy-900);
+    color: var(--neutral-900);
+}
+ul { list-style: none; }
+
+/* ===================================================
+   ANIMACIONES — Activadas con .visible via IntersectionObserver
+   =================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--dur) var(--ease-expo),
+                transform var(--dur) var(--ease-expo);
+}
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity var(--dur) var(--ease-expo),
+                transform var(--dur) var(--ease-expo);
+}
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity var(--dur) var(--ease-expo),
+                transform var(--dur) var(--ease-expo);
+}
+.slide.visible .reveal,
+.slide.visible .reveal-left,
+.slide.visible .reveal-scale { opacity: 1; transform: none; }
+
+/* Stagger delays para hijos */
+.stagger > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger > *:nth-child(2) { transition-delay: 0.22s; }
+.stagger > *:nth-child(3) { transition-delay: 0.34s; }
+.stagger > *:nth-child(4) { transition-delay: 0.46s; }
+.stagger > *:nth-child(5) { transition-delay: 0.58s; }
+
+/* ===================================================
+   ELEMENTOS COMUNES
+   =================================================== */
+
+/* Barra de progreso global */
+.progress-bar-global {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--sky-500);
+    z-index: 9999;
+    transition: width 0.3s ease;
+}
+
+/* Nav dots */
+.nav-dots {
+    position: fixed;
+    right: clamp(0.75rem, 2vw, 1.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000;
+}
+.nav-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+.nav-dot.active {
+    background: var(--sky-500);
+    transform: scale(1.4);
+}
+
+/* Slide número */
+.slide-num {
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    letter-spacing: 0.1em;
+    opacity: 0.4;
+}
+
+/* Tag / overline */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--small-size);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Línea acento */
+.accent-bar {
+    width: clamp(28px, 4vw, 44px);
+    height: 3px;
+    background: var(--sky-500);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* ===================================================
+   SLIDE THEMES — DARK (navy)
+   =================================================== */
+.slide-dark {
+    background: linear-gradient(145deg, var(--navy-900) 0%, var(--navy-800) 60%, #112244 100%);
+    color: var(--white);
+}
+.slide-dark .slide-num { color: var(--white); }
+.slide-dark .tag { color: var(--sky-400); }
+.slide-dark .accent-bar { background: var(--sky-500); }
+
+/* SLIDE THEMES — LIGHT */
+.slide-light {
+    background: var(--neutral-50);
+    color: var(--neutral-900);
+}
+.slide-light .slide-num { color: var(--neutral-900); }
+.slide-light .tag { color: var(--sky-500); }
+
+/* ===================================================
+   HEADER / FOOTER DE SLIDES — layout común
+   =================================================== */
+.slide-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(1rem, 2.5vh, 1.6rem) var(--slide-padding);
+    flex-shrink: 0;
+}
+.slide-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(0.6rem, 1.5vh, 1rem) var(--slide-padding);
+    flex-shrink: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+.slide-light .slide-footer {
+    border-top: 1px solid var(--neutral-200);
+}
+.slide-light .slide-header {
+    border-bottom: 1px solid var(--neutral-200);
+}
+.slide-dark .slide-header {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Logo inline */
+.logo-inline svg { display: block; }
+
+/* ===================================================
+   SLIDE 1 — PORTADA
+   =================================================== */
+#s1 {
+    background: linear-gradient(160deg, #0A2240 0%, #0F3460 50%, #0A2240 100%);
+    justify-content: space-between;
+}
+
+/* Líneas decorativas de fondo */
+#s1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(14,165,233,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14,165,233,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+}
+
+/* Círculo decorativo */
+#s1::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * clamp(80px, 15vw, 200px));
+    right: calc(-1 * clamp(80px, 15vw, 200px));
+    width: clamp(280px, 40vw, 500px);
+    height: clamp(280px, 40vw, 500px);
+    border-radius: 50%;
+    border: 1px solid rgba(14,165,233,0.1);
+    pointer-events: none;
+}
+
+.s1-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(1.2rem, 3vh, 2rem) var(--slide-padding);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgba(14,165,233,0.1);
+}
+
+.s1-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--slide-padding);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.s1-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: clamp(1rem, 2.5vh, 2rem);
+}
+.s1-eyebrow span {
+    font-size: var(--small-size);
+    color: var(--sky-400);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.s1-title {
+    font-size: var(--title-size);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
+}
+.s1-title em {
+    font-style: normal;
+    color: var(--sky-400);
+}
+
+.s1-sub {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    color: rgba(255,255,255,0.55);
+    line-height: 1.65;
+    font-weight: 400;
+}
+
+.s1-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(1rem, 2.5vh, 1.5rem) var(--slide-padding);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(14,165,233,0.1);
+}
+
+.s1-products {
+    display: flex;
+    gap: 0.75rem;
+}
+.s1-product-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(14,165,233,0.12);
+    border: 1px solid rgba(14,165,233,0.25);
+    border-radius: 100px;
+    padding: 0.3em 0.9em;
+    font-size: var(--small-size);
+    color: var(--sky-400);
+    font-weight: 600;
+}
+.s1-product-pill .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--sky-500);
+}
+
+/* ===================================================
+   SLIDE 2 — EL PROBLEMA
+   =================================================== */
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+
+.problem-card {
+    background: var(--white);
+    border-radius: clamp(8px, 1vw, 14px);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    border: 1px solid var(--neutral-200);
+    box-shadow: 0 1px 3px rgba(15,52,96,0.06);
+    border-top: 3px solid var(--sky-500);
+}
+.problem-card:nth-child(2) { border-top-color: var(--amber-500); }
+.problem-card:nth-child(3) { border-top-color: #10B981; }
+
+.problem-icon {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    margin-bottom: clamp(0.5rem, 1vh, 0.875rem);
+}
+.problem-card h3 {
+    font-size: var(--h3-size);
+    font-weight: 700;
+    color: var(--neutral-900);
+    letter-spacing: -0.02em;
+    margin-bottom: clamp(0.4rem, 0.8vh, 0.625rem);
+    line-height: 1.2;
+}
+.problem-card p {
+    font-size: var(--body-size);
+    color: var(--neutral-700);
+    line-height: 1.6;
+}
+
+.section-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+}
+.section-h2 {
+    font-size: var(--h2-size);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--neutral-900);
+}
+.section-h2-dark {
+    font-size: var(--h2-size);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--white);
+}
+.section-sub {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: var(--neutral-700);
+    line-height: 1.6;
+    width: 100%;
+}
+.section-sub-dark {
+    font-size: var(--body-size);
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    max-width: 55ch;
+}
+
+/* ===================================================
+   SLIDE 3 — LA SOLUCIÓN
+   =================================================== */
+.solution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 2vw, 1.75rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.solution-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: clamp(8px, 1vw, 14px);
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    position: relative;
+    overflow: hidden;
+}
+.solution-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+}
+.solution-card.rep::before { background: var(--sky-500); }
+.solution-card.sat::before { background: var(--amber-500); }
+
+.solution-label {
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.solution-card.rep .solution-label { color: var(--sky-400); }
+.solution-card.sat .solution-label { color: var(--amber-400); }
+
+.solution-card h3 {
+    font-size: var(--h3-size);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
+}
+.solution-card p {
+    font-size: var(--body-size);
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+}
+.solution-buyer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: clamp(0.5rem, 1vh, 0.75rem);
+    font-size: var(--small-size);
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+}
+
+.solution-tagline {
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+    padding: clamp(0.75rem, 1.5vw, 1.25rem) clamp(1rem, 2vw, 1.75rem);
+    background: rgba(14,165,233,0.1);
+    border: 1px solid rgba(14,165,233,0.2);
+    border-radius: 8px;
+    font-size: var(--body-size);
+    color: var(--sky-400);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+/* ===================================================
+   SLIDE 4 — CÓMO FUNCIONA (Caso de uso)
+   =================================================== */
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(0.5rem, 1vw, 0.875rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+    align-items: stretch;
+}
+.flow-step {
+    background: var(--white);
+    border-radius: clamp(8px, 1vw, 12px);
+    padding: clamp(0.875rem, 2vw, 1.5rem);
+    border: 1px solid var(--neutral-200);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.4rem, 0.8vh, 0.625rem);
+    position: relative;
+}
+.flow-step::after {
+    content: '→';
+    position: absolute;
+    right: calc(-1 * clamp(10px, 1vw, 14px));
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: var(--neutral-400);
+    font-weight: 600;
+    z-index: 1;
+}
+.flow-step:last-child::after { display: none; }
+
+.step-num {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
+    font-weight: 700;
+    color: var(--sky-500);
+    letter-spacing: 0.05em;
+}
+.flow-step h4 {
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 700;
+    color: var(--neutral-900);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+.flow-step p {
+    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+    color: var(--neutral-700);
+    line-height: 1.5;
+}
+.flow-result {
+    background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+    border-color: var(--navy-600);
+}
+.flow-result .step-num { color: var(--sky-400); }
+.flow-result h4,
+.flow-result p { color: var(--white); }
+.flow-result p { color: rgba(255,255,255,0.65); }
+
+/* ===================================================
+   SLIDE 5 — PRODUCTO: MONITOREO EN TIEMPO REAL
+   =================================================== */
+.features-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.feature-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: clamp(8px, 1vw, 12px);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+}
+.feature-card-icon {
+    width: clamp(32px, 4vw, 44px);
+    height: clamp(32px, 4vw, 44px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(0.5rem, 1vh, 0.875rem);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    flex-shrink: 0;
+}
+.ic-sky { background: rgba(14,165,233,0.15); }
+.ic-amber { background: rgba(245,158,11,0.15); }
+.ic-green { background: rgba(16,185,129,0.15); }
+
+.feature-card h3 {
+    font-size: clamp(0.875rem, 1.4vw, 1.1rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: clamp(0.3rem, 0.7vh, 0.5rem);
+}
+.feature-card p {
+    font-size: var(--small-size);
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+}
+.feature-badge {
+    display: inline-block;
+    margin-top: clamp(0.4rem, 0.8vh, 0.625rem);
+    font-family: var(--font-mono);
+    font-size: calc(var(--small-size) * 0.9);
+    color: var(--sky-400);
+    letter-spacing: 0.08em;
+}
+
+/* ===================================================
+   SLIDE 6 — PRODUCTO: GENERACIÓN IA
+   =================================================== */
+.ai-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.ai-card {
+    background: var(--white);
+    border-radius: clamp(8px, 1vw, 14px);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    border: 1px solid var(--neutral-200);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vh, 0.75rem);
+}
+.ai-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+.ai-icon {
+    width: clamp(30px, 3.5vw, 40px);
+    height: clamp(30px, 3.5vw, 40px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.875rem, 1.3vw, 1.1rem);
+    flex-shrink: 0;
+    background: var(--sky-100);
+}
+.ai-card:nth-child(2) .ai-icon { background: var(--amber-100); }
+.ai-card:nth-child(3) .ai-icon { background: #D1FAE5; }
+
+.ai-card h3 {
+    font-size: clamp(0.875rem, 1.3vw, 1.05rem);
+    font-weight: 700;
+    color: var(--neutral-900);
+    letter-spacing: -0.02em;
+}
+.ai-card p {
+    font-size: var(--small-size);
+    color: var(--neutral-700);
+    line-height: 1.55;
+}
+.ai-credits {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: calc(var(--small-size) * 0.9);
+    color: var(--sky-500);
+    font-weight: 700;
+    margin-top: auto;
+}
+.phase-badge {
+    display: inline-block;
+    background: var(--neutral-100);
+    color: var(--neutral-700);
+    font-size: calc(var(--small-size) * 0.85);
+    padding: 0.2em 0.6em;
+    border-radius: 100px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* ===================================================
+   SLIDE 7 — MODELO DE NEGOCIO
+   =================================================== */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.plan-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: clamp(8px, 1vw, 14px);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vh, 0.75rem);
+}
+.plan-card.highlighted {
+    background: var(--sky-500);
+    border-color: var(--sky-500);
+}
+.plan-name {
+    font-size: var(--small-size);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+}
+.plan-card.highlighted .plan-name { color: rgba(255,255,255,0.75); }
+
+.plan-price {
+    font-family: var(--font-mono);
+    font-size: var(--h2-size);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+.plan-price span {
+    font-size: var(--small-size);
+    font-weight: 400;
+    opacity: 0.6;
+}
+.plan-credits {
+    font-family: var(--font-mono);
+    font-size: var(--mono-size);
+    color: var(--sky-400);
+    font-weight: 700;
+}
+.plan-card.highlighted .plan-credits { color: rgba(255,255,255,0.85); }
+.plan-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+.plan-feature {
+    font-size: var(--small-size);
+    color: rgba(255,255,255,0.6);
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+.plan-feature::before { content: '✓'; color: var(--sky-400); flex-shrink: 0; }
+.plan-card.highlighted .plan-feature::before { color: rgba(255,255,255,0.8); }
+.plan-card.highlighted .plan-feature { color: rgba(255,255,255,0.8); }
+
+/* ===================================================
+   SLIDE 8 — MERCADO
+   =================================================== */
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.market-card {
+    background: var(--white);
+    border-radius: clamp(8px, 1vw, 14px);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    border: 1px solid var(--neutral-200);
+    box-shadow: 0 1px 3px rgba(15,52,96,0.06);
+}
+.market-tag {
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
+}
+.market-card:nth-child(1) .market-tag { color: var(--sky-500); }
+.market-card:nth-child(2) .market-tag { color: var(--amber-500); }
+.market-card:nth-child(3) .market-tag { color: #10B981; }
+
+.market-stat {
+    font-family: var(--font-mono);
+    font-size: var(--stat-size);
+    font-weight: 700;
+    color: var(--navy-800);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: clamp(0.3rem, 0.7vh, 0.5rem);
+}
+.market-desc {
+    font-size: var(--body-size);
+    color: var(--neutral-700);
+    line-height: 1.5;
+}
+.market-detail {
+    margin-top: clamp(0.5rem, 1vh, 0.75rem);
+    font-size: var(--small-size);
+    color: var(--neutral-400);
+    line-height: 1.4;
+}
+
+/* ===================================================
+   SLIDE 9 — POR QUÉ AHORA / DISRUPTIVO
+   =================================================== */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.why-item {
+    display: flex;
+    gap: clamp(0.625rem, 1.2vw, 1rem);
+    align-items: flex-start;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: clamp(8px, 1vw, 12px);
+    padding: clamp(0.875rem, 2vw, 1.5rem);
+}
+.why-num {
+    font-family: var(--font-mono);
+    font-size: var(--h2-size);
+    font-weight: 700;
+    color: rgba(14,165,233,0.2);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: clamp(2rem, 4vw, 3rem);
+}
+.why-text h4 {
+    font-size: clamp(1.2rem, 1.9vw, 1.6rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+.why-text p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: rgba(255,255,255,0.5);
+    line-height: 1.55;
+}
+
+.disruptive-callout {
+    margin-top: clamp(0.75rem, 1.5vh, 1.25rem);
+    padding: clamp(0.75rem, 1.5vw, 1.25rem) clamp(1rem, 2vw, 1.75rem);
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 8px;
+    font-size: var(--body-size);
+    color: var(--amber-400);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ===================================================
+   SLIDE 10 — PROPUESTA PARA CNC
+   =================================================== */
+.timeline-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.timeline-card {
+    background: var(--white);
+    border-radius: clamp(8px, 1vw, 14px);
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    border: 1px solid var(--neutral-200);
+    border-top: 3px solid var(--neutral-200);
+    position: relative;
+}
+.timeline-card.t1 { border-top-color: var(--sky-500); }
+.timeline-card.t2 { border-top-color: var(--amber-500); }
+.timeline-card.t3 { border-top-color: #10B981; }
+
+.timeline-month {
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: clamp(0.4rem, 0.8vh, 0.625rem);
+}
+.t1 .timeline-month { color: var(--sky-500); }
+.t2 .timeline-month { color: var(--amber-500); }
+.t3 .timeline-month { color: #10B981; }
+
+.timeline-card h3 {
+    font-size: clamp(0.875rem, 1.4vw, 1.1rem);
+    font-weight: 700;
+    color: var(--neutral-900);
+    letter-spacing: -0.02em;
+    margin-bottom: clamp(0.4rem, 0.8vh, 0.625rem);
+}
+.timeline-card p {
+    font-size: var(--small-size);
+    color: var(--neutral-700);
+    line-height: 1.55;
+}
+.timeline-card .cost-tag {
+    display: inline-block;
+    margin-top: clamp(0.5rem, 1vh, 0.75rem);
+    font-family: var(--font-mono);
+    font-size: calc(var(--small-size) * 0.9);
+    font-weight: 700;
+    padding: 0.25em 0.75em;
+    border-radius: 100px;
+}
+.t1 .cost-tag { background: #E0F2FE; color: var(--sky-500); }
+.t2 .cost-tag { background: var(--amber-100); color: #D97706; }
+.t3 .cost-tag { background: #D1FAE5; color: #047857; }
+
+.cnc-value-box {
+    margin-top: clamp(0.75rem, 1.5vh, 1.25rem);
+    background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+    border-radius: clamp(8px, 1vw, 12px);
+    padding: clamp(0.875rem, 2vw, 1.5rem) clamp(1rem, 2.5vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.cnc-value-box p {
+    font-size: var(--body-size);
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+}
+.cnc-value-box strong {
+    color: var(--sky-400);
+    font-weight: 700;
+}
+.cnc-value-num {
+    font-family: var(--font-mono);
+    font-size: var(--h3-size);
+    font-weight: 700;
+    color: var(--amber-400);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ===================================================
+   SLIDE 11 — COSTOS Y EQUILIBRIO
+   =================================================== */
+.costs-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 2vw, 1.75rem);
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+}
+.costs-col {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.625rem, 1.2vh, 1rem);
+}
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.625rem, 1.2vw, 1rem) clamp(0.875rem, 1.5vw, 1.25rem);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+}
+.cost-label {
+    font-size: var(--body-size);
+    color: rgba(255,255,255,0.65);
+}
+.cost-value {
+    font-family: var(--font-mono);
+    font-size: var(--body-size);
+    font-weight: 700;
+    color: var(--white);
+}
+.cost-item.total {
+    background: rgba(14,165,233,0.1);
+    border-color: rgba(14,165,233,0.2);
+}
+.cost-item.total .cost-label { color: var(--sky-400); font-weight: 600; }
+.cost-item.total .cost-value { color: var(--sky-400); font-size: var(--h3-size); }
+
+.breakeven-title {
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    color: var(--amber-400);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: clamp(0.5rem, 1vh, 0.75rem);
+}
+.breakeven-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.75rem, 1.2vw, 1rem);
+    border-radius: 6px;
+}
+.breakeven-row:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+}
+.be-plan {
+    font-size: var(--small-size);
+    color: rgba(255,255,255,0.6);
+}
+.be-companies {
+    font-family: var(--font-mono);
+    font-size: var(--body-size);
+    font-weight: 700;
+    color: var(--amber-400);
+}
+.be-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(245,158,11,0.2);
+    flex: 1;
+    margin: 0 0.75rem;
+    overflow: hidden;
+}
+.be-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--amber-500);
+}
+
+/* ===================================================
+   SLIDE 12 — PRÓXIMOS PASOS (CIERRE)
+   =================================================== */
+.steps-table {
+    margin-top: clamp(1rem, 2vh, 1.5rem);
+    border-radius: clamp(8px, 1vw, 12px);
+    overflow: hidden;
+    border: 1px solid var(--neutral-200);
+}
+.step-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    align-items: center;
+    padding: clamp(0.75rem, 1.5vw, 1.25rem) clamp(1rem, 2vw, 1.75rem);
+    border-bottom: 1px solid var(--neutral-200);
+    background: var(--white);
+}
+.step-row:last-child { border-bottom: none; }
+.step-row:nth-child(even) { background: var(--neutral-50); }
+.step-row-num {
+    width: clamp(28px, 3.5vw, 36px);
+    height: clamp(28px, 3.5vw, 36px);
+    border-radius: 50%;
+    background: var(--navy-800);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.step-row:nth-child(1) .step-row-num { background: var(--sky-500); }
+.step-row:nth-child(2) .step-row-num { background: var(--amber-500); }
+.step-row:nth-child(3) .step-row-num { background: #10B981; }
+.step-row:nth-child(4) .step-row-num { background: var(--navy-700); }
+
+.step-row-text h4 {
+    font-size: var(--body-size);
+    font-weight: 700;
+    color: var(--neutral-900);
+    letter-spacing: -0.01em;
+}
+.step-row-text p {
+    font-size: var(--small-size);
+    color: var(--neutral-700);
+    margin-top: 0.15rem;
+}
+.step-date {
+    font-family: var(--font-mono);
+    font-size: var(--small-size);
+    color: var(--neutral-400);
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.closing-cta {
+    margin-top: clamp(0.75rem, 1.5vh, 1.25rem);
+    background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+    border-radius: clamp(8px, 1vw, 12px);
+    padding: clamp(0.875rem, 2vw, 1.5rem) clamp(1rem, 2.5vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.closing-cta p {
+    font-size: var(--body-size);
+    color: rgba(255,255,255,0.65);
+}
+.closing-cta strong { color: var(--sky-400); }
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--sky-500);
+    color: var(--white);
+    font-size: var(--small-size);
+    font-weight: 700;
+    padding: 0.65em 1.4em;
+    border-radius: 100px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Barra de progreso global -->
+<div class="progress-bar-global" id="progressBar"></div>
+
+<!-- Puntos de navegación -->
+<nav class="nav-dots" id="navDots" aria-label="Navegación de slides"></nav>
+
+<!-- ================================================
+     SLIDE 1 — PORTADA
+     ================================================ -->
+<section class="slide slide-dark" id="s1" aria-label="Portada">
+    <div class="s1-header">
+        <!-- Logo dark version inline -->
+        <div class="logo-inline">
+            <svg width="180" height="41" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="bgGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1E3A5F"/>
+                        <stop offset="100%" style="stop-color:#2563A0"/>
+                    </linearGradient>
+                    <linearGradient id="barGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#7DD3FC"/>
+                        <stop offset="100%" style="stop-color:#38BDF8"/>
+                    </linearGradient>
+                    <linearGradient id="dotGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FDE68A"/>
+                        <stop offset="100%" style="stop-color:#FCD34D"/>
+                    </linearGradient>
+                </defs>
+                <rect width="64" height="64" rx="16" fill="url(#bgGradDark)"/>
+                <rect x="11" y="40" width="10" height="14" rx="3" fill="rgba(255,255,255,0.3)"/>
+                <rect x="27" y="28" width="10" height="26" rx="3" fill="rgba(255,255,255,0.55)"/>
+                <rect x="43" y="16" width="10" height="38" rx="3" fill="url(#barGradDark)"/>
+                <circle cx="48" cy="11" r="5" fill="url(#dotGradDark)"/>
+                <path d="M48 7.5 L48.9 10.1 L51.7 10.1 L49.4 11.8 L50.3 14.4 L48 12.7 L45.7 14.4 L46.6 11.8 L44.3 10.1 L47.1 10.1 Z" fill="#FFFBEB" opacity="0.95"/>
+                <text x="82" y="28" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="700" fill="#F1F5F9" letter-spacing="-0.3">Reputación</text>
+                <rect x="82" y="34" width="40" height="1.5" rx="1" fill="#38BDF8" opacity="0.8"/>
+                <text x="82" y="50" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="500" fill="#94A3B8" letter-spacing="2.2">ÍNDICE EMPRESARIAL</text>
+            </svg>
+        </div>
+        <div class="slide-num">Pitch Deck · 2026</div>
+    </div>
+
+    <div class="s1-body">
+        <div class="s1-eyebrow reveal">
+            <div class="accent-bar"></div>
+            <span>Plataforma SaaS · Propuesta para CNC Colombia</span>
+        </div>
+        <h1 class="s1-title reveal">
+            Sus datos de reputación,<br>
+            <em>convertidos en producto</em>
+        </h1>
+        <p class="s1-sub reveal" style="font-size:clamp(2rem, 3.2vw, 2.8rem);">
+            Bienvisto transforma los índices del Centro Nacional de Consultoría en inteligencia accionable — un producto digital recurrente, escalable y sin precedentes en Colombia.
+        </p>
+    </div>
+
+    <div class="s1-footer">
+        <div class="s1-products reveal">
+            <div class="s1-product-pill"><div class="dot"></div> Bienvisto Reputación</div>
+            <div class="s1-product-pill"><div class="dot"></div> Bienvisto Satisfacción</div>
+        </div>
+        <div class="slide-num" style="color:rgba(255,255,255,0.3)">01 / 12</div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 2 — EL PROBLEMA
+     ================================================ -->
+<section class="slide slide-light" id="s2" aria-label="El Problema">
+    <div class="slide-header">
+        <div class="tag" style="color:var(--sky-500)">
+            <div class="accent-bar" style="background:var(--sky-500)"></div>
+            01. El Problema
+        </div>
+        <div class="slide-num">02 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <div class="section-tag-row">
+            <h2 class="section-h2 reveal">Su reputación cambia cada día. Su último informe tiene 11 meses y 200 diapositivas que nadie leyó.</h2>
+        </div>
+        <p class="section-sub reveal" style="margin-bottom:clamp(0.5rem,1vh,0.875rem)">Para extraerle valor, el director de Comunicaciones tiene que leerlo completo, buscar los datos que le aplican, construir su propia presentación desde cero y explicarle a la junta qué significa cada número. Todo eso, mientras su reputación sigue cambiando en tiempo real y él no tiene forma de saberlo.</p>
+
+        <div class="problem-grid stagger">
+            <div class="problem-card reveal">
+                <h3>Consultoría inalcanzable</h3>
+                <p>La mayoría de empresas medianas no tiene presupuesto para contratar una consultoría de reputación. El conocimiento especializado está fuera de su alcance.</p>
+            </div>
+            <div class="problem-card reveal">
+                <h3>Informes estáticos sin acción</h3>
+                <p>Los resultados llegan en PDF genéricos que no pueden actualizarse, personalizarse ni comunicarse fácilmente a la junta directiva.</p>
+            </div>
+            <div class="problem-card reveal">
+                <h3>Sin visibilidad continua</h3>
+                <p>La reputación se mide una vez al año. Entre mediciones, la empresa no sabe cómo evolucionan sus indicadores ni qué dice el entorno de ella.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 3 — LA SOLUCIÓN
+     ================================================ -->
+<section class="slide slide-dark" id="s3" aria-label="La Solución">
+    <div class="slide-header">
+        <div class="tag">
+            <div class="accent-bar"></div>
+            02. La Solución
+        </div>
+        <div class="slide-num">03 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2-dark reveal">Bienvisto: una plataforma de autoservicio con IA — para cada director, sin consultores</h2>
+        <p class="section-sub-dark reveal">Dos productos especializados. Un solo motor de datos e inteligencia artificial.</p>
+
+        <div class="solution-grid stagger">
+            <div class="solution-card rep reveal">
+                <div class="solution-label">Producto 01</div>
+                <h3>Bienvisto Reputación</h3>
+                <p>Diagnóstico, monitoreo en tiempo real y generación automática de contenido sobre la reputación corporativa. Conectado a redes sociales y fuentes noticiosas.</p>
+                <div class="solution-buyer">Director de Comunicaciones / Sostenibilidad</div>
+            </div>
+            <div class="solution-card sat reveal">
+                <div class="solution-label">Producto 02</div>
+                <h3>Bienvisto Satisfacción</h3>
+                <p>Medición continua de satisfacción de clientes y stakeholders. Encuestas inteligentes, análisis automático y recomendaciones accionables.</p>
+                <div class="solution-buyer">Director Comercial / Experiencia al Cliente</div>
+            </div>
+        </div>
+
+        <div class="solution-tagline reveal">
+            Ambos productos comparten infraestructura — dos compradores distintos dentro de cada empresa
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 4 — CÓMO FUNCIONA
+     ================================================ -->
+<section class="slide slide-light" id="s4" aria-label="Cómo Funciona">
+    <div class="slide-header">
+        <div class="tag" style="color:var(--sky-500)">
+            <div class="accent-bar"></div>
+            03. Caso de Uso
+        </div>
+        <div class="slide-num">04 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2 reveal">De cero a diagnóstico completo, sin consultores</h2>
+        <p class="section-sub reveal" style="margin-bottom:clamp(0.5rem,1vh,0.875rem)">La plataforma lleva de la mano al director de Comunicaciones a través de un flujo guiado.</p>
+
+        <div class="flow-steps stagger">
+            <div class="flow-step reveal">
+                <div class="step-num">01</div>
+                <h4>Ingresa a la plataforma</h4>
+                <p>Responde un cuestionario inicial sobre su empresa, sector y stakeholders clave.</p>
+            </div>
+            <div class="flow-step reveal">
+                <div class="step-num">02</div>
+                <h4>Provee datos o contactos</h4>
+                <p>Sube documentos, conecta fuentes externas o entrega su base de stakeholders. La plataforma diseña un plan con el fin de mejorar la calidad de la información.</p>
+            </div>
+            <div class="flow-step reveal">
+                <div class="step-num">03</div>
+                <h4>IA procesa y analiza</h4>
+                <p>El motor de IA cruza datos internos, reputación online y casos históricos similares.</p>
+            </div>
+            <div class="flow-step flow-result reveal">
+                <div class="step-num">04</div>
+                <h4>Obtiene diagnóstico + recomendaciones</h4>
+                <p>Reporte listo para la junta directiva, con casos de empresas similares y plan de acción.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 5 — PRODUCTO: MONITOREO EN TIEMPO REAL
+     ================================================ -->
+<section class="slide slide-dark" id="s5" aria-label="Monitoreo en Tiempo Real">
+    <div class="slide-header">
+        <div class="tag">
+            <div class="accent-bar"></div>
+            04. Producto
+        </div>
+        <div class="slide-num">05 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2-dark reveal">Una herramienta viva — no un informe anual</h2>
+        <p class="section-sub-dark reveal">El índice de reputación se actualiza continuamente con lo que pasa en el mundo.</p>
+
+        <div class="features-grid-3 stagger">
+            <div class="feature-card reveal">
+                <div class="feature-card-icon ic-sky">📊</div>
+                <h3>Dashboard interactivo</h3>
+                <p>Visualización de indicadores de reputación y satisfacción. Evolución temporal, comparativo sectorial y score consolidado con semáforo.</p>
+                <div class="feature-badge">Fase 1</div>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-card-icon ic-amber">📡</div>
+                <h3>Conexión a redes sociales</h3>
+                <p>Lo que pasa en las redes de la empresa actualiza automáticamente su índice de reputación. Alertas en tiempo real.</p>
+                <div class="feature-badge">Fase 2</div>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-card-icon ic-green">📰</div>
+                <h3>Monitoreo de noticias</h3>
+                <p>Las noticias que mencionan a la empresa se analizan y alimentan el índice. La empresa sabe exactamente qué dice el entorno de ella.</p>
+                <div class="feature-badge">Fase 2</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 6 — PRODUCTO: GENERACIÓN IA
+     ================================================ -->
+<section class="slide slide-light" id="s6" aria-label="Generación con IA">
+    <div class="slide-header">
+        <div class="tag" style="color:var(--sky-500)">
+            <div class="accent-bar"></div>
+            05. Generación con IA
+        </div>
+        <div class="slide-num">06 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2 reveal">Del dato al reporte ejecutivo — en minutos, no semanas</h2>
+        <p class="section-sub reveal" style="margin-bottom:clamp(0.5rem,1vh,0.875rem)">La empresa genera contenido profesional listo para presentar. Paga por créditos según su uso.</p>
+
+        <div class="ai-grid stagger">
+            <div class="ai-card reveal">
+                <div class="ai-card-header">
+                    <div class="ai-icon">📄</div>
+                    <h3>Reporte PDF ejecutivo</h3>
+                </div>
+                <p>Análisis narrativo automatizado con gráficas, conclusiones y recomendaciones. Listo para la junta directiva.</p>
+                <div class="ai-credits">10–25 créditos</div>
+            </div>
+            <div class="ai-card reveal">
+                <div class="ai-card-header">
+                    <div class="ai-icon">📊</div>
+                    <h3>Presentación PPT</h3>
+                </div>
+                <p>Diapositivas profesionales con los datos clave generadas automáticamente. Editables y listas para usar.</p>
+                <div class="ai-credits">20 créditos <span class="phase-badge">Fase 2</span></div>
+            </div>
+            <div class="ai-card reveal">
+                <div class="ai-card-header">
+                    <div class="ai-icon">🎬</div>
+                    <h3>Video narrativo</h3>
+                </div>
+                <p>Resumen ejecutivo en video con voz sintetizada y visualización de datos. Estilo podcast empresarial.</p>
+                <div class="ai-credits">100–250 créditos <span class="phase-badge">Fase 2</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 7 — MODELO DE NEGOCIO
+     ================================================ -->
+<section class="slide slide-dark" id="s7" aria-label="Modelo de Negocio">
+    <div class="slide-header">
+        <div class="tag">
+            <div class="accent-bar"></div>
+            06. Modelo de Negocio
+        </div>
+        <div class="slide-num">07 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2-dark reveal">Freemium + créditos AI — las empresas pagan por lo que usan</h2>
+        <p class="section-sub-dark reveal">Acceso gratuito al dashboard. Pago por generación de contenido con IA.</p>
+
+        <div class="plans-grid stagger">
+            <div class="plan-card reveal">
+                <div class="plan-name">Free</div>
+                <div class="plan-price">$0<span>/mes</span></div>
+                <div class="plan-credits">20 créditos/mes</div>
+                <div class="plan-divider"></div>
+                <div class="plan-feature">Dashboard de indicadores</div>
+                <div class="plan-feature">Último período de datos</div>
+                <div class="plan-feature">1 reporte PDF básico/mes</div>
+            </div>
+            <div class="plan-card highlighted reveal">
+                <div class="plan-name">Básico</div>
+                <div class="plan-price" style="color:#fff">$500K–$1.5M<span>/mes</span></div>
+                <div class="plan-credits">200 créditos/mes</div>
+                <div class="plan-divider"></div>
+                <div class="plan-feature">Todo del plan Free</div>
+                <div class="plan-feature">Histórico completo</div>
+                <div class="plan-feature">Comparativo sectorial</div>
+                <div class="plan-feature">PPT automatizado</div>
+            </div>
+            <div class="plan-card reveal">
+                <div class="plan-name">Premium</div>
+                <div class="plan-price">$2M–$5M<span>/mes</span></div>
+                <div class="plan-credits">1.000 créditos/mes</div>
+                <div class="plan-divider"></div>
+                <div class="plan-feature">Todo del plan Básico</div>
+                <div class="plan-feature">Monitoreo redes y noticias</div>
+                <div class="plan-feature">Videos narrativos</div>
+                <div class="plan-feature">Usuarios ilimitados</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 8 — MERCADO
+     ================================================ -->
+<section class="slide slide-light" id="s8" aria-label="Mercado">
+    <div class="slide-header">
+        <div class="tag" style="color:var(--sky-500)">
+            <div class="accent-bar"></div>
+            07. Mercado
+        </div>
+        <div class="slide-num">08 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2 reveal">El mercado empieza con las empresas que el CNC ya conoce</h2>
+        <p class="section-sub reveal" style="margin-bottom:clamp(0.5rem,1vh,0.875rem)">Primario, secundario y expansión regional — sin cambiar la propuesta de valor.</p>
+
+        <div class="market-grid stagger">
+            <div class="market-card reveal">
+                <div class="market-tag">Mercado Primario</div>
+                <div class="market-stat" data-target="500">500<span style="font-size:0.5em;color:var(--sky-500)">+</span></div>
+                <div class="market-desc">Empresas en las bases de datos del CNC que ya participan en mediciones de reputación y satisfacción.</div>
+                <div class="market-detail">Relación comercial existente. Adopción inmediata posible.</div>
+            </div>
+            <div class="market-card reveal">
+                <div class="market-tag">Mercado Secundario</div>
+                <div class="market-stat">∞</div>
+                <div class="market-desc">Empresas colombianas que aún no participan en mediciones pero necesitan gestionar su reputación.</div>
+                <div class="market-detail">El plan Free actúa como herramienta de captación para el CNC.</div>
+            </div>
+            <div class="market-card reveal">
+                <div class="market-tag">Expansión Regional</div>
+                <div class="market-stat">8<span style="font-size:0.45em;color:#10B981">países</span></div>
+                <div class="market-desc">México, Perú, Chile, Brasil y más. El CNC tiene presencia o alianzas en toda la región.</div>
+                <div class="market-detail">La plataforma se replica sin cambios significativos.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 9 — POR QUÉ AHORA / DISRUPTIVO
+     ================================================ -->
+<section class="slide slide-dark" id="s9" aria-label="Por Qué Ahora">
+    <div class="slide-header">
+        <div class="tag">
+            <div class="accent-bar"></div>
+            08. Por Qué Ahora
+        </div>
+        <div class="slide-num">09 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2-dark reveal">Una propuesta sin precedentes en el mercado colombiano</h2>
+        <p class="section-sub-dark reveal">Cuatro factores que hacen viable esta iniciativa hoy.</p>
+
+        <div class="why-grid stagger">
+            <div class="why-item reveal">
+                <div class="why-num">01</div>
+                <div class="why-text">
+                    <h4>Sin competencia directa</h4>
+                    <p>Ningún proveedor de rankings de reputación en Colombia ofrece una plataforma de autoservicio con IA. El mercado está completamente abierto.</p>
+                </div>
+            </div>
+            <div class="why-item reveal">
+                <div class="why-num">02</div>
+                <div class="why-text">
+                    <h4>La IA lo hace posible hoy</h4>
+                    <p>El costo de generación de análisis con IA ha caído a $0.02–$0.10 por reporte. Hace 3 años esto era inviable económicamente.</p>
+                </div>
+            </div>
+            <div class="why-item reveal">
+                <div class="why-num">03</div>
+                <div class="why-text">
+                    <h4>El CNC tiene el activo</h4>
+                    <p>Años de datos de reputación de cientos de empresas. Un repositorio único en Colombia que nadie más tiene. El producto ya existe — solo falta la plataforma.</p>
+                </div>
+            </div>
+            <div class="why-item reveal">
+                <div class="why-num">04</div>
+                <div class="why-text">
+                    <h4>Retención bidireccional</h4>
+                    <p>Las empresas que usan la plataforma necesitan seguir participando en las mediciones del CNC. El producto genera retención para ambas partes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="disruptive-callout reveal">
+            El que establece el estándar de medición captura el mercado de largo plazo
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 10 — PROPUESTA PARA CNC
+     ================================================ -->
+<section class="slide slide-light" id="s10" aria-label="Propuesta para CNC">
+    <div class="slide-header">
+        <div class="tag" style="color:var(--sky-500)">
+            <div class="accent-bar"></div>
+            09. Propuesta
+        </div>
+        <div class="slide-num">10 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2 reveal">Contrato a 6 meses con revisiones mensuales y entregas concretas</h2>
+        <p class="section-sub reveal" style="margin-bottom:clamp(0.5rem,1vh,0.875rem)">Un roadmap claro: MVP en el mes 1, Reputación en el mes 3, Satisfacción en el mes 5.</p>
+
+        <div class="timeline-steps stagger">
+            <div class="timeline-card t1 reveal">
+                <div class="timeline-month">Mes 1</div>
+                <h3>MVP funcional</h3>
+                <p>Primera versión operativa con datos reales del CNC. Revisión mensual para validar dirección y ajustar prioridades.</p>
+                <div class="cost-tag">Primera entrega</div>
+            </div>
+            <div class="timeline-card t2 reveal">
+                <div class="timeline-month">Mes 3</div>
+                <h3>Bienvisto Reputación</h3>
+                <p>Producto completo con monitoreo en tiempo real, encuestas propias, generación de contenido con IA y dashboard de indicadores.</p>
+                <div class="cost-tag">Producto 1 listo</div>
+            </div>
+            <div class="timeline-card t3 reveal">
+                <div class="timeline-month">Mes 5</div>
+                <h3>Bienvisto Satisfacción</h3>
+                <p>Producto completo de medición y gestión de satisfacción de clientes. Listo para primeras empresas piloto.</p>
+                <div class="cost-tag">Producto 2 listo</div>
+            </div>
+        </div>
+
+        <div class="cnc-value-box reveal">
+            <p>El CNC aporta: <strong>datos + marca + relaciones comerciales.</strong><br>El equipo técnico aporta: <strong>desarrollo + tecnología + conocimiento de reputación.</strong></p>
+            <div class="cnc-value-num">Sociedad<br>45/55</div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 11 — COSTOS Y EQUILIBRIO
+     ================================================ -->
+<section class="slide slide-dark" id="s11" aria-label="Costos y Equilibrio">
+    <div class="slide-header">
+        <div class="tag">
+            <div class="accent-bar"></div>
+            10. Costos
+        </div>
+        <div class="slide-num">11 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2-dark reveal">El punto de equilibrio es alcanzable con 6 a 18 empresas</h2>
+        <p class="section-sub-dark reveal">Costo operativo bajo. Escalabilidad sin límite.</p>
+
+        <div class="costs-layout stagger">
+            <div class="costs-col">
+                <div style="font-family:var(--font-mono); font-size:var(--small-size); color:var(--sky-400); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:clamp(0.4rem,0.8vh,0.625rem);">Costo mensual en producción</div>
+                <div class="cost-item reveal">
+                    <div class="cost-label">Programador (desarrollo + mantenimiento)</div>
+                    <div class="cost-value">$4.000.000</div>
+                </div>
+                <div class="cost-item reveal">
+                    <div class="cost-label">Especialista en reputación</div>
+                    <div class="cost-value">$2–4.000.000</div>
+                </div>
+                <div class="cost-item reveal">
+                    <div class="cost-label">Infraestructura cloud (Azure/AWS)</div>
+                    <div class="cost-value">~$600.000</div>
+                </div>
+                <div class="cost-item reveal">
+                    <div class="cost-label">APIs de IA (escenario medio)</div>
+                    <div class="cost-value">~$258.000</div>
+                </div>
+                <div class="cost-item total reveal">
+                    <div class="cost-label">Total operativo / mes</div>
+                    <div class="cost-value">~$8.500.000</div>
+                </div>
+            </div>
+
+            <div class="costs-col">
+                <div class="breakeven-title">Punto de equilibrio — Plan Básico</div>
+                <div class="breakeven-row reveal">
+                    <div class="be-plan">$500.000/mes por empresa</div>
+                    <div class="be-bar"><div class="be-fill" style="width:100%"></div></div>
+                    <div class="be-companies">18 empresas</div>
+                </div>
+                <div class="breakeven-row reveal">
+                    <div class="be-plan">$1.000.000/mes por empresa</div>
+                    <div class="be-bar"><div class="be-fill" style="width:50%"></div></div>
+                    <div class="be-companies">9 empresas</div>
+                </div>
+                <div class="breakeven-row reveal">
+                    <div class="be-plan">$1.500.000/mes por empresa</div>
+                    <div class="be-bar"><div class="be-fill" style="width:33%"></div></div>
+                    <div class="be-companies">6 empresas</div>
+                </div>
+                <div style="margin-top:clamp(0.5rem,1vh,0.75rem); padding:clamp(0.625rem,1.2vw,1rem); background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.2); border-radius:8px;" class="reveal">
+                    <div style="font-size:var(--small-size); color:rgba(255,255,255,0.55); line-height:1.5;">
+                        El CNC ya tiene acceso a <strong style="color:var(--amber-400)">cientos de empresas clientes</strong>. El punto de equilibrio representa apenas el <strong style="color:var(--amber-400)">1–3%</strong> de esa base.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     SLIDE 12 — PRÓXIMOS PASOS / CIERRE
+     ================================================ -->
+<section class="slide slide-light" id="s12" aria-label="Próximos Pasos">
+    <div class="slide-header">
+        <div class="logo-inline">
+            <svg width="140" height="32" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0F3460"/>
+                        <stop offset="100%" style="stop-color:#1B4F8A"/>
+                    </linearGradient>
+                    <linearGradient id="bar2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#38BDF8"/>
+                        <stop offset="100%" style="stop-color:#0EA5E9"/>
+                    </linearGradient>
+                    <linearGradient id="dot2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FCD34D"/>
+                        <stop offset="100%" style="stop-color:#F59E0B"/>
+                    </linearGradient>
+                </defs>
+                <rect width="64" height="64" rx="16" fill="url(#bg2)"/>
+                <rect x="11" y="40" width="10" height="14" rx="3" fill="rgba(255,255,255,0.35)"/>
+                <rect x="27" y="28" width="10" height="26" rx="3" fill="rgba(255,255,255,0.6)"/>
+                <rect x="43" y="16" width="10" height="38" rx="3" fill="url(#bar2)"/>
+                <circle cx="48" cy="11" r="5" fill="url(#dot2)"/>
+                <path d="M48 7.5 L48.9 10.1 L51.7 10.1 L49.4 11.8 L50.3 14.4 L48 12.7 L45.7 14.4 L46.6 11.8 L44.3 10.1 L47.1 10.1 Z" fill="#FFFBEB" opacity="0.9"/>
+                <text x="82" y="28" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="700" fill="#0F3460" letter-spacing="-0.3">Reputación</text>
+                <rect x="82" y="34" width="40" height="1.5" rx="1" fill="#0EA5E9" opacity="0.7"/>
+                <text x="82" y="50" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="500" fill="#64748B" letter-spacing="2.2">ÍNDICE EMPRESARIAL</text>
+            </svg>
+        </div>
+        <div class="slide-num">12 / 12</div>
+    </div>
+
+    <div class="slide-content" style="padding-top:clamp(0.75rem,1.5vh,1.25rem); padding-bottom:clamp(0.75rem,1.5vh,1.25rem);">
+        <h2 class="section-h2 reveal">Próximos pasos</h2>
+        <p class="section-sub reveal" style="margin-bottom:clamp(0.5rem,1vh,0.875rem)">Lo que necesitamos para arrancar — del lado del CNC y del equipo técnico.</p>
+
+        <div class="steps-table reveal">
+            <div class="step-row">
+                <div class="step-row-num">1</div>
+                <div class="step-row-text">
+                    <h4>Firma del contrato y acuerdo societario</h4>
+                    <p>Formalizar la asociación antes de compartir datos. Todos los vacíos resueltos en papel.</p>
+                </div>
+                <div class="step-date">Sem. 6 Abr</div>
+            </div>
+            <div class="step-row">
+                <div class="step-row-num">2</div>
+                <div class="step-row-text">
+                    <h4>CNC entrega datos de reputación</h4>
+                    <p>Datos de reputación del CNC para construir el MVP. Es el único insumo que necesitamos del CNC en el mes 1.</p>
+                </div>
+                <div class="step-date">Sem. 6 Abr</div>
+            </div>
+            <div class="step-row">
+                <div class="step-row-num">3</div>
+                <div class="step-row-text">
+                    <h4>Definición de precios por plan</h4>
+                    <p>El CNC define la estrategia de precios final considerando su base de clientes y modelo de ingresos.</p>
+                </div>
+                <div class="step-date">Sem. 13 Abr</div>
+            </div>
+            <div class="step-row">
+                <div class="step-row-num">4</div>
+                <div class="step-row-text">
+                    <h4>MVP — Decisión de iterar</h4>
+                    <p>El CNC revisa el MVP con sus datos reales y define las iteraciones del siguiente mes.</p>
+                </div>
+                <div class="step-date">11 May</div>
+            </div>
+        </div>
+
+        <div class="closing-cta reveal">
+            <p>El CNC aporta los datos y la relación con sus clientes.<br><strong>El equipo técnico aporta el producto que los convierte en ingresos recurrentes.</strong></p>
+            <div class="cta-btn">Empecemos →</div>
+        </div>
+    </div>
+</section>
+
+<script>
+/* ===================================================
+   CONTROLADOR DE LA PRESENTACIÓN
+   Maneja: scroll, teclado, touch, progreso, puntos de nav
+   =================================================== */
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentIndex = 0;
+        this.isScrolling = false;
+        this.touchStartY = 0;
+
+        this.setupProgressBar();
+        this.setupNavDots();
+        this.setupIntersectionObserver();
+        this.setupKeyboard();
+        this.setupTouch();
+        this.setupWheel();
+    }
+
+    /* Actualiza la barra de progreso global */
+    setupProgressBar() {
+        const bar = document.getElementById('progressBar');
+        const update = () => {
+            const scrolled = window.scrollY;
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = total > 0 ? (scrolled / total * 100) + '%' : '0%';
+        };
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    }
+
+    /* Genera los puntos de navegación lateral */
+    setupNavDots() {
+        const nav = document.getElementById('navDots');
+        this.slides.forEach((slide, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'nav-dot' + (i === 0 ? ' active' : '');
+            btn.setAttribute('aria-label', 'Ir al slide ' + (i + 1));
+            btn.addEventListener('click', () => this.goTo(i));
+            nav.appendChild(btn);
+        });
+    }
+
+    /* Actualiza el punto activo */
+    updateDots(index) {
+        document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        this.currentIndex = index;
+    }
+
+    /* IntersectionObserver: agrega .visible para activar animaciones */
+    setupIntersectionObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Encuentra el índice del slide actual
+                    const index = Array.from(this.slides).indexOf(entry.target);
+                    if (index !== -1) this.updateDots(index);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        this.slides.forEach(slide => observer.observe(slide));
+    }
+
+    /* Navegación por teclado */
+    setupKeyboard() {
+        document.addEventListener('keydown', e => {
+            if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(e.key)) {
+                e.preventDefault();
+                this.goTo(this.currentIndex + 1);
+            } else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key)) {
+                e.preventDefault();
+                this.goTo(this.currentIndex - 1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                this.goTo(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                this.goTo(this.slides.length - 1);
+            }
+        });
+    }
+
+    /* Navegación touch/swipe */
+    setupTouch() {
+        document.addEventListener('touchstart', e => {
+            this.touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', e => {
+            const delta = this.touchStartY - e.changedTouches[0].clientY;
+            if (Math.abs(delta) > 50) {
+                delta > 0 ? this.goTo(this.currentIndex + 1) : this.goTo(this.currentIndex - 1);
+            }
+        });
+    }
+
+    /* Navegación con rueda del mouse (throttled) */
+    setupWheel() {
+        let lastWheel = 0;
+        document.addEventListener('wheel', e => {
+            e.preventDefault();
+            const now = Date.now();
+            if (now - lastWheel < 800) return;
+            lastWheel = now;
+            e.deltaY > 0 ? this.goTo(this.currentIndex + 1) : this.goTo(this.currentIndex - 1);
+        }, { passive: false });
+    }
+
+    /* Scroll suave al slide indicado */
+    goTo(index) {
+        const clamped = Math.max(0, Math.min(this.slides.length - 1, index));
+        if (clamped === this.currentIndex) return;
+        this.slides[clamped].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+/* ===================================================
+   ANIMACIÓN DE CONTADORES NUMÉRICOS
+   =================================================== */
+function animateCounters() {
+    document.querySelectorAll('[data-target]').forEach(el => {
+        const target = parseInt(el.getAttribute('data-target'));
+        const duration = 1200;
+        const start = Date.now();
+        const tick = () => {
+            const elapsed = Date.now() - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(ease * target).toLocaleString();
+            if (progress < 1) requestAnimationFrame(tick);
+        };
+        tick();
+    });
+}
+
+/* Inicia cuando el slide con contadores es visible */
+const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) animateCounters();
+    });
+}, { threshold: 0.5 });
+
+const s8 = document.getElementById('s8');
+if (s8) counterObserver.observe(s8);
+
+/* Inicia el controlador */
+const presentation = new SlidePresentation();
+
+/* Activa el primer slide inmediatamente */
+setTimeout(() => {
+    document.querySelector('.slide')?.classList.add('visible');
+}, 100);
+</script>
+</body>
+</html>
