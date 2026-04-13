@@ -1,0 +1,11 @@
+{
+  "slug": "cazaraiz-app-inmobiliaria",
+  "titulo": "CazaRaíz — App Inmobiliaria con Escaneo de Letreros",
+  "cliente": "Inversores / Co-fundadores",
+  "fecha": "2026-04-13",
+  "estado": "activa",
+  "descripcion": "App móvil que digitaliza el mercado inmobiliario informal en Colombia mediante QR dinámicos para letreros y escaneo OCR. Mercado: 60B COP/año, 7.3M hogares en arriendo.",
+  "monto": "100.000 – 200.000 USD",
+  "moneda": "USD",
+  "repo_origen": "pablovesga/cazaraiz"
+}
