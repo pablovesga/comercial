@@ -1,680 +1,747 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CazaRaíz — Propuesta App Inmobiliaria</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CazaRaíz — Para quien busca vivienda</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
-    :root {
-      --caza:       #E63946;
-      --caza-light: #FF6B6B;
-      --navy:       #0B1120;
-      --navy-mid:   #1D3557;
-      --green:      #06D6A0;
-      --dark:       #111827;
-      --muted:      #6B7280;
-      --pale:       #F9FAFB;
-      --border:     #E5E7EB;
-      --white:      #FFFFFF;
-    }
+/* ===========================================
+   THEME — BOLD SIGNAL
+   Cambiar :root afecta toda la presentación
+   =========================================== */
+:root {
+  --bg:          #141414;
+  --bg-grad:     linear-gradient(135deg, #141414 0%, #1f1f1f 60%, #141414 100%);
+  --orange:      #FF5722;
+  --orange-dim:  rgba(255,87,34,0.10);
+  --orange-glow: rgba(255,87,34,0.22);
+  --text:        #f2f2f2;
+  --muted:       #777;
+  --dim:         #3a3a3a;
+  --on-orange:   #1a1a1a;
+  --card:        #1d1d1d;
+  --border:      rgba(255,255,255,0.06);
 
-    html { scroll-behavior: smooth; }
+  --ff-display: 'Archivo Black', sans-serif;
+  --ff-body:    'Space Grotesk', sans-serif;
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--dark);
-      background: var(--pale);
-      line-height: 1.6;
-    }
+  --title:  clamp(2rem,   6vw,   5.5rem);
+  --h2:     clamp(1.3rem, 3.5vw, 2.8rem);
+  --body:   clamp(0.75rem,1.3vw, 1.05rem);
+  --small:  clamp(0.6rem, 0.9vw, 0.78rem);
+  --pad:    clamp(1.5rem, 5vw,   5rem);
+  --gap:    clamp(0.6rem, 1.8vw, 1.8rem);
+  --ease:   cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-    /* ── Nav ── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(11,17,32,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 60px;
-    }
-    .nav-brand {
-      font-weight: 800; font-size: 1.2rem; color: #fff;
-      display: flex; align-items: center; gap: 8px; text-decoration: none;
-    }
-    .nav-brand span { color: var(--caza-light); }
-    .nav-links { display: flex; gap: 24px; }
-    .nav-links a {
-      color: rgba(255,255,255,0.6); text-decoration: none;
-      font-size: 0.85rem; font-weight: 500;
-      transition: color .2s;
-    }
-    .nav-links a:hover { color: #fff; }
-    .nav-cta {
-      background: var(--caza); color: #fff !important;
-      padding: 6px 16px; border-radius: 8px;
-    }
+/* === VIEWPORT BASE === */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-    /* ── Hero ── */
-    .hero {
-      background: linear-gradient(145deg, var(--navy) 0%, var(--navy-mid) 55%, var(--navy) 100%);
-      color: #fff; text-align: center;
-      padding: 80px 24px 100px;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; top: -30%; right: -10%;
-      width: 500px; height: 500px;
-      background: var(--caza); border-radius: 50%;
-      opacity: 0.07; filter: blur(80px); pointer-events: none;
-    }
-    .hero::after {
-      content: '';
-      position: absolute; bottom: -20%; left: -10%;
-      width: 400px; height: 400px;
-      background: var(--green); border-radius: 50%;
-      opacity: 0.07; filter: blur(80px); pointer-events: none;
-    }
-    .hero-inner { position: relative; max-width: 820px; margin: 0 auto; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.8); font-size: 0.78rem; font-weight: 600;
-      padding: 5px 14px; border-radius: 999px; margin-bottom: 20px;
-      backdrop-filter: blur(8px);
-    }
-    .badge-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 900; line-height: 1.15; letter-spacing: -0.03em;
-      margin-bottom: 20px;
-    }
-    .hero h1 em { font-style: normal; color: var(--caza-light); }
-    .hero p.lead {
-      font-size: 1.1rem; color: rgba(255,255,255,0.65);
-      max-width: 600px; margin: 0 auto 36px;
-    }
-    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--caza); color: #fff;
-      font-weight: 700; font-size: 1rem;
-      padding: 14px 28px; border-radius: 14px;
-      text-decoration: none; transition: transform .15s, box-shadow .15s;
-      box-shadow: 0 4px 20px rgba(230,57,70,0.4);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(230,57,70,0.5); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.85);
-      font-weight: 600; font-size: 0.95rem;
-      padding: 14px 24px; border-radius: 14px;
-      text-decoration: none; transition: background .15s;
-    }
-    .btn-secondary:hover { background: rgba(255,255,255,0.14); }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+  font-family: var(--ff-body);
+  color: var(--text);
+}
 
-    /* ── Sections ── */
-    .section { padding: 72px 24px; }
-    .section-alt { background: #fff; }
-    .container { max-width: 900px; margin: 0 auto; }
-    .section-header { text-align: center; margin-bottom: 48px; }
-    .section-header h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px;
-    }
-    .section-header p { color: var(--muted); max-width: 520px; margin: 0 auto; }
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
 
-    /* ── Stats bar ── */
-    .stats-bar {
-      background: var(--navy);
-      padding: 32px 24px;
-      display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
-    }
-    .stat-item {
-      padding: 16px 40px;
-      text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.1);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-size: 2rem; font-weight: 900; color: var(--caza-light);
-      line-height: 1; margin-bottom: 4px;
-    }
-    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: .05em; }
+.slide {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--bg-grad);
+}
 
-    /* ── Problem / cards ── */
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:0.01ms !important; transition-duration:0.2s !important; }
+  html { scroll-behavior: auto; }
+}
 
-    .card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 16px; padding: 24px;
-    }
-    .card-dark {
-      background: linear-gradient(135deg, var(--navy-mid), #0e1d30);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px; padding: 24px; color: #fff;
-    }
-    .icon-box {
-      width: 44px; height: 44px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem; margin-bottom: 14px;
-    }
-    .icon-box-red { background: rgba(230,57,70,0.15); }
-    .icon-box-green { background: rgba(6,214,160,0.15); }
-    .icon-box-blue { background: rgba(59,130,246,0.15); }
-    .icon-box-purple { background: rgba(139,92,246,0.15); }
-    .icon-box-orange { background: rgba(251,146,60,0.15); }
-    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-    .card p, .card-dark p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
-    .card-dark p { color: rgba(255,255,255,0.6); }
-    .card-dark h3 { color: #fff; }
+@media (max-height: 700px) {
+  :root { --pad: clamp(0.75rem,3vw,2rem); --title: clamp(1.5rem,5vw,3rem); --h2: clamp(1.1rem,3vw,2rem); }
+}
+@media (max-height: 500px) {
+  :root { --pad: clamp(0.5rem,2vw,1rem); --title: clamp(1.2rem,4vw,2rem); --h2: clamp(1rem,2.5vw,1.5rem); --body: clamp(0.65rem,1vw,0.85rem); }
+  .nav-dots, .kbd-hint { display: none; }
+}
+@media (max-width: 600px) {
+  :root { --title: clamp(1.5rem,7vw,2.5rem); }
+}
 
-    /* ── Phases ── */
-    .phase {
-      border-left: 3px solid var(--border);
-      padding-left: 24px;
-      margin-bottom: 36px;
-      position: relative;
-    }
-    .phase::before {
-      content: '';
-      position: absolute; left: -8px; top: 0;
-      width: 14px; height: 14px;
-      border-radius: 50%; background: var(--border); border: 2px solid #fff;
-    }
-    .phase.active { border-left-color: var(--caza); }
-    .phase.active::before { background: var(--caza); }
-    .phase-label {
-      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
-      color: var(--muted); margin-bottom: 4px;
-    }
-    .phase.active .phase-label { color: var(--caza); }
-    .phase h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
-    .phase p { font-size: 0.875rem; color: var(--muted); }
-    .phase-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-    .tag {
-      background: var(--pale); border: 1px solid var(--border);
-      font-size: 0.72rem; padding: 3px 10px; border-radius: 999px; color: var(--muted);
-    }
-    .tag-red { background: rgba(230,57,70,0.08); border-color: rgba(230,57,70,0.2); color: var(--caza); }
+/* === ANIMACIONES con .visible === */
+.reveal       { opacity:0; transform:translateY(28px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+.reveal-right { opacity:0; transform:translateX(35px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+.reveal-scale { opacity:0; transform:scale(0.92);     transition: opacity .65s var(--ease), transform .65s var(--ease); }
 
-    /* ── Table ── */
-    .table-wrap { overflow-x: auto; margin-top: 24px; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-    thead th {
-      background: var(--navy); color: rgba(255,255,255,0.8);
-      padding: 10px 14px; text-align: left; font-weight: 600; font-size: 0.78rem;
-      text-transform: uppercase; letter-spacing: .05em;
-    }
-    tbody tr { border-bottom: 1px solid var(--border); }
-    tbody tr:last-child { border-bottom: none; }
-    tbody td { padding: 11px 14px; color: var(--dark); vertical-align: top; }
-    tbody tr:nth-child(even) { background: var(--pale); }
+.slide.visible .reveal,
+.slide.visible .reveal-right,
+.slide.visible .reveal-scale { opacity:1; transform:none; }
 
-    /* ── Tech pills ── */
-    .tech-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-    .tech-pill {
-      display: flex; align-items: center; gap: 6px;
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 8px; padding: 6px 12px;
-      font-size: 0.8rem; font-weight: 500; color: var(--dark);
-    }
-    .tech-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .td-green { background: var(--green); }
-    .td-blue { background: #3B82F6; }
-    .td-purple { background: #8B5CF6; }
-    .td-orange { background: #F97316; }
-    .td-red { background: var(--caza); }
+.d1 { transition-delay:.08s; } .d2 { transition-delay:.18s; } .d3 { transition-delay:.28s; }
+.d4 { transition-delay:.38s; } .d5 { transition-delay:.48s; } .d6 { transition-delay:.58s; }
+.d7 { transition-delay:.68s; }
 
-    /* ── Numbers highlight ── */
-    .numbers-row {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;
-      margin-top: 32px;
-    }
-    .num-card {
-      background: var(--navy);
-      border-radius: 14px; padding: 24px 20px; text-align: center;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .num-val { font-size: 1.8rem; font-weight: 900; color: var(--caza-light); line-height: 1; margin-bottom: 4px; }
-    .num-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+/* === GLOBALES === */
+.progress-bar { position:fixed; top:0; left:0; height:3px; width:0; background:var(--orange); z-index:1000; transition:width .3s ease; }
 
-    /* ── Web preview ── */
-    .web-preview {
-      border-radius: 16px; overflow: hidden;
-      border: 2px solid var(--border);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-    }
-    .browser-bar {
-      background: #f3f4f6; padding: 10px 16px;
-      display: flex; align-items: center; gap: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-    .browser-dots { display: flex; gap: 5px; }
-    .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .browser-url {
-      flex: 1; background: #fff; border: 1px solid var(--border);
-      border-radius: 6px; padding: 4px 10px;
-      font-size: 0.75rem; color: var(--muted);
-    }
-    .web-preview iframe {
-      width: 100%; height: 520px; border: none; display: block;
-    }
-    .preview-fallback {
-      background: linear-gradient(145deg, var(--navy) 0%, var(--navy-mid) 100%);
-      height: 520px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; gap: 16px;
-    }
-    .preview-fallback p { color: rgba(255,255,255,0.5); font-size: 0.875rem; }
-    .preview-fallback a {
-      color: var(--caza-light); font-weight: 600; text-decoration: none;
-      border: 1px solid rgba(255,107,107,0.3); padding: 8px 20px; border-radius: 8px;
-    }
+.nav-dots { position:fixed; right:clamp(.8rem,2vw,1.5rem); top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:8px; z-index:100; }
+.nav-dot  { width:6px; height:6px; border-radius:50%; background:var(--dim); cursor:pointer; border:none; transition:background .3s, transform .3s; }
+.nav-dot.active { background:var(--orange); transform:scale(1.6); }
 
-    /* ── CTA final ── */
-    .cta-section {
-      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
-      padding: 80px 24px; text-align: center; color: #fff;
-    }
-    .cta-section h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; margin-bottom: 12px; }
-    .cta-section p { color: rgba(255,255,255,0.6); margin-bottom: 32px; }
+.kbd-hint { position:fixed; bottom:clamp(.75rem,1.5vh,1.5rem); left:50%; transform:translateX(-50%); font-size:var(--small); color:var(--dim); z-index:100; pointer-events:none; letter-spacing:.05em; }
 
-    /* ── Footer ── */
-    footer {
-      background: var(--navy); color: rgba(255,255,255,0.35);
-      text-align: center; padding: 24px;
-      font-size: 0.8rem;
-    }
-    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.slide-num { position:absolute; bottom:var(--pad); right:var(--pad); font-family:var(--ff-display); font-size:clamp(3rem,8vw,8rem); color:rgba(255,255,255,.025); line-height:1; pointer-events:none; user-select:none; }
 
-    @media (max-width: 600px) {
-      .stat-item { padding: 14px 20px; }
-      .nav-links { display: none; }
-    }
-  </style>
+.lbl { font-size:var(--small); font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+
+.pill { display:inline-flex; align-items:center; gap:.4em; background:var(--orange-dim); border:1px solid rgba(255,87,34,.2); color:var(--orange); font-size:var(--small); font-weight:600; letter-spacing:.1em; text-transform:uppercase; padding:.35em .9em; border-radius:100px; }
+
+.card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); overflow:hidden; }
+
+/* ======================================================
+   SLIDE 1 — PORTADA
+   ====================================================== */
+.s1 { display:grid; grid-template-columns:1fr min(420px,40vw); }
+@media (max-width:700px) { .s1 { grid-template-columns:1fr; } .s1-right { display:none; } }
+
+.s1-left { display:flex; flex-direction:column; justify-content:space-between; padding:var(--pad); position:relative; z-index:2; }
+
+.s1-brand { font-family:var(--ff-display); font-size:clamp(.85rem,1.5vw,1.1rem); color:var(--muted); letter-spacing:.05em; }
+.s1-brand b { color:var(--orange); font-weight:900; }
+
+h1.s1-title { font-family:var(--ff-display); font-size:var(--title); line-height:.93; color:var(--text); letter-spacing:-.02em; }
+h1.s1-title .acc { color:var(--orange); display:block; }
+
+.s1-sub { font-size:var(--body); color:#999; line-height:1.6; max-width:440px; }
+
+.s1-right { display:flex; align-items:center; justify-content:center; padding:var(--pad) clamp(1rem,2.5vw,2.5rem); position:relative; }
+.s1-card { background:var(--orange); border-radius:20px; padding:clamp(1.5rem,3vw,2.5rem); width:100%; }
+.s1-card-n { font-family:var(--ff-display); font-size:clamp(3rem,6vw,5rem); color:rgba(0,0,0,.10); line-height:1; }
+.s1-card-h { font-family:var(--ff-display); font-size:clamp(1rem,2vw,1.5rem); color:var(--on-orange); line-height:1.2; margin:.4rem 0 .8rem; }
+.s1-card-b { font-size:var(--body); color:rgba(0,0,0,.65); line-height:1.6; }
+
+/* ======================================================
+   SLIDE 2 — EL PROBLEMA
+   ====================================================== */
+.s2 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.s2-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.75rem,1.5vw,1.25rem); }
+@media (max-width:650px) { .s2-grid { grid-template-columns:1fr 1fr; } }
+
+.s2-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(1rem,2vw,1.75rem); display:flex; flex-direction:column; gap:.5rem; }
+.s2-ico { font-size:clamp(1.5rem,3vw,2.2rem); line-height:1; }
+.s2-stat { font-family:var(--ff-display); font-size:clamp(1.5rem,4vw,3rem); color:var(--orange); line-height:1; }
+.s2-th { font-family:var(--ff-display); font-size:clamp(.8rem,1.5vw,1.1rem); color:var(--text); line-height:1.2; }
+.s2-td { font-size:var(--small); color:var(--muted); line-height:1.6; }
+
+/* ======================================================
+   SLIDE 3 — EL MERCADO INVISIBLE
+   ====================================================== */
+.s3 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.s3-quote { border-left:3px solid var(--orange); padding-left:clamp(1rem,2vw,1.75rem); margin:clamp(.5rem,1.5vh,1.25rem) 0; }
+.s3-q { font-family:var(--ff-display); font-size:clamp(.9rem,2vw,1.5rem); color:var(--text); line-height:1.4; font-style:italic; }
+.s3-qs { font-size:var(--small); color:var(--muted); margin-top:.4rem; }
+
+.s3-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
+.s3-stat { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:clamp(.75rem,1.5vw,1.25rem); text-align:center; }
+.s3-sn { font-family:var(--ff-display); font-size:clamp(1.8rem,4vw,3.5rem); color:var(--orange); line-height:1; }
+.s3-sl { font-size:var(--small); color:var(--muted); margin-top:.3rem; line-height:1.4; }
+
+/* ======================================================
+   SLIDE 4 — CÓMO FUNCIONA: ESCANEO
+   ====================================================== */
+.s4 { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
+@media (max-width:650px) { .s4 { grid-template-columns:1fr; } .s4-right { display:none; } }
+
+.s4-left { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); border-right:1px solid var(--border); }
+.s4-steps { display:flex; flex-direction:column; gap:clamp(.6rem,1.5vh,1.1rem); }
+.s4-step { display:flex; align-items:flex-start; gap:clamp(.75rem,1.5vw,1.25rem); }
+.s4-sn { flex-shrink:0; width:clamp(1.6rem,3vw,2.2rem); height:clamp(1.6rem,3vw,2.2rem); background:var(--orange); color:var(--on-orange); font-family:var(--ff-display); font-size:clamp(.65rem,1.2vw,.9rem); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.s4-sh { font-family:var(--ff-display); font-size:clamp(.8rem,1.5vw,1.1rem); color:var(--text); line-height:1.2; }
+.s4-sb { font-size:var(--small); color:var(--muted); margin-top:.2rem; line-height:1.5; }
+
+.s4-right { padding:var(--pad); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:clamp(1rem,2vh,1.5rem); }
+
+.phone { width:min(190px,28vw); aspect-ratio:9/17; background:var(--card); border:2px solid var(--border); border-radius:clamp(14px,3vw,26px); overflow:hidden; display:flex; flex-direction:column; }
+.phone-screen { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.6rem; padding:1rem; text-align:center; }
+.phone-ico { font-size:clamp(1.8rem,4vw,3rem); }
+.phone-lbl { font-family:var(--ff-display); font-size:clamp(.5rem,1vw,.72rem); color:var(--text); line-height:1.3; }
+.phone-lbl span { color:var(--orange); }
+.phone-btn { background:var(--orange); margin:.5rem; border-radius:8px; padding:.5rem; font-family:var(--ff-display); font-size:clamp(.48rem,.9vw,.63rem); color:var(--on-orange); text-align:center; }
+
+/* ======================================================
+   SLIDE 5 — CÓMO FUNCIONA: QR
+   ====================================================== */
+.s5 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.s5-split { display:grid; grid-template-columns:1fr 1fr; gap:clamp(1rem,2.5vw,2rem); }
+@media (max-width:600px) { .s5-split { grid-template-columns:1fr; } }
+
+.s5-panel { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); display:flex; flex-direction:column; gap:.75rem; }
+.s5-panel.hl { border-color:rgba(255,87,34,.35); background:var(--orange-dim); }
+.s5-pico { font-size:clamp(1.5rem,3vw,2.5rem); }
+.s5-ph { font-family:var(--ff-display); font-size:clamp(.9rem,1.8vw,1.35rem); color:var(--text); line-height:1.2; }
+.s5-pb { font-size:var(--small); color:var(--muted); line-height:1.6; }
+.s5-badge { margin-top:auto; display:inline-flex; align-items:center; gap:.3em; background:rgba(255,87,34,.15); color:var(--orange); font-size:var(--small); font-weight:600; padding:.25em .7em; border-radius:100px; width:fit-content; }
+
+/* ======================================================
+   SLIDE 6 — LO QUE OBTIENES
+   ====================================================== */
+.s6 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.s6-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.75rem,1.5vw,1.25rem); }
+@media (max-width:600px) { .s6-grid { grid-template-columns:1fr 1fr; } }
+
+.s6-f { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(1rem,2vw,1.6rem); display:flex; flex-direction:column; gap:.5rem; transition:border-color .3s; }
+.s6-f:hover { border-color:rgba(255,87,34,.3); }
+.s6-fco { font-size:clamp(1.2rem,2.5vw,1.8rem); }
+.s6-fh { font-family:var(--ff-display); font-size:clamp(.75rem,1.4vw,1rem); color:var(--text); line-height:1.2; }
+.s6-fb { font-size:var(--small); color:var(--muted); line-height:1.5; }
+
+/* ======================================================
+   SLIDE 7 — POR QUÉ CAZARAÍZ
+   ====================================================== */
+.s7 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.cmp-table { width:100%; border-collapse:separate; border-spacing:0 6px; }
+.cmp-table thead th { font-size:var(--small); font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); padding:0 clamp(.75rem,1.5vw,1.25rem) .5rem; text-align:left; }
+.cmp-table thead th:not(:first-child) { text-align:center; }
+.cmp-row td { background:var(--card); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:clamp(.5rem,1.2vh,.9rem) clamp(.75rem,1.5vw,1.25rem); font-size:var(--small); color:var(--muted); vertical-align:middle; }
+.cmp-row td:first-child { border-left:1px solid var(--border); border-radius:10px 0 0 10px; font-weight:600; color:var(--text); }
+.cmp-row td:last-child { border-right:1px solid var(--border); border-radius:0 10px 10px 0; }
+.cmp-row td:not(:first-child) { text-align:center; }
+.cmp-row.hl td { background:var(--orange-dim); border-color:rgba(255,87,34,.2); color:var(--text); }
+.cmp-row.hl td:first-child { color:var(--orange); font-family:var(--ff-display); }
+.ck { color:var(--orange); } .cx { color:var(--dim); }
+
+/* ======================================================
+   SLIDE 8 — MODELO WAZE
+   ====================================================== */
+.s8 { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
+@media (max-width:650px) { .s8 { grid-template-columns:1fr; } .s8-left { display:none; } }
+
+.s8-left { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); border-right:1px solid var(--border); background:linear-gradient(135deg,rgba(255,87,34,.05),transparent); position:relative; }
+.s8-big { position:absolute; bottom:var(--pad); left:var(--pad); font-family:var(--ff-display); font-size:clamp(4rem,10vw,9rem); line-height:.9; color:var(--orange-glow); pointer-events:none; user-select:none; }
+
+.s8-right { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:clamp(.75rem,1.5vh,1.25rem); }
+.s8-b { display:flex; align-items:flex-start; gap:clamp(.75rem,1.5vw,1.25rem); background:var(--card); border:1px solid var(--border); border-radius:12px; padding:clamp(.75rem,1.5vw,1.25rem); }
+.s8-bico { flex-shrink:0; font-size:clamp(1.2rem,2.5vw,1.8rem); }
+.s8-bh { font-family:var(--ff-display); font-size:clamp(.75rem,1.4vw,1rem); color:var(--text); }
+.s8-bd { font-size:var(--small); color:var(--muted); margin-top:.2rem; line-height:1.5; }
+
+/* ======================================================
+   SLIDE 9 — CTA
+   ====================================================== */
+.s9 { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:var(--pad); gap:clamp(1rem,3vh,2.5rem); text-align:center; position:relative; overflow:hidden; }
+.s9::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 60%, rgba(255,87,34,.18) 0%, transparent 65%); pointer-events:none; }
+
+.s9-title { font-family:var(--ff-display); font-size:var(--title); color:var(--text); line-height:.95; letter-spacing:-.02em; max-width:800px; }
+.s9-title span { color:var(--orange); }
+.s9-sub { font-size:var(--body); color:#999; max-width:520px; line-height:1.6; }
+.s9-cta { display:flex; gap:clamp(.75rem,2vw,1.25rem); flex-wrap:wrap; justify-content:center; margin-top:.5rem; }
+
+.btn-p { background:var(--orange); color:var(--on-orange); font-family:var(--ff-display); font-size:clamp(.75rem,1.3vw,1rem); padding:clamp(.75rem,1.5vw,1rem) clamp(1.5rem,3vw,2.5rem); border-radius:100px; border:none; cursor:pointer; text-decoration:none; display:inline-block; transition:transform .2s, box-shadow .2s; }
+.btn-p:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,87,34,.4); }
+
+.btn-s { background:transparent; color:var(--muted); font-family:var(--ff-body); font-size:clamp(.75rem,1.3vw,1rem); padding:clamp(.75rem,1.5vw,1rem) clamp(1.5rem,3vw,2.5rem); border-radius:100px; border:1px solid var(--border); cursor:pointer; text-decoration:none; display:inline-block; transition:border-color .2s, color .2s; }
+.btn-s:hover { border-color:rgba(255,87,34,.4); color:var(--text); }
+
+.s9-brand { font-family:var(--ff-display); font-size:clamp(.8rem,1.4vw,1rem); color:var(--muted); margin-top:1rem; }
+.s9-brand span { color:var(--orange); }
+
+</style>
 </head>
 <body>
 
-<!-- ── Nav ──────────────────────────────────────────────────────────────── -->
-<nav>
-  <a href="#" class="nav-brand">Caza<span>Raíz</span></a>
-  <div class="nav-links">
-    <a href="#problema">Problema</a>
-    <a href="#solucion">Solución</a>
-    <a href="#fases">Fases</a>
-    <a href="#modelo">Negocio</a>
-    <a href="#web">Web</a>
-    <a href="#contacto" class="nav-cta">Contactar</a>
-  </div>
-</nav>
+<!-- Barra de progreso -->
+<div class="progress-bar" id="progressBar"></div>
 
-<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="badge">
-      <div class="badge-dot"></div>
-      Propuesta Comercial · Abril 2026
-    </div>
-    <h1>El letrero que todos ven.<br><em>La ficha que nadie tenía.</em></h1>
-    <p class="lead">
-      CazaRaíz digitaliza el mercado inmobiliario informal en Colombia —
-      el 57% de arriendos que nunca llega a los portales.
-    </p>
-    <div class="hero-actions">
-      <a href="#solucion" class="btn-primary">Ver propuesta completa →</a>
-      <a href="#web" class="btn-secondary">🌐 Ver la web</a>
-    </div>
-  </div>
-</section>
+<!-- Nav dots -->
+<nav class="nav-dots" id="navDots" aria-label="Navegación"></nav>
 
-<!-- ── Stats ──────────────────────────────────────────────────────────────── -->
-<div class="stats-bar">
-  <div class="stat-item">
-    <div class="stat-num">7.3M</div>
-    <div class="stat-label">hogares en arriendo</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">$60B</div>
-    <div class="stat-label">COP mercado arriendos/año</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">57%</div>
-    <div class="stat-label">contratos verbales</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">71%</div>
-    <div class="stat-label">búsquedas son arriendo</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">0</div>
-    <div class="stat-label">apps escanean letreros hoy</div>
-  </div>
-</div>
+<!-- Hint teclado -->
+<div class="kbd-hint">↑ ↓ Espacio · Flechas para navegar</div>
 
-<!-- ── Problema ──────────────────────────────────────────────────────────── -->
-<section class="section" id="problema">
-  <div class="container">
-    <div class="section-header">
-      <h2>El mercado invisible</h2>
-      <p>Miles de propiedades con letrero físico nunca llegan a los portales digitales.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon-box icon-box-red">🔍</div>
-        <h3>Mercado invisible</h3>
-        <p>Propiedades con letrero físico que jamás se publican en portales. Un inventario enorme que nadie ve.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-red">⚠️</div>
-        <h3>Fraude creciente</h3>
-        <p>+35% en denuncias de estafas por arriendos. Sin verificación de arrendatarios ni arrendadores.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-red">👻</div>
-        <h3>Anuncios fantasma</h3>
-        <p>Alta tasa de listings desactualizados en portales. El 92% busca online pero cierra informalmente.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-red">📝</div>
-        <h3>Sin contratos</h3>
-        <p>57% de contratos de arriendo son verbales. Cero trazabilidad para arrendadores y arrendatarios.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-red">💸</div>
-        <h3>Brecha digital</h3>
-        <p>7.3M de hogares en arriendo. Ninguna plataforma atiende el segmento informal de manera efectiva.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-red">🏆</div>
-        <h3>Competencia ciega</h3>
-        <p>FincaRaíz, Metrocuadrado, Habi — ninguno captura el mercado informal ni escanea letreros físicos.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ── Solución ──────────────────────────────────────────────────────────── -->
-<section class="section section-alt" id="solucion">
-  <div class="container">
-    <div class="section-header">
-      <h2>La solución: tres pilares</h2>
-      <p>Una app móvil que conecta el mundo físico con el digital.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card-dark">
-        <div class="icon-box icon-box-green">📱</div>
-        <h3>QR Dinámicos</h3>
-        <p>El propietario genera un QR desde la app y lo pega en su letrero. El interesado escanea y ve ficha completa — fotos, precio, contacto — sin instalar nada.</p>
-      </div>
-      <div class="card-dark">
-        <div class="icon-box icon-box-blue">🔬</div>
-        <h3>OCR + WhatsApp</h3>
-        <p>El usuario fotografía un letrero. La app extrae texto vía OCR (teléfono, precio, dirección) y genera un deep-link de WhatsApp con mensaje pre-formateado listo para enviar.</p>
-      </div>
-      <div class="card-dark">
-        <div class="icon-box icon-box-purple">⭐</div>
-        <h3>Servicios de Valor</h3>
-        <p>Verificación de arrendatarios, seguros de arrendamiento, generación de contratos digitales, estimación de precios y confirmación de disponibilidad en tiempo real.</p>
-      </div>
-    </div>
+<!-- ======================================================
+     SLIDE 1 — PORTADA
+     ====================================================== -->
+<section class="slide s1" aria-label="Portada">
+  <div class="slide-num">01</div>
 
-    <div class="section-header" style="margin-top: 56px;">
-      <h2>Ventaja vs. la competencia</h2>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Competidor</th>
-            <th>Qué hace</th>
-            <th>Qué NO hace</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>FincaRaíz</strong></td>
-            <td>Clasificados online (370K propiedades)</td>
-            <td>No captura mercado informal, no verifica, anuncios desactualizados</td>
-          </tr>
-          <tr>
-            <td><strong>Metrocuadrado</strong></td>
-            <td>Clasificados + contenido editorial</td>
-            <td>No genera contratos, no ofrece seguros, no escanea letreros</td>
-          </tr>
-          <tr>
-            <td><strong>Habi</strong></td>
-            <td>Compra directa vivienda usada + crédito</td>
-            <td>No cubre arriendos, no atiende mercado informal</td>
-          </tr>
-          <tr>
-            <td><strong>La Haus</strong></td>
-            <td>Marketplace vivienda nueva + IA</td>
-            <td>No cubre usada ni arriendos</td>
-          </tr>
-          <tr>
-            <td><strong>CazaRaíz ✓</strong></td>
-            <td>OCR + QR + mapa + verificación + seguros</td>
-            <td style="color: #06D6A0; font-weight: 600;">Atiende TODO el mercado informal</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+  <div class="s1-left">
+    <div class="s1-brand reveal d1">Caza<b>Raíz</b> · Colombia</div>
 
-<!-- ── Fases ──────────────────────────────────────────────────────────────── -->
-<section class="section" id="fases">
-  <div class="container">
-    <div class="section-header">
-      <h2>Roadmap de implementación</h2>
-      <p>Cuatro fases que van del MVP hasta la expansión regional.</p>
-    </div>
-    <div>
-      <div class="phase active">
-        <div class="phase-label">Fase 1 · Meses 0–6 · MVP</div>
-        <h3>Generador de QR + OCR + Mapa</h3>
-        <p>QR dinámicos para letreros, escaneo OCR con Claude Haiku (~$2.60/mes para 1K imgs), contacto automático por WhatsApp, mapa de propiedades con geolocalización.</p>
-        <div class="phase-tags">
-          <span class="tag tag-red">En construcción</span>
-          <span class="tag">Flutter</span>
-          <span class="tag">NestJS</span>
-          <span class="tag">Claude Haiku OCR</span>
-          <span class="tag">PostgreSQL + PostGIS</span>
-        </div>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Fase 2 · Meses 6–12 · Crecimiento</div>
-        <h3>Verificación + Seguros + Estimador de Precios</h3>
-        <p>Verificación de arrendatarios (DataCrédito/TusDatos), seguros de arrendamiento integrados (SURA, MAPFRE, Zurich), estimador de precios via Habi API + datos IGAC.</p>
-        <div class="phase-tags">
-          <span class="tag">Apitude API</span>
-          <span class="tag">TusDatos API</span>
-          <span class="tag">SURA Partnership</span>
-          <span class="tag">Habi AVM</span>
-        </div>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Fase 3 · Meses 12–24 · Expansión</div>
-        <h3>Contratos Digitales + Scanner Web</h3>
-        <p>Contratos de arriendo digitales con validez legal (Ley 527/1999), firma electrónica via ZapSign, visión computacional para análisis de fotos de inmuebles.</p>
-        <div class="phase-tags">
-          <span class="tag">ZapSign</span>
-          <span class="tag">Computer Vision</span>
-          <span class="tag">La Haus Integration</span>
-        </div>
-      </div>
-      <div class="phase">
-        <div class="phase-label">Fase 4 · Meses 24–36 · Escala Regional</div>
-        <h3>Expansión a Latinoamérica</h3>
-        <p>México (US$169B de mercado), Perú, Argentina, Brasil. Modelo probado en Colombia replicable en mercados con alta informalidad.</p>
-        <div class="phase-tags">
-          <span class="tag">México</span>
-          <span class="tag">Perú</span>
-          <span class="tag">Argentina</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <h1 class="s1-title reveal d2">
+      Encuentra<span class="acc">tu hogar.</span>Sin filtros.
+    </h1>
 
-<!-- ── Stack ──────────────────────────────────────────────────────────────── -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>Stack tecnológico</h2>
-      <p>Tecnologías probadas, escalables y orientadas al mercado colombiano.</p>
-    </div>
-    <div class="grid-2">
-      <div>
-        <h3 style="font-weight: 700; margin-bottom: 12px;">🤖 IA y OCR</h3>
-        <div class="tech-grid">
-          <div class="tech-pill"><div class="tech-dot td-red"></div>Claude Haiku (OCR MVP)</div>
-          <div class="tech-pill"><div class="tech-dot td-blue"></div>Google Cloud Vision (escala)</div>
-          <div class="tech-pill"><div class="tech-dot td-red"></div>Claude Batch API</div>
-        </div>
-        <h3 style="font-weight: 700; margin-top: 24px; margin-bottom: 12px;">📱 App móvil</h3>
-        <div class="tech-grid">
-          <div class="tech-pill"><div class="tech-dot td-blue"></div>Flutter</div>
-          <div class="tech-pill"><div class="tech-dot td-green"></div>ML Kit on-device</div>
-        </div>
-      </div>
-      <div>
-        <h3 style="font-weight: 700; margin-bottom: 12px;">🖥️ Backend</h3>
-        <div class="tech-grid">
-          <div class="tech-pill"><div class="tech-dot td-green"></div>NestJS (Node.js)</div>
-          <div class="tech-pill"><div class="tech-dot td-blue"></div>PostgreSQL + PostGIS</div>
-          <div class="tech-pill"><div class="tech-dot td-purple"></div>Supabase</div>
-          <div class="tech-pill"><div class="tech-dot td-orange"></div>Google Cloud Run</div>
-        </div>
-        <h3 style="font-weight: 700; margin-top: 24px; margin-bottom: 12px;">🔗 Integraciones</h3>
-        <div class="tech-grid">
-          <div class="tech-pill"><div class="tech-dot td-green"></div>WhatsApp deep links</div>
-          <div class="tech-pill"><div class="tech-dot td-blue"></div>ZapSign (firma digital)</div>
-          <div class="tech-pill"><div class="tech-dot td-red"></div>DataCrédito / TusDatos</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Modelo de negocio ────────────────────────────────────────────────── -->
-<section class="section" id="modelo">
-  <div class="container">
-    <div class="section-header">
-      <h2>Modelo de negocio</h2>
-      <p>Tres etapas claras: masa crítica → monetización → escala.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon-box icon-box-green">🚀</div>
-        <h3>Fase 1: Freemium</h3>
-        <p>App gratuita para buscar, escanear y generar QR. Gamificación para contribuciones. Monetización cero — foco en datos.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-blue">💰</div>
-        <h3>Fase 2: Lead Gen + Premium</h3>
-        <p>$5–15 USD por lead calificado. Suscripción agentes $30–100/mes. Comisión seguros y contratos digitales.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box icon-box-purple">📊</div>
-        <h3>Fase 3: Data + Escala</h3>
-        <p>API de datos para proptechs $500–5,000/mes. Verificación de inventario para bancos y aseguradoras.</p>
-      </div>
-    </div>
-
-    <div class="numbers-row">
-      <div class="num-card">
-        <div class="num-val">$2–5</div>
-        <div class="num-label">CAC consumidor (USD)</div>
-      </div>
-      <div class="num-card">
-        <div class="num-val">$97K</div>
-        <div class="num-label">Inversión mínima MVP (USD)</div>
-      </div>
-      <div class="num-card">
-        <div class="num-val">$25K</div>
-        <div class="num-label">Ingresos/mes proyectados M24 (conservador)</div>
-      </div>
-      <div class="num-card">
-        <div class="num-val">&gt;5:1</div>
-        <div class="num-label">Ratio LTV/CAC objetivo</div>
-      </div>
-      <div class="num-card">
-        <div class="num-val">$0.002</div>
-        <div class="num-label">Costo por foto procesada (USD)</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Web Preview ────────────────────────────────────────────────────────── -->
-<section class="section section-alt" id="web">
-  <div class="container">
-    <div class="section-header">
-      <h2>La plataforma web</h2>
-      <p>Landing page y herramienta de creación de QR ya desplegadas en producción.</p>
-    </div>
-    <div class="web-preview">
-      <div class="browser-bar">
-        <div class="browser-dots">
-          <div class="browser-dot" style="background:#FF5F56"></div>
-          <div class="browser-dot" style="background:#FFBD2E"></div>
-          <div class="browser-dot" style="background:#27C93F"></div>
-        </div>
-        <div class="browser-url">cazaraiz-web — Cloud Run · us-central1</div>
-      </div>
-      <div class="preview-fallback">
-        <div style="font-size: 3rem;">🏠</div>
-        <p>Plataforma web desplegada en Google Cloud Run</p>
-        <p style="font-size: 0.78rem; color: rgba(255,255,255,0.3);">Next.js 14 · TailwindCSS · NestJS API · Supabase</p>
-        <a href="https://github.com/pablovesga/cazaraiz" target="_blank" rel="noopener">Ver repositorio →</a>
-      </div>
-    </div>
-
-    <div style="margin-top: 32px;">
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon-box icon-box-green">✅</div>
-          <h3>Desplegada en Cloud Run</h3>
-          <p>Infraestructura serverless en GCP, CI/CD automático con GitHub Actions en cada push a main.</p>
-        </div>
-        <div class="card">
-          <div class="icon-box icon-box-blue">🔐</div>
-          <h3>Backend + DB operativos</h3>
-          <p>NestJS API en producción con PostgreSQL vía Supabase. Autenticación JWT y migraciones automáticas.</p>
-        </div>
-        <div class="card">
-          <div class="icon-box icon-box-purple">📲</div>
-          <h3>Creación de QR activa</h3>
-          <p>Flujo completo funcionando: formulario de propiedad → generación de QR → ficha pública escaneable.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA final ──────────────────────────────────────────────────────────── -->
-<section class="cta-section" id="contacto">
-  <div class="container">
-    <h2>¿Construimos esto juntos?</h2>
-    <p>Buscamos co-fundadores, inversores o socios estratégicos comprometidos con transformar el mercado inmobiliario colombiano.</p>
-    <div class="hero-actions">
-      <a href="mailto:jpablovesga@gmail.com" class="btn-primary">📩 Contactar →</a>
-      <a href="https://github.com/pablovesga/cazaraiz" target="_blank" rel="noopener" class="btn-secondary">Ver código en GitHub</a>
-    </div>
-    <p style="margin-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.3);">
-      Financiamiento objetivo: $100K–200K USD (Pre-seed) · Proptech global: $16,700M en 2025 (+68%)
+    <p class="s1-sub reveal d3">
+      Miles de inmuebles en arriendo nunca aparecen en los portales.<br>
+      Solo tienen un letrero y un número. Nosotros lo cambiamos.
     </p>
   </div>
+
+  <div class="s1-right">
+    <div class="s1-card reveal-right d2">
+      <div class="s1-card-n">01</div>
+      <div class="s1-card-h">El mercado invisible ya tiene app</div>
+      <div class="s1-card-b">6 de cada 10 contratos de arriendo en Colombia son verbales. Sin publicación digital. Solo letrero físico.</div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p>© 2026 CazaRaíz — Tu radar inmobiliario · <a href="https://github.com/pablovesga/cazaraiz">GitHub</a></p>
-</footer>
+
+<!-- ======================================================
+     SLIDE 2 — EL PROBLEMA
+     ====================================================== -->
+<section class="slide s2" aria-label="El problema">
+  <div class="slide-num">02</div>
+
+  <div class="lbl reveal d1">El problema</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    Los portales muestran<br><span style="color:var(--orange)">una fracción</span> del mercado real
+  </h2>
+
+  <div class="s2-grid">
+    <div class="s2-card reveal d3">
+      <div class="s2-ico">🏷️</div>
+      <div class="s2-stat">57%</div>
+      <div class="s2-th">Contratos verbales</div>
+      <div class="s2-td">La mayoría de los arriendos en Colombia se cierran sin un contrato escrito registrado.</div>
+    </div>
+    <div class="s2-card reveal d4">
+      <div class="s2-ico">📭</div>
+      <div class="s2-stat">+6</div>
+      <div class="s2-th">Casas invisibles por barrio</div>
+      <div class="s2-td">Propiedades con letrero que no existen en Finca Raíz, Metrocuadrado ni ningún portal digital.</div>
+    </div>
+    <div class="s2-card reveal d5">
+      <div class="s2-ico">⚠️</div>
+      <div class="s2-stat">35%</div>
+      <div class="s2-th">Fraude en avisos</div>
+      <div class="s2-td">De los anuncios en Facebook Marketplace son estafas. Sin verificación, sin trazabilidad.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 3 — EL MERCADO
+     ====================================================== -->
+<section class="slide s3" aria-label="La oportunidad">
+  <div class="slide-num">03</div>
+
+  <div class="lbl reveal d1">La oportunidad</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    El arriendo supera<br>a la vivienda propia
+  </h2>
+
+  <div class="s3-quote reveal d3">
+    <div class="s3-q">"Había 6 casas en venta en ese barrio. Fui a Finca Raíz, a Metrocuadrado, a todos. La misma casa en los tres portales. Las otras 6 — solo letrero."</div>
+    <div class="s3-qs">— Nelson, fundador · Mar 2025</div>
+  </div>
+
+  <div class="s3-stats">
+    <div class="s3-stat reveal d4">
+      <div class="s3-sn">7.3M</div>
+      <div class="s3-sl">hogares en arriendo en Colombia</div>
+    </div>
+    <div class="s3-stat reveal d5">
+      <div class="s3-sn">$60B</div>
+      <div class="s3-sl">COP al año mueve el mercado de arriendos</div>
+    </div>
+    <div class="s3-stat reveal d6">
+      <div class="s3-sn">71%</div>
+      <div class="s3-sl">de las búsquedas en Finca Raíz son para arriendo</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 4 — CÓMO FUNCIONA: ESCANEO
+     ====================================================== -->
+<section class="slide s4" aria-label="Flujo escaneo de letrero">
+  <div class="slide-num">04</div>
+
+  <div class="s4-left">
+    <div class="lbl reveal d1">Cómo funciona · Flujo 1</div>
+
+    <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+      Escaneás el letrero.<br><span style="color:var(--orange)">Nosotros hacemos lo demás.</span>
+    </h2>
+
+    <div class="s4-steps">
+      <div class="s4-step reveal d3">
+        <div class="s4-sn">01</div>
+        <div>
+          <div class="s4-sh">Fotografiá el letrero</div>
+          <div class="s4-sb">Cualquier letrero de "Se arrienda" o "Se vende" con número visible.</div>
+        </div>
+      </div>
+      <div class="s4-step reveal d4">
+        <div class="s4-sn">02</div>
+        <div>
+          <div class="s4-sh">La app extrae el número</div>
+          <div class="s4-sb">OCR con IA detecta el teléfono automáticamente. Sin escribir nada a mano.</div>
+        </div>
+      </div>
+      <div class="s4-step reveal d5">
+        <div class="s4-sn">03</div>
+        <div>
+          <div class="s4-sh">WhatsApp listo en 1 toque</div>
+          <div class="s4-sb">Genera el mensaje con tu info y el inmueble. Tú solo das Send. El 97% de Colombia tiene WhatsApp.</div>
+        </div>
+      </div>
+      <div class="s4-step reveal d6">
+        <div class="s4-sn">04</div>
+        <div>
+          <div class="s4-sh">Información queda guardada</div>
+          <div class="s4-sb">Si el inmueble ya está en nuestra base, ves los datos al instante sin contactar al propietario.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s4-right">
+    <div class="phone reveal-right d3">
+      <div class="phone-screen">
+        <div class="phone-ico">📸</div>
+        <div class="phone-lbl">Número detectado<br><span>310 *** **34</span></div>
+      </div>
+      <div class="phone-btn">Abrir en WhatsApp →</div>
+    </div>
+    <div class="pill reveal d5" style="margin-top:.75rem;">Gratis · Sin API de pago</div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 5 — CÓMO FUNCIONA: QR
+     ====================================================== -->
+<section class="slide s5" aria-label="Flujo QR dinámico">
+  <div class="slide-num">05</div>
+
+  <div class="lbl reveal d1">Cómo funciona · Flujo 2</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    El propietario publica un QR.<br><span style="color:var(--orange)">Vos escaneas y ves todo.</span>
+  </h2>
+
+  <div class="s5-split">
+    <div class="s5-panel reveal d3">
+      <div class="s5-pico">🏠</div>
+      <div class="s5-ph">El propietario crea su ficha</div>
+      <div class="s5-pb">Sube fotos, precio, habitaciones y datos de contacto desde la app. En minutos tiene su ficha lista con código QR para imprimir.</div>
+      <div class="s5-badge">✓ Datos actualizados en vivo</div>
+    </div>
+    <div class="s5-panel hl reveal d4">
+      <div class="s5-pico">📱</div>
+      <div class="s5-ph">Vos escaneás el QR del letrero</div>
+      <div class="s5-pb">Apuntás la cámara al código en el letrero físico. Ves fotos, precio, metraje, historial de zona y contacto — sin llamar a nadie.</div>
+      <div class="s5-badge">✓ Sin descargar nada extra</div>
+    </div>
+  </div>
+
+  <p class="reveal d5" style="font-size:var(--small);color:var(--muted);text-align:center;">
+    Inspirado en <em>Scan A Sign</em> (Londres) · Conversión de hasta 13.6% de escaneos a contacto efectivo.
+  </p>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 6 — LO QUE OBTIENES
+     ====================================================== -->
+<section class="slide s6" aria-label="Funcionalidades para el arrendatario">
+  <div class="slide-num">06</div>
+
+  <div class="lbl reveal d1">Para vos · Arrendatario</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    Todo lo que necesitás<br><span style="color:var(--orange)">para decidir con confianza</span>
+  </h2>
+
+  <div class="s6-grid">
+    <div class="s6-f reveal d3">
+      <div class="s6-fco">🗺️</div>
+      <div class="s6-fh">Mapa de letreros</div>
+      <div class="s6-fb">Todos los inmuebles escaneados en tu zona. Filtrá por precio, tipo y frescura del dato.</div>
+    </div>
+    <div class="s6-f reveal d4">
+      <div class="s6-fco">🔔</div>
+      <div class="s6-fh">Alertas inteligentes</div>
+      <div class="s6-fb">Decile a la app qué buscás. Te avisa cuando aparezca algo que encaje en tu zona y precio.</div>
+    </div>
+    <div class="s6-f reveal d5">
+      <div class="s6-fco">💬</div>
+      <div class="s6-fh">Búsqueda conversacional</div>
+      <div class="s6-fb">No más filtros interminables. Hablale a la app como a un amigo y ella busca por vos.</div>
+    </div>
+    <div class="s6-f reveal d3" style="transition-delay:.5s">
+      <div class="s6-fco">📊</div>
+      <div class="s6-fh">Precio de mercado real</div>
+      <div class="s6-fb">Rango de precios basado en datos reales de la zona — no en estimaciones genéricas.</div>
+    </div>
+    <div class="s6-f reveal d4" style="transition-delay:.6s">
+      <div class="s6-fco">✅</div>
+      <div class="s6-fh">Disponibilidad confirmada</div>
+      <div class="s6-fb">Cada inmueble muestra cuándo fue confirmado. Sin llamar a números que ya arriendaron.</div>
+    </div>
+    <div class="s6-f reveal d5" style="transition-delay:.7s">
+      <div class="s6-fco">🛡️</div>
+      <div class="s6-fh">Sin fraudes</div>
+      <div class="s6-fb">Propietarios verificados y contacto intermediado. No más estafas de Facebook con depósitos perdidos.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 7 — POR QUÉ CAZARAÍZ
+     ====================================================== -->
+<section class="slide s7" aria-label="Diferenciadores vs portales">
+  <div class="slide-num">07</div>
+
+  <div class="lbl reveal d1">Diferenciadores</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    Lo que ningún portal<br><span style="color:var(--orange)">hace hoy</span>
+  </h2>
+
+  <div class="reveal d3">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>Plataforma</th>
+          <th>Letreros físicos</th>
+          <th>QR dinámico</th>
+          <th>Disponibilidad real</th>
+          <th>WhatsApp directo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cmp-row hl">
+          <td>CazaRaíz</td>
+          <td><span class="ck">✓</span></td>
+          <td><span class="ck">✓</span></td>
+          <td><span class="ck">✓</span></td>
+          <td><span class="ck">✓</span></td>
+        </tr>
+        <tr class="cmp-row">
+          <td>Finca Raíz</td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+        </tr>
+        <tr class="cmp-row">
+          <td>Metrocuadrado</td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+        </tr>
+        <tr class="cmp-row">
+          <td>Habi</td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="reveal d4" style="font-size:var(--small);color:var(--muted);">
+    Nuestra ventaja defensible: la base de datos de propiedades informales crece con cada foto — imposible de replicar de la noche a la mañana.
+  </p>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 8 — MODELO WAZE
+     ====================================================== -->
+<section class="slide s8" aria-label="El modelo Waze">
+  <div class="slide-num">08</div>
+
+  <div class="s8-left">
+    <div class="lbl reveal d1">Cómo crece la plataforma</div>
+    <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+      Vos sos el sensor.<br><span style="color:var(--orange)">Como en Waze.</span>
+    </h2>
+    <p class="reveal d3" style="font-size:var(--body);color:#999;line-height:1.7;max-width:400px;">
+      Cuando abrís Waze para ver el tráfico, sos vos quien alimenta los datos de todos. CazaRaíz funciona igual: cada foto mejora los resultados para todos los que buscan.
+    </p>
+    <div class="s8-big">W</div>
+  </div>
+
+  <div class="s8-right">
+    <div class="s8-b reveal d3">
+      <div class="s8-bico">📸</div>
+      <div>
+        <div class="s8-bh">Cada foto cuenta</div>
+        <div class="s8-bd">Fotografiás un letrero → lo subís a la base → otros lo encuentran → el mapa crece.</div>
+      </div>
+    </div>
+    <div class="s8-b reveal d4">
+      <div class="s8-bico">🎮</div>
+      <div>
+        <div class="s8-bh">Puntos y recompensas</div>
+        <div class="s8-bd">Ganás puntos por cada contribución verificada. Canjeables en descuentos en mudanzas y seguros.</div>
+      </div>
+    </div>
+    <div class="s8-b reveal d5">
+      <div class="s8-bico">📈</div>
+      <div>
+        <div class="s8-bh">+22% retención documentada</div>
+        <div class="s8-bd">Las apps con gamificación bien implementada retienen un 22% más de usuarios activos mensualmente.</div>
+      </div>
+    </div>
+    <div class="s8-b reveal d6">
+      <div class="s8-bico">🤝</div>
+      <div>
+        <div class="s8-bh">Efecto de red</div>
+        <div class="s8-bd">Más usuarios → más datos → mejores resultados → más usuarios. El ciclo que hace a la plataforma imposible de replicar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 9 — CTA
+     ====================================================== -->
+<section class="slide s9" aria-label="Únete a la beta">
+  <div class="slide-num">09</div>
+
+  <div class="pill reveal d1">Beta cerrada · Bogotá 2026</div>
+
+  <h2 class="s9-title reveal d2">
+    Dejá de buscar<br>en los portales.<br><span>Encontrá el letrero.</span>
+  </h2>
+
+  <p class="s9-sub reveal d3">
+    Estamos armando la primera beta en Bogotá. Sé de los primeros en encontrar inmuebles que nadie más ve.
+  </p>
+
+  <div class="s9-cta reveal d4">
+    <a href="#" class="btn-p">Quiero ser beta tester</a>
+    <a href="#" class="btn-s">Saber más</a>
+  </div>
+
+  <div class="s9-brand reveal d5">Caza<span>Raíz</span> · Colombia · 2026</div>
+</section>
+
+
+<!-- ======================================================
+     JAVASCRIPT — SlidePresentation Controller
+     ====================================================== -->
+<script>
+/* === SLIDE CONTROLLER ===
+   Teclado · rueda · touch · progress bar · nav dots
+   ================================================= */
+class SlidePresentation {
+  constructor() {
+    this.slides   = Array.from(document.querySelectorAll('.slide'));
+    this.current  = 0;
+    this.bar      = document.getElementById('progressBar');
+    this.navWrap  = document.getElementById('navDots');
+    this.touchY   = 0;
+    this.lastWheel = 0;
+
+    this._buildDots();
+    this._observe();
+    this._keyboard();
+    this._wheel();
+    this._touch();
+    this.goTo(0, false);
+  }
+
+  _buildDots() {
+    this.slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'nav-dot';
+      d.setAttribute('aria-label', `Slide ${i + 1}`);
+      d.addEventListener('click', () => this.goTo(i));
+      this.navWrap.appendChild(d);
+    });
+    this.dots = Array.from(this.navWrap.querySelectorAll('.nav-dot'));
+  }
+
+  _observe() {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          this.current = this.slides.indexOf(e.target);
+          this._ui();
+        }
+      });
+    }, { threshold: 0.55 });
+    this.slides.forEach(s => io.observe(s));
+  }
+
+  _ui() {
+    const pct = this.current / (this.slides.length - 1) * 100;
+    this.bar.style.width = pct + '%';
+    this.dots.forEach((d, i) => d.classList.toggle('active', i === this.current));
+  }
+
+  goTo(i, smooth = true) {
+    i = Math.max(0, Math.min(this.slides.length - 1, i));
+    this.current = i;
+    this.slides[i].scrollIntoView({ behavior: smooth ? 'smooth' : 'instant' });
+    this._ui();
+  }
+
+  _keyboard() {
+    document.addEventListener('keydown', e => {
+      const next = ['ArrowDown','ArrowRight',' ','PageDown'];
+      const prev = ['ArrowUp','ArrowLeft','PageUp'];
+      if (next.includes(e.key)) { e.preventDefault(); this.goTo(this.current + 1); }
+      if (prev.includes(e.key)) { e.preventDefault(); this.goTo(this.current - 1); }
+      if (e.key === 'Home') { e.preventDefault(); this.goTo(0); }
+      if (e.key === 'End')  { e.preventDefault(); this.goTo(this.slides.length - 1); }
+    });
+  }
+
+  _wheel() {
+    document.addEventListener('wheel', e => {
+      e.preventDefault();
+      const now = Date.now();
+      if (now - this.lastWheel < 700) return;
+      this.lastWheel = now;
+      this.goTo(this.current + (e.deltaY > 0 ? 1 : -1));
+    }, { passive: false });
+  }
+
+  _touch() {
+    document.addEventListener('touchstart', e => { this.touchY = e.touches[0].clientY; }, { passive: true });
+    document.addEventListener('touchend',   e => {
+      const dy = this.touchY - e.changedTouches[0].clientY;
+      if (Math.abs(dy) > 50) this.goTo(this.current + (dy > 0 ? 1 : -1));
+    }, { passive: true });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => new SlidePresentation());
+</script>
 
 </body>
 </html>
