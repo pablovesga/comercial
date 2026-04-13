@@ -1,232 +1,1048 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Propuesta — Pablo Vesga</title>
-  <style>
-    :root {
-      --bg: #0a0e1a; --surface: #111827; --card: #1a2235;
-      --accent: #3b82f6; --accent2: #8b5cf6; --green: #10b981;
-      --text: #f1f5f9; --muted: #94a3b8; --border: #1e2d45;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; }
-    a { color:var(--accent); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IQI S.A.S — Propuesta Encuesta Socioeconómica 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
 
-    .page { max-width:860px; margin:0 auto; padding:3rem 2rem 5rem; }
-    .back-link { display:inline-flex; align-items:center; gap:.4rem; color:var(--muted); font-size:.85rem; margin-bottom:2.5rem; text-decoration:none; }
+/* =============================================
+   TOKENS
+   ============================================= */
+:root {
+    --navy:    #1B3A7A;
+    --blue:    #2E5BA8;
+    --accent:  #4A7FD4;
+    --light:   #E8EDF5;
+    --white:   #FFFFFF;
+    --g50:     #F8FAFC;
+    --g100:    #F1F5F9;
+    --g200:    #E2E8F0;
+    --g400:    #94A3B8;
+    --g600:    #475569;
+    --g800:    #1E293B;
+    --green:   #16A34A;
 
-    /* HEADER */
-    .prop-header {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:14px; padding:2.5rem;
-      margin-bottom:2rem;
-      background: linear-gradient(135deg, #111827 0%, #1a2235 100%);
-      border-top: 3px solid var(--accent);
-    }
-    .prop-header-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; }
-    .prop-badge {
-      background:rgba(59,130,246,.15); border:1px solid rgba(59,130,246,.3);
-      color:var(--accent); padding:.3rem .9rem; border-radius:999px;
-      font-size:.75rem; letter-spacing:.5px; text-transform:uppercase;
-    }
-    .prop-date { color:var(--muted); font-size:.85rem; }
-    h1 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; margin:1rem 0 .5rem; }
-    .prop-client { color:var(--accent); font-size:1rem; margin-bottom:1.5rem; }
-    .prop-meta-row { display:flex; gap:2rem; flex-wrap:wrap; }
-    .prop-meta-item { display:flex; flex-direction:column; gap:.2rem; }
-    .prop-meta-item .label { font-size:.72rem; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); }
-    .prop-meta-item .value { font-size:.9rem; font-weight:600; }
+    /* FUENTES GRANDES — propósito propuesta legible */
+    --fs-hero:   clamp(2.8rem, 7vw, 6.5rem);
+    --fs-h2:     clamp(1.9rem, 3.5vw, 3.2rem);
+    --fs-h3:     clamp(1.4rem, 2.2vw, 2.0rem);
+    --fs-body:   clamp(1.15rem, 1.8vw, 1.5rem);
+    --fs-small:  clamp(1.0rem,  1.5vw, 1.25rem);
+    --fs-label:  clamp(0.85rem, 1.1vw, 1.05rem);
 
-    /* SECTIONS */
-    .section { margin-bottom:2.5rem; }
-    .section h2 {
-      font-size:1rem; font-weight:700;
-      border-left:3px solid var(--accent); padding-left:.75rem;
-      margin-bottom:1.25rem; color:var(--accent);
-    }
-    .section p, .section li { color:var(--muted); line-height:1.8; font-size:.93rem; margin-bottom:.5rem; }
-    .section ul { padding-left:1.5rem; }
+    --pad:  clamp(2rem, 5vw, 5rem);
+    --gap:  clamp(1rem, 2vw, 2rem);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-    /* DELIVERABLES */
-    .deliverable {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:10px; padding:1.25rem 1.5rem;
-      display:flex; align-items:flex-start; gap:1rem;
-      margin-bottom:.75rem;
-    }
-    .deliverable-icon {
-      width:36px; height:36px; border-radius:8px;
-      background:rgba(59,130,246,.1); display:flex; align-items:center;
-      justify-content:center; font-size:1.1rem; flex-shrink:0;
-    }
-    .deliverable h4 { font-size:.9rem; font-weight:700; margin-bottom:.25rem; }
-    .deliverable p { color:var(--muted); font-size:.83rem; margin:0; }
+    --shadow: 0 2px 12px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.05);
+}
 
-    /* TIMELINE */
-    .phases { display:flex; flex-direction:column; gap:1rem; }
-    .phase {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:10px; padding:1.25rem 1.5rem;
-      display:flex; gap:1.5rem; align-items:flex-start;
-    }
-    .phase-num {
-      width:32px; height:32px; border-radius:50%;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      display:flex; align-items:center; justify-content:center;
-      font-size:.8rem; font-weight:800; flex-shrink:0;
-    }
-    .phase h4 { font-size:.9rem; font-weight:700; margin-bottom:.25rem; }
-    .phase p { color:var(--muted); font-size:.83rem; margin:0; }
-    .phase .duration { color:var(--accent); font-size:.78rem; margin-top:.3rem; }
+/* =============================================
+   RESET + BASE
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* PRICING */
-    .pricing-card {
-      background:var(--card); border:2px solid var(--accent);
-      border-radius:14px; padding:2rem; text-align:center;
-    }
-    .price-label { color:var(--muted); font-size:.85rem; margin-bottom:.5rem; }
-    .price-value { font-size:2.5rem; font-weight:800; color:var(--accent); }
-    .price-sub { color:var(--muted); font-size:.8rem; margin-top:.3rem; }
-    .price-includes { margin-top:1.5rem; text-align:left; }
-    .price-includes li { color:var(--muted); font-size:.85rem; line-height:2; }
-    .price-includes li::before { content:'✓ '; color:var(--green); }
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: var(--navy);
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
 
-    /* CTA */
-    .cta-section {
-      text-align:center; padding:3rem;
-      background:var(--card); border:1px solid var(--border);
-      border-radius:14px;
-    }
-    .cta-section h3 { font-size:1.3rem; margin-bottom:.75rem; }
-    .cta-section p { color:var(--muted); margin-bottom:1.5rem; }
-    .btn {
-      display:inline-flex; align-items:center; gap:.5rem;
-      padding:.75rem 2rem; border-radius:8px;
-      font-size:.95rem; font-weight:600; cursor:pointer;
-      text-decoration:none; background:var(--accent); color:#fff;
-      transition:all .2s;
-    }
-    .btn:hover { background:#2563eb; transform:translateY(-1px); }
+@keyframes fadeUp   { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; }                              to { opacity:1; } }
+@keyframes slideR   { from { opacity:0; transform:translateX(-18px); } to { opacity:1; transform:translateX(0); } }
 
-    @media print {
-      .back-link { display:none; }
-      .cta-section { display:none; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.1ms !important; }
+    html { scroll-behavior: auto; }
+}
+
+/* =============================================
+   SLIDE BASE
+   ============================================= */
+.slide {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header compartido */
+.sh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(0.9rem, 2vh, 1.5rem) var(--pad);
+    border-bottom: 1px solid var(--g200);
+    flex-shrink: 0;
+    background: white;
+}
+.sh-logo { height: clamp(34px, 5.5vh, 56px); width: auto; object-fit: contain; }
+.sh-tag  { font-size: var(--fs-label); color: var(--g400); font-weight: 500; letter-spacing: .06em; }
+
+/* Body compartido */
+.sb {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.2rem, 3vh, 2.8rem) var(--pad);
+    gap: clamp(0.8rem, 1.8vh, 1.8rem);
+    background: white;
+}
+
+/* Footer compartido */
+.sf {
+    padding: clamp(0.6rem, 1.4vh, 1.1rem) var(--pad);
+    border-top: 1px solid var(--g200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: white;
+}
+.sf span { font-size: var(--fs-label); color: var(--g400); }
+
+/* Eyebrow label */
+.eyebrow {
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+/* Título de slide */
+.slide-h2 {
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+}
+/* Párrafo de cuerpo */
+.body-p {
+    font-size: var(--fs-body);
+    color: var(--g600);
+    line-height: 1.35;
+}
+.body-p strong { color: var(--g800); font-weight: 600; }
+.body-p em     { color: var(--accent); font-style: normal; font-weight: 600; }
+
+/* =============================================
+   NAV DOTS
+   ============================================= */
+.nav-dots {
+    position: fixed;
+    right: clamp(14px, 2.2vw, 26px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    z-index: 100;
+}
+.nav-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(27,58,122,.18);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: all .25s ease;
+}
+.nav-dot.active { background: var(--navy); transform: scale(1.45); }
+.nav-dot:hover  { background: var(--accent); }
+
+.key-hint {
+    position: fixed;
+    bottom: clamp(10px, 1.8vh, 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--fs-label);
+    color: rgba(100,116,139,.35);
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* =============================================
+   SLIDE 1 — PORTADA
+   ============================================= */
+#slide-1 {
+    background: var(--navy);
+    overflow: hidden;
+}
+#slide-1::before {
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 52px 52px;
+    pointer-events:none;
+}
+#slide-1::after {
+    content:'';
+    position:absolute;
+    width:65vw; height:65vw;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(74,127,212,.1) 0%, transparent 68%);
+    top:-12vw; right:-12vw;
+    pointer-events:none;
+}
+
+.s1 {
+    position:relative; z-index:1;
+    display:flex; flex-direction:column;
+    height:100%; padding:var(--pad);
+    justify-content:space-between;
+}
+.s1-top {
+    display:flex; align-items:center; justify-content:space-between;
+    opacity:0; animation: fadeIn .6s ease .1s forwards;
+}
+.s1-logo-box {
+    background:rgba(255,255,255,.95); border-radius:10px;
+    padding:clamp(6px,1.2vh,12px) clamp(14px,2.2vw,26px);
+    display:inline-flex; align-items:center;
+}
+.s1-logo { height:clamp(46px,8.5vh,92px); width:auto; object-fit:contain; }
+.s1-badge {
+    font-size:var(--fs-label); color:rgba(255,255,255,.45);
+    letter-spacing:.1em; font-weight:500;
+}
+
+.s1-mid {
+    flex:1; display:flex; flex-direction:column;
+    justify-content:center;
+    gap:clamp(1rem, 2.5vh, 2.2rem);
+    max-width:780px;
+}
+.s1-eyebrow {
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:var(--fs-label); font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase;
+    color:rgba(255,255,255,.55);
+    opacity:0; animation: fadeUp .6s var(--ease) .25s forwards;
+}
+.s1-eyebrow::before {
+    content:''; display:block;
+    width:28px; height:2px;
+    background:var(--accent); flex-shrink:0;
+}
+.s1-title {
+    font-size:var(--fs-hero); font-weight:800;
+    color:var(--white); line-height:1.07;
+    letter-spacing:-.025em;
+    opacity:0; animation: fadeUp .7s var(--ease) .38s forwards;
+}
+.s1-title span { color:rgba(255,255,255,.42); font-weight:300; }
+.s1-sub {
+    font-size:var(--fs-h3); font-weight:400;
+    color:rgba(255,255,255,.62); line-height:1.45;
+    opacity:0; animation: fadeUp .7s var(--ease) .52s forwards;
+}
+.s1-chips {
+    display:flex; flex-wrap:wrap; gap:clamp(6px,1vw,10px);
+    opacity:0; animation: fadeUp .6s var(--ease) .66s forwards;
+}
+.chip {
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:var(--fs-label); font-weight:500;
+    color:rgba(255,255,255,.78);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:999px;
+    padding:clamp(4px,.8vh,8px) clamp(12px,1.8vw,20px);
+}
+.chip-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); flex-shrink:0; }
+
+.s1-foot {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    opacity:0; animation: fadeIn .6s ease .8s forwards;
+}
+.s1-contact { font-size:var(--fs-small); color:rgba(255,255,255,.38); line-height:1.65; }
+.s1-contact strong { color:rgba(255,255,255,.65); }
+.s1-year {
+    font-size:clamp(4rem,8vw,9rem); font-weight:800;
+    color:rgba(255,255,255,.05); letter-spacing:-.05em; line-height:1;
+}
+
+/* =============================================
+   SLIDE 2 — CONTEXTO
+   ============================================= */
+#slide-2 { background:var(--g50); }
+#slide-2 .sb { background:var(--g50); }
+#slide-2 .sh, #slide-2 .sf { background:var(--g50); border-color:var(--g200); }
+
+.two-col {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:var(--gap); flex:1; overflow:hidden;
+}
+.prose-col { display:flex; flex-direction:column; gap:var(--gap); overflow:hidden; }
+
+.stat-row {
+    display:flex; flex-direction:column; gap:clamp(.5rem,1vh,1rem);
+    overflow:hidden;
+}
+.stat-big {
+    background:var(--navy); border-radius:14px;
+    padding:clamp(1rem,2vh,1.8rem) clamp(1.2rem,2.5vw,2.2rem);
+    color:white; flex:1;
+    opacity:0; animation: slideR .6s var(--ease) calc(.1s + var(--d,0s)) forwards;
+}
+.stat-big .num {
+    font-size:clamp(2.4rem,5vw,5rem); font-weight:800;
+    letter-spacing:-.04em; line-height:1; color:white;
+}
+.stat-big .lbl {
+    font-size:var(--fs-small); color:rgba(255,255,255,.65);
+    margin-top:5px; line-height:1.4;
+}
+.stat-big .src {
+    font-size:var(--fs-label); color:rgba(255,255,255,.35);
+    margin-top:3px;
+}
+.stat-big.light { background:var(--light); }
+.stat-big.light .num  { color:var(--navy); }
+.stat-big.light .lbl  { color:var(--g600); }
+.stat-big.light .src  { color:var(--g400); }
+
+.prose-block {
+    background:white; border:1px solid var(--g200);
+    border-radius:14px;
+    padding:clamp(1rem,2vh,1.8rem) clamp(1.2rem,2.5vw,2rem);
+    flex:1; display:flex; flex-direction:column; justify-content:center;
+    opacity:0; animation: fadeUp .6s var(--ease) calc(.1s + var(--d,0s)) forwards;
+}
+.prose-block h3 {
+    font-size:var(--fs-h3); font-weight:700;
+    color:var(--navy); margin-bottom:.55em;
+}
+
+/* =============================================
+   SLIDE 3 — METODOLOGÍA MAXDIFF
+   ============================================= */
+.md-layout {
+    display:grid; grid-template-columns:1.1fr .9fr;
+    gap:var(--gap); flex:1; overflow:hidden;
+}
+.md-left { display:flex; flex-direction:column; gap:clamp(.7rem,1.4vh,1.4rem); overflow:hidden; }
+.md-right { display:flex; flex-direction:column; gap:clamp(.6rem,1.2vh,1.2rem); overflow:hidden; }
+
+.navy-card {
+    background:var(--navy); border-radius:14px;
+    padding:clamp(1rem,2vh,1.8rem) clamp(1.2rem,2.5vw,2rem);
+    color:white;
+    opacity:0; animation: fadeUp .6s var(--ease) .1s forwards;
+}
+.navy-card p { font-size:var(--fs-body); color:rgba(255,255,255,.82); line-height:1.6; }
+.navy-card p strong { color:white; }
+
+.compare-grid {
+    background:white; border:1px solid var(--g200);
+    border-radius:14px; overflow:hidden; flex:1;
+    opacity:0; animation: fadeUp .6s var(--ease) .2s forwards;
+}
+.cg-head {
+    display:grid; grid-template-columns:1.2fr 1fr 1fr;
+    background:var(--navy);
+    padding:clamp(.5rem,1vh,.9rem) clamp(.8rem,1.5vw,1.3rem);
+}
+.cg-head span { font-size:var(--fs-small); font-weight:600; color:rgba(255,255,255,.75); text-align:center; }
+.cg-head span:first-child { text-align:left; }
+.cg-row {
+    display:grid; grid-template-columns:1.2fr 1fr 1fr;
+    padding:clamp(.4rem,.9vh,.8rem) clamp(.8rem,1.5vw,1.3rem);
+    border-top:1px solid var(--g100); align-items:center;
+}
+.cg-row span { font-size:var(--fs-small); color:var(--g600); text-align:center; line-height:1.3; }
+.cg-row span:first-child { text-align:left; color:var(--g800); font-weight:500; }
+.bg { display:inline-block; border-radius:5px; padding:2px 9px; font-size:var(--fs-label); font-weight:700; }
+.bg-g { background:#DCFCE7; color:#15803D; }
+.bg-r { background:#FEF2F2; color:#DC2626; }
+.bg-n { background:var(--g100); color:var(--g400); }
+
+.param-list { display:flex; flex-direction:column; gap:clamp(.5rem,1vh,1rem); overflow:hidden; }
+.param-item {
+    background:white; border:1px solid var(--g200); border-radius:12px;
+    padding:clamp(.6rem,1.2vh,1.1rem) clamp(.9rem,1.8vw,1.5rem);
+    display:flex; align-items:center; gap:clamp(.7rem,1.3vw,1.2rem);
+    opacity:0; animation: slideR .55s var(--ease) calc(.15s + var(--d,0s)) forwards;
+}
+.param-ico {
+    width:clamp(38px,4.8vw,54px); height:clamp(38px,4.8vw,54px);
+    border-radius:10px; background:var(--light);
+    display:flex; align-items:center; justify-content:center;
+    font-size:clamp(1.1rem,2vw,1.6rem); flex-shrink:0;
+}
+.param-val { font-size:var(--fs-h3); font-weight:700; color:var(--navy); line-height:1; }
+.param-dsc { font-size:var(--fs-small); color:var(--g400); margin-top:2px; line-height:1.3; }
+
+/* =============================================
+   SLIDE 4 — FORMULARIO
+   ============================================= */
+.form-layout {
+    display:grid; grid-template-columns:1.15fr .85fr;
+    gap:var(--gap); flex:1; overflow:hidden;
+}
+.form-left { display:flex; flex-direction:column; gap:clamp(.6rem,1.2vh,1.1rem); overflow:hidden; }
+.form-right { display:flex; flex-direction:column; gap:clamp(.6rem,1.2vh,1.1rem); overflow:hidden; }
+
+.question-frame {
+    background:var(--navy); border-radius:14px;
+    padding:clamp(.9rem,1.8vh,1.6rem) clamp(1.1rem,2.2vw,1.9rem);
+    color:white; flex-shrink:0;
+    opacity:0; animation: fadeUp .5s var(--ease) .1s forwards;
+}
+.question-frame p { font-size:var(--fs-body); color:rgba(255,255,255,.82); line-height:1.6; }
+.question-frame p strong { color:white; }
+
+.items-wrap {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:clamp(4px,.8vh,7px); flex:1; overflow:hidden;
+}
+.it {
+    display:flex; align-items:center; gap:clamp(7px,1vw,11px);
+    background:var(--g50); border:1px solid var(--g200);
+    border-radius:9px;
+    padding:clamp(5px,1vh,9px) clamp(8px,1.3vw,13px);
+    opacity:0; animation: fadeUp .45s var(--ease) calc(.12s + var(--d,0s)) forwards;
+}
+.it-n {
+    width:clamp(20px,2.2vw,26px); height:clamp(20px,2.2vw,26px);
+    border-radius:50%; background:var(--navy); color:white;
+    font-size:calc(var(--fs-label) * .88); font-weight:700;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.it-t { font-size:var(--fs-small); color:var(--g600); line-height:1.3; }
+
+.seg-stack { display:flex; flex-direction:column; gap:clamp(.6rem,1.2vh,1.1rem); overflow:hidden; }
+.seg-box {
+    border-radius:12px;
+    padding:clamp(.7rem,1.4vh,1.3rem) clamp(.9rem,1.8vw,1.5rem);
+    flex:1;
+    opacity:0; animation: fadeUp .55s var(--ease) calc(.2s + var(--d,0s)) forwards;
+}
+.seg-box.civil  { background:#EFF6FF; border:1px solid #BFDBFE; }
+.seg-box.region { background:#F0FDF4; border:1px solid #BBF7D0; }
+.seg-box.strato { background:#FFF7ED; border:1px solid #FED7AA; }
+.seg-title {
+    font-size:var(--fs-small); font-weight:700;
+    text-transform:uppercase; letter-spacing:.09em; margin-bottom:.45em;
+}
+.seg-box.civil  .seg-title { color:#1D4ED8; }
+.seg-box.region .seg-title { color:#15803D; }
+.seg-box.strato .seg-title { color:#C2410C; }
+.seg-box p { font-size:var(--fs-small); color:var(--g600); line-height:1.55; }
+.seg-box p strong { color:var(--g800); }
+
+/* =============================================
+   SLIDE 5 — CANAL WHATSAPP
+   ============================================= */
+.wa-layout {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:var(--gap); flex:1; overflow:hidden;
+}
+.wa-left { display:flex; flex-direction:column; gap:clamp(.5rem,1vh,1rem); overflow:hidden; }
+.wa-right { display:flex; flex-direction:column; gap:clamp(.5rem,1vh,.9rem); overflow:hidden; }
+
+.adv-card {
+    background:white; border:1px solid var(--g200); border-radius:11px;
+    padding:clamp(.6rem,1.2vh,1.1rem) clamp(.9rem,1.8vw,1.4rem);
+    display:flex; gap:clamp(.7rem,1.3vw,1.2rem); align-items:flex-start;
+    opacity:0; animation: fadeUp .5s var(--ease) calc(.08s + var(--d,0s)) forwards;
+}
+.adv-ico {
+    width:clamp(34px,4vw,46px); height:clamp(34px,4vw,46px);
+    border-radius:9px; background:var(--light);
+    display:flex; align-items:center; justify-content:center;
+    font-size:clamp(1rem,1.7vw,1.4rem); flex-shrink:0;
+}
+.adv-body { flex:1; }
+.adv-title { font-size:var(--fs-small); font-weight:600; color:var(--navy); margin-bottom:3px; }
+.adv-desc  { font-size:calc(var(--fs-small) * .9); color:var(--g400); line-height:1.4; }
+.adv-met   { font-size:var(--fs-small); font-weight:700; color:var(--accent); white-space:nowrap; align-self:center; }
+
+.esc-title-row {
+    font-size:var(--fs-small); font-weight:700;
+    text-transform:uppercase; letter-spacing:.1em; color:var(--navy);
+    opacity:0; animation: fadeIn .5s ease .1s forwards; flex-shrink:0;
+}
+.esc-card {
+    background:white; border:1px solid var(--g200); border-radius:11px;
+    padding:clamp(.55rem,1.1vh,1rem) clamp(.9rem,1.8vw,1.4rem);
+    display:flex; align-items:center; gap:clamp(.6rem,1.2vw,1.1rem);
+    opacity:0; animation: slideR .5s var(--ease) calc(.15s + var(--d,0s)) forwards;
+}
+.esc-num {
+    width:clamp(28px,3.2vw,38px); height:clamp(28px,3.2vw,38px);
+    border-radius:50%; background:var(--navy); color:white;
+    font-weight:700; font-size:var(--fs-small);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.esc-body { flex:1; }
+.esc-name { font-size:var(--fs-small); font-weight:600; color:var(--g800); }
+.esc-info { font-size:calc(var(--fs-small) * .88); color:var(--g400); margin-top:2px; }
+.esc-day  { font-size:var(--fs-small); font-weight:700; color:var(--accent); white-space:nowrap; }
+.esc-card.result {
+    background:var(--navy); border-color:var(--navy);
+}
+.esc-card.result .esc-name { color:white; }
+.esc-card.result .esc-info { color:rgba(255,255,255,.55); }
+.esc-card.result .esc-day  { color:#4ADE80; }
+
+/* =============================================
+   SLIDE 6 — PLAN DE TRABAJO
+   ============================================= */
+.plan-row {
+    display:grid; grid-template-columns:repeat(5,1fr);
+    gap:clamp(.5rem,.9vw,.9rem); flex:1; overflow:hidden;
+}
+.ph {
+    border-radius:13px; padding:clamp(.8rem,1.5vh,1.4rem) clamp(.8rem,1.5vw,1.3rem);
+    display:flex; flex-direction:column; gap:clamp(.4rem,.8vh,.8rem);
+    border:1px solid var(--g200); overflow:hidden;
+    opacity:0; animation: fadeUp .6s var(--ease) calc(.08s + var(--d,0s)) forwards;
+}
+.ph:nth-child(1) { background:#EFF6FF; border-color:#BFDBFE; }
+.ph:nth-child(2) { background:#F0FDF4; border-color:#BBF7D0; }
+.ph:nth-child(3) { background:#FEF3C7; border-color:#FDE68A; }
+.ph:nth-child(4) { background:#FFF1F2; border-color:#FECDD3; }
+.ph:nth-child(5) { background:#FAF5FF; border-color:#E9D5FF; }
+
+.ph-n {
+    font-size:clamp(2rem,3.5vw,3.2rem); font-weight:800;
+    line-height:1; opacity:.14;
+}
+.ph:nth-child(1) .ph-n { color:#1D4ED8; }
+.ph:nth-child(2) .ph-n { color:#15803D; }
+.ph:nth-child(3) .ph-n { color:#92400E; }
+.ph:nth-child(4) .ph-n { color:#9F1239; }
+.ph:nth-child(5) .ph-n { color:#6B21A8; }
+
+.ph-name {
+    font-size:var(--fs-small); font-weight:700;
+    text-transform:uppercase; letter-spacing:.08em;
+}
+.ph:nth-child(1) .ph-name { color:#1D4ED8; }
+.ph:nth-child(2) .ph-name { color:#15803D; }
+.ph:nth-child(3) .ph-name { color:#92400E; }
+.ph:nth-child(4) .ph-name { color:#9F1239; }
+.ph:nth-child(5) .ph-name { color:#6B21A8; }
+
+.ph-dur { font-size:calc(var(--fs-small) * .88); color:var(--g400); font-weight:500; }
+.ph-body { font-size:var(--fs-small); color:var(--g600); line-height:1.6; flex:1; }
+
+.plan-note {
+    background:var(--g50); border:1px solid var(--g200); border-radius:9px;
+    padding:clamp(.5rem,1vh,.9rem) clamp(.9rem,1.8vw,1.4rem);
+    font-size:var(--fs-small); color:var(--g400); flex-shrink:0;
+    opacity:0; animation: fadeIn .5s ease .6s forwards;
+}
+.plan-note strong { color:var(--g600); }
+
+/* =============================================
+   SLIDE 7 — ENTREGABLES
+   ============================================= */
+.deliv-layout {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:var(--gap); flex:1; overflow:hidden;
+}
+.deliv-col { display:flex; flex-direction:column; gap:clamp(.6rem,1.2vh,1.1rem); overflow:hidden; }
+
+.deliv-card {
+    background:white; border:1px solid var(--g200); border-radius:12px;
+    padding:clamp(.8rem,1.5vh,1.4rem) clamp(1rem,1.9vw,1.7rem);
+    display:flex; gap:clamp(.8rem,1.4vw,1.3rem); align-items:flex-start;
+    opacity:0; animation: fadeUp .55s var(--ease) calc(.08s + var(--d,0s)) forwards;
+}
+.deliv-ico {
+    width:clamp(36px,4.2vw,50px); height:clamp(36px,4.2vw,50px);
+    border-radius:10px; background:var(--light);
+    display:flex; align-items:center; justify-content:center;
+    font-size:clamp(1rem,1.7vw,1.35rem); flex-shrink:0;
+}
+.deliv-title { font-size:var(--fs-small); font-weight:600; color:var(--navy); margin-bottom:4px; line-height:1.2; }
+.deliv-desc  { font-size:calc(var(--fs-small) * .9); color:var(--g400); line-height:1.45; }
+
+.compliance-card {
+    background:var(--navy); border-radius:12px;
+    padding:clamp(.8rem,1.5vh,1.4rem) clamp(1rem,1.9vw,1.7rem);
+    color:white; flex:1;
+    opacity:0; animation: fadeUp .6s var(--ease) .55s forwards;
+}
+.compliance-card h3 {
+    font-size:var(--fs-small); font-weight:700;
+    text-transform:uppercase; letter-spacing:.1em;
+    color:rgba(255,255,255,.5); margin-bottom:.8em;
+}
+.compliance-card p {
+    font-size:var(--fs-body); color:rgba(255,255,255,.78); line-height:1.65;
+}
+.compliance-card p strong { color:white; }
+
+/* =============================================
+   SLIDE 8 — INVERSIÓN
+   ============================================= */
+.inv-layout {
+    display:grid; grid-template-columns:1.2fr .8fr;
+    gap:var(--gap); flex:1; overflow:hidden;
+}
+.inv-left  { display:flex; flex-direction:column; gap:clamp(.7rem,1.4vh,1.3rem); overflow:hidden; }
+.inv-right { display:flex; flex-direction:column; gap:clamp(.6rem,1.2vh,1.2rem); overflow:hidden; }
+
+.price-card {
+    background:var(--navy); border-radius:16px;
+    padding:clamp(1.2rem,2.6vh,2.4rem) clamp(1.5rem,3vw,2.8rem);
+    color:white;
+    opacity:0; animation: fadeUp .7s var(--ease) .1s forwards;
+}
+.pc-label {
+    font-size:var(--fs-label); font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase;
+    color:rgba(255,255,255,.45); margin-bottom:.4em;
+    display:flex; justify-content:space-between; align-items:center;
+}
+.pc-validity {
+    font-size:var(--fs-label); font-weight:700;
+    color:#FCD34D; letter-spacing:.06em;
+}
+.pc-original { font-size:var(--fs-body); color:rgba(255,255,255,.3); text-decoration:line-through; margin-bottom:3px; }
+.pc-main {
+    font-size:clamp(2.6rem,6vw,5.8rem); font-weight:800;
+    color:white; line-height:1; letter-spacing:-.04em;
+}
+.pc-sub { font-size:var(--fs-small); color:rgba(255,255,255,.45); margin-top:5px; }
+.pc-disc {
+    display:inline-flex; align-items:center; gap:7px;
+    background:rgba(74,222,128,.18); border:1px solid rgba(74,222,128,.3);
+    border-radius:999px; padding:4px 16px;
+    font-size:var(--fs-small); font-weight:600; color:#4ADE80;
+    margin-top:clamp(.6rem,1.2vh,1.1rem);
+}
+
+.inc-card {
+    background:var(--g50); border:1px solid var(--g200); border-radius:13px;
+    padding:clamp(.9rem,1.8vh,1.6rem) clamp(1.1rem,2.2vw,1.9rem);
+    flex:1; overflow:hidden;
+    opacity:0; animation: fadeUp .6s var(--ease) .25s forwards;
+}
+.inc-card h3 {
+    font-size:var(--fs-small); font-weight:700;
+    text-transform:uppercase; letter-spacing:.1em;
+    color:var(--navy); margin-bottom:.7em;
+}
+.inc-card p { font-size:var(--fs-body); color:var(--g600); line-height:1.65; }
+.inc-card p strong { color:var(--g800); }
+
+.steps-card {
+    background:white; border:1px solid var(--g200); border-radius:13px;
+    padding:clamp(.9rem,1.8vh,1.6rem) clamp(1.1rem,2.2vw,1.9rem);
+    flex:1;
+    opacity:0; animation: fadeUp .6s var(--ease) .2s forwards;
+}
+.steps-card h3 {
+    font-size:var(--fs-small); font-weight:700;
+    text-transform:uppercase; letter-spacing:.1em;
+    color:var(--navy); margin-bottom:.7em;
+}
+.steps-card p { font-size:var(--fs-body); color:var(--g600); line-height:1.7; }
+.steps-card p strong { color:var(--g800); }
+
+.contact-card {
+    background:var(--navy); border-radius:13px;
+    padding:clamp(.9rem,1.8vh,1.6rem) clamp(1.1rem,2.2vw,1.9rem);
+    color:white; flex:1;
+    display:flex; flex-direction:column; justify-content:center;
+    gap:clamp(.4rem,.8vh,.7rem);
+    opacity:0; animation: fadeUp .6s var(--ease) .65s forwards;
+}
+.cc-name { font-size:var(--fs-body); font-weight:700; color:white; }
+.cc-role { font-size:var(--fs-small); color:rgba(255,255,255,.45); }
+.cc-lines { display:flex; flex-direction:column; gap:3px; margin-top:4px; }
+.cc-line  { font-size:var(--fs-small); color:rgba(255,255,255,.7); }
+.cc-valid {
+    font-size:var(--fs-small); font-weight:600; color:#FCD34D;
+    border-top:1px solid rgba(255,255,255,.1); padding-top:8px; margin-top:4px;
+}
+
+/* =============================================
+   RESPONSIVE HELPERS
+   ============================================= */
+@media (max-height: 640px) {
+    :root { --pad:clamp(1rem,2.5vw,2.5rem); --fs-body:clamp(1rem,1.5vw,1.25rem); --fs-small:clamp(.88rem,1.25vw,1.05rem); }
+    .nav-dots, .key-hint { display:none; }
+}
+
+/* =============================================
+   PRINT / PDF
+   ============================================= */
+@media print {
+    @page { size: A4 landscape; margin: 0; }
+    html, body { height:auto !important; overflow:visible !important; scroll-snap-type:none !important; }
+    .slide { width:100% !important; height:100vh !important; overflow:visible !important; scroll-snap-align:none !important; page-break-after:always !important; break-after:page !important; position:relative !important; }
+    .sb, .sh, .sf, .two-col, .prose-col, .stat-row, .md-layout, .md-left, .md-right,
+    .form-layout, .form-left, .form-right, .wa-layout, .plan-row, .deliv-layout,
+    .inv-layout, .inv-left, .inv-right, .items-wrap, .seg-stack { overflow:visible !important; }
+    .nav-dots, .key-hint { display:none !important; }
+    [style*="animation"], .s1-top, .s1-eyebrow, .s1-title, .s1-sub, .s1-chips, .s1-foot,
+    .prose-block, .stat-big, .navy-card, .compare-grid, .param-item,
+    .question-frame, .it, .seg-box, .adv-card, .esc-card, .esc-title-row,
+    .ph, .plan-note, .deliv-card, .compliance-card,
+    .price-card, .inc-card, .steps-card, .contact-card {
+        opacity:1 !important; animation:none !important; transform:none !important;
     }
-  </style>
+    .slide, .stat-big, .navy-card, .price-card, .contact-card, .compliance-card,
+    .ph, .seg-box, #slide-1 { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+
+</style>
 </head>
 <body>
 
-<div class="page">
-  <a href="../" class="back-link">← Todas las propuestas</a>
+<nav class="nav-dots">
+  <button class="nav-dot active" data-slide="0" title="Portada"></button>
+  <button class="nav-dot" data-slide="1" title="Contexto"></button>
+  <button class="nav-dot" data-slide="2" title="MaxDiff"></button>
+  <button class="nav-dot" data-slide="3" title="Formulario"></button>
+  <button class="nav-dot" data-slide="4" title="WhatsApp"></button>
+  <button class="nav-dot" data-slide="5" title="Plan"></button>
+  <button class="nav-dot" data-slide="6" title="Entregables"></button>
+  <button class="nav-dot" data-slide="7" title="Inversión"></button>
+</nav>
+<p class="key-hint">↑ ↓ para navegar</p>
 
-  <!-- HEADER -->
-  <div class="prop-header">
-    <div class="prop-header-top">
-      <span class="prop-badge">Propuesta Comercial</span>
-      <span class="prop-date">📅 11 de abril de 2026</span>
+<!-- ============================================================ SLIDE 1 -->
+<section class="slide" id="slide-1" aria-label="Portada">
+  <div class="s1">
+    <div class="s1-top">
+      <div class="s1-logo-box"><img class="s1-logo" src="../brand/Logo.jpeg" alt="IQI S.A.S"></div>
+      <span class="s1-badge">PROPUESTA COMERCIAL · 2026</span>
     </div>
-    <h1>Nombre del Proyecto o Servicio</h1>
-    <div class="prop-client">Para: <strong>Nombre del Cliente / Empresa</strong></div>
-    <div class="prop-meta-row">
-      <div class="prop-meta-item">
-        <span class="label">Presentado por</span>
-        <span class="value">Pablo Vesga</span>
+
+    <div class="s1-mid">
+      <div class="s1-eyebrow">Encuesta Socioeconómica y de Bienestar</div>
+      <h1 class="s1-title">Conocimiento<br><span>que transforma</span><br>decisiones.</h1>
+      <p class="s1-sub">Diagnóstico socioeconómico para 6.000 colaboradores<br>mediante WhatsApp Business y metodología MaxDiff</p>
+      <div class="s1-chips">
+        <span class="chip"><span class="chip-dot"></span>6.000 colaboradores</span>
+        <span class="chip"><span class="chip-dot"></span>Módulo MaxDiff</span>
+        <span class="chip"><span class="chip-dot"></span>Ley 1581 — Habeas Data</span>
+        <span class="chip"><span class="chip-dot"></span>Tasa de respuesta estimada 20%</span>
       </div>
-      <div class="prop-meta-item">
-        <span class="label">Validez</span>
-        <span class="value">30 días</span>
+    </div>
+
+    <div class="s1-foot">
+      <div class="s1-contact">
+        <strong>IQI S.A.S.</strong><br>
+        NIT 901.141.193-6 · Bogotá, Colombia<br>
+        iqisas@outlook.com · 314 445 3746
       </div>
-      <div class="prop-meta-item">
-        <span class="label">Modalidad</span>
-        <span class="value">Remoto / Presencial</span>
-      </div>
+      <div class="s1-year">2026</div>
     </div>
   </div>
+</section>
 
-  <!-- RESUMEN -->
-  <div class="section">
-    <h2>Resumen Ejecutivo</h2>
-    <p>
-      Describe aquí el problema que resuelve la propuesta y el valor que aportas.
-      Sé concreto: ¿qué tendrá el cliente al final? ¿Qué cambia en su operación?
-    </p>
-  </div>
-
-  <!-- ENTREGABLES -->
-  <div class="section">
-    <h2>¿Qué incluye?</h2>
-    <div class="deliverable">
-      <div class="deliverable-icon">🖥️</div>
-      <div><h4>Entregable 1</h4><p>Descripción del primer entregable.</p></div>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">⚙️</div>
-      <div><h4>Entregable 2</h4><p>Descripción del segundo entregable.</p></div>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">📊</div>
-      <div><h4>Entregable 3</h4><p>Descripción del tercer entregable.</p></div>
-    </div>
-  </div>
-
-  <!-- FASES -->
-  <div class="section">
-    <h2>Plan de Trabajo</h2>
-    <div class="phases">
-      <div class="phase">
-        <div class="phase-num">1</div>
-        <div>
-          <h4>Fase 1 — Levantamiento y diseño</h4>
-          <p>Reuniones de definición, análisis de requisitos y diseño de arquitectura.</p>
-          <div class="duration">⏱ 1 semana</div>
+<!-- ============================================================ SLIDE 2 -->
+<section class="slide" id="slide-2" aria-label="Contexto">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">02 / 08 · CONTEXTO</span></header>
+  <div class="sb">
+    <div class="eyebrow">¿Por qué este estudio?</div>
+    <h2 class="slide-h2">El bienestar del colaborador<br>es medible — y gestionable.</h2>
+    <div class="two-col">
+      <div class="prose-col">
+        <div class="prose-block" style="--d:0s">
+          <h3>Brecha de información</h3>
+          <p class="body-p">Las organizaciones toman decisiones de bienestar basándose en supuestos. Sin datos segmentados por perfil demográfico, las inversiones en beneficios no llegan a quienes más las necesitan. <strong>Los solteros priorizan salud mental y desarrollo personal;</strong> quienes tienen familia priorizan educación de hijos y estabilidad financiera. Las personas en la Costa Caribe valoran el empleo formal y la salud, mientras que en Bogotá el estrés y la movilidad son los dolores principales.</p>
+        </div>
+        <div class="prose-block" style="--d:0.12s">
+          <h3>Marco normativo</h3>
+          <p class="body-p"><strong>Ley 1581/2012 (Habeas Data)</strong> — Esta propuesta incluye consentimiento expreso, aviso de privacidad y anonimización completa de reportes para cumplimiento pleno.</p>
         </div>
       </div>
-      <div class="phase">
-        <div class="phase-num">2</div>
-        <div>
-          <h4>Fase 2 — Desarrollo</h4>
-          <p>Implementación de funcionalidades principales con entregas parciales para revisión.</p>
-          <div class="duration">⏱ 3 semanas</div>
+      <div class="stat-row">
+        <div class="stat-big" style="--d:0s">
+          <div class="num">5.7</div>
+          <div class="lbl">Índice de bienestar Colombia 2024. El componente más bajo es el financiero, por debajo de salud (7.9) y tiempo libre (7.6).</div>
+          <div class="src">World Happiness Report 2024</div>
         </div>
-      </div>
-      <div class="phase">
-        <div class="phase-num">3</div>
-        <div>
-          <h4>Fase 3 — Pruebas y despliegue</h4>
-          <p>QA, correcciones y puesta en producción con capacitación al equipo.</p>
-          <div class="duration">⏱ 1 semana</div>
+        <div class="stat-big light" style="--d:0.1s">
+          <div class="num">66%</div>
+          <div class="lbl">De colombianos enfrentó al menos un problema de salud mental en 2023 — dato crítico para diseñar beneficios de bienestar.</div>
+          <div class="src">MinSalud — Encuesta Nacional 2023</div>
         </div>
       </div>
     </div>
   </div>
+  <footer class="sf"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>02 / 08</span></footer>
+</section>
 
-  <!-- INVERSIÓN -->
-  <div class="section">
-    <h2>Inversión</h2>
-    <div class="pricing-card">
-      <div class="price-label">Inversión total del proyecto</div>
-      <div class="price-value">$0.000.000</div>
-      <div class="price-sub">COP · IVA no incluido</div>
-      <ul class="price-includes">
-        <li>Todos los entregables descritos</li>
-        <li>Soporte durante el desarrollo</li>
-        <li>1 mes de soporte post-entrega</li>
-        <li>Código fuente y documentación</li>
-      </ul>
+<!-- ============================================================ SLIDE 3 -->
+<section class="slide" id="slide-3" aria-label="Metodología MaxDiff">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">03 / 08 · METODOLOGÍA</span></header>
+  <div class="sb" style="background:var(--g50)">
+    <div class="eyebrow">Diseño del instrumento</div>
+    <h2 class="slide-h2">MaxDiff: preferencias reales,<br>no respuestas de cortesía.</h2>
+    <div class="md-layout">
+      <div class="md-left">
+        <div class="navy-card">
+          <p>El <strong>Maximum Difference Scaling</strong> obliga al colaborador a elegir, dentro de cada pantalla con 4 opciones, cuál mejoraría <strong>más</strong> y cuál <strong>menos</strong> su vida personal. Al forzar trade-offs reales, se elimina el sesgo de aquiescencia —el fenómeno en que en escalas Likert todo queda marcado como "muy importante"— especialmente pronunciado en la cultura laboral latinoamericana.</p>
+        </div>
+        <div class="compare-grid">
+          <div class="cg-head"><span>Criterio</span><span>Likert</span><span>MaxDiff</span></div>
+          <div class="cg-row"><span>Discriminación entre ítems</span><span><span class="bg bg-r">Baja</span></span><span><span class="bg bg-g">Alta</span></span></div>
+          <div class="cg-row"><span>Sesgo cultural LATAM</span><span><span class="bg bg-r">Alto</span></span><span><span class="bg bg-g">Eliminado</span></span></div>
+          <div class="cg-row"><span>Segmentación por perfil</span><span><span class="bg bg-r">Limitada</span></span><span><span class="bg bg-g">Excelente</span></span></div>
+          <div class="cg-row"><span>Validez científica</span><span><span class="bg bg-n">Estándar</span></span><span><span class="bg bg-g">526+ estudios</span></span></div>
+        </div>
+      </div>
+      <div class="md-right">
+        <div class="param-list">
+          <div class="param-item" style="--d:0s"><div class="param-ico">📋</div><div><div class="param-val">18</div><div class="param-dsc">ítems sobre medios para mejorar la vida personal</div></div></div>
+          <div class="param-item" style="--d:0.1s"><div class="param-ico">🔢</div><div><div class="param-val">4</div><div class="param-dsc">opciones por pantalla — estándar Sawtooth</div></div></div>
+          <div class="param-item" style="--d:0.2s"><div class="param-ico">🔄</div><div><div class="param-val">12 – 15</div><div class="param-dsc">sets optimizados para WhatsApp móvil</div></div></div>
+          <div class="param-item" style="--d:0.3s"><div class="param-ico">⏱️</div><div><div class="param-val">8 – 10 min</div><div class="param-dsc">duración estimada del módulo MaxDiff</div></div></div>
+        </div>
+      </div>
     </div>
   </div>
+  <footer class="sf" style="background:var(--g50)"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>03 / 08</span></footer>
+</section>
 
-  <!-- CTA -->
-  <div class="cta-section">
-    <h3>¿Listo para comenzar?</h3>
-    <p>Escríbeme y comenzamos con la fase de levantamiento esta semana.</p>
-    <a href="mailto:pablo@pablovesga.com?subject=Aprobación propuesta" class="btn">
-      ✉️ Contactar a Pablo
-    </a>
+<!-- ============================================================ SLIDE 4 -->
+<section class="slide" id="slide-4" aria-label="Formulario">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">04 / 08 · FORMULARIO</span></header>
+  <div class="sb">
+    <div class="eyebrow">Contenido del instrumento</div>
+    <h2 class="slide-h2">18 dimensiones de bienestar,<br>segmentadas por perfil.</h2>
+    <div class="form-layout">
+      <div class="form-left">
+        <div class="question-frame">
+          <p>Pregunta marco: <strong>"De las siguientes opciones, ¿cuál mejoraría MÁS su experiencia de vida personal fuera del trabajo?"</strong> — presentada en sets de 4 ítems, seguida de ¿cuál MENOS?</p>
+        </div>
+        <div class="items-wrap">
+          <div class="it" style="--d:0.00s"><span class="it-n">1</span><span class="it-t">Gimnasio o actividad física</span></div>
+          <div class="it" style="--d:0.03s"><span class="it-n">2</span><span class="it-t">Consultas médicas preventivas</span></div>
+          <div class="it" style="--d:0.06s"><span class="it-n">3</span><span class="it-t">Alimentación saludable</span></div>
+          <div class="it" style="--d:0.09s"><span class="it-n">4</span><span class="it-t">Apoyo psicológico o emocional</span></div>
+          <div class="it" style="--d:0.12s"><span class="it-n">5</span><span class="it-t">Mindfulness y manejo del estrés</span></div>
+          <div class="it" style="--d:0.15s"><span class="it-n">6</span><span class="it-t">Días adicionales de descanso</span></div>
+          <div class="it" style="--d:0.18s"><span class="it-n">7</span><span class="it-t">Asesoría financiera personal</span></div>
+          <div class="it" style="--d:0.21s"><span class="it-n">8</span><span class="it-t">Crédito con tasas preferentes</span></div>
+          <div class="it" style="--d:0.24s"><span class="it-n">9</span><span class="it-t">Educación en ahorro e inversión</span></div>
+          <div class="it" style="--d:0.27s"><span class="it-n">10</span><span class="it-t">Auxilio para vivienda</span></div>
+          <div class="it" style="--d:0.30s"><span class="it-n">11</span><span class="it-t">Subsidio educativo para hijos</span></div>
+          <div class="it" style="--d:0.33s"><span class="it-n">12</span><span class="it-t">Recreación familiar</span></div>
+          <div class="it" style="--d:0.36s"><span class="it-n">13</span><span class="it-t">Cuidado de adultos mayores</span></div>
+          <div class="it" style="--d:0.39s"><span class="it-n">14</span><span class="it-t">Becas para estudios propios</span></div>
+          <div class="it" style="--d:0.42s"><span class="it-n">15</span><span class="it-t">Idiomas y habilidades digitales</span></div>
+          <div class="it" style="--d:0.45s"><span class="it-n">16</span><span class="it-t">Plataformas de entretenimiento</span></div>
+          <div class="it" style="--d:0.48s"><span class="it-n">17</span><span class="it-t">Viajes y turismo nacional</span></div>
+          <div class="it" style="--d:0.51s"><span class="it-n">18</span><span class="it-t">Actividades deportivas locales</span></div>
+        </div>
+      </div>
+      <div class="form-right">
+        <div class="seg-stack">
+          <div class="seg-box civil" style="--d:0.1s">
+            <div class="seg-title">Por Estado Civil</div>
+            <p><strong>Solteros</strong> priorizan salud mental, descanso y desarrollo personal. <strong>Con familia</strong> priorizan educación de hijos, vivienda y estabilidad financiera. Hipótesis validada por DANE ECV 2024.</p>
+          </div>
+          <div class="seg-box region" style="--d:0.22s">
+            <div class="seg-title">Por Región</div>
+            <p><strong>Bogotá</strong> (IPM 0.021): salud mental, tiempo libre. <strong>Costa Caribe</strong> (IPM 0.076): empleo, salud. <strong>Pacífico</strong>: vivienda, conectividad. <strong>Eje Cafetero</strong>: educación y familia.</p>
+          </div>
+          <div class="seg-box strato" style="--d:0.34s">
+            <div class="seg-title">Por Estrato</div>
+            <p><strong>Estratos 1-2:</strong> salud, vivienda y educación básica. <strong>Estrato 3:</strong> movilidad social y capacitación. <strong>Estratos 4-5:</strong> equilibrio vida-trabajo y experiencias.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <footer class="sf"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>04 / 08</span></footer>
+</section>
 
-</div>
+<!-- ============================================================ SLIDE 5 -->
+<section class="slide" id="slide-5" aria-label="Canal WhatsApp">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">05 / 08 · CANAL</span></header>
+  <div class="sb" style="background:var(--g50)">
+    <div class="eyebrow">Por qué WhatsApp Business</div>
+    <h2 class="slide-h2">El canal donde ya está<br>su fuerza laboral.</h2>
+    <div class="wa-layout">
+      <div class="wa-left">
+        <div class="adv-card" style="--d:0s"><div class="adv-ico">📬</div><div class="adv-body"><div class="adv-title">Tasa de apertura excepcional</div><div class="adv-desc">Los mensajes se abren en los primeros 3 minutos en el 90% de los casos.</div></div><div class="adv-met">98%</div></div>
+        <div class="adv-card" style="--d:0.08s"><div class="adv-ico">💬</div><div class="adv-body"><div class="adv-title">Experiencia conversacional</div><div class="adv-desc">Flujo tipo chat en bloques de 6-8 preguntas. Sin instalar nada.</div></div><div class="adv-met">Nativo</div></div>
+        <div class="adv-card" style="--d:0.16s"><div class="adv-ico">🔄</div><div class="adv-body"><div class="adv-title">Reanudable en cualquier momento</div><div class="adv-desc">Cada respuesta se guarda individualmente. El colaborador retoma donde lo dejó.</div></div><div class="adv-met">0 pérdida</div></div>
+        <div class="adv-card" style="--d:0.24s"><div class="adv-ico">📊</div><div class="adv-body"><div class="adv-title">Dashboard en tiempo real</div><div class="adv-desc">Avance diario por área, región y estrato. Alertas de segmentos rezagados.</div></div><div class="adv-met">Diario</div></div>
+        <div class="adv-card" style="--d:0.32s"><div class="adv-ico">🔒</div><div class="adv-body"><div class="adv-title">Cumplimiento Ley 1581</div><div class="adv-desc">Opt-in previo, cifrado AES-256 y anonimización de reportes incluidos.</div></div><div class="adv-met">Habeas Data</div></div>
+      </div>
+      <div class="wa-right">
+        <div class="esc-title-row">Protocolo de recordatorios digitales</div>
+        <div class="esc-card" style="--d:0s"><div class="esc-num">1</div><div class="esc-body"><div class="esc-name">Mensaje inicial</div><div class="esc-info">Envío al 100% — con pre-comunicación de RRHH</div></div><div class="esc-day">Día 1</div></div>
+        <div class="esc-card" style="--d:0.1s"><div class="esc-num">2</div><div class="esc-body"><div class="esc-name">Recordatorio automático</div><div class="esc-info">8 horas después del último mensaje, en horario habilitado</div></div><div class="esc-day">Día 1–2</div></div>
+        <div class="esc-card" style="--d:0.2s"><div class="esc-num">3</div><div class="esc-body"><div class="esc-name">Recordatorio +3 días</div><div class="esc-info">Template aprobado a no-respondientes</div></div><div class="esc-day">Día 4</div></div>
+        <div class="esc-card" style="--d:0.3s"><div class="esc-num">4</div><div class="esc-body"><div class="esc-name">Recordatorio de cierre</div><div class="esc-info">Último mensaje — fecha límite visible</div></div><div class="esc-day">Día 8</div></div>
+        <div class="esc-card result" style="--d:0.4s"><div class="esc-num" style="background:rgba(255,255,255,.18)">✓</div><div class="esc-body"><div class="esc-name">Tasa de respuesta estimada</div><div class="esc-info">Protocolo digital completo — 4 contactos</div></div><div class="esc-day">~20%</div></div>
+      </div>
+    </div>
+  </div>
+  <footer class="sf" style="background:var(--g50)"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>05 / 08</span></footer>
+</section>
+
+<!-- ============================================================ SLIDE 6 -->
+<section class="slide" id="slide-6" aria-label="Plan de Trabajo">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">06 / 08 · PLAN DE TRABAJO</span></header>
+  <div class="sb">
+    <div class="eyebrow">Hoja de ruta</div>
+    <h2 class="slide-h2">Cinco fases, un mes de campo,<br>resultados accionables.</h2>
+    <div class="plan-row">
+      <div class="ph" style="--d:0s">
+        <div class="ph-n">01</div>
+        <div class="ph-name">Inicio</div>
+        <div class="ph-dur">1 sesión · Semana 1</div>
+        <p class="ph-body">Reunión de kick-off con RRHH, entrega de base de colaboradores, definición de segmentos y firma del acuerdo de confidencialidad.</p>
+      </div>
+      <div class="ph" style="--d:0.1s">
+        <div class="ph-n">02</div>
+        <div class="ph-name">Diseño</div>
+        <div class="ph-dur">1 semana · Semana 2</div>
+        <p class="ph-body">Diseño y validación del formulario con módulo MaxDiff, aprobación de plantillas WhatsApp y pre-comunicación interna a colaboradores.</p>
+      </div>
+      <div class="ph" style="--d:0.2s">
+        <div class="ph-n">03</div>
+        <div class="ph-name">Campo</div>
+        <div class="ph-dur">2 semanas · Sem. 3-4</div>
+        <p class="ph-body">Lanzamiento gradual en lotes de 500 colaboradores, recordatorio automático a las 8 horas y reporte diario de avance por área y región.</p>
+      </div>
+      <div class="ph" style="--d:0.3s">
+        <div class="ph-n">04</div>
+        <div class="ph-name">Seguimiento</div>
+        <div class="ph-dur">2 semanas · Sem. 5-6</div>
+        <p class="ph-body">Recordatorios adicionales en días +3 y +8, monitoreo del Quality Rating de WhatsApp y alertas sobre segmentos con baja respuesta.</p>
+      </div>
+      <div class="ph" style="--d:0.4s">
+        <div class="ph-n">05</div>
+        <div class="ph-name">Cierre</div>
+        <div class="ph-dur">1 sesión · Semana 7</div>
+        <p class="ph-body">Análisis estadístico, informe ejecutivo con hallazgos MaxDiff por perfil demográfico y presentación de resultados virtual o presencial.</p>
+      </div>
+    </div>
+    <div class="plan-note"><strong>Nota:</strong> El lanzamiento gradual garantiza estabilidad y permite ajustes antes del despliegue masivo. La plataforma soporta hasta 60 respuestas simultáneas por segundo.</div>
+  </div>
+  <footer class="sf"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>06 / 08</span></footer>
+</section>
+
+<!-- ============================================================ SLIDE 7 -->
+<section class="slide" id="slide-7" aria-label="Entregables">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">07 / 08 · ENTREGABLES</span></header>
+  <div class="sb" style="background:var(--g50)">
+    <div class="eyebrow">Lo que recibe la organización</div>
+    <h2 class="slide-h2">Entregables listos<br>para la toma de decisiones.</h2>
+    <div class="deliv-layout">
+      <div class="deliv-col">
+        <div class="deliv-card" style="--d:0s"><div class="deliv-ico">📋</div><div><div class="deliv-title">Formulario validado con módulo MaxDiff</div><div class="deliv-desc">Instrumento diseñado a la medida con 18 ítems y set de práctica para reducir el abandono.</div></div></div>
+        <div class="deliv-card" style="--d:0.1s"><div class="deliv-ico">📊</div><div><div class="deliv-title">Informe ejecutivo segmentado</div><div class="deliv-desc">Rankings de preferencias de bienestar por estado civil, región, estrato y área organizacional.</div></div></div>
+        <div class="deliv-card" style="--d:0.2s"><div class="deliv-ico">📈</div><div><div class="deliv-title">Reportes de avance diarios</div><div class="deliv-desc">Tasa de respuesta acumulada, distribución por área y alertas de segmentos rezagados.</div></div></div>
+        <div class="deliv-card" style="--d:0.3s"><div class="deliv-ico">🎤</div><div><div class="deliv-title">Presentación ejecutiva de resultados</div><div class="deliv-desc">Sesión de 60-90 minutos con dirección de RRHH y stakeholders clave — virtual o presencial.</div></div></div>
+      </div>
+      <div class="deliv-col">
+        <div class="deliv-card" style="--d:0.4s"><div class="deliv-ico">🗄️</div><div><div class="deliv-title">Base de datos consolidada y anonimizada</div><div class="deliv-desc">Exportación en Excel/CSV lista para cruzarse con los sistemas de la organización.</div></div></div>
+        <div class="compliance-card">
+          <h3>Cumplimiento normativo incluido</h3>
+          <p>La propuesta incluye el <strong>aviso de privacidad</strong> y el protocolo de consentimiento expreso exigidos por la <strong>Ley 1581 de 2012</strong>. Todos los reportes entregados al cliente son anonimizados — sin datos individuales identificables. Los datos se cifran con <strong>AES-256</strong> en la base de datos y se eliminan al cierre del proyecto conforme al protocolo de supresión acordado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="sf" style="background:var(--g50)"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>07 / 08</span></footer>
+</section>
+
+<!-- ============================================================ SLIDE 8 -->
+<section class="slide" id="slide-8" aria-label="Inversión">
+  <header class="sh"><img class="sh-logo" src="../brand/Logo.jpeg" alt="IQI"><span class="sh-tag">08 / 08 · INVERSIÓN</span></header>
+  <div class="sb">
+    <div class="eyebrow">Inversión y próximos pasos</div>
+    <h2 class="slide-h2">Diagnóstico para 6.000 colaboradores.<br>Decisiones de largo plazo.</h2>
+    <div class="inv-layout">
+      <div class="inv-left">
+        <div class="price-card">
+          <div class="pc-label">
+            Valor de la propuesta
+            <span class="pc-validity">⏳ Válida 30 días</span>
+          </div>
+          <div class="pc-original">$ 25.000.000 COP</div>
+          <div class="pc-main">$22.500.000</div>
+          <div class="pc-sub">COP + IVA · Pago único</div>
+          <div class="pc-disc"><span>✓</span> Descuento especial del 10%</div>
+        </div>
+        <div class="inc-card">
+          <h3>Incluye</h3>
+          <p>Diseño del formulario socioeconómico con <strong>módulo MaxDiff de 18 ítems</strong>, aplicación a los <strong>6.000 colaboradores</strong> vía WhatsApp Business, gestión de la plataforma durante un mes de campo con <strong>recordatorios automáticos</strong>, reportes de avance diarios, informe ejecutivo segmentado por perfil demográfico, presentación de resultados y base de datos anonimizada con <strong>cumplimiento Ley 1581</strong>.</p>
+        </div>
+      </div>
+      <div class="inv-right">
+        <div class="steps-card">
+          <h3>Próximos pasos</h3>
+          <p>Para iniciar, el cliente confirma la aprobación por escrito o correo. A continuación se firma el acuerdo de confidencialidad, se realiza la reunión de kick-off y en la <strong>primera semana comienza el diseño del formulario</strong> con validación conjunta antes del lanzamiento.</p>
+        </div>
+        <div class="contact-card">
+          <div class="cc-name">IQI S.A.S.</div>
+          <div class="cc-role">Investigación · Consultoría · Información</div>
+          <div class="cc-lines">
+            <span class="cc-line">📧 iqisas@outlook.com</span>
+            <span class="cc-line">📱 314 445 3746</span>
+            <span class="cc-line">📍 Bogotá, Colombia · NIT 901.141.193-6</span>
+          </div>
+          <div class="cc-valid">⏳ Vigencia de la oferta: 30 días calendario a partir del envío.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="sf"><span>IQI S.A.S. · iqisas@outlook.com · 314 445 3746</span><span>08 / 08</span></footer>
+</section>
+
+<script>
+const slides = Array.from(document.querySelectorAll('.slide'));
+const dots   = Array.from(document.querySelectorAll('.nav-dot'));
+let current  = 0;
+
+function goTo(i) {
+    if (i < 0 || i >= slides.length) return;
+    current = i;
+    slides[i].scrollIntoView({ behavior:'smooth' });
+    dots.forEach((d, j) => d.classList.toggle('active', j === i));
+}
+
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            const i = slides.indexOf(e.target);
+            if (i !== -1) { current = i; dots.forEach((d,j) => d.classList.toggle('active', j===i)); }
+        }
+    });
+}, { threshold: .6 });
+
+slides.forEach(s => obs.observe(s));
+dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+document.addEventListener('keydown', e => {
+    if (e.key==='ArrowDown'||e.key==='PageDown'||e.key===' ') { e.preventDefault(); goTo(current+1); }
+    if (e.key==='ArrowUp'||e.key==='PageUp')                  { e.preventDefault(); goTo(current-1); }
+    if (e.key==='Home') { e.preventDefault(); goTo(0); }
+    if (e.key==='End')  { e.preventDefault(); goTo(slides.length-1); }
+});
+</script>
 </body>
 </html>
