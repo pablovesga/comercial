@@ -1,0 +1,40 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# Editores
+.vscode/settings.json
+.idea/
+*.code-workspace
+
+# Node (si se usa build)
+node_modules/
+dist/
+build/
+.cache/
+
+# Variables de entorno y secretos
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+credentials.json
+
+# Archivos temporales
+*.tmp
+*.log
+*.bak
+
+# PDFs de borrador (los finales sí se commitean)
+*BORRADOR*
+*_draft*
+*_temp*
+
+# Archivos grandes de prueba
+*.zip
+*.tar.gz

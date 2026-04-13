@@ -1,0 +1,95 @@
+# ============================================================
+# INSTRUCCIONES:
+# 1. Copia este archivo a .github/workflows/ en tu repositorio
+# 2. Agrega el secret COMERCIAL_TOKEN con un PAT que tenga
+#    acceso de escritura al repo pablovesga/comercial
+# 3. Edita los valores por defecto del slug y cliente abajo
+# ============================================================
+
+name: Enviar Propuesta a Portafolio Comercial
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'ID único de la propuesta (ej: empresa-proyecto-2026, sin espacios ni tildes)'
+        required: true
+        default: 'mi-cliente-2026'
+      titulo:
+        description: 'Título de la propuesta'
+        required: true
+        default: 'Propuesta de Desarrollo'
+      cliente:
+        description: 'Nombre del cliente o empresa'
+        required: true
+      estado:
+        description: 'Estado de la propuesta'
+        required: true
+        type: choice
+        options:
+          - activa
+          - enviada
+          - ganada
+          - cerrada
+        default: 'activa'
+      descripcion:
+        description: 'Descripción breve (aparece en el listado del portafolio)'
+        required: false
+      html_url:
+        description: 'URL de la propuesta en HTML (opcional, se embebe como iframe)'
+        required: false
+      monto:
+        description: 'Valor de la propuesta (opcional, ej: 5.000.000)'
+        required: false
+
+  # También se puede disparar automáticamente en un push específico:
+  # push:
+  #   paths:
+  #     - 'propuesta/**'
+  #   branches: [main]
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    name: Publicar en pablovesga/comercial
+
+    steps:
+      - name: Verificar token
+        run: |
+          if [ -z "${{ secrets.COMERCIAL_TOKEN }}" ]; then
+            echo "❌ Falta el secret COMERCIAL_TOKEN"
+            echo "   Crear en: Settings → Secrets → New repository secret"
+            exit 1
+          fi
+
+      - name: Construir fecha si no se proporcionó
+        id: fecha
+        run: echo "value=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Enviar propuesta al portafolio comercial
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.COMERCIAL_TOKEN }}
+          repository: pablovesga/comercial
+          event-type: nueva-propuesta
+          client-payload: >
+            {
+              "slug": "${{ inputs.slug }}",
+              "titulo": "${{ inputs.titulo }}",
+              "cliente": "${{ inputs.cliente }}",
+              "estado": "${{ inputs.estado }}",
+              "descripcion": "${{ inputs.descripcion }}",
+              "fecha": "${{ steps.fecha.outputs.value }}",
+              "html_url": "${{ inputs.html_url }}",
+              "monto": "${{ inputs.monto }}",
+              "repo_origen": "${{ github.repository }}"
+            }
+
+      - name: Confirmación
+        run: |
+          echo "✅ Propuesta '${{ inputs.slug }}' enviada correctamente."
+          echo ""
+          echo "📋 Ver en el portafolio:"
+          echo "   https://pablovesga.github.io/comercial/propuestas/${{ inputs.slug }}/"
+          echo ""
+          echo "⏱  El portafolio se actualiza en ~30 segundos."

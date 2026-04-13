@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diseño 2 — Glassmorphism Tech · Juan Pablo Vesga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       DISEÑO 2: GLASSMORPHISM / TECH FUTURISTA
+       Oscuro con tarjetas de cristal, gradientes y efectos de luz.
+       Indicado para: startups, tech companies, clientes innovadores.
+    ============================================================ */
+    :root {
+      --bg: #050714;
+      --glass: rgba(255,255,255,.04);
+      --glass-border: rgba(255,255,255,.08);
+      --text: #f8fafc;
+      --muted: #8b9cb8;
+      --accent: #6366f1;
+      --accent2: #22d3ee;
+      --pink: #f472b6;
+      --glow: rgba(99,102,241,.25);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background:var(--bg); color:var(--text);
+      font-family:'Space Grotesk',sans-serif;
+      overflow-x:hidden;
+    }
+    a { color:var(--accent2); text-decoration:none; }
+
+    /* ANIMATED BG */
+    .bg-orbs {
+      position:fixed; inset:0; z-index:0; pointer-events:none;
+    }
+    .orb {
+      position:absolute; border-radius:50%;
+      filter:blur(100px); opacity:.35;
+      animation:drift 20s ease-in-out infinite alternate;
+    }
+    .orb1 { width:600px; height:600px; background:var(--accent); top:-200px; left:-200px; animation-duration:25s; }
+    .orb2 { width:400px; height:400px; background:var(--accent2); bottom:-100px; right:-100px; animation-duration:18s; animation-delay:-8s; }
+    .orb3 { width:300px; height:300px; background:var(--pink); top:40%; left:50%; animation-duration:22s; animation-delay:-14s; opacity:.2; }
+    @keyframes drift { from { transform:translate(0,0) scale(1); } to { transform:translate(60px,40px) scale(1.1); } }
+
+    /* GRID LINES */
+    body::before {
+      content:''; position:fixed; inset:0; z-index:0;
+      background-image:
+        linear-gradient(rgba(99,102,241,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,.04) 1px, transparent 1px);
+      background-size:60px 60px;
+    }
+
+    /* NAV */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:100;
+      background:rgba(5,7,20,.7); backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--glass-border);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 3rem; height:64px;
+    }
+    .nav-brand {
+      font-size:1.1rem; font-weight:700; letter-spacing:-0.5px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:var(--muted); font-size:.85rem; font-weight:500; transition:color .2s; }
+    nav a:hover { color:var(--text); }
+    .nav-btn {
+      border:1px solid rgba(99,102,241,.4);
+      color:var(--accent) !important;
+      padding:.5rem 1.25rem; border-radius:8px;
+      background:rgba(99,102,241,.08);
+      transition:all .2s !important;
+    }
+    .nav-btn:hover { background:rgba(99,102,241,.2) !important; border-color:var(--accent) !important; }
+
+    /* HERO */
+    .hero {
+      position:relative; z-index:1;
+      min-height:100vh; display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      text-align:center; padding:8rem 2rem 4rem;
+    }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:.6rem;
+      background:var(--glass); border:1px solid var(--glass-border);
+      padding:.4rem 1rem; border-radius:999px;
+      font-size:.78rem; color:var(--muted); margin-bottom:2rem;
+    }
+    .hero-badge-dot { width:7px; height:7px; background:var(--accent2); border-radius:50%; animation:pulse2 2s infinite; }
+    @keyframes pulse2 { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+    h1 {
+      font-size:clamp(2.5rem,6vw,5rem);
+      font-weight:700; line-height:1;
+      letter-spacing:-2px; margin-bottom:1.5rem;
+    }
+    .h1-line1 { display:block; color:var(--text); }
+    .h1-line2 {
+      display:block;
+      background:linear-gradient(135deg,var(--accent),var(--accent2),var(--pink));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .hero-sub { color:var(--muted); font-size:1.05rem; max-width:520px; line-height:1.75; margin-bottom:3rem; }
+    .hero-btns { display:flex; gap:1rem; justify-content:center; }
+    .btn-glow {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:linear-gradient(135deg,var(--accent),#818cf8);
+      color:#fff; padding:.8rem 2rem; border-radius:10px;
+      font-size:.9rem; font-weight:600;
+      box-shadow:0 0 30px var(--glow);
+      transition:all .25s;
+    }
+    .btn-glow:hover { transform:translateY(-2px); box-shadow:0 0 50px var(--glow); color:#fff; }
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:var(--glass); border:1px solid var(--glass-border);
+      color:var(--text); padding:.8rem 2rem; border-radius:10px;
+      font-size:.9rem; font-weight:600; transition:all .25s;
+    }
+    .btn-ghost:hover { border-color:rgba(255,255,255,.2); background:rgba(255,255,255,.08); color:var(--text); }
+
+    /* SCROLL INDICATOR */
+    .scroll-hint {
+      position:absolute; bottom:2.5rem;
+      display:flex; flex-direction:column; align-items:center; gap:.4rem;
+      color:var(--muted); font-size:.75rem;
+    }
+    .scroll-line { width:1px; height:40px; background:linear-gradient(var(--accent),transparent); animation:scrlfall 1.5s ease-in-out infinite; }
+    @keyframes scrlfall { 0%{opacity:0;transform:scaleY(0);transform-origin:top} 50%{opacity:1;transform:scaleY(1)} 100%{opacity:0;transform:scaleY(1);transform-origin:bottom} }
+
+    /* GLASS CARDS SECTION */
+    .cards-section { position:relative; z-index:1; padding:4rem 2rem; }
+    .cards-inner { max-width:1100px; margin:0 auto; }
+    .section-label {
+      font-size:.72rem; text-transform:uppercase; letter-spacing:2px;
+      color:var(--accent); margin-bottom:.75rem;
+    }
+    .section-h2 { font-size:2rem; font-weight:700; letter-spacing:-1px; margin-bottom:.5rem; }
+    .section-sub { color:var(--muted); margin-bottom:3rem; }
+
+    .glass-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; }
+    .glass-card {
+      background:var(--glass);
+      border:1px solid var(--glass-border);
+      border-radius:16px; padding:1.75rem;
+      backdrop-filter:blur(10px);
+      transition:all .25s; position:relative; overflow:hidden;
+    }
+    .glass-card::before {
+      content:''; position:absolute; inset:0; border-radius:inherit;
+      background:linear-gradient(135deg,rgba(255,255,255,.04),transparent);
+      pointer-events:none;
+    }
+    .glass-card:hover { border-color:rgba(99,102,241,.4); transform:translateY(-3px); box-shadow:0 12px 40px rgba(99,102,241,.15); }
+    .glass-card-icon {
+      width:44px; height:44px; border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.2rem; margin-bottom:1.25rem;
+    }
+    .glass-card h3 { font-size:1rem; font-weight:600; margin-bottom:.5rem; }
+    .glass-card p { color:var(--muted); font-size:.85rem; line-height:1.7; }
+
+    /* TIMELINE */
+    .timeline-section { position:relative; z-index:1; padding:4rem 2rem; }
+    .timeline-inner { max-width:800px; margin:0 auto; }
+    .tl { display:flex; flex-direction:column; gap:0; position:relative; padding-left:2rem; }
+    .tl::before { content:''; position:absolute; left:0; top:0; bottom:0; width:1px; background:linear-gradient(var(--accent),transparent); }
+    .tl-item2 { position:relative; padding:0 0 2.5rem 1.5rem; }
+    .tl-dot {
+      position:absolute; left:-2.5rem; top:.2rem;
+      width:10px; height:10px; border-radius:50%;
+      background:var(--accent); border:2px solid var(--bg);
+      box-shadow:0 0 10px var(--accent);
+    }
+    .tl-period { font-size:.75rem; color:var(--accent2); font-weight:600; margin-bottom:.4rem; }
+    .tl-role2 { font-size:1rem; font-weight:700; margin-bottom:.2rem; }
+    .tl-co { color:var(--muted); font-size:.85rem; margin-bottom:.75rem; }
+    .tl-desc2 { color:var(--muted); font-size:.87rem; line-height:1.75; }
+    .tl-chips { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.75rem; }
+    .chip {
+      background:rgba(99,102,241,.1); border:1px solid rgba(99,102,241,.2);
+      color:#a5b4fc; padding:.2rem .65rem; border-radius:999px; font-size:.72rem;
+    }
+
+    /* CTA */
+    .cta-glass {
+      position:relative; z-index:1;
+      margin:2rem; border-radius:20px;
+      background:var(--glass); border:1px solid var(--glass-border);
+      backdrop-filter:blur(20px);
+      padding:4rem; text-align:center;
+    }
+    .cta-glass h2 { font-size:2rem; font-weight:700; letter-spacing:-1px; margin-bottom:.75rem; }
+    .cta-glass p { color:var(--muted); margin-bottom:2rem; }
+
+    footer { position:relative; z-index:1; text-align:center; padding:2rem; color:var(--muted); font-size:.8rem; border-top:1px solid var(--glass-border); }
+
+    @media (max-width:768px) {
+      .glass-grid { grid-template-columns:1fr; }
+      nav ul { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+<nav>
+  <div class="nav-brand">Juan Pablo Vesga</div>
+  <ul>
+    <li><a href="../hoja-de-vida/">Hoja de Vida</a></li>
+    <li><a href="../propuestas/">Propuestas</a></li>
+    <li><a href="../presentaciones/">Presentaciones</a></li>
+  </ul>
+  <a href="mailto:pablovesga@outlook.com" class="btn-ghost nav-btn">Contactar</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">
+    <div class="hero-badge-dot"></div>
+    Bogotá D.C. · Disponible 2026
+  </div>
+  <h1>
+    <span class="h1-line1">25 años de</span>
+    <span class="h1-line2">tecnología aplicada</span>
+  </h1>
+  <p class="hero-sub">
+    Ingeniero de Automatización y Magíster en TI. Conecto la estrategia de negocio
+    con soluciones tecnológicas reales: SaaS, data, cloud, automatización.
+  </p>
+  <div class="hero-btns">
+    <a href="../propuestas/" class="btn-glow">Ver propuestas →</a>
+    <a href="../hoja-de-vida/" class="btn-ghost">Hoja de vida</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<section class="cards-section">
+  <div class="cards-inner">
+    <div class="section-label">Servicios</div>
+    <div class="section-h2">¿Qué puedo hacer por ti?</div>
+    <p class="section-sub">Soluciones de extremo a extremo, desde la idea hasta el despliegue.</p>
+    <div class="glass-grid">
+      <div class="glass-card">
+        <div class="glass-card-icon">⚡</div>
+        <h3>Desarrollo SaaS</h3>
+        <p>Plataformas en la nube listas para producción. PHP/YII, Python/Django, Google Cloud.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-card-icon">📊</div>
+        <h3>Data Science & BI</h3>
+        <p>Análisis con R, diseño de indicadores, dashboards y reportes para toma de decisiones.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-card-icon">🧠</div>
+        <h3>Consultoría TI</h3>
+        <p>Diagnóstico, estrategia y hoja de ruta tecnológica alineada con el negocio.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-card-icon">🔧</div>
+        <h3>Automatización</h3>
+        <p>Eliminación de procesos manuales, integraciones y GitHub Actions.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-card-icon">📋</div>
+        <h3>Encuestas & Research</h3>
+        <p>Qualtrics, diseño de instrumentos, análisis estadístico e informes formales.</p>
+      </div>
+      <div class="glass-card">
+        <div class="glass-card-icon">🏭</div>
+        <h3>mEmpresa — Mantenimiento</h3>
+        <p>SaaS para gerencia de activos, OT, KPIs y programación de mantenimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-inner">
+    <div class="section-label">Trayectoria</div>
+    <div class="section-h2">Experiencia</div>
+    <br>
+    <div class="tl">
+      <div class="tl-item2">
+        <div class="tl-dot"></div>
+        <div class="tl-period">2018 — Presente</div>
+        <div class="tl-role2">Profesional Gr 2</div>
+        <div class="tl-co">ICFES · Bogotá</div>
+        <div class="tl-desc2">Registro, citación y operación en pruebas de estado. Análisis de datos con R y Qualtrics.</div>
+        <div class="tl-chips"><span class="chip">R</span><span class="chip">Qualtrics</span></div>
+      </div>
+      <div class="tl-item2">
+        <div class="tl-dot"></div>
+        <div class="tl-period">2012 — 2018</div>
+        <div class="tl-role2">Data Scientist / Asistente Operativo</div>
+        <div class="tl-co">Centro Nacional de Consultoría (CNC)</div>
+        <div class="tl-desc2">Proyectos licitados con el gobierno. Bases de datos, R, indicadores, visualización de datos.</div>
+        <div class="tl-chips"><span class="chip">R</span><span class="chip">Data Science</span><span class="chip">Gobierno</span></div>
+      </div>
+      <div class="tl-item2">
+        <div class="tl-dot"></div>
+        <div class="tl-period">2008 — 2011</div>
+        <div class="tl-role2">Coordinador General</div>
+        <div class="tl-co">GRAL MACHINERY E.U.</div>
+        <div class="tl-desc2">Área de producción, nómina, compras. Desarrollé SaaS para inventarios, logística y RRHH.</div>
+        <div class="tl-chips"><span class="chip">SaaS</span><span class="chip">PHP</span><span class="chip">MySQL</span></div>
+      </div>
+      <div class="tl-item2">
+        <div class="tl-dot"></div>
+        <div class="tl-period">1999 — 2007</div>
+        <div class="tl-role2">Supervisor Mantenimiento / Dev</div>
+        <div class="tl-co">INEMA S.A.</div>
+        <div class="tl-desc2">Administración de servidores y red. Software de producción, inventarios y logística con códigos de barras.</div>
+        <div class="tl-chips"><span class="chip">Redes</span><span class="chip">Software</span><span class="chip">Producción</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-glass">
+  <h2>¿Tienes un proyecto en mente?</h2>
+  <p>Escríbeme y definimos la propuesta técnica juntos.</p>
+  <a href="mailto:pablovesga@outlook.com" class="btn-glow">pablovesga@outlook.com →</a>
+</div>
+
+<footer>© 2026 Juan Pablo Vesga Rosas · <a href="https://app.mempresa.com">app.mempresa.com</a></footer>
+
+<div style="position:fixed;bottom:1rem;right:1rem;background:rgba(99,102,241,.9);color:#fff;padding:.5rem 1rem;border-radius:8px;font-size:.75rem;font-family:monospace;z-index:9999;backdrop-filter:blur(8px)">
+  Diseño 2 — Glassmorphism Tech
+  <br><a href="opcion-1.html" style="color:#bfdbfe">→ Ver Diseño 1</a>
+  <br><a href="opcion-3.html" style="color:#f9a8d4">→ Ver Diseño 3</a>
+</div>
+</body>
+</html>
