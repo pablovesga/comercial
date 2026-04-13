@@ -3,87 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Propuestas Comerciales — Pablo Vesga</title>
+  <title>Propuestas Comerciales — Juan Pablo Vesga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0e1a; --surface: #111827; --card: #1a2235;
-      --accent: #3b82f6; --accent2: #8b5cf6; --green: #10b981;
-      --yellow: #f59e0b; --text: #f1f5f9; --muted: #94a3b8; --border: #1e2d45;
+      --bg: #f5f0e8;
+      --ink: #0a0a0a;
+      --ink2: #1a1a1a;
+      --muted: #6b6b6b;
+      --white: #ffffff;
+      --yellow: #ffd60a;
+      --blue: #1a56db;
+      --green: #2dc653;
+      --border: #d6cfc0;
+      --card-bg: #ede7d9;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; }
-    a { color:var(--accent); text-decoration:none; }
+    body { background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; }
+    a { color:inherit; text-decoration:none; }
 
+    /* NAV */
     nav {
-      position:sticky; top:0; z-index:100;
-      background:rgba(10,14,26,.88); backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--border);
+      background:var(--ink); color:var(--bg);
       display:flex; align-items:center; justify-content:space-between;
-      padding:0 2rem; height:60px;
+      padding:1rem 3rem; position:sticky; top:0; z-index:100;
     }
-    .logo { font-weight:700; color:var(--accent); }
-    nav ul { list-style:none; display:flex; gap:2rem; }
-    nav a { color:var(--muted); font-size:.9rem; }
-    nav a:hover { color:var(--text); }
+    .nav-logo { font-size:1.1rem; font-weight:800; }
+    nav ul { list-style:none; display:flex; gap:2.5rem; }
+    nav a { color:rgba(245,240,232,.65); font-size:.85rem; font-weight:500; transition:color .2s; }
+    nav a:hover { color:var(--bg); }
+    .nav-contact {
+      background:var(--yellow); color:var(--ink) !important;
+      padding:.5rem 1.25rem; font-weight:700 !important; font-size:.82rem !important;
+    }
 
-    .page { max-width:1000px; margin:0 auto; padding:3rem 2rem; }
-    .back-link { display:inline-flex; align-items:center; gap:.4rem; color:var(--muted); font-size:.85rem; margin-bottom:1.5rem; }
-    h1 { font-size:2rem; font-weight:800; margin-bottom:.5rem; }
-    .sub { color:var(--muted); margin-bottom:2.5rem; }
+    /* PAGE */
+    .page { max-width:1100px; margin:0 auto; padding:4rem 3rem; }
+    .back-link { display:inline-flex; align-items:center; gap:.4rem; color:var(--muted); font-size:.85rem; margin-bottom:2rem; font-weight:500; }
+    .back-link:hover { color:var(--ink); }
 
-    .filters { display:flex; gap:.75rem; margin-bottom:2rem; flex-wrap:wrap; }
+    .page-header { margin-bottom:3rem; border-bottom:2px solid var(--ink); padding-bottom:2rem; }
+    .page-header h1 { font-size:clamp(2rem,4vw,3.5rem); font-weight:800; letter-spacing:-2px; line-height:.95; }
+    .page-header p { color:var(--muted); margin-top:.75rem; font-size:.95rem; }
+
+    /* FILTERS */
+    .filters { display:flex; gap:.5rem; margin-bottom:2.5rem; flex-wrap:wrap; }
     .filter-btn {
-      padding:.4rem 1rem; border-radius:999px; font-size:.82rem;
-      cursor:pointer; border:1px solid var(--border);
-      background:transparent; color:var(--muted); transition:all .2s;
+      padding:.4rem 1.1rem; font-size:.8rem; font-weight:700;
+      cursor:pointer; border:2px solid var(--ink);
+      background:transparent; color:var(--ink); transition:all .2s; letter-spacing:.5px;
     }
     .filter-btn.active, .filter-btn:hover {
-      background:rgba(59,130,246,.15); border-color:rgba(59,130,246,.4); color:var(--accent);
+      background:var(--ink); color:var(--bg);
     }
 
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem; }
+    /* GRID */
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.25rem; }
     .prop-card {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:12px; padding:1.5rem;
-      transition:all .2s; display:flex; flex-direction:column; gap:.75rem;
+      background:var(--white); border:1px solid var(--border);
+      padding:1.75rem; transition:all .2s;
+      display:flex; flex-direction:column; gap:.75rem;
+      color:inherit;
     }
-    .prop-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 8px 30px rgba(59,130,246,.1); }
+    .prop-card:hover { border-color:var(--ink); transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,.07); }
     .prop-card h3 { font-size:1rem; font-weight:700; }
     .prop-meta { color:var(--muted); font-size:.82rem; display:flex; gap:1rem; flex-wrap:wrap; }
-    .prop-desc { color:var(--muted); font-size:.87rem; line-height:1.6; }
-    .prop-footer { display:flex; justify-content:space-between; align-items:center; margin-top:auto; }
+    .prop-desc { color:var(--muted); font-size:.87rem; line-height:1.65; }
+    .prop-footer { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:.5rem; border-top:1px solid var(--border); }
     .status {
-      padding:.2rem .7rem; border-radius:999px; font-size:.72rem; font-weight:600;
+      padding:.2rem .65rem; font-size:.7rem; font-weight:700; letter-spacing:.5px; text-transform:uppercase;
     }
-    .status.activa { background:rgba(16,185,129,.15); color:var(--green); border:1px solid rgba(16,185,129,.3); }
-    .status.enviada { background:rgba(59,130,246,.15); color:var(--accent); border:1px solid rgba(59,130,246,.3); }
-    .status.cerrada { background:rgba(148,163,184,.1); color:var(--muted); border:1px solid var(--border); }
-    .status.ganada { background:rgba(245,158,11,.15); color:var(--yellow); border:1px solid rgba(245,158,11,.3); }
-    .ver-btn {
-      font-size:.8rem; color:var(--accent); display:flex; align-items:center; gap:.3rem;
+    .status.activa { background:rgba(45,198,83,.12); color:#1a7a35; border:1px solid rgba(45,198,83,.3); }
+    .status.enviada { background:rgba(26,86,219,.1); color:var(--blue); border:1px solid rgba(26,86,219,.25); }
+    .status.cerrada { background:var(--card-bg); color:var(--muted); border:1px solid var(--border); }
+    .status.ganada { background:rgba(255,214,10,.2); color:#7a5c00; border:1px solid rgba(255,214,10,.4); }
+    .ver-btn { font-size:.82rem; font-weight:700; color:var(--ink); }
+
+    .empty { text-align:center; padding:4rem; color:var(--muted); grid-column:1/-1; }
+
+    footer { background:var(--ink); color:rgba(245,240,232,.4); padding:1.5rem 3rem; display:flex; justify-content:space-between; font-size:.8rem; margin-top:6rem; }
+    footer a { color:rgba(245,240,232,.4); }
+
+    @media (max-width:768px) {
+      nav { padding:1rem; }
+      nav ul { gap:1rem; }
+      .page { padding:2rem 1.5rem; }
+      footer { flex-direction:column; gap:.5rem; }
     }
-
-    .empty { text-align:center; padding:4rem; color:var(--muted); }
-
-    footer { text-align:center; padding:2.5rem; color:var(--muted); font-size:.85rem; border-top:1px solid var(--border); margin-top:4rem; }
-    footer a { color:var(--accent); }
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">PV · Comercial</div>
+  <div class="nav-logo">Juan Pablo Vesga Rosas</div>
   <ul>
     <li><a href="../hoja-de-vida/">Hoja de Vida</a></li>
     <li><a href="./">Propuestas</a></li>
     <li><a href="../presentaciones/">Presentaciones</a></li>
+    <li><a href="mailto:pablovesga@outlook.com" class="nav-contact">Contactar</a></li>
   </ul>
 </nav>
 
 <div class="page">
   <a href="../" class="back-link">← Inicio</a>
-  <h1>Propuestas Comerciales</h1>
-  <p class="sub">Propuestas técnicas y económicas para clientes y socios.</p>
+  <div class="page-header">
+    <h1>Propuestas<br>Comerciales</h1>
+    <p>Propuestas técnicas y económicas para clientes y socios.</p>
+  </div>
 
   <div class="filters">
     <button class="filter-btn active" data-filter="all">Todas</button>
@@ -99,7 +125,8 @@
 </div>
 
 <footer>
-  <p>© 2026 Pablo Vesga · <a href="mailto:pablo@pablovesga.com">pablo@pablovesga.com</a></p>
+  <p>© 2026 Juan Pablo Vesga Rosas · Bogotá D.C., Colombia · +57 313 369 4170</p>
+  <p><a href="https://github.com/pablovesga">GitHub</a> · <a href="https://app.mempresa.com">mEmpresa</a></p>
 </footer>
 
 <script>
@@ -128,11 +155,11 @@
       return;
     }
     grid.innerHTML = items.map(p => `
-      <a href="${p.slug}/" class="prop-card" style="color:inherit;text-decoration:none">
+      <a href="${p.slug}/" class="prop-card">
         <h3>${p.titulo}</h3>
         <div class="prop-meta">
-          <span>👤 ${p.cliente}</span>
-          <span>📅 ${p.fecha}</span>
+          <span>${p.cliente}</span>
+          <span>${p.fecha}</span>
         </div>
         ${p.descripcion ? `<div class="prop-desc">${p.descripcion}</div>` : ''}
         <div class="prop-footer">

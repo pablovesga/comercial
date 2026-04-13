@@ -3,216 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pablo Vesga — Portafolio Comercial</title>
+  <title>Juan Pablo Vesga Rosas — Portafolio Comercial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0e1a;
-      --surface: #111827;
-      --card: #1a2235;
-      --accent: #3b82f6;
-      --accent2: #8b5cf6;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --border: #1e2d45;
+      --bg: #f5f0e8;
+      --ink: #0a0a0a;
+      --ink2: #1a1a1a;
+      --muted: #6b6b6b;
+      --white: #ffffff;
+      --yellow: #ffd60a;
+      --blue: #1a56db;
+      --border: #d6cfc0;
+      --card-bg: #ede7d9;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      min-height: 100vh;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; }
+    a { color:inherit; text-decoration:none; }
 
     /* NAV */
     nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(10,14,26,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 60px;
+      background:var(--ink); color:var(--bg);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:1rem 3rem;
     }
-    .logo { font-weight: 700; font-size: 1.1rem; color: var(--accent); letter-spacing: .5px; }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav a { color: var(--muted); text-decoration: none; font-size: .9rem; transition: color .2s; }
-    nav a:hover { color: var(--text); }
+    .nav-logo { font-size:1.1rem; font-weight:800; }
+    nav ul { list-style:none; display:flex; gap:2.5rem; }
+    nav a { color:rgba(245,240,232,.65); font-size:.85rem; font-weight:500; transition:color .2s; }
+    nav a:hover { color:var(--bg); }
+    .nav-contact {
+      background:var(--yellow); color:var(--ink) !important;
+      padding:.5rem 1.25rem; font-weight:700 !important; font-size:.82rem !important;
+    }
 
     /* HERO */
-    .hero {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; text-align: center;
-      padding: 7rem 2rem 5rem;
-      background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,.15) 0%, transparent 70%);
+    .hero { display:grid; grid-template-columns:1fr 1fr; min-height:88vh; }
+    .hero-left {
+      background:var(--ink); color:var(--bg);
+      padding:5rem 3rem; display:flex; flex-direction:column; justify-content:space-between;
     }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(59,130,246,.15);
-      border: 1px solid rgba(59,130,246,.3);
-      color: var(--accent);
-      padding: .3rem .9rem;
-      border-radius: 999px;
-      font-size: .78rem;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
+    .hero-tag {
+      display:inline-block; background:var(--yellow);
+      color:var(--ink); font-size:.72rem; font-weight:700; letter-spacing:2px;
+      text-transform:uppercase; padding:.3rem .8rem; margin-bottom:2rem;
     }
-    h1 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
-    h1 span {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .hero-left h1 {
+      font-size:clamp(3rem,5vw,5.5rem);
+      font-weight:800; line-height:.92;
+      letter-spacing:-3px; margin-bottom:2rem;
     }
-    .hero p {
-      font-size: 1.15rem; color: var(--muted); max-width: 520px;
-      line-height: 1.7; margin-bottom: 2.5rem;
+    .hero-left h1 .yellow { color:var(--yellow); }
+    .hero-left h1 .blue { color:#60a5fa; }
+    .hero-desc { color:rgba(245,240,232,.65); font-size:1rem; line-height:1.75; max-width:420px; margin-bottom:2.5rem; }
+    .hero-left-bottom { display:flex; gap:2rem; align-items:center; flex-wrap:wrap; }
+    .stat-pill { border:1px solid rgba(245,240,232,.15); padding:.75rem 1.25rem; }
+    .stat-pill .n { font-size:1.8rem; font-weight:800; }
+    .stat-pill .l { font-size:.72rem; color:rgba(245,240,232,.5); margin-top:.1rem; }
+    .hero-btn {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:var(--yellow); color:var(--ink);
+      font-weight:700; padding:.9rem 2rem; font-size:.9rem; transition:all .2s;
+      margin-bottom:2.5rem;
     }
-    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-    .btn {
-      display: inline-flex; align-items: center; gap: .5rem;
-      padding: .75rem 1.75rem; border-radius: 8px;
-      font-size: .95rem; font-weight: 600; cursor: pointer;
-      text-decoration: none; transition: all .2s;
-      border: none;
-    }
-    .btn-primary {
-      background: var(--accent); color: #fff;
-      box-shadow: 0 0 20px rgba(59,130,246,.35);
-    }
-    .btn-primary:hover { background: #2563eb; transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-btn:hover { background:#fff; }
 
-    /* GRID */
-    section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
-    .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; }
-    .section-title span { color: var(--accent); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
+    /* HERO RIGHT */
+    .hero-right {
+      background:var(--card-bg);
+      padding:5rem 3rem; display:flex; flex-direction:column; justify-content:center;
+      position:relative; overflow:hidden;
+    }
+    .hero-right::before {
+      content:'JPV';
+      position:absolute; bottom:-40px; right:-20px;
+      font-size:20rem; font-weight:800;
+      color:var(--border); line-height:1; pointer-events:none;
+      letter-spacing:-10px;
+    }
+    .profile-tag { font-size:.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:1.5rem; }
+    .profile-name { font-size:2.5rem; font-weight:800; line-height:1.05; letter-spacing:-1.5px; margin-bottom:.5rem; }
+    .profile-role { color:var(--blue); font-weight:600; font-size:.95rem; margin-bottom:2rem; }
 
-    /* CARD */
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.75rem;
-      text-decoration: none;
-      color: inherit;
-      transition: all .2s;
-      display: flex; flex-direction: column; gap: .75rem;
+    /* MARQUEE */
+    .marquee-wrap {
+      background:var(--yellow); overflow:hidden;
+      white-space:nowrap; padding:.6rem 0; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);
     }
-    .card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(59,130,246,.12);
+    .marquee-inner { display:inline-block; animation:marquee 20s linear infinite; }
+    .marquee-inner span {
+      font-size:.85rem; font-weight:700; text-transform:uppercase; letter-spacing:2px;
+      color:var(--ink); margin:0 2rem;
     }
-    .card-icon {
-      font-size: 2rem;
-      width: 52px; height: 52px;
-      background: rgba(59,130,246,.1);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .card h3 { font-size: 1.1rem; font-weight: 700; }
-    .card p { color: var(--muted); font-size: .9rem; line-height: 1.6; }
-    .card .tag {
-      align-self: flex-start;
-      background: rgba(139,92,246,.15);
-      border: 1px solid rgba(139,92,246,.3);
-      color: #a78bfa;
-      padding: .2rem .7rem;
-      border-radius: 999px;
-      font-size: .75rem;
-      margin-top: auto;
-    }
+    .marquee-inner span::before { content:'★ '; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-    /* STATS */
-    .stats { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; padding: 3rem 2rem; }
-    .stat { text-align: center; }
-    .stat-num { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
-    .stat-label { color: var(--muted); font-size: .85rem; margin-top: .25rem; }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 2.5rem;
-      color: var(--muted);
-      font-size: .85rem;
-      border-top: 1px solid var(--border);
-      margin-top: 4rem;
+    /* STATS BAR */
+    .stats-bar {
+      display:flex; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);
+      background:var(--white);
     }
-    footer a { color: var(--accent); text-decoration: none; }
+    .stat-box { flex:1; padding:2rem; text-align:center; border-right:1px solid var(--border); }
+    .stat-box:last-child { border-right:none; }
+    .stat-num { font-size:2.5rem; font-weight:800; letter-spacing:-1px; }
+    .stat-lbl { color:var(--muted); font-size:.75rem; margin-top:.2rem; }
+
+    /* SECTIONS TABLE */
+    .sections-bold { padding:5rem 3rem; max-width:1200px; margin:0 auto; }
+    .sections-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3rem; flex-wrap:wrap; gap:1rem; }
+    .sections-header h2 { font-size:clamp(1.8rem,3vw,3rem); font-weight:800; letter-spacing:-1.5px; }
+    .sections-header p { color:var(--muted); max-width:300px; text-align:right; }
+    .sections-table { border-top:2px solid var(--ink); }
+    .section-row {
+      display:grid; grid-template-columns:60px 1fr 1fr auto;
+      align-items:center; gap:2rem;
+      padding:1.5rem 0; border-bottom:1px solid var(--border);
+      transition:all .2s; color:inherit; text-decoration:none;
+      display:grid;
+    }
+    .section-row:hover { background:var(--card-bg); padding-left:1rem; padding-right:1rem; margin:0 -1rem; }
+    .section-idx { font-size:.75rem; font-weight:700; color:var(--muted); }
+    .section-name { font-size:1.15rem; font-weight:700; }
+    .section-desc { color:var(--muted); font-size:.85rem; line-height:1.6; }
+    .section-arrow { font-size:1.5rem; opacity:0; transition:opacity .2s; }
+    .section-row:hover .section-arrow { opacity:1; }
+
+    /* CTA */
+    .cta-big {
+      background:var(--yellow); padding:5rem 3rem;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:2rem; border-top:2px solid var(--ink);
+    }
+    .cta-big h2 { font-size:clamp(2rem,4vw,4rem); font-weight:800; letter-spacing:-2px; line-height:.95; }
+    .cta-big-actions { display:flex; flex-direction:column; gap:1rem; align-items:flex-end; }
+    .cta-big-actions a {
+      display:inline-flex; align-items:center; gap:.75rem;
+      background:var(--ink); color:var(--bg);
+      font-weight:700; padding:1rem 2rem; font-size:.95rem; transition:all .2s;
+    }
+    .cta-big-actions a:hover { background:var(--ink2); }
+    .cta-big-actions .secondary {
+      background:transparent; border:2px solid var(--ink); color:var(--ink);
+    }
+    .cta-big-actions .secondary:hover { background:var(--ink); color:var(--bg); }
+
+    footer { background:var(--ink); color:rgba(245,240,232,.4); padding:1.5rem 3rem; display:flex; justify-content:space-between; font-size:.8rem; }
+    footer a { color:rgba(245,240,232,.4); }
+
+    @media (max-width:768px) {
+      nav { padding:1rem; }
+      nav ul { gap:1rem; }
+      .hero { grid-template-columns:1fr; }
+      .hero-right { display:none; }
+      .sections-bold { padding:3rem 1.5rem; }
+      .section-row { grid-template-columns:40px 1fr; }
+      .section-desc, .section-arrow { display:none; }
+      .stats-bar { flex-wrap:wrap; }
+      .cta-big { padding:3rem 1.5rem; }
+      footer { flex-direction:column; gap:.5rem; }
+    }
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">PV · Comercial</div>
+  <div class="nav-logo">Juan Pablo Vesga Rosas</div>
   <ul>
     <li><a href="hoja-de-vida/">Hoja de Vida</a></li>
     <li><a href="propuestas/">Propuestas</a></li>
     <li><a href="presentaciones/">Presentaciones</a></li>
+    <li><a href="mailto:pablovesga@outlook.com" class="nav-contact">Contactar</a></li>
   </ul>
 </nav>
 
 <div class="hero">
-  <div class="hero-badge">Portafolio Comercial 2026</div>
-  <h1>Pablo Vesga<br><span>Soluciones Digitales</span></h1>
-  <p>Desarrollo de software, automatización e inteligencia artificial para empresas que quieren crecer con tecnología.</p>
-  <div class="hero-cta">
-    <a href="hoja-de-vida/" class="btn btn-primary">Ver Hoja de Vida</a>
-    <a href="propuestas/" class="btn btn-outline">Ver Propuestas</a>
+  <div class="hero-left">
+    <div>
+      <div class="hero-tag">Portafolio Comercial 2026</div>
+      <h1>
+        Tecnología<br>
+        que <span class="yellow">habla</span><br>
+        <span class="blue">negocio</span>
+      </h1>
+      <p class="hero-desc">
+        25+ años construyendo puentes entre tecnología y estrategia empresarial.
+        Ingeniero de Automatización · MSc TI · Bogotá, Colombia.
+      </p>
+      <a href="hoja-de-vida/" class="hero-btn">Ver Hoja de Vida →</a>
+    </div>
+    <div class="hero-left-bottom">
+      <div class="stat-pill">
+        <div class="n">25+</div>
+        <div class="l">Años de experiencia</div>
+      </div>
+      <div class="stat-pill">
+        <div class="n">5</div>
+        <div class="l">Empresas</div>
+      </div>
+      <div class="stat-pill">
+        <div class="n">MSc</div>
+        <div class="l">Uniandes · TI</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="profile-tag">Perfil profesional</div>
+    <div class="profile-name">Juan Pablo<br>Vesga Rosas</div>
+    <div class="profile-role">Ing. Automatización · MSc TI para el Negocio</div>
+    <p style="color:var(--muted);font-size:.9rem;line-height:1.75;max-width:360px">
+      Desarrollador SaaS, Data Scientist y consultor TI con foco en resultados de negocio.
+      Fundador de <a href="https://app.mempresa.com" style="color:var(--blue);font-weight:600">mEmpresa</a>.
+    </p>
   </div>
 </div>
 
-<div class="stats">
-  <div class="stat">
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>Desarrollo SaaS</span>
+    <span>Data Science</span>
+    <span>Google Cloud</span>
+    <span>Automatización</span>
+    <span>Consultoría TI</span>
+    <span>Encuestas Qualtrics</span>
+    <span>Python · PHP · R</span>
+    <span>Desarrollo SaaS</span>
+    <span>Data Science</span>
+    <span>Google Cloud</span>
+    <span>Automatización</span>
+    <span>Consultoría TI</span>
+    <span>Encuestas Qualtrics</span>
+    <span>Python · PHP · R</span>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-box">
     <div class="stat-num" id="stat-propuestas">—</div>
-    <div class="stat-label">Propuestas activas</div>
+    <div class="stat-lbl">Propuestas activas</div>
   </div>
-  <div class="stat">
+  <div class="stat-box">
     <div class="stat-num" id="stat-presentaciones">—</div>
-    <div class="stat-label">Presentaciones</div>
+    <div class="stat-lbl">Presentaciones</div>
   </div>
-  <div class="stat">
-    <div class="stat-num">5+</div>
-    <div class="stat-label">Años de experiencia</div>
+  <div class="stat-box">
+    <div class="stat-num">5</div>
+    <div class="stat-lbl">Empresas</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">MSc</div>
+    <div class="stat-lbl">Uniandes</div>
   </div>
 </div>
 
-<section>
-  <div class="section-title">¿Qué encontrarás <span>aquí?</span></div>
-  <div class="grid">
-    <a href="hoja-de-vida/" class="card">
-      <div class="card-icon">👤</div>
-      <h3>Hoja de Vida</h3>
-      <p>Perfil profesional, experiencia, proyectos ejecutados y habilidades técnicas.</p>
-      <span class="tag">Actualizada automáticamente</span>
+<section class="sections-bold">
+  <div class="sections-header">
+    <h2>¿Qué encontrarás<br>aquí?</h2>
+    <p>Todo lo que necesitas para conocer el perfil y los servicios disponibles.</p>
+  </div>
+  <div class="sections-table">
+    <a href="hoja-de-vida/" class="section-row">
+      <div class="section-idx">01</div>
+      <div class="section-name">Hoja de Vida</div>
+      <div class="section-desc">Perfil profesional, experiencia, proyectos ejecutados y habilidades técnicas.</div>
+      <div class="section-arrow">→</div>
     </a>
-    <a href="propuestas/" class="card">
-      <div class="card-icon">📋</div>
-      <h3>Propuestas Comerciales</h3>
-      <p>Propuestas técnicas y económicas personalizadas para cada cliente o socio.</p>
-      <span class="tag">Por cliente</span>
+    <a href="propuestas/" class="section-row">
+      <div class="section-idx">02</div>
+      <div class="section-name">Propuestas Comerciales</div>
+      <div class="section-desc">Propuestas técnicas y económicas personalizadas para cada cliente o socio.</div>
+      <div class="section-arrow">→</div>
     </a>
-    <a href="presentaciones/" class="card">
-      <div class="card-icon">🎯</div>
-      <h3>Presentaciones</h3>
-      <p>Decks interactivos para demos, pitches y reuniones de negocio.</p>
-      <span class="tag">Interactivas</span>
+    <a href="presentaciones/" class="section-row">
+      <div class="section-idx">03</div>
+      <div class="section-name">Presentaciones</div>
+      <div class="section-desc">Decks interactivos para demos, pitches y reuniones de negocio.</div>
+      <div class="section-arrow">→</div>
     </a>
   </div>
 </section>
 
+<div class="cta-big">
+  <h2>Hablemos de<br>tu proyecto.</h2>
+  <div class="cta-big-actions">
+    <a href="mailto:pablovesga@outlook.com?subject=Propuesta comercial">
+      Escribir ahora →
+    </a>
+    <a href="propuestas/" class="secondary">Ver propuestas</a>
+  </div>
+</div>
+
 <footer>
-  <p>© 2026 Pablo Vesga · <a href="mailto:pablo@pablovesga.com">pablo@pablovesga.com</a> · <a href="https://github.com/pablovesga">GitHub</a></p>
+  <p>© 2026 Juan Pablo Vesga Rosas · Bogotá D.C., Colombia · +57 313 369 4170</p>
+  <p><a href="https://github.com/pablovesga">GitHub</a> · <a href="https://app.mempresa.com">mEmpresa</a></p>
 </footer>
 
 <script>
-  // Carga conteo de propuestas desde el índice JSON si existe
   async function loadStats() {
     try {
       const r = await fetch('propuestas/index.json');
