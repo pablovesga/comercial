@@ -1,7 +1,7 @@
 {
-  "generado": "2026-04-13T03:56:25.454431Z",
-  "total": 1,
-  "activas": 1,
+  "generado": "2026-04-13T04:12:31.591100Z",
+  "total": 3,
+  "activas": 3,
   "propuestas": [
     {
       "slug": "bienvisto-cnc-2026",
@@ -9,7 +9,26 @@
       "cliente": "Centro Nacional de Consultoría (CNC)",
       "fecha": "2026-04-13",
       "estado": "activa",
-      "descripcion": "Propuesta para convertir los índices IGR/Merco del CNC en una plataforma SaaS de autoservicio con IA. Incluye pitch deck de 12 slides y business case completo con proyección financiera. Punto de equilibrio: 6–18 empresas. Prototipo: 11 de mayo 2026."
+      "descripcion": "Propuesta para convertir los índices IGR/Merco del CNC en una plataforma SaaS de autoservicio con IA. Incluye pitch deck de 12 slides y business case completo. Punto de equilibrio: 6–18 empresas. Prototipo: 11 de mayo 2026."
+    },
+    {
+      "slug": "cazaraiz-app-inmobiliaria",
+      "titulo": "CazaRaíz — App Inmobiliaria con Escaneo de Letreros",
+      "cliente": "Inversores / Co-fundadores",
+      "fecha": "2026-04-13",
+      "estado": "activa",
+      "descripcion": "App móvil que digitaliza el mercado inmobiliario informal en Colombia mediante QR dinámicos para letreros y escaneo OCR. Mercado: 60B COP/año, 7.3M hogares en arriendo.",
+      "monto": "100.000 – 200.000 USD",
+      "moneda": "USD",
+      "repo_origen": "pablovesga/cazaraiz"
+    },
+    {
+      "slug": "jiyumi-motor-encuestas-2026",
+      "titulo": "Jiyumi — Motor de Encuestas Socioeconómicas",
+      "cliente": "Por definir",
+      "fecha": "2026-04-13",
+      "estado": "activa",
+      "descripcion": "Encuestas socioeconómicas via WhatsApp para 1,500+ empleados. GCP ~.50 USD/mes. Ley 1581."
     }
   ]
 }
