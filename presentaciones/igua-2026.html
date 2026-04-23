@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edificio Iguá — Evaluación de Propuestas de Seguridad 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ==================== TOKENS ==================== */
+:root {
+  --bg:       #FFFFFF;
+  --surface:  #F8FAF7;
+  --card:     #FFFFFF;
+  --border:   #DDE5D9;
+  --ink:      #1A2818;
+  --ink-mid:  #334830;
+  --ink-soft: #6B8564;
+  --ink-dim:  #A3B89D;
+  --green:    #2D8A24;
+  --green-d:  #1C5918;
+  --green-l:  #45A83B;
+  --green-p:  #EAF5E8;
+  --green-m:  #C3E0BD;
+  --amber:    #C17B0A;
+
+  --agora:    #2563EB; --agora-p: #EFF6FF; --agora-m: #BFDBFE;
+  --blue-b:   #0891B2; --blue-p:  #ECFEFF; --blue-m:  #A5F3FC;
+  --wolf:     #C2410C; --wolf-p:  #FFF7ED; --wolf-m:  #FED7AA;
+  --inmo:     #7C3AED; --inmo-p:  #F5F3FF; --inmo-m:  #DDD6FE;
+
+  --sans: 'Outfit', sans-serif;
+  --mono: 'DM Mono', monospace;
+
+  /* small text DOUBLED vs original */
+  --title:  clamp(3rem, 7.5vw, 7rem);
+  --h2:     clamp(1.9rem, 3.2vw, 3rem);
+  --h3:     clamp(1.3rem, 2vw, 1.9rem);
+  --body:   clamp(1rem, 1.35vw, 1.25rem);
+  --sm:     clamp(1rem, 1.2vw, 1.4rem);
+  --tbl:    clamp(0.85rem, 1vw, 1.1rem);
+
+  --pad:    clamp(1.5rem, 4.5vw, 4.5rem);
+  --gap:    clamp(0.7rem, 1.5vw, 1.4rem);
+  --r:      clamp(10px, 1vw, 18px);
+  --ease:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur:    0.6s;
+}
+
+/* ==================== RESET + VIEWPORT BASE ==================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow-x: hidden; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--bg); color: var(--ink); }
+h1, h2, h3 { font-family: var(--sans); font-weight: 800; line-height: 1.05; }
+
+.slide {
+  width: 100vw; height: 100vh; height: 100dvh;
+  overflow: hidden; scroll-snap-align: start;
+  display: flex; flex-direction: column; background: var(--bg);
+}
+.inner {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; overflow: hidden;
+  padding: clamp(0.8rem, 2vh, 1.5rem) var(--pad);
+}
+img { max-width: 100%; object-fit: contain; }
+
+@media (max-height: 800px) { :root { --pad: clamp(1rem, 3vw, 2.5rem); --h2: clamp(1.5rem, 2.8vw, 2.3rem); --h3: clamp(1.1rem, 1.8vw, 1.6rem); } }
+@media (max-height: 650px) { :root { --pad: clamp(0.7rem, 2.5vw, 1.5rem); --body: clamp(0.85rem, 1.1vw, 1rem); --sm: clamp(0.8rem, 1vw, 1.1rem); } }
+@media (max-height: 500px) { .nav-dots { display: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; } html { scroll-behavior: auto; } }
+
+/* ==================== HEADER ==================== */
+.top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: clamp(0.5rem, 1vh, 0.9rem) var(--pad);
+  background: var(--surface);
+  border-bottom: 1.5px solid var(--border);
+  flex-shrink: 0;
+}
+.logo-area { display: flex; align-items: center; gap: clamp(0.7rem, 1.2vw, 1rem); }
+.logo-img { height: clamp(68px, 10vh, 104px); width: auto; display: block; }
+.logo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+.logo-name { font-size: var(--sm); font-weight: 700; color: var(--ink-mid); letter-spacing: 0.03em; }
+.top-label {
+  font-family: var(--mono); font-size: var(--sm); color: var(--ink-dim);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.top-label::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: block; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+/* ==================== FOOTER ==================== */
+.btm-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: clamp(0.4rem, 0.9vh, 0.7rem) var(--pad);
+  background: var(--surface); border-top: 1.5px solid var(--border);
+  flex-shrink: 0;
+  font-family: var(--mono); font-size: var(--sm); color: var(--ink-dim);
+}
+.snum { font-weight: 500; color: var(--green); }
+
+/* ==================== PROGRESS + DOTS ==================== */
+.progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, var(--green), var(--green-l)); z-index: 1000; transition: width 0.3s ease; border-radius: 0 2px 2px 0; }
+.nav-dots { position: fixed; right: clamp(0.6rem, 1.2vw, 1rem); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: clamp(6px, 0.9vh, 9px); z-index: 1000; }
+.nav-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.3s, transform 0.3s, box-shadow 0.3s; }
+.nav-dot.active { background: var(--green); transform: scale(1.6); box-shadow: 0 0 0 3px var(--green-m); }
+
+/* ==================== ANIMATIONS ==================== */
+.reveal { opacity: 0; transform: translateY(18px) scale(0.98); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.slide.vis .reveal { opacity: 1; transform: translateY(0) scale(1); }
+.reveal:nth-child(1) { transition-delay: 0.04s; }
+.reveal:nth-child(2) { transition-delay: 0.12s; }
+.reveal:nth-child(3) { transition-delay: 0.20s; }
+.reveal:nth-child(4) { transition-delay: 0.28s; }
+.reveal:nth-child(5) { transition-delay: 0.36s; }
+.reveal:nth-child(6) { transition-delay: 0.44s; }
+.reveal:nth-child(7) { transition-delay: 0.52s; }
+
+/* ==================== PILL LABEL ==================== */
+.pill-label {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--green-p); border: 1.5px solid var(--green-m);
+  color: var(--green-d); border-radius: 100px;
+  padding: 0.25rem 0.9rem;
+  font-size: var(--sm); font-weight: 600;
+  margin-bottom: clamp(0.4rem, 0.9vh, 0.8rem);
+  width: fit-content;
+}
+.pill-label::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--green); display: block; }
+
+/* ==================== SHARED CARD ==================== */
+.card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r);
+}
+
+/* ==================== SLIDE 1: PORTADA ==================== */
+.portada .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.portada-eyebrow {
+  font-family: var(--mono); font-size: var(--sm); color: var(--green);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: clamp(0.8rem, 1.8vh, 1.5rem);
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.portada-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green); display: block; }
+.portada-title {
+  font-size: var(--title); font-weight: 900; color: var(--ink);
+  letter-spacing: -0.03em; line-height: 0.9;
+  margin-bottom: clamp(0.8rem, 1.8vh, 1.5rem);
+}
+.portada-title .hl {
+  display: block; color: var(--green);
+  background: var(--green-p); padding: 0 0.25em;
+  border-radius: 6px; width: fit-content;
+}
+.portada-sub {
+  font-size: var(--h3); font-weight: 400; color: var(--ink-soft);
+  line-height: 1.5; margin-bottom: clamp(1rem, 2.5vh, 2rem);
+  max-width: 400px;
+}
+.portada-right { display: flex; flex-direction: column; gap: var(--gap); }
+.fact-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: clamp(0.8rem, 1.5vw, 1.4rem);
+  display: flex; align-items: center; gap: clamp(0.7rem, 1.2vw, 1rem);
+}
+.fact-card.green { background: var(--green-p); border-color: var(--green-m); }
+.fact-val { font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 900; color: var(--green); line-height: 1; }
+.fact-lbl { font-size: var(--sm); color: var(--ink-soft); font-weight: 500; }
+.fact-sub { font-family: var(--mono); font-size: var(--sm); color: var(--ink-dim); }
+
+/* ==================== SLIDES 2/3: STAT + GOAL GRIDS ==================== */
+.slide-h2 { font-size: var(--h2); margin-bottom: clamp(0.2rem, 0.5vh, 0.4rem); }
+.slide-intro { font-size: var(--body); color: var(--ink-soft); margin-bottom: clamp(0.5rem, 1vh, 0.8rem); line-height: 1.5; }
+
+.three-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+
+.sc {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: clamp(0.8rem, 1.8vw, 1.6rem);
+  display: flex; flex-direction: column; gap: clamp(0.25rem, 0.5vh, 0.4rem);
+  position: relative; overflow: hidden;
+}
+.sc::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--green); border-radius: 0 0 var(--r) var(--r); }
+.sc-ico { font-size: clamp(1.3rem, 2.2vw, 2rem); }
+.sc-val { font-size: clamp(1.6rem, 3vw, 2.8rem); font-weight: 900; color: var(--ink); line-height: 1; }
+.sc-lbl { font-size: var(--sm); color: var(--ink-soft); font-weight: 600; letter-spacing: 0.04em; }
+.sc-desc { font-size: var(--sm); color: var(--ink-dim); line-height: 1.3; }
+
+.probs { display: flex; flex-direction: column; gap: clamp(0.25rem, 0.6vh, 0.4rem); margin-top: clamp(0.4rem, 0.9vh, 0.7rem); }
+.prob {
+  display: flex; align-items: center; gap: 0.7rem;
+  font-size: var(--body); color: var(--ink-mid);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.35rem 0.75rem;
+}
+.prob::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+
+/* ==================== SLIDE 3: GOAL CARDS ==================== */
+.goal-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-top: 3px solid var(--green);
+  border-radius: var(--r); padding: clamp(1rem, 2vw, 1.8rem);
+  display: flex; flex-direction: column; gap: clamp(0.3rem, 0.6vh, 0.5rem);
+}
+.goal-ico { font-size: clamp(1.5rem, 2.5vw, 2.2rem); }
+.goal-title { font-size: var(--h3); font-weight: 800; }
+.goal-target { font-size: var(--h3); font-weight: 900; color: var(--green); }
+.goal-desc { font-size: var(--sm); color: var(--ink-soft); line-height: 1.4; }
+
+/* ==================== SLIDE 4: VENDOR INTRO ==================== */
+.two-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); }
+.vcc {
+  background: var(--card); border: 1.5px solid var(--border); border-radius: var(--r);
+  padding: clamp(0.9rem, 1.8vw, 1.6rem);
+  display: flex; align-items: center; gap: clamp(0.7rem, 1.5vw, 1.2rem);
+  box-shadow: 0 2px 8px rgba(29,72,24,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.vcc:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(29,72,24,0.1); }
+.vcc.ag { border-left: 4px solid var(--agora); }
+.vcc.bb { border-left: 4px solid var(--blue-b); }
+.vcc.wf { border-left: 4px solid var(--wolf); }
+.vcc.im { border-left: 4px solid var(--inmo); }
+.vcc-ico { font-size: clamp(1.8rem, 3vw, 2.8rem); flex-shrink: 0; }
+.vcc-name { font-size: var(--h3); font-weight: 800; line-height: 1.1; margin-bottom: 0.2rem; }
+.vcc-tag { font-size: var(--sm); color: var(--ink-soft); line-height: 1.3; }
+.vcc-price { font-family: var(--mono); font-size: var(--sm); font-weight: 500; margin-left: auto; flex-shrink: 0; padding-left: 0.5rem; text-align: right; }
+.vcc-price.ag { color: var(--agora); }
+.vcc-price.bb { color: var(--blue-b); }
+.vcc-price.wf { color: var(--wolf); }
+.vcc-price.im { color: var(--inmo); }
+
+/* ==================== SLIDES 5-8: VENDOR DETAIL ==================== */
+.vdr-header {
+  display: flex; align-items: center; gap: clamp(0.8rem, 1.5vw, 1.2rem);
+  padding: clamp(0.7rem, 1.2vw, 1rem) clamp(0.9rem, 1.8vw, 1.4rem);
+  border-radius: var(--r); margin-bottom: var(--gap);
+  border-left: 4px solid; flex-shrink: 0;
+}
+.vdr-header.ag { background: var(--agora-p); border-color: var(--agora); }
+.vdr-header.bb { background: var(--blue-p);  border-color: var(--blue-b); }
+.vdr-header.wf { background: var(--wolf-p);  border-color: var(--wolf); }
+.vdr-header.im { background: var(--inmo-p);  border-color: var(--inmo); }
+.vdr-badge { font-size: clamp(1.8rem, 3vw, 2.8rem); flex-shrink: 0; }
+.vdr-name { font-size: var(--h2); font-weight: 900; line-height: 1; }
+.vdr-name.ag { color: var(--agora); }
+.vdr-name.bb { color: var(--blue-b); }
+.vdr-name.wf { color: var(--wolf); }
+.vdr-name.im { color: var(--inmo); }
+.vdr-sub { font-size: var(--sm); color: var(--ink-soft); margin-top: 0.2rem; }
+
+.vdi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); }
+.vdi {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: clamp(0.7rem, 1.4vw, 1.2rem);
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+.vdi-lbl { font-family: var(--mono); font-size: var(--sm); color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+.vdi-val { font-size: var(--h3); font-weight: 800; line-height: 1.2; }
+.vdi-sub { font-size: var(--sm); color: var(--ink-soft); line-height: 1.35; }
+
+.diff-box {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: clamp(0.7rem, 1.3vw, 1.1rem);
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  margin-top: var(--gap); flex-shrink: 0;
+}
+.diff-box.ag { border-color: var(--agora-m); }
+.diff-box.bb { border-color: var(--blue-m); }
+.diff-box.wf { border-color: var(--wolf-m); }
+.diff-box.im { border-color: var(--inmo-m); }
+.diff-ico { font-size: clamp(1.2rem, 1.8vw, 1.6rem); flex-shrink: 0; }
+.diff-title { font-size: var(--body); font-weight: 700; margin-bottom: 0.2rem; }
+.diff-desc { font-size: var(--sm); color: var(--ink-soft); line-height: 1.35; }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+.tech-tag {
+  display: inline-block; padding: 0.15rem 0.55rem; border-radius: 6px;
+  font-size: clamp(0.75rem, 0.85vw, 0.95rem); font-weight: 600;
+  background: var(--card); color: var(--ink-soft); border: 1px solid var(--border);
+}
+
+/* ==================== SLIDE 9: TABLA COMPARATIVA ==================== */
+.tbl-wrap { overflow-y: auto; margin-top: clamp(0.3rem, 0.7vh, 0.5rem); max-height: calc(100vh - 18rem); }
+.tbl-wrap::-webkit-scrollbar { width: 4px; height: 4px; }
+.tbl-wrap::-webkit-scrollbar-track { background: var(--surface); }
+.tbl-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: clamp(1.06rem, 1.25vw, 1.38rem); }
+.compare-table th, .compare-table td {
+  padding: clamp(0.35rem, 0.7vh, 0.6rem) clamp(0.45rem, 0.9vw, 0.8rem);
+  text-align: left; border-bottom: 1.5px solid var(--border); vertical-align: top;
+}
+.compare-table th { font-weight: 700; background: var(--surface); }
+.compare-table th.ca { color: var(--agora); background: var(--agora-p); }
+.compare-table th.cb { color: var(--blue-b); background: var(--blue-p); }
+.compare-table th.cw { color: var(--wolf);   background: var(--wolf-p); }
+.compare-table th.ci { color: var(--inmo);   background: var(--inmo-p); }
+.compare-table td.ca { color: var(--agora); font-weight: 600; }
+.compare-table td.cb { color: var(--blue-b); font-weight: 600; }
+.compare-table td.cw { color: var(--wolf);   font-weight: 600; }
+.compare-table td.ci { color: var(--inmo);   font-weight: 600; }
+.rlabel { color: var(--ink-dim); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: clamp(0.94rem, 1.06vw, 1.19rem); }
+
+.bdg-yes { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 100px; background: #DCFCE7; color: #166534; font-weight: 700; font-size: 0.9em; }
+.bdg-no  { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 100px; background: #FEE2E2; color: #991B1B; font-weight: 700; font-size: 0.9em; }
+.bdg-nd  { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 100px; background: var(--surface); color: var(--ink-dim); font-weight: 600; font-size: 0.9em; border: 1px solid var(--border); }
+
+/* ==================== SLIDE 10: VALORES AGREGADOS ==================== */
+.va-table { width: 100%; border-collapse: collapse; font-size: clamp(1.06rem, 1.25vw, 1.38rem); margin-top: clamp(0.4rem, 0.8vh, 0.6rem); }
+.va-table th, .va-table td {
+  padding: clamp(0.35rem, 0.7vh, 0.6rem) clamp(0.45rem, 0.9vw, 0.8rem);
+  text-align: left; border-bottom: 1.5px solid var(--border); vertical-align: top;
+}
+.va-table th { font-weight: 700; background: var(--surface); }
+.va-table th.ca { color: var(--agora); background: var(--agora-p); }
+.va-table th.cb { color: var(--blue-b); background: var(--blue-p); }
+.va-table th.cw { color: var(--wolf); background: var(--wolf-p); }
+.va-table th.ci { color: var(--inmo); background: var(--inmo-p); }
+.va-highlight { background: var(--green-p); border: 1.5px solid var(--green-m); border-radius: var(--r); padding: clamp(0.6rem, 1.2vh, 1rem) clamp(0.8rem, 1.5vw, 1.2rem); margin-top: clamp(0.5rem, 1vh, 0.8rem); }
+.va-highlight-item { font-size: var(--sm); color: var(--ink-mid); margin-bottom: 0.5rem; line-height: 1.45; }
+.va-highlight-item:last-child { margin-bottom: 0; }
+.va-highlight-item strong { color: var(--ink); font-weight: 700; }
+
+/* ==================== SLIDE 11: ANÁLISIS FINANCIERO ==================== */
+/* (Análisis en desarrollo - sin estilos específicos de gráficos) */
+
+/* ==================== SLIDE 12: ASEGURADORA ==================== */
+.seg-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: clamp(1rem, 2vw, 1.8rem);
+  text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: clamp(0.3rem, 0.6vh, 0.5rem);
+}
+.seg-num { font-size: clamp(2.5rem, 4.5vw, 4rem); font-weight: 900; color: var(--green); opacity: 0.12; line-height: 1; }
+.seg-ico { font-size: clamp(1.6rem, 2.5vw, 2.4rem); }
+.seg-title { font-size: var(--h3); font-weight: 800; }
+.seg-desc { font-size: var(--sm); color: var(--ink-soft); line-height: 1.45; }
+.seg-question { margin-top: clamp(1rem, 2vh, 1.5rem); text-align: center; font-size: clamp(2rem, 3.8vw, 3.5rem); font-weight: 900; color: var(--green); line-height: 1.2; }
+
+/* ==================== SLIDE 13: PRÓXIMOS PASOS ==================== */
+.steps { display: flex; flex-direction: column; gap: var(--gap); margin-top: clamp(0.4rem, 0.9vh, 0.7rem); }
+.step {
+  display: flex; align-items: flex-start; gap: clamp(0.8rem, 1.5vw, 1.3rem);
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--r); padding: clamp(0.7rem, 1.4vw, 1.2rem);
+}
+.step-num { font-size: clamp(1.1rem, 2.2vw, 1.7rem); font-weight: 900; color: var(--green); opacity: 0.3; line-height: 1; flex-shrink: 0; width: clamp(26px, 3vw, 38px); }
+.step-title { font-size: var(--body); font-weight: 700; margin-bottom: 0.15rem; }
+.step-desc { font-size: var(--sm); color: var(--ink-soft); line-height: 1.4; }
+/* Logo y pills para el cierre del slide 13 */
+.cls-logo { height: clamp(90px, 13vh, 130px); width: auto; }
+.cls-pills { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; }
+.cls-pill {
+  background: var(--green-p); border: 1.5px solid var(--green-m); color: var(--green-d);
+  font-size: var(--sm); font-weight: 600; border-radius: 100px; padding: 0.3rem 0.9rem;
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="pb"></div>
+<nav class="nav-dots" id="nd"></nav>
+
+<!-- ==================== SLIDE 1: PORTADA ==================== -->
+<section class="slide portada" id="s1">
+  <div class="top-bar">
+    <div class="logo-area">
+      <img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá">
+      <div class="logo-dot"></div>
+      <div class="logo-name">Edificio Iguá</div>
+    </div>
+    <div class="top-label">Asamblea Extraordinaria de Copropietarios · Bogotá 2026</div>
+  </div>
+  <div class="inner">
+    <div class="portada-left">
+      <div class="portada-eyebrow reveal">Evaluación de Propuestas de Seguridad</div>
+      <h1 class="portada-title reveal">Edificio<br><span class="hl">Iguá</span></h1>
+      <p class="portada-sub reveal">¿Cómo modernizamos nuestra seguridad?<br>4 propuestas hacia un Edificio Autónomo</p>
+    </div>
+    <div class="portada-right reveal">
+      <div class="fact-card green">
+        <div style="font-size:clamp(2rem,4vw,3.2rem)">🏢</div>
+        <div><div class="fact-val">37</div><div class="fact-lbl">Unidades residenciales</div></div>
+      </div>
+      <div class="fact-card">
+        <div style="font-size:clamp(2rem,4vw,3.2rem)">📋</div>
+        <div><div class="fact-val">4</div><div class="fact-lbl">Propuestas evaluadas</div><div class="fact-sub">Bajo los mismos TDR</div></div>
+      </div>
+      <div class="fact-card">
+        <div style="font-size:clamp(2rem,4vw,3.2rem)">📍</div>
+        <div><div class="fact-val">2026</div><div class="fact-lbl">Bogotá, Colombia</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Evaluación técnica y financiera comparativa</span><span class="snum">01 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 2: CONTEXTO — ACTA ASAMBLEA ==================== -->
+<section class="slide" id="s2">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Asamblea ordinaria · Marzo 2026</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Contexto · Acta asamblea marzo 2026</div>
+    <h2 class="slide-h2 reveal">¿Qué nos trajo hasta aquí?</h2>
+    <p class="slide-intro reveal">La asamblea ordinaria de copropietarios aprobó un ajuste presupuestal del <strong style="color:var(--ink)">29.17%</strong> impulsado principalmente por el alza en los costos de vigilancia.</p>
+    <div class="three-grid reveal">
+      <div class="sc"><div class="sc-ico">📈</div><div class="sc-val">+29.17%</div><div class="sc-lbl">Ajuste presupuestal</div><div class="sc-desc">Aprobado en asamblea ordinaria de copropietarios</div></div>
+      <div class="sc"><div class="sc-ico">🔢</div><div class="sc-val">Cuota 13</div><div class="sc-lbl">Mes adicional</div><div class="sc-desc">Se aprobó cobrar un mes 13 de administración dentro del año</div></div>
+      <div class="sc"><div class="sc-ico">💰</div><div class="sc-val">Cuota extra.</div><div class="sc-lbl">Recaudo especial</div><div class="sc-desc">Cuota extraordinaria aprobada para financiar obras e imprevistos del año</div></div>
+    </div>
+    <div class="probs reveal">
+      <div class="prob">Nuevas <strong>obligaciones legales</strong> encarecieron el contrato de vigilancia vigente</div>
+      <div class="prob">Automatización del acceso <strong>rechazada</strong> por la asamblea para implementación inmediata</div>
+      <div class="prob">Nuevo Consejo de Administración y Comité de Convivencia elegidos en la misma sesión</div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">02 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 3: OBJETIVO ==================== -->
+<section class="slide" id="s3">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Qué buscamos</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Objetivo</div>
+    <h2 class="slide-h2 reveal">El objetivo: Edificio Autónomo</h2>
+    <p class="slide-intro reveal">Transformar la seguridad del edificio reduciendo costos, mejorando la calidad y modernizando la operación.</p>
+    <div class="three-grid reveal">
+      <div class="goal-card">
+        <div class="goal-ico">💸</div>
+        <div class="goal-title">Reducir costos</div>
+        <div class="goal-target">40% – 70%</div>
+        <div class="goal-desc">Ahorrar entre $56M y $130M al año en operación de seguridad</div>
+      </div>
+      <div class="goal-card">
+        <div class="goal-ico">🔒</div>
+        <div class="goal-title">Mejorar seguridad</div>
+        <div class="goal-target">24/7 Automatizado</div>
+        <div class="goal-desc">Control de acceso biométrico, CCTV inteligente y citofonía virtual</div>
+      </div>
+      <div class="goal-card">
+        <div class="goal-ico">📱</div>
+        <div class="goal-title">Modernizar</div>
+        <div class="goal-target">Trazabilidad total</div>
+        <div class="goal-desc">App para residentes, registro de accesos e informes automáticos</div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">03 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 4: LOS 4 CANDIDATOS ==================== -->
+<section class="slide" id="s4">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Los competidores</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Evaluación</div>
+    <h2 class="slide-h2 reveal">4 propuestas evaluadas</h2>
+    <p class="slide-intro reveal">Todas cotizaron los mismos requerimientos bajo Términos de Referencia iguales.</p>
+    <div class="two-grid reveal">
+      <div class="vcc ag">
+        <div class="vcc-ico">☁️</div>
+        <div style="flex:1"><div class="vcc-name">Ágora Tech</div><div class="vcc-tag">Plataforma HomeLok · Financiación 24–36 meses</div></div>
+        <div class="vcc-price ag">$102.3M</div>
+      </div>
+      <div class="vcc bb">
+        <div class="vcc-ico">🤖</div>
+        <div style="flex:1"><div class="vcc-name">BlueBuilding</div><div class="vcc-tag">Machine Learning · Modelo suscripción OpEx</div></div>
+        <div class="vcc-price bb">$12.7M + $5M/mes</div>
+      </div>
+      <div class="vcc wf">
+        <div class="vcc-ico">🛡️</div>
+        <div style="flex:1"><div class="vcc-name">Wolf Security</div><div class="vcc-tag">Biometría · Obras civiles incluidas</div></div>
+        <div class="vcc-price wf">$56.3M</div>
+      </div>
+      <div class="vcc im">
+        <div class="vcc-ico">⚡</div>
+        <div style="flex:1"><div class="vcc-name">Inmótika</div><div class="vcc-tag">IA · Generador diesel · Llave en mano</div></div>
+        <div class="vcc-price im">$173.7M</div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">04 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 5: ÁGORA TECH ==================== -->
+<section class="slide" id="s5">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label" style="color:var(--agora);">Ágora Tech · Propuesta 1 de 4</div>
+  </div>
+  <div class="inner" style="justify-content:flex-start;">
+    <div class="vdr-header ag reveal">
+      <div class="vdr-badge">☁️</div>
+      <div>
+        <div class="vdr-name ag">Ágora Tech</div>
+        <div class="vdr-sub">Seguridad administrada en la nube · Plataforma HomeLok</div>
+      </div>
+    </div>
+    <div class="vdi-grid reveal">
+      <div class="vdi">
+        <div class="vdi-lbl">Inversión total</div>
+        <div class="vdi-val" style="color:var(--agora)">$102.280.500</div>
+        <div class="vdi-sub">IVA incluido · Financiable al 100%</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Mensualidad</div>
+        <div class="vdi-val">$1.139.600 + IVA</div>
+        <div class="vdi-sub">Gestión, monitoreo y mantenimiento preventivo</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Ahorro proyectado</div>
+        <div class="vdi-val" style="color:var(--green)">$93M – $110M / año</div>
+        <div class="vdi-sub">$7.8M/mes con 24m · $9.2M/mes con 36m</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Garantía</div>
+        <div class="vdi-val">36 / 12 meses</div>
+        <div class="vdi-sub">Equipos de acceso / Adecuaciones técnicas</div>
+      </div>
+    </div>
+    <div class="diff-box ag reveal">
+      <div class="diff-ico">⭐</div>
+      <div>
+        <div class="diff-title">Financiación del 100% a 24 o 36 meses — el proyecto se paga solo con el ahorro</div>
+        <div class="diff-desc">Sin desembolso inicial. La copropiedad usa el ahorro mensual en vigilancia para pagar las cuotas.</div>
+        <div class="tech-tags">
+          <span class="tech-tag">HomeLok Cloud</span><span class="tech-tag">Citofonía QR</span>
+          <span class="tech-tag">Alarma monitoreo</span><span class="tech-tag">Optimización CCTV</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">05 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 6: BLUEBUILDING ==================== -->
+<section class="slide" id="s6">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label" style="color:var(--blue-b);">BlueBuilding · Propuesta 2 de 4</div>
+  </div>
+  <div class="inner" style="justify-content:flex-start;">
+    <div class="vdr-header bb reveal">
+      <div class="vdr-badge">🤖</div>
+      <div>
+        <div class="vdr-name bb">BlueBuilding</div>
+        <div class="vdr-sub">Machine Learning aplicado · Modelo suscripción mensual (OpEx)</div>
+      </div>
+    </div>
+    <div class="vdi-grid reveal">
+      <div class="vdi">
+        <div class="vdi-lbl">Instalación inicial</div>
+        <div class="vdi-val" style="color:var(--blue-b)">$12.724.656</div>
+        <div class="vdi-sub">Única vez · Equipos en comodato (son de BlueBuilding)</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Mensualidad</div>
+        <div class="vdi-val">$4.978.415</div>
+        <div class="vdi-sub">Licenciamiento + mantenimiento preventivo y correctivo total</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Ahorro proyectado</div>
+        <div class="vdi-val" style="color:var(--green)">42% → 56% → 62%</div>
+        <div class="vdi-sub">Año 1: $77.4M · Años 2–3 mayor al amortizarse la inversión</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Garantía</div>
+        <div class="vdi-val">Total operativa</div>
+        <div class="vdi-sub">ANS 3–48h según gravedad · Equipos 100% de BlueBuilding</div>
+      </div>
+    </div>
+    <div class="diff-box bb reveal">
+      <div class="diff-ico">⭐</div>
+      <div>
+        <div class="diff-title">OpEx puro: inversión mínima + seguro de hogar para cada apartamento incluido</div>
+        <div class="diff-desc">⚠️ NO ejecuta obras civiles — el edificio debe contratar puerta esclusa y adecuaciones por separado.</div>
+        <div class="tech-tags">
+          <span class="tech-tag">Machine Learning</span><span class="tech-tag">17 cámaras Hikvision</span>
+          <span class="tech-tag">App residente</span><span class="tech-tag">Seguro contenidos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">06 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 7: WOLF SECURITY ==================== -->
+<section class="slide" id="s7">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label" style="color:var(--wolf);">Wolf Security · Propuesta 3 de 4</div>
+  </div>
+  <div class="inner" style="justify-content:flex-start;">
+    <div class="vdr-header wf reveal">
+      <div class="vdr-badge">🛡️</div>
+      <div>
+        <div class="vdr-name wf">Wolf Security</div>
+        <div class="vdr-sub">Biometría + obras civiles integradas · Precio competitivo de hardware</div>
+      </div>
+    </div>
+    <div class="vdi-grid reveal">
+      <div class="vdi">
+        <div class="vdi-lbl">Inversión total</div>
+        <div class="vdi-val" style="color:var(--wolf)">$56.327.000</div>
+        <div class="vdi-sub">Equipos + mano de obra + obras civiles incluidas</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Mensualidad</div>
+        <div class="vdi-val">No especificada</div>
+        <div class="vdi-sub">Monitoreo 24h · Servicio técnico inmediato</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Ahorro</div>
+        <div class="vdi-val">Reducción de guardas</div>
+        <div class="vdi-sub">Sin tabla de proyección financiera específica en la propuesta</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Garantía</div>
+        <div class="vdi-val">Soporte inmediato</div>
+        <div class="vdi-sub">Monitoreo 24h · Sin plazo de garantía documentado formalmente</div>
+      </div>
+    </div>
+    <div class="diff-box wf reveal">
+      <div class="diff-ico">⭐</div>
+      <div>
+        <div class="diff-title">El único que incluye adecuaciones físicas en el precio: rejas divisorias, vidrios templados y carpintería metálica</div>
+        <div class="diff-desc">Precio de hardware el más competitivo. Punto débil: sin proyección financiera ni cuota de mantenimiento definida.</div>
+        <div class="tech-tags">
+          <span class="tech-tag">Biometría facial</span><span class="tech-tag">Huella dactilar</span>
+          <span class="tech-tag">Motores Nice</span><span class="tech-tag">Alarma Paradox</span><span class="tech-tag">Rejas + vidrios</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">07 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 8: INMÓTIKA ==================== -->
+<section class="slide" id="s8">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label" style="color:var(--inmo);">Inmótika · Propuesta 4 de 4</div>
+  </div>
+  <div class="inner" style="justify-content:flex-start;">
+    <div class="vdr-header im reveal">
+      <div class="vdr-badge">⚡</div>
+      <div>
+        <div class="vdr-name im">Inmótika</div>
+        <div class="vdr-sub">Alta gama · IA + Generador diesel · Proyecto llave en mano</div>
+      </div>
+    </div>
+    <div class="vdi-grid reveal">
+      <div class="vdi">
+        <div class="vdi-lbl">Inversión total</div>
+        <div class="vdi-val" style="color:var(--inmo)">$173.675.962</div>
+        <div class="vdi-sub">Con IVA · La solución más completa y robusta del grupo</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Mensualidad</div>
+        <div class="vdi-val">Licencia vitalicia App</div>
+        <div class="vdi-sub">Sin cuota mensual definida · Soporte preventivo y correctivo continuo</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Continuidad energética</div>
+        <div class="vdi-val" style="color:var(--inmo)">Generador 10KVA</div>
+        <div class="vdi-sub">Única con backup eléctrico industrial total ante apagones</div>
+      </div>
+      <div class="vdi">
+        <div class="vdi-lbl">Garantía</div>
+        <div class="vdi-val">Continua</div>
+        <div class="vdi-sub">Soporte preventivo, correctivo y actualizaciones incluidas</div>
+      </div>
+    </div>
+    <div class="diff-box im reveal">
+      <div class="diff-ico">⭐</div>
+      <div>
+        <div class="diff-title">Generador diesel propio — el edificio nunca queda vulnerable ante cortes de energía</div>
+        <div class="diff-desc">Red industrial en tubería EMT. 19 cámaras con IA. La inversión más alta pero la solución más independiente.</div>
+        <div class="tech-tags">
+          <span class="tech-tag">19 cámaras IP 4MP IA</span><span class="tech-tag">Generador diesel 10KVA</span>
+          <span class="tech-tag">Red EMT</span><span class="tech-tag">Pantallas LCD 8"</span><span class="tech-tag">App vitalicia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">08 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 9: TABLA COMPARATIVA ==================== -->
+<section class="slide" id="s9">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Comparación lado a lado</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Comparación</div>
+    <h2 class="slide-h2 reveal">Tabla comparativa</h2>
+    <div class="tbl-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="rlabel">Característica</th>
+            <th class="ca">Ágora Tech</th>
+            <th class="cb">BlueBuilding</th>
+            <th class="cw">Wolf Security</th>
+            <th class="ci">Inmótika</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rlabel">Valor total<br><span style="font-size:0.85em;opacity:0.7">(IVA incluido)</span></td>
+            <td class="ca">$102.280.500</td>
+            <td class="cb">$12.724.656 instalación<br>+ licencia mensual</td>
+            <td class="cw">$56.327.000</td>
+            <td class="ci">$173.675.962</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Cámaras</td>
+            <td class="ca">Optimización del sistema actual + hasta 3 nuevas</td>
+            <td class="cb">17 IP (Bala, Domo y Turret)</td>
+            <td class="cw"><span class="bdg-nd">No desglosadas en base</span></td>
+            <td class="ci">19 IP de 4MP — alta gama</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Infraestructura eléct. y datos</td>
+            <td class="ca">Adecuaciones básicas + ductos + cableado CAT6</td>
+            <td class="cb">Sin obra civil; requiere cuarto seguro para Rack</td>
+            <td class="cw">Cableado UTP CAT5 + UPS 2KVA</td>
+            <td class="ci">Generador Diesel 10KVA + red datos tubería EMT</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Adecuaciones físicas</td>
+            <td class="ca">Puerta secundaria vidrio templado + muros Drywall</td>
+            <td class="cb">Recomienda esclusa y reja sótano (no ejecutadas)</td>
+            <td class="cw">Rejas divisorias + puertas vidrio recepción y sótano</td>
+            <td class="ci">Exclusa entrada principal + cerramientos + puertas de acceso</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Modelo de negocio</td>
+            <td class="ca">Venta de equipos con financiación 24 o 36 meses</td>
+            <td class="cb">Suscripción mensual con equipos en comodato</td>
+            <td class="cw">Venta de equipos y mano de obra</td>
+            <td class="ci">Llave en mano — tecnología de alto nivel</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Citofonía / App</td>
+            <td class="ca">Citofonía virtual por códigos QR</td>
+            <td class="cb">App propia con usuarios ilimitados</td>
+            <td class="cw">Video portero + lectora biométrica + App</td>
+            <td class="ci">App vitalicia 37 uds. + pantalla LCD 8" en portería</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">09 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 10: VALORES AGREGADOS ==================== -->
+<section class="slide" id="s10">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Servicios adicionales incluidos</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Extras</div>
+    <h2 class="slide-h2 reveal">Valores agregados específicos</h2>
+    <div class="tbl-wrap reveal">
+      <table class="va-table">
+        <thead>
+          <tr>
+            <th class="rlabel">Servicio</th>
+            <th class="ca">Ágora Tech</th>
+            <th class="cb">BlueBuilding</th>
+            <th class="cw">Wolf Security</th>
+            <th class="ci">Inmótika</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rlabel">Interventoría</td>
+            <td class="ca">No mencionada</td>
+            <td class="cb"><strong>Sí</strong> (obras civiles terceros)</td>
+            <td class="cw">No mencionada</td>
+            <td class="ci">No mencionada</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Seguridad motorizada</td>
+            <td class="ca"><strong>Sí</strong> (aliado autorizado)</td>
+            <td class="cb"><strong>Sí</strong> (aliado externo)</td>
+            <td class="cw">No detallada</td>
+            <td class="ci">No detallada</td>
+          </tr>
+          <tr>
+            <td class="rlabel">Seguros</td>
+            <td class="ca">No incluidos</td>
+            <td class="cb"><strong>Sí</strong> (contenidos + póliza hurto)</td>
+            <td class="cw">No incluidos</td>
+            <td class="ci">No incluidos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="va-highlight reveal">
+      <div class="va-highlight-item"><strong>Ágora Tech:</strong> Servicio opcional de todero tiempo completo ($4.500.000/mes) — mantenimiento preventivo + aseo</div>
+      <div class="va-highlight-item"><strong>Inmótika:</strong> Generador Eléctrico Diesel 10 KVA incluido — único valor agregado de infraestructura crítica en la convocatoria</div>
+      <div class="va-highlight-item"><strong>BlueBuilding:</strong> Machine Learning para analítica de datos en nube central</div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">10 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 11: ANÁLISIS FINANCIERO ==================== -->
+<section class="slide" id="s11">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Análisis financiero · En desarrollo</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">En proceso</div>
+    <h2 class="slide-h2 reveal">Análisis Financiero</h2>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(1.5rem,3vh,2.5rem);margin-top:clamp(2rem,4vh,3rem);">
+      <div style="font-size:clamp(4rem,8vw,7rem);opacity:0.15;">📊</div>
+      <div style="text-align:center;max-width:700px;">
+        <p style="font-size:var(--h3);font-weight:700;color:var(--ink);margin-bottom:1rem;" class="reveal">Análisis en desarrollo</p>
+        <p style="font-size:var(--body);color:var(--ink-soft);line-height:1.6;" class="reveal">El análisis financiero detallado está siendo preparado por la contadora de la copropiedad para su entrega antes de la asamblea.</p>
+        <p style="font-size:var(--sm);color:var(--ink-dim);margin-top:1.5rem;font-style:italic;" class="reveal">Este slide será actualizado con los datos definitivos una vez completado el análisis contable.</p>
+      </div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">11 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 12: ASEGURADORA ==================== -->
+<section class="slide" id="s12">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Impacto en póliza de bienes comunes</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Aseguradora</div>
+    <h2 class="slide-h2 reveal">Respuesta Mapfre Seguros</h2>
+    <p class="slide-intro reveal">Consultamos a la aseguradora sobre los cambios en la póliza al suprimir el contrato de vigilancia y volver al esquema inteligente.</p>
+    <div class="three-grid reveal">
+      <div class="seg-card">
+        <div class="seg-num">01</div>
+        <div class="seg-ico">⚠️</div>
+        <div class="seg-title">Exclusión de sustracción</div>
+        <div class="seg-desc">La aseguradora podría retirar la cobertura de sustracción. No sería posible reclamar por pérdida de bienes comunes o de terceros (vehículos, motos, patinetas, bicicletas) que permanezcan en áreas comunes bajo cuidado y tenencia.</div>
+      </div>
+      <div class="seg-card">
+        <div class="seg-num">02</div>
+        <div class="seg-ico">📊</div>
+        <div class="seg-title">Incremento de deducible</div>
+        <div class="seg-desc">Si mantiene la cobertura, podrá subir el deducible del 5% (mín. 1 SMMLV) a <strong>20% (mín. 10 SMMLV = $17.5M)</strong>. La copropiedad participaría en mayor porcentaje sobre cada pérdida por hurto.</div>
+      </div>
+      <div class="seg-card">
+        <div class="seg-num">03</div>
+        <div class="seg-ico">🚫</div>
+        <div class="seg-title">No renovación</div>
+        <div class="seg-desc">La compañía podría optar por <strong>no suscribir o renovar</strong> la póliza a su vencimiento, considerando el cambio en las condiciones de seguridad del riesgo.</div>
+      </div>
+    </div>
+    <div class="seg-question reveal">¿Es válido cotizar con otras aseguradoras?</div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">12 / 13</span></div>
+</section>
+
+<!-- ==================== SLIDE 13: PRÓXIMOS PASOS ==================== -->
+<section class="slide" id="s13">
+  <div class="top-bar">
+    <div class="logo-area"><img class="logo-img" src="../assets/logoIgua.png" alt="Edificio Iguá"></div>
+    <div class="top-label">Decisión y plan de acción</div>
+  </div>
+  <div class="inner">
+    <div class="pill-label reveal">Decisión</div>
+    <h2 class="slide-h2 reveal">Próximos pasos</h2>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">Preguntas y respuestas</div>
+          <div class="step-desc">Espacio abierto para resolver dudas sobre las propuestas, condiciones técnicas y financieras</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Votación: ¿Queremos automatizar el edificio?</div>
+          <div class="step-desc">Primera votación · Respuesta: <strong>SÍ</strong> o <strong>NO</strong></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">¿Cuál propuesta prefiere para automatizar el edificio?</div>
+          <div class="step-desc">Segunda votación · Opciones: Ágora Tech · BlueBuilding · Wolf Security · Inmótika</div>
+        </div>
+      </div>
+    </div>
+    <img class="cls-logo reveal" src="../assets/logoIgua.png" alt="Edificio Iguá" style="margin-top:clamp(2rem,4vh,3rem);">
+    <div class="cls-pills reveal" style="margin-top:clamp(1.5rem,3vh,2rem);">
+      <div class="cls-pill">Modernización</div>
+      <div class="cls-pill">Ahorro 40–70%</div>
+      <div class="cls-pill">Seguridad 24/7</div>
+      <div class="cls-pill">Bogotá 2026</div>
+    </div>
+  </div>
+  <div class="btm-bar"><span>Edificio Iguá Asamblea extraordinaria 2026</span><span class="snum">13 / 13</span></div>
+</section>
+
+<script>
+/* === PRESENTATION CONTROLLER === */
+(function() {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const nd = document.getElementById('nd');
+  const pb = document.getElementById('pb');
+  const dots = [];
+  let cur = 0, wl = false;
+
+  // Build nav dots
+  slides.forEach((_, i) => {
+    const b = document.createElement('button');
+    b.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    b.setAttribute('aria-label', 'Slide ' + (i + 1));
+    b.addEventListener('click', () => go(i));
+    nd.appendChild(b);
+    dots.push(b);
+  });
+
+  function go(i) {
+    if (i < 0 || i >= slides.length) return;
+    slides[i].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function update(i) {
+    cur = i;
+    dots.forEach((d, j) => d.classList.toggle('active', j === i));
+    pb.style.width = (slides.length > 1 ? (i / (slides.length - 1)) * 100 : 0) + '%';
+  }
+
+  // Intersection observer — reveal + track current
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('vis');
+      update(slides.indexOf(e.target));
+    });
+  }, { threshold: 0.5 });
+  slides.forEach(s => io.observe(s));
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    switch (e.key) {
+      case ' ': case 'ArrowDown': case 'ArrowRight': e.preventDefault(); go(cur + 1); break;
+      case 'ArrowUp': case 'ArrowLeft':              e.preventDefault(); go(cur - 1); break;
+      case 'Home':                                   e.preventDefault(); go(0);       break;
+      case 'End':                                    e.preventDefault(); go(slides.length - 1); break;
+    }
+  });
+
+  // Touch
+  let sy = 0;
+  document.addEventListener('touchstart', e => { sy = e.touches[0].clientY; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    const d = sy - e.changedTouches[0].clientY;
+    if (Math.abs(d) > 50) go(d > 0 ? cur + 1 : cur - 1);
+  }, { passive: true });
+
+  // Wheel
+  document.addEventListener('wheel', e => {
+    e.preventDefault();
+    if (wl) return;
+    wl = true;
+    setTimeout(() => { wl = false; }, 850);
+    go(e.deltaY > 0 ? cur + 1 : cur - 1);
+  }, { passive: false });
+})();
+</script>
+</body>
+</html>
