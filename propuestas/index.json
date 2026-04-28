@@ -1,8 +1,19 @@
 {
-  "generado": "2026-04-23T17:16:37.786267Z",
+  "generado": "2026-04-28T03:25:32.250277Z",
   "total": 3,
   "activas": 3,
   "propuestas": [
+    {
+      "slug": "cazaraiz-app-inmobiliaria",
+      "titulo": "CazaRaíz — App Inmobiliaria con Escaneo de Letreros",
+      "cliente": "Inversores / Co-fundadores",
+      "fecha": "2026-04-28",
+      "estado": "activa",
+      "descripcion": "App móvil que digitaliza el mercado inmobiliario informal en Colombia mediante QR dinámicos para letreros y escaneo OCR. Mercado: 0B COP/año, 7.3M hogares en arriendo.",
+      "monto": "100.000 – 200.000 USD",
+      "moneda": "USD",
+      "repo_origen": "pablovesga/cazaraiz"
+    },
     {
       "slug": "bienvisto-cnc-2026",
       "titulo": "Bienvisto — Plataforma SaaS de Reputación para CNC Colombia",
@@ -10,17 +21,6 @@
       "fecha": "2026-04-13",
       "estado": "activa",
       "descripcion": "Propuesta para convertir los índices IGR/Merco del CNC en una plataforma SaaS de autoservicio con IA. Incluye pitch deck de 12 slides y business case completo. Punto de equilibrio: 6–18 empresas. Prototipo: 11 de mayo 2026."
-    },
-    {
-      "slug": "cazaraiz-app-inmobiliaria",
-      "titulo": "CazaRaíz — App Inmobiliaria con Escaneo de Letreros",
-      "cliente": "Inversores / Co-fundadores",
-      "fecha": "2026-04-13",
-      "estado": "activa",
-      "descripcion": "App móvil que digitaliza el mercado inmobiliario informal en Colombia mediante QR dinámicos para letreros y escaneo OCR. Mercado: 60B COP/año, 7.3M hogares en arriendo.",
-      "monto": "100.000 – 200.000 USD",
-      "moneda": "USD",
-      "repo_origen": "pablovesga/cazaraiz"
     },
     {
       "slug": "jiyumi-motor-encuestas-2026",
