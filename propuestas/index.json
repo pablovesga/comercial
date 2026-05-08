@@ -1,8 +1,15 @@
 {
-  "generado": "2026-04-13T04:17:32.043391Z",
-  "total": 3,
-  "activas": 3,
+  "generado": "2026-05-08T16:35:28Z",
+  "total": 4,
+  "activas": 4,
   "propuestas": [
+    {
+      "slug": "mirave-ecommerce-2026",
+      "titulo": "E-commerce Mira Ve Óptica",
+      "cliente": "Óptica Mira Ve",
+      "fecha": "2026-05-08",
+      "estado": "activa"
+    },
     {
       "slug": "bienvisto-cnc-2026",
       "titulo": "Bienvisto — Plataforma SaaS de Reputación para CNC Colombia",
