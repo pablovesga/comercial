@@ -3,34 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CazaRaíz — Para quien busca vivienda</title>
+<title>CazaRaíz — Inteligencia inmobiliaria</title>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 /* ===========================================
-   THEME — BOLD SIGNAL
+   THEME — NOCHE DE RADAR (light)
    Cambiar :root afecta toda la presentación
    =========================================== */
 :root {
-  --bg:          #141414;
-  --bg-grad:     linear-gradient(135deg, #141414 0%, #1f1f1f 60%, #141414 100%);
-  --orange:      #FF5722;
-  --orange-dim:  rgba(255,87,34,0.10);
-  --orange-glow: rgba(255,87,34,0.22);
-  --text:        #f2f2f2;
-  --muted:       #777;
-  --dim:         #3a3a3a;
-  --on-orange:   #1a1a1a;
-  --card:        #1d1d1d;
-  --border:      rgba(255,255,255,0.06);
+  --bg:          #F7FAFC;
+  --bg-grad:     linear-gradient(145deg, #F7FAFC 0%, #FFFFFF 55%, #EDF2F7 100%);
+  --orange:      #E63946;
+  --orange-dim:  rgba(230,57,70,0.08);
+  --orange-glow: rgba(230,57,70,0.16);
+  --indigo:      #1D3557;
+  --mint:        #06D6A0;
+  --text:        #0B1120;
+  --muted:       #6B7280;
+  --dim:         #9CA3AF;
+  --on-orange:   #FFFFFF;
+  --card:        #FFFFFF;
+  --border:      rgba(0,0,0,0.08);
 
   --ff-display: 'Archivo Black', sans-serif;
   --ff-body:    'Space Grotesk', sans-serif;
 
   --title:  clamp(2rem,   6vw,   5.5rem);
   --h2:     clamp(1.3rem, 3.5vw, 2.8rem);
-  --body:   clamp(0.75rem,1.3vw, 1.05rem);
-  --small:  clamp(1.13rem, 0.9vw, 1.4rem);
+  --body:   clamp(1.05rem,1.8vw, 1.4rem);
+  --small:  clamp(1.2rem, 1.8vw, 1.56rem);
   --pad:    clamp(1.5rem, 5vw,   5rem);
   --gap:    clamp(0.6rem, 1.8vw, 1.8rem);
   --ease:   cubic-bezier(0.16, 1, 0.3, 1);
@@ -73,7 +75,7 @@ html {
   :root { --pad: clamp(0.75rem,3vw,2rem); --title: clamp(1.5rem,5vw,3rem); --h2: clamp(1.1rem,3vw,2rem); }
 }
 @media (max-height: 500px) {
-  :root { --pad: clamp(0.5rem,2vw,1rem); --title: clamp(1.2rem,4vw,2rem); --h2: clamp(1rem,2.5vw,1.5rem); --body: clamp(0.65rem,1vw,0.85rem); }
+  :root { --pad: clamp(0.5rem,2vw,1rem); --title: clamp(1.2rem,4vw,2rem); --h2: clamp(1rem,2.5vw,1.5rem); --body: clamp(1rem,1.5vw,1.2rem); }
   .nav-dots, .kbd-hint { display: none; }
 }
 @media (max-width: 600px) {
@@ -102,13 +104,13 @@ html {
 
 .kbd-hint { position:fixed; bottom:clamp(.75rem,1.5vh,1.5rem); left:50%; transform:translateX(-50%); font-size:var(--small); color:var(--dim); z-index:100; pointer-events:none; letter-spacing:.05em; }
 
-.slide-num { position:absolute; bottom:var(--pad); right:var(--pad); font-family:var(--ff-display); font-size:clamp(3rem,8vw,8rem); color:rgba(255,255,255,.025); line-height:1; pointer-events:none; user-select:none; }
+.slide-num { position:absolute; bottom:var(--pad); right:var(--pad); font-family:var(--ff-display); font-size:clamp(3rem,8vw,8rem); color:rgba(11,17,32,.05); line-height:1; pointer-events:none; user-select:none; }
 
 .lbl { font-size:var(--small); font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
 
-.pill { display:inline-flex; align-items:center; gap:.4em; background:var(--orange-dim); border:1px solid rgba(255,87,34,.2); color:var(--orange); font-size:var(--small); font-weight:600; letter-spacing:.1em; text-transform:uppercase; padding:.35em .9em; border-radius:100px; }
+.pill { display:inline-flex; align-items:center; gap:.4em; background:var(--orange-dim); border:1px solid rgba(230,57,70,.2); color:var(--orange); font-size:var(--small); font-weight:600; letter-spacing:.1em; text-transform:uppercase; padding:.35em .9em; border-radius:100px; }
 
-.card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); overflow:hidden; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); overflow:hidden; box-shadow:0 2px 12px rgba(11,17,32,0.06); }
 
 /* ======================================================
    SLIDE 1 — PORTADA
@@ -118,13 +120,13 @@ html {
 
 .s1-left { display:flex; flex-direction:column; justify-content:space-between; padding:var(--pad); position:relative; z-index:2; }
 
-.s1-brand { font-family:var(--ff-display); font-size:clamp(.85rem,1.5vw,1.1rem); color:var(--muted); letter-spacing:.05em; }
+.s1-brand { font-family:var(--ff-display); font-size:clamp(1.7rem,3vw,2.2rem); color:var(--muted); letter-spacing:.05em; }
 .s1-brand b { color:var(--orange); font-weight:900; }
 
 h1.s1-title { font-family:var(--ff-display); font-size:var(--title); line-height:.93; color:var(--text); letter-spacing:-.02em; }
 h1.s1-title .acc { color:var(--orange); display:block; }
 
-.s1-sub { font-size:var(--body); color:#999; line-height:1.6; max-width:440px; }
+.s1-sub { font-size:var(--body); color:var(--muted); line-height:1.6; max-width:440px; }
 
 .s1-right { display:flex; align-items:center; justify-content:center; padding:var(--pad) clamp(1rem,2.5vw,2.5rem); position:relative; }
 .s1-card { background:var(--orange); border-radius:20px; padding:clamp(1.5rem,3vw,2.5rem); width:100%; }
@@ -140,10 +142,10 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 .s2-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.75rem,1.5vw,1.25rem); }
 @media (max-width:650px) { .s2-grid { grid-template-columns:1fr 1fr; } }
 
-.s2-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(1rem,2vw,1.75rem); display:flex; flex-direction:column; gap:.5rem; }
+.s2-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(1rem,2vw,1.75rem); display:flex; flex-direction:column; gap:.5rem; box-shadow:0 2px 10px rgba(11,17,32,0.06); }
 .s2-ico { font-size:clamp(1.5rem,3vw,2.2rem); line-height:1; }
 .s2-stat { font-family:var(--ff-display); font-size:clamp(1.5rem,4vw,3rem); color:var(--orange); line-height:1; }
-.s2-th { font-family:var(--ff-display); font-size:clamp(.8rem,1.5vw,1.1rem); color:var(--text); line-height:1.2; }
+.s2-th { font-family:var(--ff-display); font-size:clamp(1.6rem,3vw,2.2rem); color:var(--text); line-height:1.2; }
 .s2-td { font-size:var(--small); color:var(--muted); line-height:1.6; }
 
 /* ======================================================
@@ -156,12 +158,27 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 .s3-qs { font-size:var(--small); color:var(--muted); margin-top:.4rem; }
 
 .s3-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2vw,1.5rem); }
-.s3-stat { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:clamp(.75rem,1.5vw,1.25rem); text-align:center; }
+.s3-stat { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:clamp(.75rem,1.5vw,1.25rem); text-align:center; box-shadow:0 2px 10px rgba(11,17,32,0.06); }
 .s3-sn { font-family:var(--ff-display); font-size:clamp(1.8rem,4vw,3.5rem); color:var(--orange); line-height:1; }
 .s3-sl { font-size:var(--small); color:var(--muted); margin-top:.3rem; line-height:1.4; }
 
 /* ======================================================
-   SLIDE 4 — CÓMO FUNCIONA: ESCANEO
+   SLIDE 4 — LOS 4 CASOS DE USO (overview)
+   ====================================================== */
+.s-uc { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.uc-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(.75rem,1.5vw,1.25rem); }
+@media (max-width:650px) { .uc-grid { grid-template-columns:1fr; } }
+
+.uc-card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); display:flex; flex-direction:column; gap:.6rem; transition:border-color .3s, background .3s, box-shadow .3s; box-shadow:0 2px 10px rgba(11,17,32,0.06); }
+.uc-card:hover { border-color:rgba(230,57,70,.35); background:rgba(230,57,70,.03); box-shadow:0 6px 24px rgba(230,57,70,.12); }
+.uc-ico { font-size:clamp(1.6rem,3vw,2.4rem); line-height:1; }
+.uc-num { font-family:var(--ff-display); font-size:var(--small); color:var(--orange); letter-spacing:.15em; text-transform:uppercase; }
+.uc-title { font-family:var(--ff-display); font-size:clamp(1.7rem,3.2vw,2.4rem); color:var(--text); line-height:1.2; }
+.uc-desc { font-size:var(--small); color:var(--muted); line-height:1.6; }
+
+/* ======================================================
+   SLIDE 5 — CASO 1: CAZADOR DE INVENTARIO
    ====================================================== */
 .s4 { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
 @media (max-width:650px) { .s4 { grid-template-columns:1fr; } .s4-right { display:none; } }
@@ -169,97 +186,127 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 .s4-left { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); border-right:1px solid var(--border); }
 .s4-steps { display:flex; flex-direction:column; gap:clamp(.6rem,1.5vh,1.1rem); }
 .s4-step { display:flex; align-items:flex-start; gap:clamp(.75rem,1.5vw,1.25rem); }
-.s4-sn { flex-shrink:0; width:clamp(1.6rem,3vw,2.2rem); height:clamp(1.6rem,3vw,2.2rem); background:var(--orange); color:var(--on-orange); font-family:var(--ff-display); font-size:clamp(.65rem,1.2vw,.9rem); border-radius:50%; display:flex; align-items:center; justify-content:center; }
-.s4-sh { font-family:var(--ff-display); font-size:clamp(.8rem,1.5vw,1.1rem); color:var(--text); line-height:1.2; }
+.s4-sn { flex-shrink:0; width:clamp(1.6rem,3vw,2.2rem); height:clamp(1.6rem,3vw,2.2rem); background:var(--orange); color:var(--on-orange); font-family:var(--ff-display); font-size:clamp(1.3rem,2.4vw,1.8rem); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.s4-sh { font-family:var(--ff-display); font-size:clamp(1.6rem,3vw,2.2rem); color:var(--text); line-height:1.2; }
 .s4-sb { font-size:var(--small); color:var(--muted); margin-top:.2rem; line-height:1.5; }
 
 .s4-right { padding:var(--pad); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:clamp(1rem,2vh,1.5rem); }
 
-.phone { width:min(190px,28vw); aspect-ratio:9/17; background:var(--card); border:2px solid var(--border); border-radius:clamp(14px,3vw,26px); overflow:hidden; display:flex; flex-direction:column; }
+.phone { width:min(190px,28vw); aspect-ratio:9/17; background:var(--card); border:2px solid var(--border); border-radius:clamp(14px,3vw,26px); overflow:hidden; display:flex; flex-direction:column; box-shadow:0 8px 30px rgba(11,17,32,0.10); }
 .phone-screen { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.6rem; padding:1rem; text-align:center; }
 .phone-ico { font-size:clamp(1.8rem,4vw,3rem); }
-.phone-lbl { font-family:var(--ff-display); font-size:clamp(.5rem,1vw,.72rem); color:var(--text); line-height:1.3; }
+.phone-lbl { font-family:var(--ff-display); font-size:clamp(1rem,2vw,1.44rem); color:var(--text); line-height:1.3; }
 .phone-lbl span { color:var(--orange); }
-.phone-btn { background:var(--orange); margin:.5rem; border-radius:8px; padding:.5rem; font-family:var(--ff-display); font-size:clamp(.48rem,.9vw,.63rem); color:var(--on-orange); text-align:center; }
+.phone-btn { background:var(--orange); margin:.5rem; border-radius:8px; padding:.5rem; font-family:var(--ff-display); font-size:clamp(.96rem,1.8vw,1.26rem); color:var(--on-orange); text-align:center; }
 
 /* ======================================================
-   SLIDE 5 — CÓMO FUNCIONA: QR
+   SLIDE 6 — CASO 2: PROPIETARIO DIGITAL
    ====================================================== */
 .s5 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
 
 .s5-split { display:grid; grid-template-columns:1fr 1fr; gap:clamp(1rem,2.5vw,2rem); }
 @media (max-width:600px) { .s5-split { grid-template-columns:1fr; } }
 
-.s5-panel { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); display:flex; flex-direction:column; gap:.75rem; }
-.s5-panel.hl { border-color:rgba(255,87,34,.35); background:var(--orange-dim); }
+.s5-panel { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); display:flex; flex-direction:column; gap:.75rem; box-shadow:0 2px 10px rgba(11,17,32,0.06); }
+.s5-panel.hl { border-color:rgba(230,57,70,.3); background:linear-gradient(145deg, rgba(230,57,70,.05), rgba(230,57,70,.02)); box-shadow:0 4px 20px rgba(230,57,70,.10); }
 .s5-pico { font-size:clamp(1.5rem,3vw,2.5rem); }
 .s5-ph { font-family:var(--ff-display); font-size:clamp(.9rem,1.8vw,1.35rem); color:var(--text); line-height:1.2; }
 .s5-pb { font-size:var(--small); color:var(--muted); line-height:1.6; }
-.s5-badge { margin-top:auto; display:inline-flex; align-items:center; gap:.3em; background:rgba(255,87,34,.15); color:var(--orange); font-size:var(--small); font-weight:600; padding:.25em .7em; border-radius:100px; width:fit-content; }
+.s5-badge { margin-top:auto; display:inline-flex; align-items:center; gap:.3em; background:rgba(230,57,70,.15); color:var(--orange); font-size:var(--small); font-weight:600; padding:.25em .7em; border-radius:100px; width:fit-content; }
+
+/* Panel de stats para propietario */
+.owner-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.6rem,1.2vw,1rem); margin-top:.5rem; }
+.owner-stat { background:rgba(0,0,0,.03); border:1px solid var(--border); border-radius:10px; padding:.75rem; text-align:center; }
+.owner-stat-n { font-family:var(--ff-display); font-size:clamp(1.2rem,2.5vw,2rem); color:var(--orange); line-height:1; }
+.owner-stat-l { font-size:var(--small); color:var(--muted); margin-top:.2rem; line-height:1.3; }
 
 /* ======================================================
-   SLIDE 6 — LO QUE OBTIENES
+   SLIDE 7 — CASO 3: BUSCADOR INTELIGENTE
    ====================================================== */
-.s6 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+.s-search { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
 
-.s6-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.75rem,1.5vw,1.25rem); }
-@media (max-width:600px) { .s6-grid { grid-template-columns:1fr 1fr; } }
+.search-demo { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); display:flex; flex-direction:column; gap:1rem; box-shadow:0 2px 10px rgba(11,17,32,0.06); }
+.chat-bubble { display:flex; gap:.75rem; align-items:flex-start; }
+.chat-bubble.user { flex-direction:row-reverse; }
+.chat-avatar { flex-shrink:0; width:clamp(1.6rem,3vw,2rem); height:clamp(1.6rem,3vw,2rem); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:clamp(1.4rem,2.4vw,1.8rem); }
+.chat-avatar.bot { background:var(--orange); }
+.chat-avatar.usr { background:var(--dim); }
+.chat-msg { background:rgba(0,0,0,.04); border:1px solid var(--border); border-radius:12px; padding:.6rem .9rem; font-size:var(--small); color:var(--text); line-height:1.5; max-width:80%; }
+.chat-bubble.user .chat-msg { background:var(--orange-dim); border-color:rgba(230,57,70,.2); }
 
-.s6-f { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(1rem,2vw,1.6rem); display:flex; flex-direction:column; gap:.5rem; transition:border-color .3s; }
-.s6-f:hover { border-color:rgba(255,87,34,.3); }
-.s6-fco { font-size:clamp(1.2rem,2.5vw,1.8rem); }
-.s6-fh { font-family:var(--ff-display); font-size:clamp(.75rem,1.4vw,1rem); color:var(--text); line-height:1.2; }
-.s6-fb { font-size:var(--small); color:var(--muted); line-height:1.5; }
+.search-features { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.6rem,1.2vw,1rem); }
+@media (max-width:600px) { .search-features { grid-template-columns:1fr 1fr; } }
+.sf-item { display:flex; align-items:flex-start; gap:.6rem; }
+.sf-ico { font-size:clamp(1rem,2vw,1.4rem); flex-shrink:0; line-height:1.2; }
+.sf-text { font-size:var(--small); color:var(--muted); line-height:1.5; }
+.sf-text strong { color:var(--text); display:block; font-family:var(--ff-display); font-size:clamp(1.4rem,2.4vw,1.76rem); }
 
 /* ======================================================
-   SLIDE 7 — POR QUÉ CAZARAÍZ
+   SLIDE 8 — CASO 4: SERVICIOS DE CIERRE
+   ====================================================== */
+.s-close { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
+
+.close-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(.75rem,1.5vw,1.25rem); }
+@media (max-width:600px) { .close-grid { grid-template-columns:1fr; } }
+
+.close-card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(1rem,2.5vw,2rem); display:flex; flex-direction:column; gap:.6rem; position:relative; overflow:hidden; transition:border-color .3s, box-shadow .3s; box-shadow:0 2px 10px rgba(11,17,32,0.06); }
+.close-card:hover { border-color:rgba(230,57,70,.3); }
+.close-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--orange),transparent); opacity:0; transition:opacity .3s; }
+.close-card:hover::before { opacity:1; }
+.close-ico { font-size:clamp(1.4rem,2.5vw,2rem); line-height:1; }
+.close-title { font-family:var(--ff-display); font-size:clamp(1.6rem,3vw,2.2rem); color:var(--text); line-height:1.2; }
+.close-desc { font-size:var(--small); color:var(--muted); line-height:1.6; }
+.close-tag { margin-top:auto; display:inline-flex; align-items:center; gap:.3em; background:rgba(230,57,70,.12); color:var(--orange); font-size:var(--small); font-weight:600; padding:.2em .65em; border-radius:100px; width:fit-content; }
+
+/* ======================================================
+   SLIDE 9 — POR QUÉ PROPIA (tabla comparativa)
    ====================================================== */
 .s7 { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); }
 
 .cmp-table { width:100%; border-collapse:separate; border-spacing:0 6px; }
 .cmp-table thead th { font-size:var(--small); font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); padding:0 clamp(.75rem,1.5vw,1.25rem) .5rem; text-align:left; }
 .cmp-table thead th:not(:first-child) { text-align:center; }
-.cmp-row td { background:var(--card); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:clamp(.5rem,1.2vh,.9rem) clamp(.75rem,1.5vw,1.25rem); font-size:var(--small); color:var(--muted); vertical-align:middle; }
-.cmp-row td:first-child { border-left:1px solid var(--border); border-radius:10px 0 0 10px; font-weight:600; color:var(--text); }
-.cmp-row td:last-child { border-right:1px solid var(--border); border-radius:0 10px 10px 0; }
+.cmp-row td { background:var(--card); border-top:1px solid rgba(0,0,0,0.07); border-bottom:1px solid rgba(0,0,0,0.07); padding:clamp(.5rem,1.2vh,.9rem) clamp(.75rem,1.5vw,1.25rem); font-size:var(--small); color:var(--muted); vertical-align:middle; box-shadow:0 1px 4px rgba(11,17,32,0.04); }
+.cmp-row td:first-child { border-left:1px solid rgba(0,0,0,0.07); border-radius:10px 0 0 10px; font-weight:600; color:var(--text); }
+.cmp-row td:last-child { border-right:1px solid rgba(0,0,0,0.07); border-radius:0 10px 10px 0; }
 .cmp-row td:not(:first-child) { text-align:center; }
-.cmp-row.hl td { background:var(--orange-dim); border-color:rgba(255,87,34,.2); color:var(--text); }
-.cmp-row.hl td:first-child { color:var(--orange); font-family:var(--ff-display); }
+.cmp-row.hl td { background:rgba(230,57,70,.06); border-color:rgba(230,57,70,.25); color:var(--text); }
+.cmp-row.hl td:first-child { color:var(--orange); font-family:var(--ff-display); font-weight:700; }
 .ck { color:var(--orange); } .cx { color:var(--dim); }
 
 /* ======================================================
-   SLIDE 8 — MODELO WAZE
+   SLIDE 10 — MODELO WAZE
    ====================================================== */
 .s8 { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
 @media (max-width:650px) { .s8 { grid-template-columns:1fr; } .s8-left { display:none; } }
 
-.s8-left { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); border-right:1px solid var(--border); background:linear-gradient(135deg,rgba(255,87,34,.05),transparent); position:relative; }
-.s8-big { position:absolute; bottom:var(--pad); left:var(--pad); font-family:var(--ff-display); font-size:clamp(4rem,10vw,9rem); line-height:.9; color:var(--orange-glow); pointer-events:none; user-select:none; }
+.s8-left { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:var(--gap); border-right:1px solid var(--border); background:linear-gradient(135deg,rgba(230,57,70,.06),rgba(29,53,87,.04)); position:relative; }
+.s8-big { position:absolute; bottom:var(--pad); left:var(--pad); font-family:var(--ff-display); font-size:clamp(4rem,10vw,9rem); line-height:.9; color:rgba(230,57,70,.10); pointer-events:none; user-select:none; }
 
 .s8-right { padding:var(--pad); display:flex; flex-direction:column; justify-content:center; gap:clamp(.75rem,1.5vh,1.25rem); }
-.s8-b { display:flex; align-items:flex-start; gap:clamp(.75rem,1.5vw,1.25rem); background:var(--card); border:1px solid var(--border); border-radius:12px; padding:clamp(.75rem,1.5vw,1.25rem); }
+.s8-b { display:flex; align-items:flex-start; gap:clamp(.75rem,1.5vw,1.25rem); background:var(--card); border:1px solid var(--border); border-radius:12px; padding:clamp(.75rem,1.5vw,1.25rem); box-shadow:0 2px 8px rgba(11,17,32,0.05); }
 .s8-bico { flex-shrink:0; font-size:clamp(1.2rem,2.5vw,1.8rem); }
-.s8-bh { font-family:var(--ff-display); font-size:clamp(.75rem,1.4vw,1rem); color:var(--text); }
+.s8-bh { font-family:var(--ff-display); font-size:clamp(1.5rem,2.8vw,2rem); color:var(--text); }
 .s8-bd { font-size:var(--small); color:var(--muted); margin-top:.2rem; line-height:1.5; }
 
 /* ======================================================
-   SLIDE 9 — CTA
+   SLIDE 11 — CTA
    ====================================================== */
 .s9 { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:var(--pad); gap:clamp(1rem,3vh,2.5rem); text-align:center; position:relative; overflow:hidden; }
-.s9::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 60%, rgba(255,87,34,.18) 0%, transparent 65%); pointer-events:none; }
+.s9::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 60%, rgba(230,57,70,.10) 0%, transparent 65%); pointer-events:none; }
 
 .s9-title { font-family:var(--ff-display); font-size:var(--title); color:var(--text); line-height:.95; letter-spacing:-.02em; max-width:800px; }
 .s9-title span { color:var(--orange); }
-.s9-sub { font-size:var(--body); color:#999; max-width:520px; line-height:1.6; }
+.s9-sub { font-size:var(--body); color:var(--muted); max-width:520px; line-height:1.6; }
 .s9-cta { display:flex; gap:clamp(.75rem,2vw,1.25rem); flex-wrap:wrap; justify-content:center; margin-top:.5rem; }
 
-.btn-p { background:var(--orange); color:var(--on-orange); font-family:var(--ff-display); font-size:clamp(.75rem,1.3vw,1rem); padding:clamp(.75rem,1.5vw,1rem) clamp(1.5rem,3vw,2.5rem); border-radius:100px; border:none; cursor:pointer; text-decoration:none; display:inline-block; transition:transform .2s, box-shadow .2s; }
-.btn-p:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,87,34,.4); }
+.btn-p { background:var(--orange); color:var(--on-orange); font-family:var(--ff-display); font-size:clamp(1.5rem,2.6vw,2rem); padding:clamp(.75rem,1.5vw,1rem) clamp(1.5rem,3vw,2.5rem); border-radius:100px; border:none; cursor:pointer; text-decoration:none; display:inline-block; transition:transform .2s, box-shadow .2s; }
+.btn-p:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(230,57,70,.4); }
 
-.btn-s { background:transparent; color:var(--muted); font-family:var(--ff-body); font-size:clamp(.75rem,1.3vw,1rem); padding:clamp(.75rem,1.5vw,1rem) clamp(1.5rem,3vw,2.5rem); border-radius:100px; border:1px solid var(--border); cursor:pointer; text-decoration:none; display:inline-block; transition:border-color .2s, color .2s; }
-.btn-s:hover { border-color:rgba(255,87,34,.4); color:var(--text); }
+.btn-s { background:transparent; color:var(--muted); font-family:var(--ff-body); font-size:clamp(1.5rem,2.6vw,2rem); padding:clamp(.75rem,1.5vw,1rem) clamp(1.5rem,3vw,2.5rem); border-radius:100px; border:1px solid var(--border); cursor:pointer; text-decoration:none; display:inline-block; transition:border-color .2s, color .2s; }
+.btn-s:hover { border-color:rgba(230,57,70,.4); color:var(--text); }
 
-.s9-brand { font-family:var(--ff-display); font-size:clamp(.8rem,1.4vw,1rem); color:var(--muted); margin-top:1rem; }
+.s9-brand { font-family:var(--ff-display); font-size:clamp(1.6rem,2.8vw,2rem); color:var(--muted); margin-top:1rem; }
 .s9-brand span { color:var(--orange); }
 
 </style>
@@ -283,23 +330,37 @@ h1.s1-title .acc { color:var(--orange); display:block; }
   <div class="slide-num">01</div>
 
   <div class="s1-left">
-    <div class="s1-brand reveal d1">Caza<b>Raíz</b> · Colombia</div>
+    <div class="s1-brand reveal d1" style="display:flex;align-items:center;gap:.6em;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 124" width="28" height="34" aria-hidden="true" style="flex-shrink:0;">
+        <defs><clipPath id="pc-icon-s1"><circle cx="50" cy="46" r="31"/></clipPath></defs>
+        <path d="M50,5 C77,5 94,25 94,47 C94,70 50,112 50,112 C50,112 6,70 6,47 C6,25 23,5 50,5 Z" fill="var(--orange)"/>
+        <circle cx="50" cy="46" r="21" fill="white" opacity="0.10"/>
+        <line x1="8" y1="46" x2="92" y2="46" stroke="white" stroke-width="2.5" stroke-linecap="round" clip-path="url(#pc-icon-s1)"/>
+        <line x1="50" y1="8" x2="50" y2="84" stroke="white" stroke-width="2.5" stroke-linecap="round" clip-path="url(#pc-icon-s1)"/>
+        <circle cx="50" cy="46" r="21" fill="none" stroke="white" stroke-width="2" opacity="0.35"/>
+        <circle cx="50" cy="46" r="5.5" fill="white"/>
+        <path d="M50,110 Q43,118 35,116" stroke="#06D6A0" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M50,110 L50,120" stroke="#06D6A0" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M50,110 Q57,118 65,116" stroke="#06D6A0" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      Caza<b>Raíz</b> · Colombia
+    </div>
 
     <h1 class="s1-title reveal d2">
-      Encuentra<span class="acc">tu hogar.</span>Sin filtros.
+      Encontrá<span class="acc">tu hogar.</span>
     </h1>
 
     <p class="s1-sub reveal d3">
-      Miles de inmuebles en arriendo nunca aparecen en los portales.<br>
-      Solo tienen un letrero y un número. Nosotros lo cambiamos.
+      Inteligencia artificial para el mercado inmobiliario real.<br>
+      Miles de inmuebles en arriendo nunca aparecen en los portales. Solo tienen un letrero y un número. CazaRaíz lo cambia.
     </p>
   </div>
 
   <div class="s1-right">
     <div class="s1-card reveal-right d2">
       <div class="s1-card-n">01</div>
-      <div class="s1-card-h">El mercado invisible ya tiene app</div>
-      <div class="s1-card-b">6 de cada 10 contratos de arriendo en Colombia son verbales. Sin publicación digital. Solo letrero físico.</div>
+      <div class="s1-card-h">El mercado invisible ya tiene inteligencia</div>
+      <div class="s1-card-b">6 de cada 10 contratos de arriendo en Colombia son verbales. Sin publicación digital. Solo letrero físico. CazaRaíz conecta ese mundo con la tecnología.</div>
     </div>
   </div>
 </section>
@@ -375,16 +436,57 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 
 
 <!-- ======================================================
-     SLIDE 4 — CÓMO FUNCIONA: ESCANEO
+     SLIDE 4 — LOS 4 CASOS DE USO (overview)
      ====================================================== -->
-<section class="slide s4" aria-label="Flujo escaneo de letrero">
+<section class="slide s-uc" aria-label="Los 4 casos de uso">
   <div class="slide-num">04</div>
 
+  <div class="lbl reveal d1">La plataforma</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    Una plataforma.<br><span style="color:var(--orange)">Cuatro formas de usarla.</span>
+  </h2>
+
+  <div class="uc-grid">
+    <div class="uc-card reveal d3">
+      <div class="uc-ico">📸</div>
+      <div class="uc-num">Caso 01</div>
+      <div class="uc-title">Cazador de Inventario</div>
+      <div class="uc-desc">Fotografiá letreros, la IA extrae los datos con OCR, ganás puntos y construís la base de datos del mercado real.</div>
+    </div>
+    <div class="uc-card reveal d4">
+      <div class="uc-ico">🏷️</div>
+      <div class="uc-num">Caso 02</div>
+      <div class="uc-title">Propietario Digital</div>
+      <div class="uc-desc">QR dinámico para el letrero físico, ficha digital completa y panel de estadísticas: visitas, leads y conversión en tiempo real.</div>
+    </div>
+    <div class="uc-card reveal d5">
+      <div class="uc-ico">🔍</div>
+      <div class="uc-num">Caso 03</div>
+      <div class="uc-title">Buscador Inteligente</div>
+      <div class="uc-desc">Búsqueda conversacional con IA, alertas cuando aparece el match perfecto y staging virtual para ver el espacio amoblado antes de visitar.</div>
+    </div>
+    <div class="uc-card reveal d6">
+      <div class="uc-ico">✅</div>
+      <div class="uc-num">Caso 04</div>
+      <div class="uc-title">Servicios de Cierre</div>
+      <div class="uc-desc">Verificación de arrendatario, seguro de arrendamiento, contrato digital y valoración IA para cerrar el negocio con confianza.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 5 — CASO 1: CAZADOR DE INVENTARIO
+     ====================================================== -->
+<section class="slide s4" aria-label="Caso 1 — Cazador de inventario">
+  <div class="slide-num">05</div>
+
   <div class="s4-left">
-    <div class="lbl reveal d1">Cómo funciona · Flujo 1</div>
+    <div class="lbl reveal d1">Caso 01 · Cazador de Inventario</div>
 
     <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
-      Escaneás el letrero.<br><span style="color:var(--orange)">Nosotros hacemos lo demás.</span>
+      Fotografiá el letrero.<br><span style="color:var(--orange)">Nosotros hacemos lo demás.</span>
     </h2>
 
     <div class="s4-steps">
@@ -392,14 +494,14 @@ h1.s1-title .acc { color:var(--orange); display:block; }
         <div class="s4-sn">01</div>
         <div>
           <div class="s4-sh">Fotografiá el letrero</div>
-          <div class="s4-sb">Cualquier letrero de "Se arrienda" o "Se vende" con número visible.</div>
+          <div class="s4-sb">Cualquier letrero de "Se arrienda" o "Se vende" con número visible. Sin escribir nada.</div>
         </div>
       </div>
       <div class="s4-step reveal d4">
         <div class="s4-sn">02</div>
         <div>
-          <div class="s4-sh">La app extrae el número</div>
-          <div class="s4-sb">OCR con IA detecta el teléfono automáticamente. Sin escribir nada a mano.</div>
+          <div class="s4-sh">OCR extrae los datos</div>
+          <div class="s4-sb">IA detecta el teléfono, dirección y tipo de inmueble automáticamente del letrero.</div>
         </div>
       </div>
       <div class="s4-step reveal d5">
@@ -412,8 +514,8 @@ h1.s1-title .acc { color:var(--orange); display:block; }
       <div class="s4-step reveal d6">
         <div class="s4-sn">04</div>
         <div>
-          <div class="s4-sh">Información queda guardada</div>
-          <div class="s4-sb">Si el inmueble ya está en nuestra base, ves los datos al instante sin contactar al propietario.</div>
+          <div class="s4-sh">Datos guardados + puntos</div>
+          <div class="s4-sb">El inmueble queda en la base para todos. Vos ganás puntos canjeables por servicios de la plataforma.</div>
         </div>
       </div>
     </div>
@@ -427,35 +529,49 @@ h1.s1-title .acc { color:var(--orange); display:block; }
       </div>
       <div class="phone-btn">Abrir en WhatsApp →</div>
     </div>
-    <div class="pill reveal d5" style="margin-top:.75rem;">Gratis · Sin API de pago</div>
+    <div class="pill reveal d5" style="margin-top:.75rem;">+15 puntos · Contribución verificada</div>
   </div>
 </section>
 
 
 <!-- ======================================================
-     SLIDE 5 — CÓMO FUNCIONA: QR
+     SLIDE 6 — CASO 2: PROPIETARIO DIGITAL
      ====================================================== -->
-<section class="slide s5" aria-label="Flujo QR dinámico">
-  <div class="slide-num">05</div>
+<section class="slide s5" aria-label="Caso 2 — Propietario digital">
+  <div class="slide-num">06</div>
 
-  <div class="lbl reveal d1">Cómo funciona · Flujo 2</div>
+  <div class="lbl reveal d1">Caso 02 · Propietario Digital</div>
 
   <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
-    El propietario publica un QR.<br><span style="color:var(--orange)">Vos escaneas y ves todo.</span>
+    El letrero físico<br><span style="color:var(--orange)">con inteligencia digital.</span>
   </h2>
 
   <div class="s5-split">
     <div class="s5-panel reveal d3">
       <div class="s5-pico">🏠</div>
-      <div class="s5-ph">El propietario crea su ficha</div>
-      <div class="s5-pb">Sube fotos, precio, habitaciones y datos de contacto desde la app. En minutos tiene su ficha lista con código QR para imprimir.</div>
-      <div class="s5-badge">✓ Datos actualizados en vivo</div>
+      <div class="s5-ph">Creá tu ficha digital en minutos</div>
+      <div class="s5-pb">Subí fotos, precio, habitaciones y descripción desde la app. En segundos tenés tu ficha con código QR para imprimir y pegar en el letrero.</div>
+      <div class="s5-badge">✓ QR dinámico — se actualiza en vivo</div>
     </div>
     <div class="s5-panel hl reveal d4">
-      <div class="s5-pico">📱</div>
-      <div class="s5-ph">Vos escaneás el QR del letrero</div>
-      <div class="s5-pb">Apuntás la cámara al código en el letrero físico. Ves fotos, precio, metraje, historial de zona y contacto — sin llamar a nadie.</div>
-      <div class="s5-badge">✓ Sin descargar nada extra</div>
+      <div class="s5-pico">📊</div>
+      <div class="s5-ph">Panel de rendimiento del aviso</div>
+      <div class="s5-pb">Mirá cuántas personas escanearon tu QR, cuántas contactaron y cuántas visitaron el inmueble. Confirmá disponibilidad con un solo toque.</div>
+      <div class="owner-stats">
+        <div class="owner-stat">
+          <div class="owner-stat-n">847</div>
+          <div class="owner-stat-l">Vistas del mes</div>
+        </div>
+        <div class="owner-stat">
+          <div class="owner-stat-n">63</div>
+          <div class="owner-stat-l">Leads recibidos</div>
+        </div>
+        <div class="owner-stat">
+          <div class="owner-stat-n">7.4%</div>
+          <div class="owner-stat-l">Conversión</div>
+        </div>
+      </div>
+      <div class="s5-badge">✓ Confirmación de disponibilidad en 1 tap</div>
     </div>
   </div>
 
@@ -466,57 +582,157 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 
 
 <!-- ======================================================
-     SLIDE 6 — LO QUE OBTIENES
+     SLIDE 7 — CASO 3: BUSCADOR INTELIGENTE
      ====================================================== -->
-<section class="slide s6" aria-label="Funcionalidades para el arrendatario">
-  <div class="slide-num">06</div>
+<section class="slide s-search" aria-label="Caso 3 — Buscador inteligente">
+  <div class="slide-num">07</div>
 
-  <div class="lbl reveal d1">Para vos · Arrendatario</div>
+  <div class="lbl reveal d1">Caso 03 · Buscador Inteligente</div>
 
   <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
-    Todo lo que necesitás<br><span style="color:var(--orange)">para decidir con confianza</span>
+    Hablale a la IA.<br><span style="color:var(--orange)">Ella busca por vos.</span>
   </h2>
 
-  <div class="s6-grid">
-    <div class="s6-f reveal d3">
-      <div class="s6-fco">🗺️</div>
-      <div class="s6-fh">Mapa de letreros</div>
-      <div class="s6-fb">Todos los inmuebles escaneados en tu zona. Filtrá por precio, tipo y frescura del dato.</div>
+  <div class="search-demo reveal d3">
+    <div class="chat-bubble user">
+      <div class="chat-avatar usr">👤</div>
+      <div class="chat-msg">busco apto en Poblado máximo $1.5M que acepte mascotas, necesito parqueadero</div>
     </div>
-    <div class="s6-f reveal d4">
-      <div class="s6-fco">🔔</div>
-      <div class="s6-fh">Alertas inteligentes</div>
-      <div class="s6-fb">Decile a la app qué buscás. Te avisa cuando aparezca algo que encaje en tu zona y precio.</div>
+    <div class="chat-bubble">
+      <div class="chat-avatar bot">🤖</div>
+      <div class="chat-msg">Encontré <strong style="color:var(--orange)">14 inmuebles</strong> en El Poblado con esas condiciones. ¿Cuántas habitaciones necesitás? ¿Tenés fecha de entrada definida?</div>
     </div>
-    <div class="s6-f reveal d5">
-      <div class="s6-fco">💬</div>
-      <div class="s6-fh">Búsqueda conversacional</div>
-      <div class="s6-fb">No más filtros interminables. Hablale a la app como a un amigo y ella busca por vos.</div>
+    <div class="chat-bubble user">
+      <div class="chat-avatar usr">👤</div>
+      <div class="chat-msg">2 habitaciones, entrada el 1 de mayo</div>
     </div>
-    <div class="s6-f reveal d3" style="transition-delay:.5s">
-      <div class="s6-fco">📊</div>
-      <div class="s6-fh">Precio de mercado real</div>
-      <div class="s6-fb">Rango de precios basado en datos reales de la zona — no en estimaciones genéricas.</div>
+    <div class="chat-bubble">
+      <div class="chat-avatar bot">🤖</div>
+      <div class="chat-msg">Perfecto. Quedan <strong style="color:var(--orange)">6 opciones</strong> disponibles para esa fecha. ¿Querés ver el staging virtual de los 3 más cercanos a tus criterios?</div>
     </div>
-    <div class="s6-f reveal d4" style="transition-delay:.6s">
-      <div class="s6-fco">✅</div>
-      <div class="s6-fh">Disponibilidad confirmada</div>
-      <div class="s6-fb">Cada inmueble muestra cuándo fue confirmado. Sin llamar a números que ya arriendaron.</div>
+  </div>
+
+  <div class="search-features reveal d4">
+    <div class="sf-item">
+      <div class="sf-ico">💬</div>
+      <div class="sf-text"><strong>Conversacional</strong>Sin filtros manuales. La IA refina con cada respuesta.</div>
     </div>
-    <div class="s6-f reveal d5" style="transition-delay:.7s">
-      <div class="s6-fco">🛡️</div>
-      <div class="s6-fh">Sin fraudes</div>
-      <div class="s6-fb">Propietarios verificados y contacto intermediado. No más estafas de Facebook con depósitos perdidos.</div>
+    <div class="sf-item">
+      <div class="sf-ico">🔔</div>
+      <div class="sf-text"><strong>Alertas inteligentes</strong>Te avisamos cuando aparezca un match en tiempo real.</div>
+    </div>
+    <div class="sf-item">
+      <div class="sf-ico">🛋️</div>
+      <div class="sf-text"><strong>Staging virtual</strong>Mirá el espacio amoblado antes de visitarlo — con IA.</div>
     </div>
   </div>
 </section>
 
 
 <!-- ======================================================
-     SLIDE 7 — POR QUÉ CAZARAÍZ
+     SLIDE 8 — CASO 4: SERVICIOS DE CIERRE
+     ====================================================== -->
+<section class="slide s-close" aria-label="Caso 4 — Servicios de cierre">
+  <div class="slide-num">08</div>
+
+  <div class="lbl reveal d1">Caso 04 · Servicios de Cierre</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    Encontraste el lugar.<br><span style="color:var(--orange)">Cerrálo con confianza.</span>
+  </h2>
+
+  <div class="close-grid">
+    <div class="close-card reveal d3">
+      <div class="close-ico">🔍</div>
+      <div class="close-title">Verificación de Arrendatario</div>
+      <div class="close-desc">Estudio de crédito, historial de arriendos y referencias laborales integradas. Propietario decide en minutos, no en días.</div>
+      <div class="close-tag">Protege al propietario</div>
+    </div>
+    <div class="close-card reveal d4">
+      <div class="close-ico">🛡️</div>
+      <div class="close-title">Seguro de Arrendamiento</div>
+      <div class="close-desc">Cobertura ante incumplimiento de pago, daños y litigios. Integrado con aseguradoras colombianas desde la app sin papeleo.</div>
+      <div class="close-tag">Tranquilidad 100%</div>
+    </div>
+    <div class="close-card reveal d5">
+      <div class="close-ico">📄</div>
+      <div class="close-title">Contrato Digital</div>
+      <div class="close-desc">Contrato con firma electrónica válida en Colombia. Cláusulas estándar revisadas por abogados y personalizables en segundos.</div>
+      <div class="close-tag">Firma en 5 minutos</div>
+    </div>
+    <div class="close-card reveal d6">
+      <div class="close-ico">💡</div>
+      <div class="close-title">Valoración IA</div>
+      <div class="close-desc">La IA analiza fotos, ubicación y datos del mercado real para sugerir el precio justo. Sin avalúos costosos ni estimaciones genéricas.</div>
+      <div class="close-tag">Precio justo garantizado</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 9 — PERFILES × PILARES (matriz)
+     ====================================================== -->
+<section class="slide" aria-label="Perfiles por pilares" style="padding:var(--pad);display:flex;flex-direction:column;justify-content:center;gap:var(--gap);overflow:auto;">
+  <div class="slide-num">09</div>
+
+  <div class="lbl reveal d1">La plataforma completa</div>
+
+  <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
+    Cada perfil.<br><span style="color:var(--orange)">Su recorrido.</span>
+  </h2>
+
+  <div class="reveal d3" style="overflow-x:auto;">
+    <style>
+      .matrix-table { width:100%; border-collapse:separate; border-spacing:0 4px; min-width:560px; }
+      .matrix-table thead th { font-size:clamp(1.3rem,2vw,1.64rem); font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); padding:.4rem .6rem; text-align:center; }
+      .matrix-table thead th:first-child { text-align:left; }
+      .matrix-table thead th.profile { color:var(--orange); }
+      .matrix-row td { background:var(--card); border-top:1px solid rgba(0,0,0,0.07); border-bottom:1px solid rgba(0,0,0,0.07); padding:.45rem .6rem; font-size:clamp(1.3rem,2.2vw,1.7rem); color:var(--muted); text-align:center; vertical-align:middle; box-shadow:0 1px 4px rgba(11,17,32,0.04); }
+      .matrix-row td:first-child { border-left:1px solid rgba(0,0,0,0.07); border-radius:8px 0 0 8px; text-align:left; color:var(--text); font-size:clamp(1.3rem,2vw,1.6rem); white-space:nowrap; padding-left:.9rem; }
+      .matrix-row td:last-child  { border-right:1px solid rgba(0,0,0,0.07); border-radius:0 8px 8px 0; }
+      .mx-check { color:#06D6A0; font-size:1.1em; font-weight:900; }
+      .mx-dash  { color:var(--dim); }
+      .matrix-row.cat-head td { background:rgba(230,57,70,0.06); border-color:rgba(230,57,70,0.15); }
+      .matrix-row.cat-head td:first-child { color:var(--orange); font-family:var(--ff-display); font-size:clamp(1.2rem,2vw,1.5rem); letter-spacing:.1em; text-transform:uppercase; }
+    </style>
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th style="width:38%">Función / Pilar</th>
+          <th class="profile">Arrendatario</th>
+          <th class="profile">Arrendador</th>
+          <th class="profile">Vendedor</th>
+          <th class="profile">Comprador</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="matrix-row cat-head"><td colspan="5">CAPTURA DE INVENTARIO</td></tr>
+        <tr class="matrix-row"><td>📸 Cazador / OCR letrero</td>          <td><span class="mx-check">✓</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td></tr>
+        <tr class="matrix-row"><td>🏷️ Propietario Digital (QR)</td>       <td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-dash">—</span></td></tr>
+        <tr class="matrix-row cat-head"><td colspan="5">BÚSQUEDA Y VALORACIÓN</td></tr>
+        <tr class="matrix-row"><td>🔍 Buscador IA conversacional</td>     <td><span class="mx-check">✓</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td></tr>
+        <tr class="matrix-row"><td>💡 Valorización IA</td>                <td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td></tr>
+        <tr class="matrix-row cat-head"><td colspan="5">PRESENTACIÓN VISUAL</td></tr>
+        <tr class="matrix-row"><td>🛋️ Virtual Staging (IA)</td>           <td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-dash">—</span></td></tr>
+        <tr class="matrix-row"><td>🏗️ Redesign / Renovación (IA)</td>     <td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td></tr>
+        <tr class="matrix-row cat-head"><td colspan="5">SERVICIOS DE CIERRE</td></tr>
+        <tr class="matrix-row"><td>🔎 Verificación Crediticia</td>        <td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-dash">—</span></td></tr>
+        <tr class="matrix-row"><td>📋 Verificación de Propiedad</td>      <td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td></tr>
+        <tr class="matrix-row"><td>🛡️ Seguro de Arriendo</td>             <td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td></tr>
+        <tr class="matrix-row"><td>📄 Contratos Digitales</td>            <td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td></tr>
+        <tr class="matrix-row"><td>📑 Escrituración Digital</td>          <td><span class="mx-dash">—</span></td><td><span class="mx-dash">—</span></td><td><span class="mx-check">✓</span></td><td><span class="mx-check">✓</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- ======================================================
+     SLIDE 10 — POR QUÉ PROPIA (tabla comparativa)
      ====================================================== -->
 <section class="slide s7" aria-label="Diferenciadores vs portales">
-  <div class="slide-num">07</div>
+  <div class="slide-num">10</div>
 
   <div class="lbl reveal d1">Diferenciadores</div>
 
@@ -531,13 +747,15 @@ h1.s1-title .acc { color:var(--orange); display:block; }
           <th>Plataforma</th>
           <th>Letreros físicos</th>
           <th>QR dinámico</th>
-          <th>Disponibilidad real</th>
-          <th>WhatsApp directo</th>
+          <th>Búsqueda IA</th>
+          <th>Staging virtual</th>
+          <th>Servicios cierre</th>
         </tr>
       </thead>
       <tbody>
         <tr class="cmp-row hl">
           <td>CazaRaíz</td>
+          <td><span class="ck">✓</span></td>
           <td><span class="ck">✓</span></td>
           <td><span class="ck">✓</span></td>
           <td><span class="ck">✓</span></td>
@@ -549,6 +767,7 @@ h1.s1-title .acc { color:var(--orange); display:block; }
           <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
         </tr>
         <tr class="cmp-row">
           <td>Metrocuadrado</td>
@@ -556,9 +775,11 @@ h1.s1-title .acc { color:var(--orange); display:block; }
           <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
+          <td><span class="cx">✗</span></td>
         </tr>
         <tr class="cmp-row">
           <td>Habi</td>
+          <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
           <td><span class="cx">✗</span></td>
@@ -575,17 +796,17 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 
 
 <!-- ======================================================
-     SLIDE 8 — MODELO WAZE
+     SLIDE 10 — MODELO WAZE
      ====================================================== -->
 <section class="slide s8" aria-label="El modelo Waze">
-  <div class="slide-num">08</div>
+  <div class="slide-num">11</div>
 
   <div class="s8-left">
     <div class="lbl reveal d1">Cómo crece la plataforma</div>
     <h2 class="reveal d2" style="font-family:var(--ff-display);font-size:var(--h2);line-height:1.1;letter-spacing:-.02em;">
       Vos sos el sensor.<br><span style="color:var(--orange)">Como en Waze.</span>
     </h2>
-    <p class="reveal d3" style="font-size:var(--body);color:#999;line-height:1.7;max-width:400px;">
+    <p class="reveal d3" style="font-size:var(--body);color:var(--muted);line-height:1.7;max-width:400px;">
       Cuando abrís Waze para ver el tráfico, sos vos quien alimenta los datos de todos. CazaRaíz funciona igual: cada foto mejora los resultados para todos los que buscan.
     </p>
     <div class="s8-big">W</div>
@@ -603,7 +824,7 @@ h1.s1-title .acc { color:var(--orange); display:block; }
       <div class="s8-bico">🎮</div>
       <div>
         <div class="s8-bh">Puntos y recompensas</div>
-        <div class="s8-bd">Ganás puntos por cada contribución verificada. Canjeables en descuentos en mudanzas y seguros.</div>
+        <div class="s8-bd">Ganás puntos por cada contribución verificada. Canjeables en créditos para servicios de CazaRaíz.</div>
       </div>
     </div>
     <div class="s8-b reveal d5">
@@ -625,19 +846,19 @@ h1.s1-title .acc { color:var(--orange); display:block; }
 
 
 <!-- ======================================================
-     SLIDE 9 — CTA
+     SLIDE 11 — CTA
      ====================================================== -->
 <section class="slide s9" aria-label="Únete a la beta">
-  <div class="slide-num">09</div>
+  <div class="slide-num">12</div>
 
   <div class="pill reveal d1">Beta cerrada · Bogotá 2026</div>
 
   <h2 class="s9-title reveal d2">
-    Dejá de buscar<br>en los portales.<br><span>Encontrá el letrero.</span>
+    Dejá de buscar<br>en los portales.<br><span>CazaRaíz lo encuentra por vos.</span>
   </h2>
 
   <p class="s9-sub reveal d3">
-    Estamos armando la primera beta en Bogotá. Sé de los primeros en encontrar inmuebles que nadie más ve.
+    Estamos armando la primera beta en Bogotá. Sé de los primeros en acceder a inteligencia artificial aplicada al mercado inmobiliario real de Colombia.
   </p>
 
   <div class="s9-cta reveal d4">
