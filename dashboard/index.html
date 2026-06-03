@@ -629,12 +629,15 @@ async function syncPreferences() {
 /* ════════════════════════════════════════════
    DATA LOADING
 ════════════════════════════════════════════ */
+const RAW = 'https://raw.githubusercontent.com/pablovesga/comercial/main/dashboard/data/';
+
 async function loadData() {
   try {
+    const t = Date.now();
     const [newsRes, projRes, prefsRes] = await Promise.all([
-      fetch('./data/news.json?t=' + Date.now()),
-      fetch('./data/projects.json?t=' + Date.now()),
-      fetch('./data/preferences.json?t=' + Date.now()),
+      fetch(RAW + 'news.json?t=' + t),
+      fetch(RAW + 'projects.json?t=' + t),
+      fetch(RAW + 'preferences.json?t=' + t),
     ]);
     const newsData  = await newsRes.json();
     const projData  = await projRes.json();
