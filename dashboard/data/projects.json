@@ -1,0 +1,151 @@
+{
+  "generado": "2026-06-03T00:00:00Z",
+  "proyectos": [
+    {
+      "id": "eligeapp-reputacion",
+      "nombre": "EligeApp Reputación",
+      "subtitulo": "Inteligencia sobre IGR/Merco para empresas colombianas",
+      "repo": "pablovesga/reputacion",
+      "url": "https://reputacion.eligeapp.com",
+      "color": "#0EA5E9",
+      "icono": "🏆",
+      "nota": "Propuesta CNC activa — prototipo esperado para mayo 2026",
+      "fases": [
+        { "nombre": "Arquitectura y diseño sistema", "estado": "completado" },
+        { "nombre": "Ingesta datos IGR/Merco", "estado": "en_progreso" },
+        { "nombre": "Dashboard de reputación", "estado": "en_progreso" },
+        { "nombre": "IA generación de reportes", "estado": "pendiente" },
+        { "nombre": "Monetización freemium (créditos)", "estado": "pendiente" }
+      ],
+      "github": {
+        "issues_open": 0,
+        "issues_closed": 0,
+        "ultimo_commit": null,
+        "milestones": []
+      }
+    },
+    {
+      "id": "eligeapp-educacion",
+      "nombre": "EligeApp Educación",
+      "subtitulo": "Rankings personalizables de colegios e IES en Colombia",
+      "repo": "pablovesga/reputacion",
+      "url": "https://edu.eligeapp.com",
+      "color": "#10B981",
+      "icono": "🎓",
+      "nota": "Sprint de exploración y arquitectura MVP en curso",
+      "fases": [
+        { "nombre": "Fuentes de datos (ICFES, SNIES, MEN)", "estado": "completado" },
+        { "nombre": "Modelo de rankings DEA", "estado": "en_progreso" },
+        { "nombre": "Frontend de búsqueda y filtros", "estado": "pendiente" },
+        { "nombre": "Comparador de instituciones", "estado": "pendiente" },
+        { "nombre": "Monetización B2B", "estado": "pendiente" }
+      ],
+      "github": {
+        "issues_open": 0,
+        "issues_closed": 0,
+        "ultimo_commit": null,
+        "milestones": []
+      }
+    },
+    {
+      "id": "eligeapp-encuestas",
+      "nombre": "EligeApp Motor Encuestas",
+      "subtitulo": "Encuestas socioeconómicas via WhatsApp para empresas",
+      "repo": "pablovesga/Jiyumi",
+      "url": null,
+      "color": "#F59E0B",
+      "icono": "📊",
+      "nota": "Stack completo definido — Python + FastAPI + WhatsApp Business API",
+      "fases": [
+        { "nombre": "Diseño de motor de estados", "estado": "completado" },
+        { "nombre": "Integración WhatsApp Business API", "estado": "en_progreso" },
+        { "nombre": "Branching logic y MaxDiff/HB", "estado": "pendiente" },
+        { "nombre": "Dashboard de resultados en tiempo real", "estado": "pendiente" },
+        { "nombre": "Multi-tenant y facturación", "estado": "pendiente" }
+      ],
+      "github": {
+        "issues_open": 0,
+        "issues_closed": 0,
+        "ultimo_commit": null,
+        "milestones": []
+      }
+    },
+    {
+      "id": "eligeapp-satisfaccion",
+      "nombre": "EligeApp Satisfacción",
+      "subtitulo": "Medición de satisfacción y experiencia del cliente",
+      "repo": null,
+      "url": null,
+      "color": "#8B5CF6",
+      "icono": "⭐",
+      "nota": "Producto en definición — tercera vertical de EligeApp",
+      "fases": [
+        { "nombre": "Definición de producto y mercado", "estado": "en_progreso" },
+        { "nombre": "Arquitectura y stack técnico", "estado": "pendiente" },
+        { "nombre": "MVP formularios y NPS", "estado": "pendiente" },
+        { "nombre": "Análisis e insights IA", "estado": "pendiente" },
+        { "nombre": "Integración con Reputación", "estado": "pendiente" }
+      ],
+      "github": {
+        "issues_open": 0,
+        "issues_closed": 0,
+        "ultimo_commit": null,
+        "milestones": []
+      }
+    },
+    {
+      "id": "cazaraiz",
+      "nombre": "CazaRaíz",
+      "subtitulo": "App inmobiliaria con escaneo de letreros y QR dinámicos",
+      "repo": "pablovesga/cazaraiz",
+      "url": null,
+      "color": "#EF4444",
+      "icono": "🏠",
+      "nota": "30 issues abiertos distribuidos en 5 fases — en desarrollo activo",
+      "fases": [
+        { "nombre": "Frontend Completo", "estado": "en_progreso", "issues_open": 15, "issues_closed": 0 },
+        { "nombre": "Backend Funcional", "estado": "pendiente", "issues_open": 9, "issues_closed": 0 },
+        { "nombre": "App Móvil", "estado": "pendiente", "issues_open": 8, "issues_closed": 0 },
+        { "nombre": "Servicios Premium", "estado": "pendiente", "issues_open": 8, "issues_closed": 0 },
+        { "nombre": "Escala y LatAm", "estado": "pendiente", "issues_open": 3, "issues_closed": 0 }
+      ],
+      "github": {
+        "issues_open": 30,
+        "issues_closed": 0,
+        "ultimo_commit": null,
+        "milestones": [
+          { "nombre": "Fase 1 — Frontend Completo", "open": 15, "closed": 0 },
+          { "nombre": "Fase 2 — Backend Funcional", "open": 9, "closed": 0 },
+          { "nombre": "Fase 3 — App Móvil", "open": 8, "closed": 0 },
+          { "nombre": "Fase 4 — Servicios Premium", "open": 8, "closed": 0 },
+          { "nombre": "Fase 5 — Escala y LatAm", "open": 3, "closed": 0 }
+        ]
+      }
+    },
+    {
+      "id": "perfectviewer",
+      "nombre": "PerfectViewer",
+      "subtitulo": "Viewer 4D multi-tenant para proyectos inmobiliarios",
+      "repo": "PerfectaMente-Tech/perfectviewer",
+      "url": null,
+      "color": "#EC4899",
+      "icono": "🏗️",
+      "nota": "Milestone General completado — 3 issues cerrados",
+      "fases": [
+        { "nombre": "Core viewer 3D/4D (R3F)", "estado": "completado" },
+        { "nombre": "Sistema multi-tenant", "estado": "completado" },
+        { "nombre": "Hotspots y overlays interactivos", "estado": "completado" },
+        { "nombre": "White-label y onboarding clientes", "estado": "en_progreso" },
+        { "nombre": "Integración Luma AI y AR", "estado": "pendiente" }
+      ],
+      "github": {
+        "issues_open": 1,
+        "issues_closed": 3,
+        "ultimo_commit": null,
+        "milestones": [
+          { "nombre": "General", "open": 0, "closed": 3 }
+        ]
+      }
+    }
+  ]
+}
