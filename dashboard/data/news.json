@@ -1,123 +1,96 @@
 {
-  "generado": "2026-06-04T12:00:00Z",
+  "generado": "2026-06-05T10:00:00Z",
   "semana": "2026-W23",
   "items": [
     {
-      "id": "anthropic-project-glasswing-expansion",
-      "titulo": "Anthropic expande Project Glasswing a más de 150 organizaciones en 15 países",
-      "resumen": "Anthropic amplía su iniciativa de seguridad de software Project Glasswing para incluir cerca de 150 nuevas organizaciones en más de 15 países. Los socios iniciales ya identificaron más de 10.000 vulnerabilidades críticas usando Claude Mythos Preview.",
-      "url": "https://www.anthropic.com/news/expanding-project-glasswing",
-      "fuente": "Anthropic",
-      "fecha": "2026-06-02",
-      "tags": ["Claude", "agentes IA", "automatización"]
-    },
-    {
-      "id": "anthropic-claude-opus-48-workflows-dinamicos",
-      "titulo": "Claude Opus 4.8 llega con Workflows Dinámicos y modo rápido 2.5×",
-      "resumen": "Anthropic lanzó Claude Opus 4.8 el 28 de mayo, con la nueva función 'dynamic workflows' que permite orquestar cientos de subagentes en paralelo para tareas a gran escala. El modo rápido es ahora tres veces más económico que en modelos anteriores, y el modelo es cuatro veces menos propenso a dejar errores en código sin señalar.",
-      "url": "https://www.anthropic.com/news/claude-opus-4-8",
-      "fuente": "Anthropic",
-      "fecha": "2026-05-28",
-      "tags": ["Claude", "LLMs", "agentes IA"]
-    },
-    {
-      "id": "anthropic-claude-security-codebase-scan",
-      "titulo": "Anthropic lanza Claude Security para escaneo automatizado de vulnerabilidades en código",
-      "resumen": "El nuevo producto Claude Security usa Claude Opus 4.8 para analizar bases de código y sugerir parches de forma autónoma. Claude Opus 4.8 también se convirtió en el modelo predeterminado para cuentas Max, Team Premium, Enterprise y API de Anthropic.",
-      "url": "https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
+      "id": "anthropic-daniela-amodei-ipo-retorno-ia",
+      "titulo": "Daniela Amodei defiende el retorno de la IA ante el mercado en vísperas del IPO de Anthropic",
+      "resumen": "En entrevista con TechCrunch, Daniela Amodei rechaza las dudas del mercado sobre el retorno de inversión en IA, citando la tasa de ingresos de $47.000 millones de Anthropic como evidencia de demanda real. El IPO de Anthropic se perfila como uno de los más grandes del sector tecnológico en 2026.",
+      "url": "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/",
       "fuente": "TechCrunch",
-      "fecha": "2026-06-02",
-      "tags": ["Claude", "automatización", "agentes IA"]
+      "fecha": "2026-06-04",
+      "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "claude-code-doble-limite-velocidad-junio",
-      "titulo": "Claude Code duplica límites de velocidad y mejora workflows de agentes paralelos",
-      "resumen": "Anthropic duplicó los rate limits de Claude Code y aumentó los límites de API para Claude Opus, facilitando el desarrollo a escala. La actualización también mejora el manejo de herramientas en paralelo, vistas de conectores más limpias y renderizado más rápido.",
-      "url": "https://www.startuphub.ai/ai-news/technology/2026/claude-code-s-latest-updates",
-      "fuente": "StartupHub.ai",
+      "id": "meta-business-agent-whatsapp-global",
+      "titulo": "Meta lanza globalmente Business Agent: IA nativa para WhatsApp, Messenger e Instagram",
+      "resumen": "Meta desplegó su agente de IA empresarial en WhatsApp Business a nivel mundial el 3 de junio, permitiendo automatizar atención al cliente, recomendaciones de productos y reservas de citas. El modelo de precios cambia de por-mensaje a por-tokens procesados, abriendo una nueva fuente de ingresos para Meta.",
+      "url": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+      "fuente": "TechCrunch",
       "fecha": "2026-06-03",
-      "tags": ["Claude", "automatización", "agentes IA"]
+      "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "microsoft-build-2026-mai-thinking-agentes",
-      "titulo": "Microsoft Build 2026 presenta MAI-Thinking-1 y el agente Scout para trabajo empresarial",
-      "resumen": "Microsoft presentó MAI-Thinking-1, su primer modelo de razonamiento propio con 35 mil millones de parámetros activos y una ventana de contexto de 128.000 tokens. También reveló Scout, un agente personal de trabajo que se integra con Teams y Outlook para gestión proactiva de tareas y calendarios.",
-      "url": "https://www.enter.co/especiales/dev/inteligencia-artificial/microsoft-build-2026-agentes-ia-modelos-seguridad/",
-      "fuente": "Enter.co",
-      "fecha": "2026-06-02",
-      "tags": ["agentes IA", "LLMs", "automatización"]
-    },
-    {
-      "id": "mcp-97-millones-instalaciones-estandar",
-      "titulo": "Model Context Protocol de Anthropic supera 97 millones de instalaciones en marzo 2026",
-      "resumen": "El protocolo MCP de Anthropic cruzó los 97 millones de instalaciones en marzo de 2026, consolidándose como infraestructura fundacional para la construcción de agentes de IA. Su adopción masiva marca la transición de estándar experimental a estándar de la industria.",
-      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-06-01",
-      "tags": ["agentes IA", "Claude", "automatización"]
-    },
-    {
-      "id": "google-io-2026-gemini-omni-35-flash",
-      "titulo": "Google I/O 2026: Gemini Omni y Gemini 3.5 Flash redefinen la IA multimodal y agéntica",
-      "resumen": "Google presentó Gemini Omni, capaz de generar cualquier tipo de contenido a partir de video como entrada, y Gemini 3.5 Flash, primer modelo de su nueva familia que combina inteligencia de frontera con capacidad de acción directa. Ambos modelos compiten directamente en el espacio de agentes autónomos.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
-      "fuente": "Google Blog",
-      "fecha": "2026-06-01",
-      "tags": ["LLMs", "agentes IA", "automatización"]
-    },
-    {
-      "id": "mit-aceleracion-entrenamiento-llm-210-pct",
-      "titulo": "MIT logra acelerar el entrenamiento de LLMs hasta 210% con modelo predictivo auxiliar",
-      "resumen": "Investigadores del MIT desarrollaron un método que entrena un modelo más pequeño para predecir las salidas del LLM de razonamiento principal, reduciendo significativamente el trabajo del modelo grande. El sistema acelera el entrenamiento entre un 70% y un 210% preservando la precisión del modelo original.",
-      "url": "https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226",
-      "fuente": "MIT News",
-      "fecha": "2026-05-30",
-      "tags": ["LLMs", "automatización"]
-    },
-    {
-      "id": "rag-agentado-arquitectura-dominante-2026",
-      "titulo": "RAG agéntico se consolida como arquitectura dominante en IA empresarial 2026",
-      "resumen": "El RAG agéntico, donde agentes especializados manejan recuperación y validación en paralelo, es el patrón dominante en 2026. Las mejoras en chunking jerárquico, bases de datos vectoriales y caché han reducido los tiempos de respuesta de RAG a niveles comparables con llamadas API estándar.",
-      "url": "https://ragaboutit.com/retrieval-augmented-generation-in-enterprise-ai-whats-changing-in-2026/",
-      "fuente": "RAG About It",
-      "fecha": "2026-05-29",
-      "tags": ["RAG", "agentes IA", "LLMs"]
-    },
-    {
-      "id": "vdbass-mercado-crecimiento-30-pct-2026",
-      "titulo": "Mercado de bases de datos vectoriales como servicio crece 30.5% en 2026",
-      "resumen": "El mercado de Vector Database as a Service (VDBaaS) pasa de USD 1.620 millones en 2025 a USD 2.120 millones en 2026, impulsado por la adopción masiva de RAG empresarial. Las empresas priorizan RAG para reducir alucinaciones y aprovechar datos propietarios con modelos de lenguaje.",
-      "url": "https://squirro.com/squirro-blog/state-of-rag-genai",
-      "fuente": "Squirro",
-      "fecha": "2026-05-28",
-      "tags": ["RAG", "LLMs"]
-    },
-    {
-      "id": "colombia-60-pct-empresas-pilotos-ia-2026",
-      "titulo": "El 60% de las empresas colombianas ya ejecutan pilotos activos de IA en 2026",
-      "resumen": "Según el CIO Playbook 2026, el 60% de las compañías en Colombia implementa pilotos de IA, superando a sus pares regionales en inversión en agentes de IA (32% vs. 23% en la región). Sin embargo, el 40% de las PYMEs aún no tiene planes de adopción.",
-      "url": "https://impactotic.co/inteligencia-artificial/cio-playbook-2026-60-de-las-empresas-en-colombia-implementan-pilotos-de-ia/",
-      "fuente": "Impacto TIC",
-      "fecha": "2026-06-03",
-      "tags": ["Colombia tech", "automatización", "agentes IA"]
-    },
-    {
-      "id": "colombia-computacion-cuantica-ejecutivos-2026",
-      "titulo": "53% de ejecutivos colombianos ven la IA y computación cuántica como transformadores de su industria",
-      "resumen": "Un estudio publicado el 3 de junio revela que más de la mitad de los ejecutivos en Colombia cree que la IA y la computación cuántica transformarán su industria antes de 2030. Paradójicamente, solo el 13% espera usar tecnología cuántica activamente en ese horizonte.",
-      "url": "https://www.infobae.com/tecno/2026/06/03/colombia-ante-la-computacion-cuantica-53-de-los-ejecutivos-la-ve-como-el-futuro-pero-pocos-se-preparan/",
-      "fuente": "Infobae Colombia",
+      "id": "colombia-ia-gobernanza-reto-resultados",
+      "titulo": "Más del 50% de empresas colombianas enfrenta reto de gobernanza IA sin marcos establecidos",
+      "resumen": "SONDA advierte que la presión por implementar IA avanzó más rápido que la capacidad organizacional en Colombia: más de la mitad de las empresas carece de marcos de protección de datos, gobernanza de IA o criterios éticos definidos. El desafío ya no es adoptar IA sino demostrar resultados reales y sostenibles.",
+      "url": "https://www.itsitio.com/co/inteligencia-artificial/despues-del-boom-de-la-ia-las-empresas-enfrentan-el-reto-de-demostrar-resultados-reales/",
+      "fuente": "ITSitio Colombia",
       "fecha": "2026-06-03",
       "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "multi-agentes-sistemas-automatizacion-empresarial",
-      "titulo": "Sistemas multi-agente redefinen la automatización empresarial: ROI promedio del 171%",
-      "resumen": "Datos de 2025 muestran que las organizaciones proyectan un ROI promedio del 171% en automatización con flujos de trabajo de IA. Los sistemas multi-agente, donde agentes especializados manejan distintas partes de un workflow, se consolidan como la arquitectura preferida para operaciones empresariales complejas.",
-      "url": "https://cacm.acm.org/blogcacm/multi-agent-systems-will-rescript-enterprise-automation-in-2026/",
-      "fuente": "Communications of the ACM",
+      "id": "snowflake-summit-2026-empresa-agentica-coco-cowork",
+      "titulo": "Snowflake Summit 2026 presenta CoCo y CoWork: agentes IA para la empresa agéntica",
+      "resumen": "Snowflake presentó CoCo (agente de codificación) y CoWork (agente personal para equipos) como pilares de su visión de empresa agéntica. El CEO Sridhar Ramaswamy declaró que el trabajo del futuro implicará colaborar con agentes inteligentes autónomos conectados a datos gobernados en la plataforma Snowflake.",
+      "url": "https://www.muycomputerpro.com/2026/06/03/snowflake-summit-2026-empresa-agentica-primer-plano",
+      "fuente": "MuyComputerPro",
+      "fecha": "2026-06-03",
+      "tags": ["agentes IA", "automatización", "RAG"]
+    },
+    {
+      "id": "snowflake-anthropic-cortex-summit-partnership",
+      "titulo": "Snowflake y Anthropic consolidan alianza: Claude en Cortex AI impulsa IA empresarial gobernada",
+      "resumen": "Durante el Snowflake Summit 26, ambas compañías anunciaron hitos de su alianza estratégica: empresas líderes adoptan Claude en Snowflake Cortex AI para construir IA de producción con gobernanza robusta. La demanda de IA que respeta las políticas de datos empresariales es el principal motor del crecimiento conjunto.",
+      "url": "https://www.snowflake.com/en/news/press-releases/snowflake-and-anthropic-accelerate-enterprise-ai-adoption-driven-by-rising-demand-for-governed-ai/",
+      "fuente": "Snowflake",
+      "fecha": "2026-06-02",
+      "tags": ["Claude", "agentes IA", "automatización"]
+    },
+    {
+      "id": "anthropic-ipo-sec-s1-confidencial",
+      "titulo": "Anthropic presenta confidencialmente su S-1 ante la SEC para salir a bolsa con valoración de $965.000M",
+      "resumen": "Anthropic presentó el 1 de junio su borrador de registro Form S-1 ante la SEC, con una valoración de $965.000 millones que supera a OpenAI en capitalización privada. La compañía reporta ingresos anualizados de $47.000 millones, un salto desde $10.000 millones el año anterior.",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "fuente": "Anthropic",
       "fecha": "2026-06-01",
-      "tags": ["agentes IA", "automatización", "LLMs"]
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "open-source-llms-500-modelos-2026",
+      "titulo": "El ecosistema de LLMs supera los 500 modelos en 2026 y desplaza el foco hacia flujos de trabajo",
+      "resumen": "El ecosistema de LLMs cuenta ya con más de 500 modelos disponibles entre APIs comerciales y código abierto (Llama, Mistral, Qwen, DeepSeek), con muchos rivalizando en benchmarks con propietarios. El foco de la industria se desplaza de los modelos como producto final a su integración en workflows que generan valor empresarial real.",
+      "url": "https://llm-stats.com/ai-news",
+      "fuente": "LLM Stats",
+      "fecha": "2026-06-01",
+      "tags": ["LLMs", "automatización"]
+    },
+    {
+      "id": "inmerxia-2026-medellin-primera-semana-ia-colombia",
+      "titulo": "Medellín acogerá INMERXIA 2026: la primera Semana de Inteligencia Artificial de Colombia en noviembre",
+      "resumen": "Del 9 al 13 de noviembre de 2026, Medellín será epicentro de INMERXIA con más de 10.000 asistentes proyectados entre empresarios, universidades, gobierno y emprendedores de 18 sectores productivos. El evento fue concebido, diseñado y ejecutado íntegramente con inteligencia artificial, siendo en sí mismo una demostración de su poder transformador.",
+      "url": "https://www.hsbnoticias.com/medellin-sera-sede-de-la-primera-semana-de-inteligencia-artificial/",
+      "fuente": "HSB Noticias",
+      "fecha": "2026-05-26",
+      "tags": ["Colombia tech", "agentes IA"]
+    },
+    {
+      "id": "anthropic-65b-ronda-valoracion-965b",
+      "titulo": "Anthropic cierra ronda de $65.000 millones con ingresos anualizados de $47.000 millones",
+      "resumen": "Anthropic completó una ronda de financiamiento de $65.000 millones que elevó su valoración a $965.000 millones, superando a OpenAI en capitalización privada. El crecimiento de ingresos de 4,7× en un año refleja la acelerada adopción empresarial de Claude en producción.",
+      "url": "https://www.edtechinnovationhub.com/news/anthropic-raises-65b-as-claude-demand-drives-new-compute-deals",
+      "fuente": "EdTech Innovation Hub",
+      "fecha": "2026-05-29",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "rag-madurez-grafos-contexto-5x-precision",
+      "titulo": "RAG alcanza madurez tecnológica en 2026: grafos de contexto logran 5× de mejora en precisión",
+      "resumen": "Los sistemas RAG basados en grafos de contexto alcanzan hasta cinco veces más precisión que los esquemas de recuperación directa, según análisis de 2026. El nuevo framework Tracert-RAG permite razonamiento multi-hop eficiente sobre documentos complejos, consolidando la madurez del ecosistema RAG para producción empresarial.",
+      "url": "https://ragaboutit.com/rag-technology-breakthroughs-whats-changing-in-ai-right-now/",
+      "fuente": "RAG About It",
+      "fecha": "2026-05-28",
+      "tags": ["RAG", "LLMs", "agentes IA"]
     }
   ]
 }
