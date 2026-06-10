@@ -1,0 +1,162 @@
+name: Monitor Tiquetes BOG-MTR
+
+on:
+  schedule:
+    - cron: '0 13 * * 2'   # Martes 8:00 AM Bogotá (UTC-5 = 13:00 UTC)
+  workflow_dispatch:         # Permite disparar manualmente desde GitHub UI
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Buscar vuelos con SerpAPI
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          python3 << 'PYEOF'
+          import json, urllib.request, urllib.parse, os, sys, time
+          from datetime import datetime, timezone
+
+          API_KEY = os.environ.get("SERPAPI_KEY", "")
+          if not API_KEY:
+              print("ERROR: SERPAPI_KEY no configurado")
+              sys.exit(1)
+
+          BASE = "https://serpapi.com/search.json"
+
+          def buscar(dep, arr, fecha, intentos=3):
+              params = {
+                  "engine": "google_flights",
+                  "departure_id": dep, "arrival_id": arr,
+                  "outbound_date": fecha, "type": "2",
+                  "adults": "3", "children": "1",
+                  "currency": "COP", "gl": "co", "hl": "es",
+                  "no_cache": "true", "api_key": API_KEY
+              }
+              url = BASE + "?" + urllib.parse.urlencode(params)
+              for i in range(1, intentos + 1):
+                  try:
+                      with urllib.request.urlopen(url, timeout=30) as r:
+                          data = json.loads(r.read())
+                      if "error" in data:
+                          raise Exception(data["error"])
+                      return data
+                  except Exception as e:
+                      print(f"  Intento {i}/{intentos} fallido: {e}")
+                      if i < intentos:
+                          time.sleep(i * 15)
+              raise Exception(f"Todos los intentos fallaron para {dep}->{arr}")
+
+          def parse_min(t):
+              if not t: return -1
+              try:
+                  if len(t) > 8 and ' ' in t: t = t.split(' ')[1]
+                  from datetime import datetime as dt
+                  fmt = "%I:%M %p" if ('AM' in t or 'PM' in t) else "%H:%M"
+                  d = dt.strptime(t.strip(), fmt)
+                  return d.hour * 60 + d.minute
+              except: return -1
+
+          def get_tiempo(op, cual):
+              legs = op.get("flights", [])
+              if not legs: return ""
+              ap = legs[0]["departure_airport"] if cual == "dep" else legs[-1]["arrival_airport"]
+              t = ap.get("time", "")
+              return t.split(' ')[1] if len(t) > 8 and ' ' in t else t
+
+          def get_aerolinea(op):
+              legs = op.get("flights", [])
+              return ", ".join(dict.fromkeys(f.get("airline", "") for f in legs if f.get("airline")))
+
+          def fmt_vuelo(f):
+              return {
+                  "aerolinea": get_aerolinea(f),
+                  "salida": get_tiempo(f, "dep"),
+                  "llegada": get_tiempo(f, "arr"),
+                  "precio_4pax": f.get("price", 0),
+                  "precio_adulto_aprox": round(f.get("price", 0) / 3.1)
+              }
+
+          resultado = {
+              "generado": datetime.now(timezone.utc).isoformat(),
+              "ruta": "BOG ↔ MTR",
+              "pasajeros": "3 adultos + 1 niño",
+              "error": None,
+              "ida": None,
+              "retorno": None,
+              "mejor_combinacion": None
+          }
+
+          # IDA: BOG -> MTR | 20 dic 2026 | llegar antes 11am
+          print("Buscando IDA: BOG -> MTR | 2026-12-20...")
+          try:
+              d = buscar("BOG", "MTR", "2026-12-20")
+              todos = d.get("best_flights", []) + d.get("other_flights", [])
+              filtrados = [f for f in todos if 0 <= parse_min(get_tiempo(f, "arr")) <= 660]
+              resultado["ida"] = {
+                  "fecha": "2026-12-20",
+                  "restriccion": "Llegar antes de las 11:00 AM",
+                  "total_encontrados": len(todos),
+                  "vuelos": [fmt_vuelo(f) for f in sorted(filtrados, key=lambda x: x.get("price", 99999999))],
+                  "rango_tipico": d.get("price_insights", {}).get("typical_price_range", [])
+              }
+              print(f"  {len(todos)} vuelos | {len(filtrados)} cumplen restriccion horaria")
+          except Exception as e:
+              resultado["error"] = str(e)
+              print(f"ERROR IDA: {e}")
+
+          # RETORNO: MTR -> BOG | 3 ene 2027 | salir después 13:00
+          print("Buscando RETORNO: MTR -> BOG | 2027-01-03...")
+          try:
+              d2 = buscar("MTR", "BOG", "2027-01-03")
+              todos2 = d2.get("best_flights", []) + d2.get("other_flights", [])
+              filtrados2 = [f for f in todos2 if parse_min(get_tiempo(f, "dep")) >= 780]
+              resultado["retorno"] = {
+                  "fecha": "2027-01-03",
+                  "restriccion": "Salir después de las 13:00",
+                  "total_encontrados": len(todos2),
+                  "vuelos": [fmt_vuelo(f) for f in sorted(filtrados2, key=lambda x: x.get("price", 99999999))]
+              }
+              print(f"  {len(todos2)} vuelos | {len(filtrados2)} cumplen restriccion horaria")
+          except Exception as e:
+              resultado["error"] = (resultado.get("error") or "") + str(e)
+              print(f"ERROR RETORNO: {e}")
+
+          # Mejor combinación
+          if resultado["ida"] and resultado["retorno"]:
+              vi = resultado["ida"]["vuelos"]
+              vr = resultado["retorno"]["vuelos"]
+              if vi and vr:
+                  total = vi[0]["precio_4pax"] + vr[0]["precio_4pax"]
+                  resultado["mejor_combinacion"] = {
+                      "ida": vi[0],
+                      "retorno": vr[0],
+                      "total_4pax": total,
+                      "precio_adulto_aprox": round(total / 3.1),
+                      "alerta": total / 3.1 < 250000
+                  }
+                  print(f"Mejor combinacion: COP {total:,} (4 pax)")
+
+          with open("dashboard/data/flights.json", "w", encoding="utf-8") as f:
+              json.dump(resultado, f, ensure_ascii=False, indent=2)
+          print("OK — dashboard/data/flights.json actualizado")
+          PYEOF
+
+      - name: Commit y push flights.json
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add dashboard/data/flights.json
+          git diff --staged --quiet && echo "Sin cambios" || (
+            git commit -m "chore(flights): actualización BOG-MTR $(date +%Y-%m-%d)"
+            git push
+          )
