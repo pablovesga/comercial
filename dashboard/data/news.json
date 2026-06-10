@@ -1,105 +1,96 @@
 {
-  "generado": "2026-06-08T15:00:00Z",
+  "generado": "2026-06-10T12:00:00Z",
   "semana": "2026-W24",
   "items": [
     {
-      "id": "apple-wwdc-2026-siri-gemini-agente-ia",
-      "titulo": "Apple presenta en WWDC 2026 una Siri renovada con IA de Gemini y capacidades de agente",
-      "resumen": "En la keynote del 8 de junio, Apple reveló Siri 2.0 impulsada por un modelo de Google Gemini, con modo de chat, comprensión contextual y la capacidad de ejecutar tareas multipaso entre aplicaciones. La compañía también anunció una integración de agentes de IA con el App Store para delegar reservas, edición de documentos y control del hogar inteligente.",
-      "url": "https://www.techradar.com/news/live/apple-wwdc-2026-live",
-      "fuente": "TechRadar",
+      "id": "claude-fable-5-mythos-5-lanzamiento",
+      "titulo": "Anthropic lanza Claude Fable 5 y Mythos 5, sus modelos más poderosos hasta la fecha",
+      "resumen": "El 9 de junio, Anthropic presentó Claude Fable 5 y Mythos 5, los primeros modelos de la clase Mythos disponibles para el gran público, con ventana de contexto de 1 millón de tokens, 128 K tokens de salida y pensamiento adaptativo siempre activo. Fable 5 alcanzó el 93,9 % en SWE-bench Verified, consolidándose como el modelo de uso general más capaz publicado ampliamente a la fecha.",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "fuente": "Anthropic",
+      "fecha": "2026-06-09",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "claude-fable-5-amazon-bedrock-disponible",
+      "titulo": "Claude Fable 5 llega a Amazon Bedrock con capacidades Mythos y salvaguardas integradas",
+      "resumen": "Amazon Web Services anunció la disponibilidad de Claude Fable 5 en Amazon Bedrock el mismo día de su lanzamiento, permitiendo a las empresas usar el modelo de clase Mythos junto con las herramientas de seguridad y observabilidad de AWS. La integración incluye soporte para agentes de Amazon Bedrock y acceso vía API a las capacidades extendidas del modelo.",
+      "url": "https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/",
+      "fuente": "AWS Blog",
+      "fecha": "2026-06-09",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "claude-fable-5-swe-bench-93-9-programacion",
+      "titulo": "Claude Fable 5 logra 93,9 % en SWE-bench y escribe más del 80 % de su propio código",
+      "resumen": "Con un 93,9 % en SWE-bench Verified, Claude Fable 5 lidera los rankings de programación entre los modelos de acceso general disponibles en junio de 2026. Anthropic también reveló que el modelo genera más del 80 % de su propio código, frente a menos del 10 % registrado en febrero del año anterior.",
+      "url": "https://sdtimes.com/anthropic-releases-claude-fable-5-claud-mythos-5/",
+      "fuente": "SD Times",
+      "fecha": "2026-06-09",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "augment-code-claude-fable-5-agente-codigo",
+      "titulo": "Augment Code integra Claude Fable 5 para llevar capacidades Mythos a los agentes de código",
+      "resumen": "Augment Code anunció la integración de Claude Fable 5 en su plataforma el mismo día del lanzamiento, habilitando que los agentes de programación aprovechen el razonamiento extendido y el contexto de 1 millón de tokens del nuevo modelo. La compañía reporta mejoras notables en tareas largas y corrección de errores complejos en repositorios de gran escala.",
+      "url": "https://www.augmentcode.com/changelog/build-with-mythos-claude-fable-5-is-now-in-augment-code",
+      "fuente": "Augment Code",
+      "fecha": "2026-06-09",
+      "tags": ["agentes IA", "Claude"]
+    },
+    {
+      "id": "anthropic-facturacion-agentes-sdk-junio-15",
+      "titulo": "Anthropic separa la facturación de agentes y Claude Code de los límites de suscripción desde el 15 de junio",
+      "resumen": "A partir del 15 de junio, Anthropic migra el Agent SDK, Claude Code sin cabeza, Claude Code GitHub Actions y los agentes de terceros fuera de los límites de suscripción, facturándose a tarifas de API. El cambio busca ofrecer mayor transparencia de costos a los equipos de desarrollo que integran agentes en producción.",
+      "url": "https://www.pravinkumar.co/blog/claude-june-15-billing-change-explained-2026",
+      "fuente": "PravinKumar.co",
+      "fecha": "2026-06-09",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "jetbrains-guia-frameworks-agentes-ia-produccion-2026",
+      "titulo": "JetBrains publica guía definitiva de frameworks agénticos para aplicaciones en producción 2026",
+      "resumen": "El blog de PyCharm de JetBrains lanzó una guía de los principales frameworks agénticos, cubriendo LangGraph, AutoGen, CrewAI, Agno y LlamaIndex Workflows con criterios para elegir entre orquestación paralela y secuencial. El artículo destaca que el factor diferenciador ya no es el modelo subyacente, sino la lógica de negocio y el grado de supervisión humana en el bucle.",
+      "url": "https://blog.jetbrains.com/pycharm/2026/06/top-agentic-frameworks-for-building-applications-2026/",
+      "fuente": "JetBrains Blog",
       "fecha": "2026-06-08",
       "tags": ["agentes IA", "LLMs"]
     },
     {
-      "id": "anthropic-claude-outage-junio-investigacion-filtracion",
-      "titulo": "Anthropic investiga reportes de filtración de datos tras una caída masiva de Claude",
-      "resumen": "El 5 de junio, Claude.ai, la API, Claude Code y Cowork sufrieron errores elevados durante varias horas antes de restablecerse por completo. Anthropic atribuyó el incidente a problemas de infraestructura, aunque abrió una investigación sobre denuncias de usuarios que aseguraron recibir respuestas destinadas a otras personas.",
-      "url": "https://cybernews.com/ai-news/claude-outage-resolved-anthropic-opus-model-errors/",
-      "fuente": "Cybernews",
-      "fecha": "2026-06-05",
-      "tags": ["Claude"]
+      "id": "agnt8x-plataforma-agentes-ia-marketplace-publico",
+      "titulo": "EightX Labs abre al público agnt8x: plataforma para reclutar, operar y monetizar agentes de IA",
+      "resumen": "EightX Labs lanzó agnt8x en acceso público, unificando el ciclo de vida de los agentes con un marketplace de constructores, un sistema de pasaporte y auditoría, y un conductor de orquestación multiagente. La propuesta permite a empresas medianas desplegar agentes especializados en ventas, soporte, investigación y administración desde un único entorno.",
+      "url": "https://blog.mean.ceo/ai-agents-news-june-2026/",
+      "fuente": "Mean.ceo",
+      "fecha": "2026-06-08",
+      "tags": ["agentes IA"]
     },
     {
-      "id": "google-research-agentic-rag-framework-preview",
-      "titulo": "Google Research lanza en vista previa un framework de RAG agéntico para empresas",
-      "resumen": "El 5 de junio, Google Research y Google Cloud presentaron un flujo de trabajo multiagente que descompone consultas empresariales complejas y busca contexto de forma iterativa antes de generar respuestas confiables. La función ya está disponible en vista previa pública dentro de Gemini Enterprise Agent Platform.",
-      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
-      "fuente": "Google Research",
-      "fecha": "2026-06-05",
+      "id": "alteryx-agent-studio-mcp-server-workflows",
+      "titulo": "Alteryx lanza Agent Studio y MCP Server para convertir flujos de datos en agentes autónomos",
+      "resumen": "En Inspire 2026, Alteryx presentó Agent Studio, que transforma los flujos de trabajo y la lógica de negocio existentes en agentes autónomos conectados a Slack, Teams y modelos como Claude. El MCP Server complementario permite exponer workflows de Alteryx One como herramientas MCP invocables desde cualquier LLM o agente personalizado.",
+      "url": "https://enterprisedna.co/resources/news/alteryx-agent-studio-inspire-2026-analytics-ai-agents/",
+      "fuente": "Enterprise DNA",
+      "fecha": "2026-06-07",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "agentic-rag-patron-dominante-empresa-2026",
+      "titulo": "RAG agéntico se consolida como arquitectura dominante en IA empresarial de producción",
+      "resumen": "Múltiples análisis de junio coinciden en que el patrón de RAG agéntico —con agentes especializados para descomposición de consultas, recuperación iterativa, validación y síntesis— supera a RAG simple en precisión y fiabilidad empresarial. Los frameworks líderes incorporan soporte multimodal, controles de acceso granulares y auditoría para cumplir con HIPAA, GDPR y normativas financieras.",
+      "url": "https://heeya.fr/en/blog/agentic-rag-implementation-enterprise-2026",
+      "fuente": "Heeya.fr",
+      "fecha": "2026-06-07",
       "tags": ["RAG", "agentes IA"]
     },
     {
-      "id": "aws-summit-madrid-2026-ia-agentica-empresas",
-      "titulo": "AWS Summit Madrid 2026 confirma el giro empresarial hacia la IA agéntica",
-      "resumen": "Cerca de 10.000 profesionales asistieron el 4 de junio al AWS Summit Madrid, donde Amazon detalló planes de inversión por 33.700 millones de euros en infraestructura de IA en España. El evento giró en torno a agentes capaces de ejecutar procesos de negocio completos dentro de las herramientas que ya usan las empresas.",
-      "url": "https://www.revistainteligenciaartificial.com/2026/06/aws-summit-madrid-2026-la-ia-agentica-llega-a-las-empresas-espanolas/",
-      "fuente": "Revista Inteligencia Artificial",
-      "fecha": "2026-06-04",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "foxconn-momclaw-manufactura-multiagente-nvidia",
-      "titulo": "Foxconn despliega MoMClaw, un sistema multiagente de IA para manufactura basado en NVIDIA",
-      "resumen": "Construido sobre el blueprint FOX de NVIDIA, MoMClaw conecta sensores de máquina con cientos de agentes coordinados que vigilan líneas de producción en tiempo real. La compañía reporta una reducción del 80% en el tiempo de análisis de causas raíz y una caída del 10% en fallas de máquina.",
-      "url": "https://blog.mean.ceo/ai-agents-news-june-2026/",
-      "fuente": "Mean.ceo",
-      "fecha": "2026-06-04",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "colombia-cio-playbook-2026-60-empresas-pilotos-ia",
-      "titulo": "CIO Playbook 2026 revela que el 60% de las empresas colombianas ya ejecuta pilotos de IA",
-      "resumen": "El reporte señala que seis de cada diez empresas en Colombia se encuentran en fase activa de pruebas e implementación de soluciones de inteligencia artificial. El estudio destaca que las compañías colombianas invierten más en agentes de IA que el promedio regional: 32% frente a 23%.",
-      "url": "https://impactotic.co/inteligencia-artificial/cio-playbook-2026-60-de-las-empresas-en-colombia-implementan-pilotos-de-ia/",
-      "fuente": "Impacto TIC",
-      "fecha": "2026-06-04",
-      "tags": ["Colombia tech", "agentes IA"]
-    },
-    {
-      "id": "microsoft-mai-thinking-1-modelo-rival-claude",
-      "titulo": "Microsoft presenta MAI-Thinking-1, su primer LLM propio que dice igualar a Claude Opus 4.6",
-      "resumen": "Microsoft develó MAI-Thinking-1 junto con actualizaciones de generación de imágenes, voz y código, marcando su primer modelo de lenguaje construido internamente. La compañía afirma que el modelo iguala el desempeño de Claude Opus 4.6 de Anthropic en tareas de razonamiento.",
-      "url": "https://legaltechnology.com/microsoft-unveils-first-llm-vibe-coding-model-and-speech-text-updates/",
-      "fuente": "Legal IT Insider",
-      "fecha": "2026-06-03",
-      "tags": ["LLMs", "Claude"]
-    },
-    {
-      "id": "colombia-inteligente-2026-resultados-convocatoria-30-junio",
-      "titulo": "MinCiencias anunciará el 30 de junio los proyectos ganadores de ColombIA Inteligente 2026",
-      "resumen": "La convocatoria, que destina $24.000 millones de pesos a soluciones de IA y tecnologías cuánticas, cerró su recepción de propuestas en abril y entra ahora en fase de evaluación. De ese monto, $16.000 millones se destinarán a iniciativas de inteligencia artificial con proyectos de hasta $2.000 millones cada uno.",
-      "url": "https://minciencias.gov.co/sala_de_prensa/minciencias-abre-convocatoria-colombia-inteligente-2026-para-financiar-soluciones-con",
-      "fuente": "Minciencias",
+      "id": "conecta-colombia-2026-telecomunicaciones-ia-bogota",
+      "titulo": "Conecta Colombia 2026 reúne a más de 400 líderes de telecomunicaciones en Bogotá con foco en IA",
+      "resumen": "El 2 y 3 de junio, más de 400 ejecutivos del sector telecom se reunieron en el Grand Hyatt Bogotá para debatir automatización de redes, soberanía digital, ciberseguridad e inteligencia artificial aplicada a infraestructura. El evento posicionó a Colombia como referente regional en adopción de conectividad e infraestructura habilitadora de IA en América Latina.",
+      "url": "https://www.newslinereport.com/tecnologia/nota/inicia-conecta-colombia-2026-ia-ciberseguridad-y-el-futuro-de-las-telecomunicaciones",
+      "fuente": "Newsline Report",
       "fecha": "2026-06-03",
       "tags": ["Colombia tech"]
-    },
-    {
-      "id": "anthropic-claude-mythos-infraestructura-critica-15-paises",
-      "titulo": "Anthropic expande Claude Mythos a infraestructura crítica en más de 15 países",
-      "resumen": "Anthropic anunció el escalamiento de su programa Claude Mythos para apoyar sectores de infraestructura crítica —energía, agua, transporte— en más de 15 países. La iniciativa busca que gobiernos y operadores usen IA para fortalecer la resiliencia operativa frente a fallas y ciberamenazas.",
-      "url": "https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
-      "fuente": "TechCrunch",
-      "fecha": "2026-06-02",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "colombia-automatizacion-procesos-sin-personal-2026",
-      "titulo": "En Colombia ya se automatiza hasta el 60% de los procesos operativos sin intervención humana",
-      "resumen": "Un análisis de 2026 sobre la adopción de IA en el país señala que las herramientas actuales permiten automatizar entre el 30% y el 60% de los procesos operativos de una empresa mediana colombiana. El estudio proyecta que para fin de año el 55% de las interacciones de atención al cliente serán híbridas entre IA y agentes humanos.",
-      "url": "https://ecosistemastartup.com/ia-en-colombia-60-de-procesos-ya-se-automatizan-sin-personal/",
-      "fuente": "El Ecosistema Startup",
-      "fecha": "2026-06-02",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "github-copilot-facturacion-creditos-ia-reaccion",
-      "titulo": "GitHub pasa Copilot a facturación por créditos de IA y genera fuerte reacción de desarrolladores",
-      "resumen": "Desde el 1 de junio, GitHub reemplazó su modelo de Copilot basado en solicitudes por una facturación medida en \"AI Credits\" valorados en $0.01 cada uno. Desarrolladores reportaron sorpresas en sus costos y expresaron rechazo en redes, reabriendo el debate sobre la sostenibilidad económica de las herramientas de codificación con IA.",
-      "url": "https://blog.mean.ceo/large-language-model-news-june-2026/",
-      "fuente": "Mean.ceo",
-      "fecha": "2026-06-01",
-      "tags": ["LLMs", "automatización"]
     }
   ]
 }
