@@ -1,96 +1,96 @@
 {
-  "generado": "2026-06-12T12:00:00Z",
-  "semana": "2026-W24",
+  "generado": "2026-06-15T00:00:00Z",
+  "semana": "2026-W25",
   "items": [
     {
-      "id": "claude-corps-anthropic-150m-fellows-nonprofits",
-      "titulo": "Anthropic lanza Claude Corps: becas de US$150M para llevar IA a organizaciones sin ánimo de lucro",
-      "resumen": "El 11 de junio, Anthropic anunció Claude Corps, un programa nacional de US$150 millones que colocará a 1.000 profesionales en inicio de carrera dentro de ONGs durante 12 meses con salarios de US$85.000 cubiertos íntegramente por Anthropic. El primer cohorte de 100 becarios comenzará en octubre de 2026, buscando expandir el uso de Claude en el sector social estadounidense.",
-      "url": "https://www.anthropic.com/news/claude-corps",
-      "fuente": "Anthropic",
-      "fecha": "2026-06-12",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "claude-80-por-ciento-codigo-propio-preocupacion-anthropic",
-      "titulo": "Anthropic revela que Claude ya escribe más del 80% de su propio código y alerta sobre IA autónoma",
-      "resumen": "Ingenieros de Anthropic publicaron que Claude genera más del 80% de su propio código de desarrollo, frente a menos del 10% en febrero del año anterior. La empresa advierte que esta tendencia apunta hacia sistemas capaces de diseñar y desarrollar sus propios sucesores de forma completamente autónoma.",
-      "url": "https://www.techtimes.com/articles/318249/20260611/claude-corps-fellowship-pays-85k-anthropic-admits-its-ai-will-displace-workers.htm",
-      "fuente": "TechTimes",
-      "fecha": "2026-06-11",
-      "tags": ["Claude", "LLMs"]
-    },
-    {
-      "id": "guerra-plataformas-agentes-ia-vs-rpa-copilots-143-billones",
-      "titulo": "La guerra de plataformas agénticas en la empresa: RPA, Copilots y agentes de IA compiten por un mercado de US$143B",
-      "resumen": "Un análisis de mercado documenta que el gasto en plataformas de agentes de IA alcanzará los US$143.000 millones en 2027, canibalizando el software tradicional de RPA y gestión de procesos. AWS, Google, Microsoft, IBM y Databricks convergen en describir sus agentes como sistemas con metas, memoria, planificación y autonomía variable.",
-      "url": "https://windowsnews.ai/article/2026-enterprise-ai-automation-the-agent-platform-war-behind-rpa-copilots-governance.424066",
-      "fuente": "Windows News AI",
-      "fecha": "2026-06-11",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "venturebeat-fin-era-rag-arquitectura-contexto-agentes",
-      "titulo": "VentureBeat: la era del RAG está terminando para los agentes de IA, llega la arquitectura de contexto",
-      "resumen": "Un análisis de VentureBeat argumenta que el patrón clásico de RAG está alcanzando sus límites en pipelines agénticos y que una nueva capa de conocimiento en tiempo de compilación está emergiendo como alternativa. La arquitectura de contexto permitiría a los agentes estructurar y pre-cargar conocimiento antes de la inferencia, reduciendo la latencia y los errores de recuperación.",
-      "url": "https://venturebeat.com/data/the-rag-era-is-ending-for-agentic-ai-a-new-compilation-stage-knowledge-layer-is-what-comes-next",
-      "fuente": "VentureBeat",
-      "fecha": "2026-06-11",
-      "tags": ["RAG", "agentes IA"]
-    },
-    {
-      "id": "colombia-40-por-ciento-pymes-rezagadas-adopcion-ia",
-      "titulo": "El 40% de las pymes colombianas se quedó atrás en la adopción de IA, alerta informe de ANDICOM",
-      "resumen": "Un informe presentado en ANDICOM 2026 señala que el 40% de las pequeñas y medianas empresas colombianas aún no ha iniciado ningún piloto de inteligencia artificial, acumulando una brecha respecto a las grandes corporaciones que ya operan agentes en producción. La falta de gobernanza de datos, talento especializado y casos de uso claros son los tres obstáculos principales identificados.",
-      "url": "https://impactotic.co/inteligencia-artificial/adopcion-de-ia-en-empresas-colombia-andicom/",
-      "fuente": "Impacto TIC",
-      "fecha": "2026-06-11",
+      "id": "colombia-tech-report-2026-kpmg-2295-startups-857m",
+      "titulo": "KPMG Colombia Tech Report 2026: 2.295 startups y US$857M, SaaS supera por primera vez a Fintech",
+      "resumen": "El Colombia Tech Report 2026 de KPMG y 13 aliados mapea 2.295 startups activas, un crecimiento del 9,3% interanual, con US$857M invertidos en 131 transacciones durante 2025. Por primera vez SaaS lidera el ecosistema con el 27% de las startups, desplazando a Fintech, y Bogotá se consolida como el tercer ecosistema startup más sólido de Latinoamérica.",
+      "url": "https://ecosistemastartup.com/colombia-tech-report-2026-2-295-startups-y-el-reto-de-escalar/",
+      "fuente": "El Ecosistema Startup",
+      "fecha": "2026-06-14",
       "tags": ["Colombia tech"]
     },
     {
-      "id": "stanford-agentes-ia-salto-12-a-66-por-ciento-exito",
-      "titulo": "Índice IA Stanford 2026: los agentes pasan del 12% al 66% de éxito en tareas reales en un año",
-      "resumen": "El Informe de Índice de IA 2026 de Stanford documenta un salto histórico en la tasa de éxito de agentes de IA en trabajo computacional real: del 12% al 66% en apenas 12 meses, situándose a solo 6 puntos porcentuales del desempeño humano. El avance se atribuye a mejoras en planificación multiagente, uso de herramientas y modelos de razonamiento.",
-      "url": "https://www.packagingtechtoday.com/news-headlines/ai-agents-jumped-from-12-to-66-task-success-in-one-year/",
-      "fuente": "Packaging Technology Today",
-      "fecha": "2026-06-10",
+      "id": "mcp-a2a-convergencia-linux-foundation-estandar-agentes",
+      "titulo": "MCP y A2A consolidan arquitectura de dos capas para agentes empresariales bajo Linux Foundation",
+      "resumen": "Un análisis de Zylos Research documenta que el estándar de facto para despliegues agénticos empresariales combina MCP (integración agente-herramienta) con A2A (coordinación agente-agente), con más de 100 empresas que ya adoptaron formalmente ambos protocolos. Ambos estándares operan bajo la Agentic AI Foundation (AAIF) de la Linux Foundation, co-fundada por Anthropic, Block y OpenAI.",
+      "url": "https://zylos.ai/research/2026-03-26-agent-interoperability-protocols-mcp-a2a-acp-convergence/",
+      "fuente": "Zylos Research",
+      "fecha": "2026-06-14",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "rag-agente-grafo-conocimiento-contexto-5x-precision",
+      "titulo": "RAG agéntico con grafos de contexto logra hasta 5x más precisión en análisis empresarial",
+      "resumen": "Nuevos estudios de implementación en 2026 muestran que las arquitecturas de RAG agéntico que combinan grafos de conocimiento con planificación de consultas en tiempo de compilación alcanzan hasta 5 veces mayor precisión que el RAG vectorial estándar en tareas de análisis empresarial. El patrón context-graph-grounded RAG está emergiendo como referencia para casos de uso en soporte legal, análisis financiero y atención al cliente.",
+      "url": "https://dev.to/suraj_khaitan_f893c243958/-rag-in-2026-a-practical-blueprint-for-retrieval-augmented-generation-16pp",
+      "fuente": "DEV Community",
+      "fecha": "2026-06-14",
+      "tags": ["RAG", "agentes IA"]
+    },
+    {
+      "id": "claude-nueve-diez-brokers-agentes-trading-2026",
+      "titulo": "Claude impulsa 9 de cada 10 agentes IA de brokers que operan cuentas reales de clientes",
+      "resumen": "Un análisis de Finance Magnates revela que al menos 10 brokers y plataformas de trading desplegaron agentes de IA conectados a cuentas reales entre enero y junio de 2026, y Claude de Anthropic alimenta nueve de ellos, incluyendo Interactive Brokers, Robinhood, eToro y Public. El hallazgo consolida a Claude como el LLM de referencia para aplicaciones financieras agénticas de alta responsabilidad.",
+      "url": "https://www.tradingview.com/news/financemagnates:7d8ba7efc094b:0-claude-powers-nine-of-ten-broker-ai-agents-that-now-trade-live-accounts/",
+      "fuente": "Finance Magnates / TradingView",
+      "fecha": "2026-06-13",
+      "tags": ["Claude", "agentes IA", "automatización"]
+    },
+    {
+      "id": "google-a2a-protocol-150-socios-coordinacion-agentes",
+      "titulo": "A2A de Google suma más de 150 socios empresariales para coordinación entre agentes de IA",
+      "resumen": "El protocolo Agent-to-Agent (A2A) de Google, lanzado con 50 socios en abril de 2025, alcanzó en abril de 2026 más de 150 organizaciones participantes, consolidándose como el estándar dominante para coordinación inter-agente empresarial. La combinación MCP + A2A emerge como arquitectura de dos capas por defecto para despliegues agénticos a escala.",
+      "url": "https://rapidclaw.dev/blog/a2a-protocol-complete-guide-2026",
+      "fuente": "Rapid Claw",
+      "fecha": "2026-06-13",
       "tags": ["agentes IA", "LLMs"]
     },
     {
-      "id": "google-gemini-enterprise-agent-platform-rag-preview",
-      "titulo": "Google lanza Gemini Enterprise Agent Platform con RAG agéntico en vista previa pública",
-      "resumen": "Google redenominó Vertex AI a Gemini Enterprise Agent Platform, unificando Agentspace y Gemini Code Assist Enterprise bajo un modelo de precios por agente y un constructor no-code en Workspace Studio. La plataforma incluye RAG agéntico con planificación avanzada de consultas, trazabilidad y respuestas auditables disponibles en vista previa pública.",
-      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
-      "fuente": "Google Research",
-      "fecha": "2026-06-10",
-      "tags": ["agentes IA", "RAG"]
+      "id": "minciencias-colombia-inteligente-2026-24000-millones-ia",
+      "titulo": "MinCiencias abre ColombIA Inteligente 2026 con $24.000 millones para proyectos de IA y computación cuántica",
+      "resumen": "El Ministerio de Ciencia, Tecnología e Innovación lanzó la convocatoria ColombIA Inteligente 2026, que distribuirá $24.000 millones entre proyectos de investigación aplicada: $16.000 millones para inteligencia artificial y $8.000 millones para tecnologías cuánticas, con hasta $2.000 millones por iniciativa y 14 meses de duración. Los proyectos seleccionados se publicarán el 30 de junio de 2026.",
+      "url": "https://minciencias.gov.co/sala_de_prensa/minciencias-abre-convocatoria-colombia-inteligente-2026-para-financiar-soluciones-con",
+      "fuente": "MinCiencias",
+      "fecha": "2026-06-13",
+      "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "colombia-60-por-ciento-empresas-pilotos-ia-cio-playbook",
-      "titulo": "CIO Playbook 2026: el 60% de las empresas colombianas ya ejecuta pilotos de IA y lideran la región en agentes",
-      "resumen": "Según el informe CIO Playbook 2026 de Lenovo e IDC, el 60% de las empresas colombianas está en fase activa de implementación de soluciones de IA, muy por encima del promedio regional. Colombia también invierte más en agentes de IA (32%) que el resto de Latinoamérica (23%), posicionándose como referente regional en adopción de IA agéntica.",
-      "url": "https://impactotic.co/inteligencia-artificial/cio-playbook-2026-60-de-las-empresas-en-colombia-implementan-pilotos-de-ia/",
-      "fuente": "Impacto TIC",
-      "fecha": "2026-06-10",
-      "tags": ["Colombia tech", "agentes IA"]
+      "id": "claude-fable-5-lanzamiento-publico-junio-2026",
+      "titulo": "Anthropic lanza Claude Fable 5: ventana de 1M tokens y rendimiento 10% superior a Opus 4.8",
+      "resumen": "Anthropic liberó Claude Fable 5, su primer modelo de clase Mythos disponible al público general, con una ventana de contexto de 1 millón de tokens, hasta 128k tokens de salida y precio de $10/$50 por millón de tokens. El modelo supera a Claude Opus 4.8 en más del 10% en benchmarks de programación, visión y tareas científicas, aunque fue temporalmente suspendido por una directiva de exportación del gobierno de EE.UU.",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "fuente": "Anthropic",
+      "fecha": "2026-06-12",
+      "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "graphrag-empresarial-reduce-alucinaciones-62-por-ciento",
-      "titulo": "GraphRAG empresarial reduce alucinaciones en un 62% según benchmark MLOps de 47 despliegues",
-      "resumen": "Un benchmark de la comunidad MLOps sobre 47 despliegues en producción revela que las arquitecturas de RAG con grafos de conocimiento (GraphRAG) reducen la tasa de alucinaciones en un 62% respecto al RAG estándar. Las cinco principales victorias empresariales demuestran ventajas concretas en soporte al cliente, búsqueda legal y análisis financiero.",
-      "url": "https://ragaboutit.com/5-enterprise-graphrag-wins-that-slash-hallucination-by-62/",
-      "fuente": "RAG About It",
-      "fecha": "2026-06-10",
-      "tags": ["RAG", "LLMs"]
+      "id": "zenity-gobernanza-agentes-ia-claude-enterprise",
+      "titulo": "Zenity extiende gobernanza y seguridad de agentes IA a Claude Enterprise con Compliance API",
+      "resumen": "Zenity anunció una integración con la Compliance API de Claude que ofrece controles de gobernanza centralizados y visibilidad completa sobre los agentes de IA que operan en entornos Claude Enterprise. La solución permite a las organizaciones auditar acciones agénticas, establecer políticas y detectar anomalías en flujos automatizados en tiempo real.",
+      "url": "https://vmblog.com/news/zenity-extends-ai-agent-security-and-governance-to-claude-enterprise/",
+      "fuente": "VMblog",
+      "fecha": "2026-06-12",
+      "tags": ["Claude", "agentes IA"]
     },
     {
-      "id": "alibaba-accio-work-plataforma-agentes-ia-sin-codigo-pymes",
-      "titulo": "Alibaba lanza Accio Work, plataforma agéntica sin código para pymes en más de 100 mercados",
-      "resumen": "La división de comercio internacional de Alibaba presentó Accio Work, una plataforma plug-and-play de agentes de IA que despliega agentes especializados en cumplimiento, aprovisionamiento, negociación y logística para pymes. La solución está disponible desde el primer día en más de 100 mercados sin necesidad de programación.",
-      "url": "https://blog.mean.ceo/ai-agents-news-june-2026/",
-      "fuente": "Mean.ceo",
-      "fecha": "2026-06-10",
-      "tags": ["agentes IA", "automatización"]
+      "id": "reco-mitigacion-riesgo-agentes-ia-claude-enterprise",
+      "titulo": "Reco extiende su plataforma de seguridad a Claude Enterprise para gobernar agentes IA",
+      "resumen": "Reco anunció la integración de su plataforma de gestión de riesgos con Claude Enterprise, permitiendo a los equipos de seguridad descubrir, clasificar y supervisar todos los agentes de IA activos en la organización. La solución mapea automáticamente las acciones de los agentes, identifica exposiciones de datos y genera alertas ante comportamientos anómalos.",
+      "url": "https://www.globenewswire.com/news-release/2026/06/12/3311246/0/en/reco-mitigates-ai-agent-risk-across-claude-and-the-enterprise.html",
+      "fuente": "GlobeNewswire",
+      "fecha": "2026-06-12",
+      "tags": ["Claude", "agentes IA", "automatización"]
+    },
+    {
+      "id": "claude-for-legal-90-agentes-ia-especializados-derecho",
+      "titulo": "Claude for Legal lanza catálogo de más de 90 agentes IA especializados para firmas de abogados",
+      "resumen": "Anthropic publicó en GitHub el catálogo de Claude for Legal con más de 90 agentes de IA especializados en tareas legales: revisión de contratos, due diligence, investigación jurisprudencial y redacción de escritos. Los agentes son adaptables por cada firma a sus flujos específicos, marcando un hito en la adopción de IA autónoma en el sector legal.",
+      "url": "https://www.artificiallawyer.com/2026/06/01/claude-for-legal-has-over-90-ai-agents/",
+      "fuente": "Artificial Lawyer",
+      "fecha": "2026-06-12",
+      "tags": ["Claude", "agentes IA"]
     }
   ]
 }
