@@ -1,96 +1,114 @@
 {
-  "generado": "2026-06-15T00:00:00Z",
+  "generado": "2026-06-17T10:00:00Z",
   "semana": "2026-W25",
   "items": [
     {
-      "id": "colombia-tech-report-2026-kpmg-2295-startups-857m",
-      "titulo": "KPMG Colombia Tech Report 2026: 2.295 startups y US$857M, SaaS supera por primera vez a Fintech",
-      "resumen": "El Colombia Tech Report 2026 de KPMG y 13 aliados mapea 2.295 startups activas, un crecimiento del 9,3% interanual, con US$857M invertidos en 131 transacciones durante 2025. Por primera vez SaaS lidera el ecosistema con el 27% de las startups, desplazando a Fintech, y Bogotá se consolida como el tercer ecosistema startup más sólido de Latinoamérica.",
-      "url": "https://ecosistemastartup.com/colombia-tech-report-2026-2-295-startups-y-el-reto-de-escalar/",
-      "fuente": "El Ecosistema Startup",
-      "fecha": "2026-06-14",
-      "tags": ["Colombia tech"]
+      "id": "claude-caidas-diez-disrupciones-infraestructura-junio-2026",
+      "titulo": "Claude sufre décima interrupción en 12 días: Anthropic expone tensión en infraestructura",
+      "resumen": "Claude experimentó el 16 de junio de 2026 su décima interrupción significativa desde el 5 de junio, con errores persistentes en Opus 4.8 y Haiku 4.5 a pesar de un intento de corrección a las 2:00 PM ET. El evento expone las limitaciones de infraestructura de Anthropic en un período de alta demanda tras el lanzamiento de Fable 5.",
+      "url": "https://www.techtimes.com/articles/318514/20260616/claude-outage-tenth-disruption-12-days-exposes-anthropic-infrastructure-strain.htm",
+      "fuente": "TechTimes",
+      "fecha": "2026-06-16",
+      "tags": ["Claude"]
     },
     {
-      "id": "mcp-a2a-convergencia-linux-foundation-estandar-agentes",
-      "titulo": "MCP y A2A consolidan arquitectura de dos capas para agentes empresariales bajo Linux Foundation",
-      "resumen": "Un análisis de Zylos Research documenta que el estándar de facto para despliegues agénticos empresariales combina MCP (integración agente-herramienta) con A2A (coordinación agente-agente), con más de 100 empresas que ya adoptaron formalmente ambos protocolos. Ambos estándares operan bajo la Agentic AI Foundation (AAIF) de la Linux Foundation, co-fundada por Anthropic, Block y OpenAI.",
-      "url": "https://zylos.ai/research/2026-03-26-agent-interoperability-protocols-mcp-a2a-acp-convergence/",
-      "fuente": "Zylos Research",
+      "id": "microsoft-scout-agente-autonomo-microsoft365-workiq",
+      "titulo": "Microsoft lanza Scout: agente IA siempre activo que opera Microsoft 365 sin supervisión constante",
+      "resumen": "Microsoft presentó Scout, un agente IA autónomo que opera de forma continua en todo el ecosistema Microsoft 365 —desde Outlook hasta SharePoint— ejecutando flujos complejos sin instrucciones directas del usuario. El 16 de junio, las APIs de Work IQ, capa de inteligencia del lugar de trabajo que impulsa a Scout, quedaron disponibles para el público general.",
+      "url": "https://techcommunity.microsoft.com/discussions/microsoft365copilot/microsoft-introduces-scout-the-always-on-personal-ai-agent/4525534",
+      "fuente": "Microsoft Community Hub",
+      "fecha": "2026-06-16",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "openai-deployment-simulation-pruebas-llm-produccion",
+      "titulo": "OpenAI lanza Deployment Simulation: prueba modelos LLM con conversaciones reales antes de producción",
+      "resumen": "OpenAI introdujo el 16 de junio de 2026 Deployment Simulation, una metodología que reproduce conversaciones pasadas en un nuevo modelo candidato y califica las respuestas para estimar el rendimiento antes del despliegue real. La herramienta busca reducir regresiones al actualizar modelos en producción.",
+      "url": "https://llm-stats.com/ai-news",
+      "fuente": "LLM Stats",
+      "fecha": "2026-06-16",
+      "tags": ["LLMs", "automatización"]
+    },
+    {
+      "id": "arquitectura-contexto-reemplaza-rag-agente-empresarial",
+      "titulo": "La arquitectura de contexto desplaza al RAG tradicional en sistemas de IA agéntica empresarial",
+      "resumen": "Un análisis de VentureBeat documenta que la 'arquitectura de contexto' está desplazando al RAG estático en entornos agénticos: los agentes recuperan datos en tiempo de ejecución mediante llamadas a herramientas, tratando la capa de datos como un recurso vivo en lugar de un payload precargado. La inversión en optimización de recuperación creció del 19% al 28,9% en el primer trimestre de 2026.",
+      "url": "https://venturebeat.com/data/context-architecture-is-replacing-rag-as-agentic-ai-pushes-enterprise-retrieval-to-its-limits",
+      "fuente": "VentureBeat",
+      "fecha": "2026-06-16",
+      "tags": ["RAG", "agentes IA"]
+    },
+    {
+      "id": "anthropic-pausa-cambio-creditos-agentes-sdk-junio-15",
+      "titulo": "Anthropic pausa cambio de créditos del Agent SDK previsto para el 15 de junio",
+      "resumen": "Anthropic anunció que pausó el plan de separar el uso del Agent SDK y claude-p del pool de suscripciones Pro, Max, Team y Enterprise previsto para el 15 de junio de 2026. El Agent SDK continúa consumiendo créditos de suscripción como antes, dando más tiempo a los desarrolladores para adaptar sus flujos de facturación.",
+      "url": "https://www.digitalapplied.com/blog/anthropic-claude-credit-overhaul-june-15-2026",
+      "fuente": "Digital Applied",
+      "fecha": "2026-06-15",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "claude-code-subagentes-anidados-modo-seguro-junio-2026",
+      "titulo": "Claude Code agrega sub-agentes anidados, sesiones /cd y modo seguro en actualización de junio",
+      "resumen": "Anthropic actualizó Claude Code con soporte para sub-agentes que pueden crear sus propios agentes hijos, comandos /cd para mover sesiones entre directorios, y un modo seguro para aislar configuraciones rotas. La actualización también amplía los modelos de respaldo y refuerza controles de seguridad y administración.",
+      "url": "https://releasebot.io/updates/anthropic/claude-code",
+      "fuente": "Releasebot",
+      "fecha": "2026-06-15",
+      "tags": ["Claude", "agentes IA"]
+    },
+    {
+      "id": "milei-argentina-empresas-operadas-agentes-ia-categoria-legal",
+      "titulo": "Argentina impulsa nueva categoría legal para empresas operadas íntegramente por agentes de IA",
+      "resumen": "El gobierno de Javier Milei promueve una figura legal en Argentina para empresas operadas sin directivos humanos formales, gestionadas completamente por agentes de inteligencia artificial autónomos. De aprobarse, convertiría a Argentina en el primer país del mundo en reconocer jurídicamente las 'empresas headless' dirigidas por IA.",
+      "url": "https://www.xataka.com/robotica-e-ia/milei-quiere-crear-nueva-categoria-empresarial-argentina-companias-operadas-agentes-ia",
+      "fuente": "Xataka",
+      "fecha": "2026-06-15",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "gartner-40-porciento-apps-empresariales-agentes-ia-2026",
+      "titulo": "Gartner: el 40% de las aplicaciones empresariales integrarán agentes IA antes de que acabe 2026",
+      "resumen": "Según Gartner, el 40% de las aplicaciones empresariales contará con algún tipo de agente de inteligencia artificial integrado para finales de 2026, mientras que McKinsey reporta que el 62% de las organizaciones experimenta con agentes pero solo el 23% los ha escalado a producción. Los agentes se consolidan como la capa operativa del software corporativo.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-06-15",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "llm-roundup-gpt55-gemini35-mistral-large3-junio-2026",
+      "titulo": "Ronda de lanzamientos LLM: GPT-5.5, Gemini 3.5 Flash y Mistral Large 3 compiten en junio",
+      "resumen": "Junio de 2026 concentra una oleada de nuevos modelos de lenguaje: OpenAI con GPT-5.5, Google con Gemini 3.5 Flash, Mistral con Medium 3.5 y Large 3, en un mercado donde los modelos abiertos como Llama 4 y Qwen3-Coder reducen rápidamente la brecha con los propietarios. Los modelos abiertos ganan terreno en despliegues con privacidad, personalización y control de costos.",
+      "url": "https://presenc.ai/research/june-2026-llm-release-roundup",
+      "fuente": "Presenc AI",
+      "fecha": "2026-06-15",
+      "tags": ["LLMs"]
+    },
+    {
+      "id": "google-cloud-colombia-ia-agentica-empresas-aceleran",
+      "titulo": "Google Cloud impulsa IA agéntica en Colombia: el 89% de empresas planea invertir en 2026",
+      "resumen": "Según el Google Cloud Summit Colombia 2026, el país entra en una nueva etapa operativa de IA con casos concretos como Wolkvox automatizando el 80% de consultas de clientes y Altipal desplegando el agente 'Mary' para atender 150.000 clientes. El 89% de las empresas colombianas encuestadas planea destinar entre el 1% y el 15% de su presupuesto a IA generativa en 2026.",
+      "url": "https://www.enter.co/especiales/dev/inteligencia-artificial/google-cloud-colombia-ia-agentica-automatizacion-empresas/",
+      "fuente": "Enter.co",
+      "fecha": "2026-06-14",
+      "tags": ["Colombia tech", "agentes IA"]
+    },
+    {
+      "id": "foxconn-momclaw-multi-agente-manufactura-80-reduccion",
+      "titulo": "Foxconn lanza MoMClaw: sistema multi-agente que reduce 80% el tiempo de análisis de fallas en manufactura",
+      "resumen": "Foxconn presentó MoMClaw, un sistema de múltiples agentes de IA construido sobre el blueprint FOX de Nvidia que conecta sensores de maquinaria con cientos de agentes coordinados, logrando una reducción del 80% en el tiempo de análisis de causa raíz y un 10% menos de fallos de maquinaria. Es uno de los primeros despliegues agénticos a escala industrial documentados.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
       "fecha": "2026-06-14",
       "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "rag-agente-grafo-conocimiento-contexto-5x-precision",
-      "titulo": "RAG agéntico con grafos de contexto logra hasta 5x más precisión en análisis empresarial",
-      "resumen": "Nuevos estudios de implementación en 2026 muestran que las arquitecturas de RAG agéntico que combinan grafos de conocimiento con planificación de consultas en tiempo de compilación alcanzan hasta 5 veces mayor precisión que el RAG vectorial estándar en tareas de análisis empresarial. El patrón context-graph-grounded RAG está emergiendo como referencia para casos de uso en soporte legal, análisis financiero y atención al cliente.",
-      "url": "https://dev.to/suraj_khaitan_f893c243958/-rag-in-2026-a-practical-blueprint-for-retrieval-augmented-generation-16pp",
-      "fuente": "DEV Community",
+      "id": "rag-10-arquitecturas-patrones-llm-empresarial-2026",
+      "titulo": "RAG en 2026: los 10 patrones de arquitectura para casos empresariales con LLMs",
+      "resumen": "Techment documenta los 10 patrones de arquitectura RAG más adoptados en entornos empresariales para 2026, desde Hybrid RAG (lexical + semántico) hasta Agentic Graph RAG que explora grafos de conocimiento de forma autónoma. El Adaptive RAG emerge como referencia al usar un clasificador de consultas que enruta cada pregunta a la estrategia de recuperación óptima.",
+      "url": "https://www.techment.com/blogs/rag-architectures-enterprise-use-cases-2026/",
+      "fuente": "Techment",
       "fecha": "2026-06-14",
-      "tags": ["RAG", "agentes IA"]
-    },
-    {
-      "id": "claude-nueve-diez-brokers-agentes-trading-2026",
-      "titulo": "Claude impulsa 9 de cada 10 agentes IA de brokers que operan cuentas reales de clientes",
-      "resumen": "Un análisis de Finance Magnates revela que al menos 10 brokers y plataformas de trading desplegaron agentes de IA conectados a cuentas reales entre enero y junio de 2026, y Claude de Anthropic alimenta nueve de ellos, incluyendo Interactive Brokers, Robinhood, eToro y Public. El hallazgo consolida a Claude como el LLM de referencia para aplicaciones financieras agénticas de alta responsabilidad.",
-      "url": "https://www.tradingview.com/news/financemagnates:7d8ba7efc094b:0-claude-powers-nine-of-ten-broker-ai-agents-that-now-trade-live-accounts/",
-      "fuente": "Finance Magnates / TradingView",
-      "fecha": "2026-06-13",
-      "tags": ["Claude", "agentes IA", "automatización"]
-    },
-    {
-      "id": "google-a2a-protocol-150-socios-coordinacion-agentes",
-      "titulo": "A2A de Google suma más de 150 socios empresariales para coordinación entre agentes de IA",
-      "resumen": "El protocolo Agent-to-Agent (A2A) de Google, lanzado con 50 socios en abril de 2025, alcanzó en abril de 2026 más de 150 organizaciones participantes, consolidándose como el estándar dominante para coordinación inter-agente empresarial. La combinación MCP + A2A emerge como arquitectura de dos capas por defecto para despliegues agénticos a escala.",
-      "url": "https://rapidclaw.dev/blog/a2a-protocol-complete-guide-2026",
-      "fuente": "Rapid Claw",
-      "fecha": "2026-06-13",
-      "tags": ["agentes IA", "LLMs"]
-    },
-    {
-      "id": "minciencias-colombia-inteligente-2026-24000-millones-ia",
-      "titulo": "MinCiencias abre ColombIA Inteligente 2026 con $24.000 millones para proyectos de IA y computación cuántica",
-      "resumen": "El Ministerio de Ciencia, Tecnología e Innovación lanzó la convocatoria ColombIA Inteligente 2026, que distribuirá $24.000 millones entre proyectos de investigación aplicada: $16.000 millones para inteligencia artificial y $8.000 millones para tecnologías cuánticas, con hasta $2.000 millones por iniciativa y 14 meses de duración. Los proyectos seleccionados se publicarán el 30 de junio de 2026.",
-      "url": "https://minciencias.gov.co/sala_de_prensa/minciencias-abre-convocatoria-colombia-inteligente-2026-para-financiar-soluciones-con",
-      "fuente": "MinCiencias",
-      "fecha": "2026-06-13",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "claude-fable-5-lanzamiento-publico-junio-2026",
-      "titulo": "Anthropic lanza Claude Fable 5: ventana de 1M tokens y rendimiento 10% superior a Opus 4.8",
-      "resumen": "Anthropic liberó Claude Fable 5, su primer modelo de clase Mythos disponible al público general, con una ventana de contexto de 1 millón de tokens, hasta 128k tokens de salida y precio de $10/$50 por millón de tokens. El modelo supera a Claude Opus 4.8 en más del 10% en benchmarks de programación, visión y tareas científicas, aunque fue temporalmente suspendido por una directiva de exportación del gobierno de EE.UU.",
-      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-      "fuente": "Anthropic",
-      "fecha": "2026-06-12",
-      "tags": ["Claude", "LLMs"]
-    },
-    {
-      "id": "zenity-gobernanza-agentes-ia-claude-enterprise",
-      "titulo": "Zenity extiende gobernanza y seguridad de agentes IA a Claude Enterprise con Compliance API",
-      "resumen": "Zenity anunció una integración con la Compliance API de Claude que ofrece controles de gobernanza centralizados y visibilidad completa sobre los agentes de IA que operan en entornos Claude Enterprise. La solución permite a las organizaciones auditar acciones agénticas, establecer políticas y detectar anomalías en flujos automatizados en tiempo real.",
-      "url": "https://vmblog.com/news/zenity-extends-ai-agent-security-and-governance-to-claude-enterprise/",
-      "fuente": "VMblog",
-      "fecha": "2026-06-12",
-      "tags": ["Claude", "agentes IA"]
-    },
-    {
-      "id": "reco-mitigacion-riesgo-agentes-ia-claude-enterprise",
-      "titulo": "Reco extiende su plataforma de seguridad a Claude Enterprise para gobernar agentes IA",
-      "resumen": "Reco anunció la integración de su plataforma de gestión de riesgos con Claude Enterprise, permitiendo a los equipos de seguridad descubrir, clasificar y supervisar todos los agentes de IA activos en la organización. La solución mapea automáticamente las acciones de los agentes, identifica exposiciones de datos y genera alertas ante comportamientos anómalos.",
-      "url": "https://www.globenewswire.com/news-release/2026/06/12/3311246/0/en/reco-mitigates-ai-agent-risk-across-claude-and-the-enterprise.html",
-      "fuente": "GlobeNewswire",
-      "fecha": "2026-06-12",
-      "tags": ["Claude", "agentes IA", "automatización"]
-    },
-    {
-      "id": "claude-for-legal-90-agentes-ia-especializados-derecho",
-      "titulo": "Claude for Legal lanza catálogo de más de 90 agentes IA especializados para firmas de abogados",
-      "resumen": "Anthropic publicó en GitHub el catálogo de Claude for Legal con más de 90 agentes de IA especializados en tareas legales: revisión de contratos, due diligence, investigación jurisprudencial y redacción de escritos. Los agentes son adaptables por cada firma a sus flujos específicos, marcando un hito en la adopción de IA autónoma en el sector legal.",
-      "url": "https://www.artificiallawyer.com/2026/06/01/claude-for-legal-has-over-90-ai-agents/",
-      "fuente": "Artificial Lawyer",
-      "fecha": "2026-06-12",
-      "tags": ["Claude", "agentes IA"]
+      "tags": ["RAG", "LLMs"]
     }
   ]
 }
