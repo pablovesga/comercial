@@ -1,114 +1,114 @@
 {
-  "generado": "2026-06-17T10:00:00Z",
+  "generado": "2026-06-19T12:00:00Z",
   "semana": "2026-W25",
   "items": [
     {
-      "id": "claude-caidas-diez-disrupciones-infraestructura-junio-2026",
-      "titulo": "Claude sufre décima interrupción en 12 días: Anthropic expone tensión en infraestructura",
-      "resumen": "Claude experimentó el 16 de junio de 2026 su décima interrupción significativa desde el 5 de junio, con errores persistentes en Opus 4.8 y Haiku 4.5 a pesar de un intento de corrección a las 2:00 PM ET. El evento expone las limitaciones de infraestructura de Anthropic en un período de alta demanda tras el lanzamiento de Fable 5.",
-      "url": "https://www.techtimes.com/articles/318514/20260616/claude-outage-tenth-disruption-12-days-exposes-anthropic-infrastructure-strain.htm",
-      "fuente": "TechTimes",
-      "fecha": "2026-06-16",
+      "id": "anthropic-oficina-seul-alianzas-naver-samsung-lg-cns",
+      "titulo": "Anthropic abre oficina en Seúl y anuncia alianzas con NAVER, Samsung SDS y LG CNS",
+      "resumen": "Anthropic inauguró el 17 de junio de 2026 su tercera oficina en Asia-Pacífico, en Seúl, con KiYoung Choi como director representante. La apertura va acompañada de alianzas empresariales con NAVER (Claude Code en toda su ingeniería), Samsung SDS, LG CNS, Nexon, Hanwha Solutions y Channel Talk, además de un MOU con el Ministerio de Ciencia y TIC de Corea para avanzar en seguridad de IA.",
+      "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem",
+      "fuente": "Anthropic",
+      "fecha": "2026-06-17",
       "tags": ["Claude"]
     },
     {
-      "id": "microsoft-scout-agente-autonomo-microsoft365-workiq",
-      "titulo": "Microsoft lanza Scout: agente IA siempre activo que opera Microsoft 365 sin supervisión constante",
-      "resumen": "Microsoft presentó Scout, un agente IA autónomo que opera de forma continua en todo el ecosistema Microsoft 365 —desde Outlook hasta SharePoint— ejecutando flujos complejos sin instrucciones directas del usuario. El 16 de junio, las APIs de Work IQ, capa de inteligencia del lugar de trabajo que impulsa a Scout, quedaron disponibles para el público general.",
-      "url": "https://techcommunity.microsoft.com/discussions/microsoft365copilot/microsoft-introduces-scout-the-always-on-personal-ai-agent/4525534",
-      "fuente": "Microsoft Community Hub",
-      "fecha": "2026-06-16",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "openai-deployment-simulation-pruebas-llm-produccion",
-      "titulo": "OpenAI lanza Deployment Simulation: prueba modelos LLM con conversaciones reales antes de producción",
-      "resumen": "OpenAI introdujo el 16 de junio de 2026 Deployment Simulation, una metodología que reproduce conversaciones pasadas en un nuevo modelo candidato y califica las respuestas para estimar el rendimiento antes del despliegue real. La herramienta busca reducir regresiones al actualizar modelos en producción.",
-      "url": "https://llm-stats.com/ai-news",
-      "fuente": "LLM Stats",
-      "fecha": "2026-06-16",
-      "tags": ["LLMs", "automatización"]
-    },
-    {
-      "id": "arquitectura-contexto-reemplaza-rag-agente-empresarial",
-      "titulo": "La arquitectura de contexto desplaza al RAG tradicional en sistemas de IA agéntica empresarial",
-      "resumen": "Un análisis de VentureBeat documenta que la 'arquitectura de contexto' está desplazando al RAG estático en entornos agénticos: los agentes recuperan datos en tiempo de ejecución mediante llamadas a herramientas, tratando la capa de datos como un recurso vivo en lugar de un payload precargado. La inversión en optimización de recuperación creció del 19% al 28,9% en el primer trimestre de 2026.",
-      "url": "https://venturebeat.com/data/context-architecture-is-replacing-rag-as-agentic-ai-pushes-enterprise-retrieval-to-its-limits",
-      "fuente": "VentureBeat",
-      "fecha": "2026-06-16",
-      "tags": ["RAG", "agentes IA"]
-    },
-    {
-      "id": "anthropic-pausa-cambio-creditos-agentes-sdk-junio-15",
-      "titulo": "Anthropic pausa cambio de créditos del Agent SDK previsto para el 15 de junio",
-      "resumen": "Anthropic anunció que pausó el plan de separar el uso del Agent SDK y claude-p del pool de suscripciones Pro, Max, Team y Enterprise previsto para el 15 de junio de 2026. El Agent SDK continúa consumiendo créditos de suscripción como antes, dando más tiempo a los desarrolladores para adaptar sus flujos de facturación.",
-      "url": "https://www.digitalapplied.com/blog/anthropic-claude-credit-overhaul-june-15-2026",
-      "fuente": "Digital Applied",
-      "fecha": "2026-06-15",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "claude-code-subagentes-anidados-modo-seguro-junio-2026",
-      "titulo": "Claude Code agrega sub-agentes anidados, sesiones /cd y modo seguro en actualización de junio",
-      "resumen": "Anthropic actualizó Claude Code con soporte para sub-agentes que pueden crear sus propios agentes hijos, comandos /cd para mover sesiones entre directorios, y un modo seguro para aislar configuraciones rotas. La actualización también amplía los modelos de respaldo y refuerza controles de seguridad y administración.",
-      "url": "https://releasebot.io/updates/anthropic/claude-code",
-      "fuente": "Releasebot",
-      "fecha": "2026-06-15",
-      "tags": ["Claude", "agentes IA"]
-    },
-    {
-      "id": "milei-argentina-empresas-operadas-agentes-ia-categoria-legal",
-      "titulo": "Argentina impulsa nueva categoría legal para empresas operadas íntegramente por agentes de IA",
-      "resumen": "El gobierno de Javier Milei promueve una figura legal en Argentina para empresas operadas sin directivos humanos formales, gestionadas completamente por agentes de inteligencia artificial autónomos. De aprobarse, convertiría a Argentina en el primer país del mundo en reconocer jurídicamente las 'empresas headless' dirigidas por IA.",
-      "url": "https://www.xataka.com/robotica-e-ia/milei-quiere-crear-nueva-categoria-empresarial-argentina-companias-operadas-agentes-ia",
-      "fuente": "Xataka",
-      "fecha": "2026-06-15",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "gartner-40-porciento-apps-empresariales-agentes-ia-2026",
-      "titulo": "Gartner: el 40% de las aplicaciones empresariales integrarán agentes IA antes de que acabe 2026",
-      "resumen": "Según Gartner, el 40% de las aplicaciones empresariales contará con algún tipo de agente de inteligencia artificial integrado para finales de 2026, mientras que McKinsey reporta que el 62% de las organizaciones experimenta con agentes pero solo el 23% los ha escalado a producción. Los agentes se consolidan como la capa operativa del software corporativo.",
-      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-06-15",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "llm-roundup-gpt55-gemini35-mistral-large3-junio-2026",
-      "titulo": "Ronda de lanzamientos LLM: GPT-5.5, Gemini 3.5 Flash y Mistral Large 3 compiten en junio",
-      "resumen": "Junio de 2026 concentra una oleada de nuevos modelos de lenguaje: OpenAI con GPT-5.5, Google con Gemini 3.5 Flash, Mistral con Medium 3.5 y Large 3, en un mercado donde los modelos abiertos como Llama 4 y Qwen3-Coder reducen rápidamente la brecha con los propietarios. Los modelos abiertos ganan terreno en despliegues con privacidad, personalización y control de costos.",
-      "url": "https://presenc.ai/research/june-2026-llm-release-roundup",
-      "fuente": "Presenc AI",
-      "fecha": "2026-06-15",
-      "tags": ["LLMs"]
-    },
-    {
-      "id": "google-cloud-colombia-ia-agentica-empresas-aceleran",
-      "titulo": "Google Cloud impulsa IA agéntica en Colombia: el 89% de empresas planea invertir en 2026",
-      "resumen": "Según el Google Cloud Summit Colombia 2026, el país entra en una nueva etapa operativa de IA con casos concretos como Wolkvox automatizando el 80% de consultas de clientes y Altipal desplegando el agente 'Mary' para atender 150.000 clientes. El 89% de las empresas colombianas encuestadas planea destinar entre el 1% y el 15% de su presupuesto a IA generativa en 2026.",
-      "url": "https://www.enter.co/especiales/dev/inteligencia-artificial/google-cloud-colombia-ia-agentica-automatizacion-empresas/",
+      "id": "colombia-supera-brasil-mexico-adopcion-ia-microsoft-q1-2026",
+      "titulo": "Colombia supera a Brasil, México y Argentina en adopción de IA según informe Microsoft Q1 2026",
+      "resumen": "El 24,5% de la población colombiana en edad laboral usó inteligencia artificial en el primer trimestre de 2026, ubicando al país en el puesto 41 del ranking global —muy por encima del promedio mundial del 17,8%— y liderando entre las grandes economías de América Latina. Colombia creció 2,5 puntos porcentuales respecto al segundo semestre de 2025, superando a Chile, Argentina, México y Brasil.",
+      "url": "https://www.enter.co/especiales/dev/inteligencia-artificial/colombia-acelera-el-uso-de-inteligencia-artificial-y-supera-a-varios-paises-de-america-latina-microsoft/",
       "fuente": "Enter.co",
-      "fecha": "2026-06-14",
+      "fecha": "2026-06-18",
+      "tags": ["Colombia tech"]
+    },
+    {
+      "id": "colombia-brecha-ia-ciudadanos-avanzan-mas-que-empresas",
+      "titulo": "Brecha crítica de IA en Colombia: los ciudadanos avanzan más rápido que las empresas",
+      "resumen": "Un nuevo análisis revela que la adopción individual de IA en Colombia supera a la empresarial, generando una brecha crítica donde los trabajadores usan herramientas de IA por cuenta propia mientras las compañías siguen en etapas tempranas de implementación. El fenómeno plantea riesgos de desalineación entre capacidades individuales y estrategia corporativa.",
+      "url": "https://criptoinforme.com/ia/colombia-frente-a-una-brecha-critica-en-inteligencia-artificial-ciudadanos-avanzan-mas-rapido-que-las-empresas/",
+      "fuente": "Criptoinforme",
+      "fecha": "2026-06-18",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "colombia-salesforce-agentforce-4900-agentes-ia-portafolio",
+      "titulo": "Colombia impulsa adopción de IA con más de 4.900 agentes creados según Salesforce Agentforce",
+      "resumen": "Salesforce reportó que Colombia cuenta con más de 4.900 agentes de IA creados a través de su plataforma Agentforce, con compañías como Sura, RappiPay, Italcol, HDI Seguros y Kia como protagonistas. El Agentforce World Tour en Bogotá consolidó la visión de 'empresa agéntica', donde agentes IA operan junto a equipos humanos para automatizar procesos complejos.",
+      "url": "https://www.portafolio.co/tecnologia/colombia-impulsa-la-adopcion-de-inteligencia-artificial-con-mas-de-4-900-agentes-creados-segun-salesforce-490806",
+      "fuente": "Portafolio",
+      "fecha": "2026-06-17",
       "tags": ["Colombia tech", "agentes IA"]
     },
     {
-      "id": "foxconn-momclaw-multi-agente-manufactura-80-reduccion",
-      "titulo": "Foxconn lanza MoMClaw: sistema multi-agente que reduce 80% el tiempo de análisis de fallas en manufactura",
-      "resumen": "Foxconn presentó MoMClaw, un sistema de múltiples agentes de IA construido sobre el blueprint FOX de Nvidia que conecta sensores de maquinaria con cientos de agentes coordinados, logrando una reducción del 80% en el tiempo de análisis de causa raíz y un 10% menos de fallos de maquinaria. Es uno de los primeros despliegues agénticos a escala industrial documentados.",
-      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-06-14",
-      "tags": ["agentes IA", "automatización"]
+      "id": "inception-mercury-2-difusivo-1000-tokens-segundo-agentico",
+      "titulo": "Inception lanza Mercury 2: modelo difusivo que supera los 1.000 tokens por segundo para flujos agénticos",
+      "resumen": "Inception presentó Mercury 2, un modelo de razonamiento con arquitectura difusiva que genera tokens en paralelo superando los 1.000 tokens por segundo, orientado a bucles agénticos e interacciones de voz en tiempo real. La arquitectura difusiva representa una alternativa a los transformers autoregresivos convencionales en aplicaciones de alta velocidad.",
+      "url": "https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/",
+      "fuente": "WaveSpeed Blog",
+      "fecha": "2026-06-18",
+      "tags": ["LLMs", "agentes IA", "automatización"]
     },
     {
-      "id": "rag-10-arquitecturas-patrones-llm-empresarial-2026",
-      "titulo": "RAG en 2026: los 10 patrones de arquitectura para casos empresariales con LLMs",
-      "resumen": "Techment documenta los 10 patrones de arquitectura RAG más adoptados en entornos empresariales para 2026, desde Hybrid RAG (lexical + semántico) hasta Agentic Graph RAG que explora grafos de conocimiento de forma autónoma. El Adaptive RAG emerge como referencia al usar un clasificador de consultas que enruta cada pregunta a la estrategia de recuperación óptima.",
-      "url": "https://www.techment.com/blogs/rag-architectures-enterprise-use-cases-2026/",
-      "fuente": "Techment",
-      "fecha": "2026-06-14",
+      "id": "cohere-north-mini-code-gratuito-llm-programacion",
+      "titulo": "Cohere lanza North Mini Code gratuito: LLM especializado en tareas de programación",
+      "resumen": "Cohere lanzó el 17 de junio de 2026 North Mini Code de forma gratuita, un modelo de lenguaje de gran escala optimizado para codificación que compite directamente en el segmento de modelos ligeros para desarrollo de software. El lanzamiento forma parte de la oleada de modelos de junio 2026 que incluye actualizaciones de Gemini, OpenAI y modelos open-source.",
+      "url": "https://llm-stats.com/ai-news",
+      "fuente": "LLM Stats",
+      "fecha": "2026-06-17",
+      "tags": ["LLMs"]
+    },
+    {
+      "id": "kimi-k27-code-open-source-1t-coding-agentico",
+      "titulo": "Kimi K2.7-Code: Moonshot AI lanza modelo open-source de 1 billón de parámetros para coding agéntico",
+      "resumen": "Moonshot AI publicó el 15 de junio los pesos de Kimi K2.7-Code en Hugging Face bajo licencia Modified MIT, un modelo de mezcla de expertos de 1 billón de parámetros (32B activos por token) con ventana de contexto de 256K y modo de razonamiento obligatorio. Reduce un 30% los tokens de razonamiento frente a K2.6 y cuesta 5 veces menos que Claude Opus 4.8, aunque sus benchmarks son de verificación interna.",
+      "url": "https://devops.com/moonshot-ais-kimi-k2-7-code-targets-token-efficiency-in-agentic-coding/",
+      "fuente": "DevOps.com",
+      "fecha": "2026-06-15",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "google-gemini-enterprise-agentic-rag-34-porciento-precision",
+      "titulo": "Google Research publica RAG agéntico en Gemini Enterprise con 34% más precisión que RAG clásico",
+      "resumen": "Google Research documentó el sistema de RAG agéntico de Gemini Enterprise Agent Platform, compuesto por cinco agentes especializados (Orquestador, Planificador, Reescritor de queries, Agente RAG y Validador de Contexto Suficiente) que logran un 34% de mejora en precisión factual respecto al RAG de un solo paso. El validador de contexto, con 93% de exactitud usando Gemini 1.5 Pro, determina si los documentos recuperados son suficientes antes de generar la respuesta.",
+      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
+      "fuente": "Google Research",
+      "fecha": "2026-06-17",
+      "tags": ["RAG", "agentes IA"]
+    },
+    {
+      "id": "llm-agentes-seguridad-red-team-arxiv-junio-2026",
+      "titulo": "ArXiv publica benchmark de red-teaming multi-turno para evaluar seguridad de agentes LLM",
+      "resumen": "Un nuevo artículo en arXiv (junio 19, 2026) presenta un benchmark de red-teaming adversarial multi-turno para sistemas basados en LLM, evaluando robustez frente a jailbreaks y ataques en cadena en sistemas de seguridad crítica. El trabajo emerge como respuesta al cierre forzado de Fable 5 por controles de exportación y propone metodologías estándar para auditar agentes autónomos antes de despliegue.",
+      "url": "https://dentro.de/ai/news/",
+      "fuente": "Dentro.de/AI",
+      "fecha": "2026-06-19",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "agentic-rag-supera-rag-estandar-comparativo-arxiv-2026",
+      "titulo": "Estudio comparativo en arXiv confirma que RAG agéntico supera al RAG estándar en tareas empresariales complejas",
+      "resumen": "Un análisis experimental publicado en arXiv (2601.07711) demuestra que el RAG agéntico, donde un agente orquestador decide cuándo y cómo recuperar información, supera al RAG mejorado estático en tareas complejas de múltiples pasos, aunque con mayor latencia y costo. Los autores advierten que la brecha se cierra significativamente en consultas simples, recomendando enrutamiento adaptativo según la complejidad de la pregunta.",
+      "url": "https://arxiv.org/pdf/2601.07711",
+      "fuente": "arXiv",
+      "fecha": "2026-06-17",
       "tags": ["RAG", "LLMs"]
+    },
+    {
+      "id": "colombia-paradoja-ia-adopcion-masiva-roi-estancado",
+      "titulo": "La paradoja de la IA en Colombia: adopción masiva pero ROI estancado en empresas",
+      "resumen": "Un análisis de Latinpyme revela que pese al liderazgo de Colombia en adopción de IA en América Latina, las empresas reportan dificultades para convertir esa adopción en retorno sobre inversión medible, con el 40% de las pymes aún rezagadas. Los expertos señalan la falta de casos de uso concretos, datos de calidad y talento especializado como los principales frenos para escalar proyectos de IA a producción.",
+      "url": "https://latinpyme.com/blog/revista-latinpyme-2/la-paradoja-de-la-ia-en-colombia-adopcion-masiva-roi-estancado-110",
+      "fuente": "Latinpyme",
+      "fecha": "2026-06-18",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "des-2026-ia-prueba-madurez-pymes-automatizacion",
+      "titulo": "DES 2026: la IA ya no es tendencia sino prueba de madurez para la automatización en pymes",
+      "resumen": "El Digital Enterprise Show 2026 dejó un mensaje claro: las empresas que no han integrado IA en procesos core quedan expuestas a una brecha competitiva creciente, especialmente en automatización de flujos de trabajo, atención al cliente y análisis de datos. Los ponentes coincidieron en que la IA agéntica pasó de ser experimental a ser un estándar de operaciones en empresas maduras digitalmente.",
+      "url": "https://www.precognis.com/blog/des-2026-inteligencia-artificial-transformacion-digital-pymes/",
+      "fuente": "Precognis",
+      "fecha": "2026-06-17",
+      "tags": ["automatización", "agentes IA"]
     }
   ]
 }
