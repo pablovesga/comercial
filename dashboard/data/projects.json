@@ -1,5 +1,5 @@
 {
-  "generado": "2026-06-22T10:00:00Z",
+  "generado": "2026-06-24T09:30:00Z",
   "proyectos": [
     {
       "id": "eligeapp-reputacion",
@@ -209,7 +209,7 @@
       "url": null,
       "color": "#EC4899",
       "icono": "🏗️",
-      "nota": "Milestone General completado — 3 issues cerrados",
+      "nota": "Milestone General completado — 51 issues abiertos en 9 milestones activos",
       "fases": [
         {
           "nombre": "Core viewer 3D/4D (R3F)",
@@ -233,10 +233,21 @@
         }
       ],
       "github": {
-        "issues_open": 1,
-        "issues_closed": 3,
-        "ultimo_commit": null,
-        "milestones": []
+        "issues_open": 51,
+        "issues_closed": 54,
+        "ultimo_commit": "2026-03-03",
+        "milestones": [
+          {"title": "General", "open_issues": 0, "closed_issues": 3, "state": "open"},
+          {"title": "M0 — Fundaciones dev2.0", "open_issues": 6, "closed_issues": 0, "state": "open"},
+          {"title": "M1 — Cuentas multi-tenant & auth", "open_issues": 6, "closed_issues": 0, "state": "open"},
+          {"title": "M2 — Constructor/editor de proyectos", "open_issues": 7, "closed_issues": 0, "state": "open"},
+          {"title": "M3 — Pipeline de spins", "open_issues": 6, "closed_issues": 0, "state": "open"},
+          {"title": "M4 — Editor visual de hotspots", "open_issues": 5, "closed_issues": 0, "state": "open"},
+          {"title": "M5 — Módulo 3D / Colab→PLY", "open_issues": 5, "closed_issues": 0, "state": "open"},
+          {"title": "M6 — Cobro (suscripción + módulos)", "open_issues": 5, "closed_issues": 0, "state": "open"},
+          {"title": "M7 — Exportación a viewer estático", "open_issues": 5, "closed_issues": 0, "state": "open"},
+          {"title": "M8 — Hardening, deploy & observabilidad", "open_issues": 5, "closed_issues": 0, "state": "open"}
+        ]
       }
     }
   ]
