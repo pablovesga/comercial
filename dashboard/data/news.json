@@ -1,7 +1,97 @@
 {
-  "generado": "2026-06-24T09:30:00Z",
-  "semana": "2026-W26",
+  "generado": "2026-06-29T14:00:00Z",
+  "semana": "2026-W27",
   "items": [
+    {
+      "id": "claude-fable-5-offline-mythos-5-infraestructura-critica-eeuu-junio-2026",
+      "titulo": "Claude Fable 5 sigue suspendido; EE.UU. autoriza Mythos 5 solo para infraestructura crítica",
+      "resumen": "A más de dos semanas del veto por control de exportaciones, Fable 5 permanece inaccesible para todos los usuarios generales: el secretario de Comercio Howard Lutnick firmó el 26 de junio una carta que autoriza Mythos 5 exclusivamente para entidades Anexo A y socios de infraestructura crítica. Fuentes de Axios confirman que el Pentágono y la NSA tienen pendiente su aprobación para restaurar Fable 5 al público general.",
+      "url": "https://www.techtimes.com/articles/319213/20260628/claude-fable-5-still-offline-us-clears-mythos-5-critical-infrastructure.htm",
+      "fuente": "TechTimes",
+      "fecha": "2026-06-28",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "micron-anthropic-acuerdo-estrategico-infraestructura-ia-serie-h-2026",
+      "titulo": "Micron y Anthropic firman acuerdo estratégico de infraestructura IA con inversión en Serie H",
+      "resumen": "Micron Technology anunció un acuerdo con Anthropic que cubre diseño conjunto de arquitectura de memoria y almacenamiento para IA, compromisos de oferta y demanda y adopción empresarial de Claude, además de una inversión estratégica en la ronda Serie H. La alianza apunta a escalar la infraestructura necesaria para modelos de frontera y pipelines agénticos complejos.",
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-and-anthropic-announce-strategic-agreement-scale-next",
+      "fuente": "Micron Technology",
+      "fecha": "2026-06-27",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "claude-managed-agents-sandbox-mcp-privados-enterprise-2026",
+      "titulo": "Claude Managed Agents: agentes en sandbox controlado con servidores MCP privados para Enterprise",
+      "resumen": "Anthropic lanzó Claude Managed Agents, que permite ejecutar agentes en un entorno sandbox que la empresa controla y conectarlos a servidores MCP (Model Context Protocol) privados propios. Tanto el entorno de ejecución de herramientas como los servicios a los que accede el agente operan dentro de los límites establecidos por la empresa, cerrando el principal vacío de seguridad en despliegues agénticos.",
+      "url": "https://releasebot.io/updates/anthropic/claude",
+      "fuente": "Anthropic / Releasebot",
+      "fecha": "2026-06-27",
+      "tags": ["Claude", "agentes IA", "automatización"]
+    },
+    {
+      "id": "colombia-inteligente-2026-minciencias-24000-millones-ia-cuantica",
+      "titulo": "ColombIA Inteligente 2026: MinCiencias publica proyectos ganadores del fondo de $24.000 millones",
+      "resumen": "El Ministerio de Ciencias anunció los proyectos seleccionados de la convocatoria ColombIA Inteligente 2026, asignando $16.000 millones a iniciativas de inteligencia artificial en diagnóstico médico, sistemas agroalimentarios y energías renovables, y $8.000 millones a tecnologías cuánticas. Cada proyecto recibe hasta $2.000 millones durante 14 meses en alianzas IES-empresa-territorio.",
+      "url": "https://minciencias.gov.co/convocatorias/convocatoria-colombia-inteligente-2026",
+      "fuente": "MinCiencias",
+      "fecha": "2026-06-29",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "colombia-tech-report-2026-kpmg-2295-startups-saas-inversion-857m",
+      "titulo": "Colombia Tech Report 2026: 2.295 startups y US$857M en inversión; SaaS supera a fintech por primera vez",
+      "resumen": "KPMG publicó el Colombia Tech Report 2026 mostrando un ecosistema de 2.295 startups activas con crecimiento anual del 24%, triple del promedio regional. Por primera vez SaaS lidera el mapeo con 610 startups (27%), desplazando a fintech al segundo puesto, mientras el 56% de las empresas del país ya emplea algún tipo de IA generativa.",
+      "url": "https://ecosistemastartup.com/colombia-tech-2026-2-295-startups-y-us857m-en-inversion/",
+      "fuente": "El Ecosistema Startup",
+      "fecha": "2026-06-27",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "google-antigravity-plataforma-agentes-reemplaza-gemini-cli-2026",
+      "titulo": "Google Antigravity reemplaza Gemini CLI y Code Assist como plataforma agent-first para desarrolladores",
+      "resumen": "Google lanzó Antigravity, plataforma de desarrollo orientada a agentes que desde el 18 de junio reemplaza a Gemini CLI y Gemini Code Assist (ambos descontinuados). Antigravity unifica en un solo harness cuatro superficies —app Antigravity 2.0, CLI agy, SDK y Managed Agents vía Gemini API— y es compatible con agentes de terceros como Claude Code y Codex.",
+      "url": "https://www.multiplicalia.com/novedades-ia-junio-2026/",
+      "fuente": "Multiplicalia",
+      "fecha": "2026-06-27",
+      "tags": ["agentes IA", "LLMs", "automatización"]
+    },
+    {
+      "id": "whitehouse-orden-ejecutiva-innovacion-seguridad-ia-avanzada-2026",
+      "titulo": "Casa Blanca emite orden ejecutiva sobre innovación y seguridad en IA avanzada",
+      "resumen": "El gobierno de EE.UU. publicó la orden ejecutiva 'Promoting Advanced Artificial Intelligence Innovation and Security', que establece el marco regulatorio para el desarrollo y despliegue seguro de IA de frontera incluyendo controles de exportación para modelos de mayor capacidad. La orden formaliza la posición del gobierno de mantener el liderazgo estadounidense en IA mientras implementa salvaguardas de seguridad nacional.",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
+      "fuente": "The White House",
+      "fecha": "2026-06-27",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "openai-gpt-56-sol-terra-luna-ultra-modo-subagentes-2026",
+      "titulo": "OpenAI lanza GPT-5.6 Sol con modo ultra multi-agente; acceso inicial limitado a 20 socios del gobierno",
+      "resumen": "OpenAI presentó el 26 de junio la familia GPT-5.6 (Sol, Terra y Luna) en preview restringido para aproximadamente 20 empresas aprobadas por el gobierno de EE.UU. El modo ultra de Sol orquesta subagentes en paralelo para acelerar tareas complejas de larga duración, logrando un récord de 91.9% en Terminal-Bench 2.1.",
+      "url": "https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov",
+      "fuente": "VentureBeat",
+      "fecha": "2026-06-26",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "claude-slack-equipos-enterprise-tareas-delegadas-2026",
+      "titulo": "Claude se integra en Slack para Teams y Enterprise: los equipos delegan tareas directamente en canales",
+      "resumen": "Anthropic anunció que los planes Team y Enterprise pueden ahora mencionar a Claude directamente en conversaciones de Slack, permitiendo delegar tareas mientras los equipos se enfocan en otras actividades. La integración convierte a Claude en un colaborador persistente dentro de los flujos de trabajo de Slack sin necesidad de cambiar de aplicación.",
+      "url": "https://releasebot.io/updates/anthropic/claude",
+      "fuente": "Anthropic / Releasebot",
+      "fecha": "2026-06-26",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "colombia-ia-cancer-premios-latam-digital-2026",
+      "titulo": "Dos desarrollos colombianos de IA aplicada al cáncer ganan Premios Latam Digital 2026",
+      "resumen": "Colombia obtuvo el primer lugar en las categorías 'Salud Preventiva Digital' e 'IA para Diagnóstico y Tratamiento' de los Premios Latam Digital 2026 con dos proyectos de inteligencia artificial aplicada al diagnóstico y tratamiento del cáncer. Los reconocimientos consolidan el avance del ecosistema colombiano de IA en salud hacia aplicaciones de alto impacto social.",
+      "url": "https://www.semana.com/economia/capsulas/articulo/dos-desarrollos-colombianos-de-inteligencia-artificial-aplicada-al-cancer-son-reconocidos-en-los-premios-latam-digital-2026/202621/",
+      "fuente": "Semana",
+      "fecha": "2026-06-26",
+      "tags": ["Colombia tech", "LLMs"]
+    },
     {
       "id": "claude-caida-masiva-pipelines-agentcos-junio-23-2026",
       "titulo": "Claude cae por décima vez en tres semanas: 8.000 reportes y fallos en pipelines agénticos antes del IPO",

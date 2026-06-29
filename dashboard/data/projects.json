@@ -1,5 +1,5 @@
 {
-  "generado": "2026-06-24T09:30:00Z",
+  "generado": "2026-06-29T14:00:00Z",
   "proyectos": [
     {
       "id": "eligeapp-reputacion",
@@ -33,8 +33,8 @@
         }
       ],
       "github": {
-        "issues_open": 0,
-        "issues_closed": 0,
+        "issues_open": 3,
+        "issues_closed": 3,
         "ultimo_commit": null,
         "milestones": []
       }
@@ -71,8 +71,8 @@
         }
       ],
       "github": {
-        "issues_open": 0,
-        "issues_closed": 0,
+        "issues_open": 3,
+        "issues_closed": 3,
         "ultimo_commit": null,
         "milestones": []
       }
