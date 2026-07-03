@@ -1,105 +1,114 @@
 {
-  "generado": "2026-07-01T12:00:00Z",
+  "generado": "2026-07-03T12:00:00Z",
   "semana": "2026-W27",
   "items": [
     {
-      "id": "claude-sonnet-5-fable-mythos-restaurados-julio-2026",
-      "titulo": "Anthropic lanza Claude Sonnet 5 y restaura Fable 5 y Mythos 5 tras levantar controles de exportación",
-      "resumen": "Anthropic publicó Claude Sonnet 5 el 1 de julio con capacidades casi equivalentes a Opus 4.8 —a $2 entrada / $10 salida por millón de tokens hasta agosto de 2026— siendo el modelo Sonnet más agéntico hasta la fecha con planificación multi-paso, uso de navegador y terminal. Simultáneamente, el gobierno de EE.UU. levantó el veto de exportaciones que mantuvo a Fable 5 fuera de servicio durante 18 días; Fable 5 vuelve al público general en Claude, Claude Code y Cowork, mientras Mythos 5 permanece restringido a un círculo cerrado de organizaciones aprobadas.",
-      "url": "https://www.ghacks.net/2026/07/01/anthropic-releases-claude-sonnet-5-with-near-opus-performance-restores-fable-5-and-mythos-5-after-us-lifts-export-controls/",
-      "fuente": "gHacks",
+      "id": "claude-enterprise-analytics-alertas-gasto-julio-2026",
+      "titulo": "Anthropic lanza analytics enriquecido y alertas de gasto para Claude Enterprise",
+      "resumen": "Anthropic publicó el 2 de julio un nuevo panel de administración para Claude Enterprise que muestra el uso y costo desagregados por grupo y usuario, con alertas automáticas al alcanzar el 75% y 90% del límite de gasto organizacional antes de que se bloquee algún flujo activo. El Admin API complementa el panel para que los equipos de TI automaticen revisiones de solicitudes de aumento y detecten picos de consumo a escala.",
+      "url": "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend",
+      "fuente": "Anthropic Blog",
+      "fecha": "2026-07-02",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "openai-gpt-5-6-sol-cerebras-750-tokens-julio-2026",
+      "titulo": "OpenAI estrena GPT-5.6 Sol en hardware Cerebras: hasta 750 tokens por segundo para clientes selectos",
+      "resumen": "OpenAI puso en preview limitada GPT-5.6 Sol corriendo sobre chips wafer-scale de Cerebras, alcanzando hasta 750 tokens por segundo —aproximadamente 15 veces más rápido que los niveles de servicio actuales de GPT-5.5 priority— con inteligencia de frontera. El acceso se expande gradualmente desde un pequeño grupo de socios en julio mientras el gobierno de EE.UU. completa la revisión de exportaciones.",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "fuente": "OpenAI",
+      "fecha": "2026-07-02",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "nvidia-bionemo-claude-science-biociencias-julio-2026",
+      "titulo": "NVIDIA BioNeMo acelera Claude Science: supercomputación de biociencias integrada con el workbench de Anthropic",
+      "resumen": "Anthropic y NVIDIA anunciaron la integración de BioNeMo —plataforma de modelos fundacionales de biología molecular— con Claude Science, permitiendo a investigadores ejecutar pipelines de plegamiento de proteínas y descubrimiento de fármacos directamente desde el workbench sin salir del entorno. La integración aprovecha las GPUs H200 de NVIDIA a través de la capa de cómputo flexible de Claude Science.",
+      "url": "https://www.artificialintelligence-news.com/news/nvidia-bionemo-accelerates-anthropic-claude-science/",
+      "fuente": "AI News",
+      "fecha": "2026-07-02",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "colombia-ia-campana-presidencial-moe-desinformacion-2026",
+      "titulo": "IA se cuela en la campaña presidencial colombiana: estudio MOE detecta desinformación y discursos de odio amplificados",
+      "resumen": "El primer análisis de la Misión de Observación Electoral sobre inteligencia artificial en política colombiana identificó que la IA fue un factor relevante en la segunda vuelta presidencial de 2026, amplificando la desinformación, los ataques a la prensa y los discursos de odio a una velocidad sin precedentes en la historia electoral del país. El estudio llama a regular el uso electoral de modelos generativos antes de los comicios de 2027.",
+      "url": "https://www.semana.com/amp/mejor-colombia/elecciones/articulo/la-inteligencia-artificial-se-metio-en-la-campana-presidencial-y-cambio-la-conversacion-esto-revelo-estudio-de-la-moe/202645/",
+      "fuente": "Semana",
+      "fecha": "2026-07-02",
+      "tags": ["Colombia tech", "LLMs"]
+    },
+    {
+      "id": "salesforce-agentforce-800m-arr-2026",
+      "titulo": "Salesforce Agentforce supera $800M en ARR y 18.500 clientes en su primer año fiscal completo",
+      "resumen": "Salesforce reportó que Agentforce —su plataforma de agentes IA autónomos para ventas, servicio y comercio— alcanzó $800 millones en ingresos recurrentes anuales con un crecimiento del 169% interanual, adoptada ya por más de 18.500 organizaciones desde su lanzamiento. El resultado consolida a los agentes IA como el segmento de más rápido crecimiento en el mercado de software empresarial según analistas de Gartner.",
+      "url": "https://sanalabs.com/agents-blog/ai-agents-for-automating-work-enterprise-guide-2026",
+      "fuente": "Sana Labs / Salesforce",
+      "fecha": "2026-07-02",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "des-2026-malaga-debate-europeo-agentes-ia",
+      "titulo": "DES 2026 en Málaga: Europa debate estándares de gobernanza para agentes IA empresariales",
+      "resumen": "El Digital Enterprise Show 2026 abrió sus puertas en Málaga situando a la ciudad como epicentro del debate europeo sobre agentes de IA, con más de 30.000 asistentes de 70 países discutiendo marcos de auditabilidad, transparencia y responsabilidad para sistemas que ya toman decisiones autónomas en banca, retail y manufactura. El evento reunió a la Comisión Europea, fabricantes de modelos y CIOs para definir el primer borrador de estándares voluntarios de AI Agents Governance.",
+      "url": "https://www.justretail.news/noticias/des-2026-abre-sus-puertas-situando-a-malaga-en-el-epicentro-del-debate-europeo-sobre-los-agentes-de-ia/",
+      "fuente": "JustRetail News",
+      "fecha": "2026-07-02",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "nemotron-3-arquitectura-hibrida-mamba-2-contexto-largo-2026",
+      "titulo": "NVIDIA Nemotron 3 combina atención estándar y Mamba-2 SSM para eficiencia en contextos largos agénticos",
+      "resumen": "NVIDIA presentó Nemotron 3, un LLM de arquitectura híbrida que alterna capas de atención regular con capas de Mamba-2 State Space Model para reducir el costo cuadrático en contextos de hasta 128K tokens, apuntando directamente a los harnesses de agentes que procesan historial extenso de herramientas. Los benchmarks internos muestran un 40% menos de VRAM respecto a modelos Transformer equivalentes en ventanas largas, posicionándolo como opción para pipelines RAG agénticos de bajo costo.",
+      "url": "https://llm-stats.com/ai-news",
+      "fuente": "LLM Stats",
+      "fecha": "2026-07-02",
+      "tags": ["LLMs", "agentes IA", "RAG"]
+    },
+    {
+      "id": "claude-fable-5-clasificador-ciberseguridad-hackerone-julio-2026",
+      "titulo": "Anthropic redespliega Claude Fable 5 globalmente y añade clasificador de ciberseguridad con programa HackerOne",
+      "resumen": "Tras el levantamiento de los controles de exportación de EE.UU., Anthropic reactivó Claude Fable 5 para todos los usuarios mundiales el 1 de julio e introdujo un clasificador de severidad de jailbreaks de ciberseguridad —el primero con taxonomía pública— junto a un programa de divulgación responsable en HackerOne para que investigadores reporten intentos de evasión de salvaguardas ciber. Mythos 5 permanece restringido a organizaciones aprobadas por el gobierno.",
+      "url": "https://www.marktechpost.com/2026/07/01/anthropic-redeploys-claude-fable-5-on-july-1-after-us-export-controls-lift-adds-new-cybersecurity-classifier/",
+      "fuente": "MarkTechPost",
       "fecha": "2026-07-01",
       "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "extreme-networks-agent-one-coworker-redes-autonomas-julio-2026",
-      "titulo": "Extreme Networks lanza Agent ONE Coworker: agente IA proactivo para redes empresariales autónomas",
-      "resumen": "Extreme Networks inició el 1 de julio el despliegue de Agent ONE Coworker para todos los clientes de Platform ONE: un agente que opera de forma continua junto a los equipos de TI, detecta congestión de red y fallos recurrentes en puntos de venta, y sugiere o aplica correcciones en tiempo real sin esperar instrucciones. A diferencia de herramientas reactivas, el agente genera dashboards en vivo desde datos reales y gestiona casos de soporte de principio a fin de forma autónoma.",
-      "url": "https://www.extremenetworks.com/extremeconnect/pr/extreme-introduces-new-operating-model-for-enterprise-networking-with-extreme-agent-one",
-      "fuente": "Extreme Networks",
+      "id": "colombia-60-porciento-empresas-pilotos-ia-cio-playbook-2026",
+      "titulo": "CIO Playbook 2026: el 60% de empresas colombianas ejecuta pilotos de IA activos y lidera inversión en agentes en LatAm",
+      "resumen": "El estudio de IDC entre 500 líderes tecnológicos de seis países latinoamericanos, presentado en el Lenovo Tech World 2026 en Bogotá, encontró que el 60% de empresas colombianas ya está en fase de ejecución activa de pilotos de IA, con una inversión en agentes del 32% frente al 23% regional. Sin embargo, más de la mitad carece de un marco de gobernanza de datos o IA formalizado, lo que representa el principal freno para escalar los pilotos a producción.",
+      "url": "https://impactotic.co/inteligencia-artificial/cio-playbook-2026-60-de-las-empresas-en-colombia-implementan-pilotos-de-ia/",
+      "fuente": "Impacto TIC",
       "fecha": "2026-07-01",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "rakuten-claude-code-prs-produccion-autonomos-2026",
-      "titulo": "Rakuten despliega Claude Code en producción: agentes revisan y completan pull requests de forma autónoma",
-      "resumen": "El equipo tecnológico de Rakuten reportó el despliegue de Claude Code sobre sus pull requests de producción más complejos, con el sistema procesando cada PR de forma independiente, ejecutando pruebas y verificando resultados antes de presentar el código completado a ingenieros humanos para aprobación estructural final. El caso es uno de los primeros despliegues enterprise de escala real documentados para agentes de codificación autónomos.",
-      "url": "https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored/",
-      "fuente": "AI News",
-      "fecha": "2026-07-01",
-      "tags": ["Claude", "agentes IA", "automatización"]
-    },
-    {
-      "id": "claude-science-workbench-investigadores-biociencias-2026",
-      "titulo": "Anthropic lanza Claude Science: workbench con 60+ herramientas para investigadores científicos",
-      "resumen": "Claude Science es un entorno de investigación en beta disponible desde el 30 de junio para usuarios Pro, Max, Team y Enterprise, con más de 60 conectores especializados en genómica, proteómica, biología estructural y quimioinformática, más un agente revisor que verifica citas y cálculos automáticamente. Anthropic abrirá convocatoria hasta el 15 de julio para otorgar hasta $30.000 en créditos a 50 proyectos seleccionados que correrán de septiembre a diciembre de 2026.",
-      "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
-      "fuente": "Anthropic",
-      "fecha": "2026-06-30",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "colombia-ia-accidentes-laborales-prevencion-predictiva-2026",
-      "titulo": "Colombia impulsa IA predictiva para reducir accidentes laborales: 127.000 casos solo en Q1 2025",
-      "resumen": "El Tiempo reporta que organizaciones y expertos colombianos proponen intensificar el uso de inteligencia artificial para prevenir accidentes laborales antes de que ocurran, dado que en el primer trimestre de 2025 se registraron 127.065 accidentes —más de 1.400 al día— con 89 muertes en el período. Los algoritmos procesan datos históricos y operativos en tiempo real para identificar patrones previos a incidentes y generar alertas tempranas en sectores de alto riesgo industrial.",
-      "url": "https://www.eltiempo.com/tecnosfera/novedades-tecnologia/plantean-intensificar-el-uso-de-inteligencia-artificial-para-reducir-accidentes-laborales-en-colombia-3526045",
-      "fuente": "El Tiempo",
-      "fecha": "2026-06-30",
       "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "colombia-habilidades-ia-53-aprendizaje-empresarial-2026",
-      "titulo": "Colombia lidera adopción de habilidades IA en LatAm: 53% de alza en aprendizaje empresarial digital",
-      "resumen": "El Tiempo documenta que Colombia registró un aumento del 53% interanual en aprendizaje empresarial orientado a inteligencia artificial, automatización y pensamiento estratégico digital, consolidándose como líder regional en desarrollo de capacidades tecnológicas. La demanda de competencias en agentes IA y análisis de datos supera a cualquier otro país de América Latina, impulsada por la expansión de iniciativas gubernamentales como ColombIA Inteligente.",
-      "url": "https://www.eltiempo.com/amp/tecnosfera/novedades-tecnologia/colombia-acelera-su-transformacion-digital-con-fuerte-impulso-en-habilidades-de-ia-y-pensamiento-estrategico-3483372",
+      "id": "colombia-3000-ciberataques-semana-ia-summit-tech-2026",
+      "titulo": "Colombia recibe más de 3.000 ciberataques por semana: IA potencia amenazas según alerta del Summit Tech 2026",
+      "resumen": "Expertos en ciberseguridad advirtieron en el Summit Tech 2026 que Colombia supera los 3.000 intentos de ciberataque semanales, con el agravante de que herramientas criminales basadas en IA permiten personalizar campañas de phishing y analizar vulnerabilidades en tiempo real, elevando el costo promedio de una filtración a más de 14.000 millones de pesos por empresa. Colombia ocupa el tercer lugar en la región más atacada, solo detrás de Brasil y México.",
+      "url": "https://www.eltiempo.com/economia/empresas/colombia-recibe-mas-de-3-000-ciberataques-por-semana-alerta-lanzada-en-el-summit-tech-3557163",
       "fuente": "El Tiempo",
-      "fecha": "2026-06-29",
+      "fecha": "2026-07-01",
       "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "gartner-40-porciento-apps-enterprise-agentes-ia-fin-2026",
-      "titulo": "Gartner: 40% de apps empresariales tendrán agentes IA especializados para finales de 2026; gasto sube 139%",
-      "resumen": "El informe State of AI Agents 2026 proyecta que el 40% de las aplicaciones empresariales incluirá agentes de IA especializados para tareas específicas antes de diciembre de 2026, frente a menos del 5% en 2025. El gasto global en software de agentes IA alcanzará aproximadamente $206.500 millones en 2026, un crecimiento del 139% respecto a los $86.400 millones de 2025, convirtiendo a los agentes en el segmento de software empresarial de mayor crecimiento.",
-      "url": "https://www.prosus.com/news-insights/2026/state-of-ai-agents-2026-autonomy-is-here",
-      "fuente": "Prosus / Gartner",
-      "fecha": "2026-06-29",
+      "id": "agentic-rag-cinco-patrones-produccion-2026",
+      "titulo": "Cinco patrones de Agentic RAG que sobreviven a producción: del 40% de fallos del RAG ingenuo a pipelines robustos",
+      "resumen": "Un análisis técnico publicado por Brightter documenta que el RAG naive falla en la etapa de recuperación aproximadamente el 40% de las veces en entornos productivos reales, e identifica cinco patrones arquitectónicos que sí escalan: recuperación iterativa con árbitro, grafo de conocimiento como índice secundario, descomposición de consultas complejas, verificación de suficiencia de contexto y fallback a búsqueda web en tiempo real. El mercado de RAG enterprise alcanzó $1.940 millones en 2025 y proyecta un CAGR del 38,4% hasta 2030.",
+      "url": "https://www.brightter.com/articles/agentic-rag-five-retrieval-patterns-that-survive-production",
+      "fuente": "Brightter",
+      "fecha": "2026-07-01",
+      "tags": ["RAG", "agentes IA"]
+    },
+    {
+      "id": "gartner-gobernanza-agentes-ia-requisito-corporativo-2026",
+      "titulo": "Gartner: la gobernanza de agentes IA pasa a ser requisito de junta directiva en 2026, no solo de TI",
+      "resumen": "El informe de tendencias de Gartner para el segundo semestre de 2026 establece que las juntas directivas exigen ahora decisiones de agentes IA transparentes, auditables y vinculadas a objetivos de negocio, elevando la gobernanza de IA de una preocupación del área de tecnología a un ítem del orden del día ejecutivo. El cambio sigue al crecimiento del 139% en gasto de software de agentes IA durante 2026, donde la falta de trazabilidad representa el riesgo de adopción número uno citado por los CROs.",
+      "url": "https://blog.mean.ceo/ai-agents-news-july-2026/",
+      "fuente": "Mean.CEO / Gartner",
+      "fecha": "2026-07-01",
       "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "google-gemini-enterprise-agentic-rag-34-precision-preview-2026",
-      "titulo": "Google integra Agentic RAG en Gemini Enterprise Agent Platform: 34% más precisión en consultas complejas",
-      "resumen": "Google Research lanzó en preview público un framework multiagente de RAG agéntico en Gemini Enterprise Agent Platform que descompone consultas empresariales complejas, recupera contexto de forma iterativa desde múltiples corpus y confirma si el contexto es suficiente antes de generar respuestas, aumentando hasta un 34% la precisión en benchmarks de factualidad. El sistema Cross-Corpus Retrieval respondió el 90,1% de preguntas FramesQA eligiendo entre cuatro corpus con latencia prácticamente idéntica al RAG estándar.",
-      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
-      "fuente": "Google Research",
-      "fecha": "2026-06-08",
-      "tags": ["RAG", "agentes IA", "LLMs"]
-    },
-    {
-      "id": "microsoft-mdash-defender-96-cybergym-seguridad-agentes-2026",
-      "titulo": "Microsoft MDASH integra Defender y alcanza 96,55% en CyberGym: 16 vulnerabilidades críticas halladas por agentes IA",
-      "resumen": "El harness de seguridad multiagente de Microsoft (codename MDASH) saltó 10 puntos porcentuales hasta 96,55% en el benchmark CyberGym al integrarse con Microsoft Defender en el Build 2026, habiendo descubierto 16 vulnerabilidades nuevas en el stack de Windows, incluyendo cuatro de ejecución remota de código crítica en el kernel TCP/IP y el servicio IKEv2. El sistema orquesta más de 100 agentes especializados que buscan, debaten entre sí y confirman exploits de extremo a extremo sin intervención humana.",
-      "url": "https://www.techtimes.com/articles/317692/20260603/microsoft-mdash-gains-defender-integration-build-2026-9655-cybergym-benchmark.htm",
-      "fuente": "TechTimes",
-      "fecha": "2026-06-03",
-      "tags": ["agentes IA", "automatización", "LLMs"]
-    },
-    {
-      "id": "redis-iris-context-platform-reemplaza-rag-agentes-2026",
-      "titulo": "Redis lanza Iris Context Platform para superar los límites del RAG clásico en pipelines agénticos",
-      "resumen": "Redis presentó Iris Context Platform, una capa de conocimiento diseñada para los volúmenes de solicitudes de datos que generan los agentes IA modernos —donde el 85% del cómputo se gasta en re-descubrimiento de contexto según Pinecone. La plataforma representa la ola de 'arquitectura de contexto' que VentureBeat documenta como sustituto del RAG construido para escala humana, con adopción de recuperación híbrida triplicando de 10,3% a 33,3% en Q1 2026.",
-      "url": "https://venturebeat.com/data/context-architecture-is-replacing-rag-as-agentic-ai-pushes-enterprise-retrieval-to-its-limits",
-      "fuente": "VentureBeat",
-      "fecha": "2026-05-19",
-      "tags": ["RAG", "agentes IA", "automatización"]
-    },
-    {
-      "id": "google-synthid-100-mil-millones-imagenes-api-deteccion-2026",
-      "titulo": "Google SynthID supera 100.000 millones de marcas de agua y lanza API de detección de contenido IA en la nube",
-      "resumen": "Google anunció que SynthID ha aplicado marcas de agua imperceptibles a más de 100.000 millones de imágenes y videos y 60.000 años de audio desde su lanzamiento, y previsualizó una Content Detection API en Gemini Enterprise Agent Platform que permite a empresas identificar contenido sintético generado por modelos de terceros como NVIDIA y OpenAI. La API, en preview para socios como Shutterstock, Snap y Canva, procesa imágenes JPEG/PNG/WebP usando ML para detectar artefactos a nivel de píxel y ya se usa 50 millones de veces globalmente.",
-      "url": "https://www.infoq.com/news/2026/05/google-synthid-content-detection/",
-      "fuente": "InfoQ",
-      "fecha": "2026-05-15",
-      "tags": ["LLMs", "automatización"]
     }
   ]
 }
