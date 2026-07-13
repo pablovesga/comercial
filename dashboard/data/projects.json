@@ -1,5 +1,5 @@
 {
-  "generado": "2026-07-08T13:09:33Z",
+  "generado": "2026-07-13T13:08:35Z",
   "proyectos": [
     {
       "id": "eligeapp-reputacion",
@@ -237,16 +237,66 @@
         "issues_closed": 54,
         "ultimo_commit": "2026-03-03",
         "milestones": [
-          {"title": "General", "open_issues": 0, "closed_issues": 3, "state": "open"},
-          {"title": "M0 — Fundaciones dev2.0", "open_issues": 6, "closed_issues": 0, "state": "open"},
-          {"title": "M1 — Cuentas multi-tenant & auth", "open_issues": 6, "closed_issues": 0, "state": "open"},
-          {"title": "M2 — Constructor/editor de proyectos", "open_issues": 7, "closed_issues": 0, "state": "open"},
-          {"title": "M3 — Pipeline de spins", "open_issues": 6, "closed_issues": 0, "state": "open"},
-          {"title": "M4 — Editor visual de hotspots", "open_issues": 5, "closed_issues": 0, "state": "open"},
-          {"title": "M5 — Módulo 3D / Colab→PLY", "open_issues": 5, "closed_issues": 0, "state": "open"},
-          {"title": "M6 — Cobro (suscripción + módulos)", "open_issues": 5, "closed_issues": 0, "state": "open"},
-          {"title": "M7 — Exportación a viewer estático", "open_issues": 5, "closed_issues": 0, "state": "open"},
-          {"title": "M8 — Hardening, deploy & observabilidad", "open_issues": 5, "closed_issues": 0, "state": "open"}
+          {
+            "title": "General",
+            "open_issues": 0,
+            "closed_issues": 3,
+            "state": "open"
+          },
+          {
+            "title": "M0 — Fundaciones dev2.0",
+            "open_issues": 6,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M1 — Cuentas multi-tenant & auth",
+            "open_issues": 6,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M2 — Constructor/editor de proyectos",
+            "open_issues": 7,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M3 — Pipeline de spins",
+            "open_issues": 6,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M4 — Editor visual de hotspots",
+            "open_issues": 5,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M5 — Módulo 3D / Colab→PLY",
+            "open_issues": 5,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M6 — Cobro (suscripción + módulos)",
+            "open_issues": 5,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M7 — Exportación a viewer estático",
+            "open_issues": 5,
+            "closed_issues": 0,
+            "state": "open"
+          },
+          {
+            "title": "M8 — Hardening, deploy & observabilidad",
+            "open_issues": 5,
+            "closed_issues": 0,
+            "state": "open"
+          }
         ]
       }
     }

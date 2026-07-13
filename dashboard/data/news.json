@@ -1,96 +1,114 @@
 {
-  "generado": "2026-07-08T13:09:33Z",
-  "semana": "2026-W28",
+  "generado": "2026-07-13T00:00:00Z",
+  "semana": "2026-W29",
   "items": [
     {
-      "id": "claude-cowork-movil-web-beta-julio-2026",
-      "titulo": "Anthropic expande Claude Cowork a móvil y web: sesiones que siguen trabajando aunque el portátil esté cerrado",
-      "resumen": "Anthropic lanzó el 7 de julio la beta de Claude Cowork en iOS, Android y web para suscriptores del plan Max, permitiendo que los flujos de trabajo continúen en la nube aunque el portátil esté cerrado y que el usuario monitoree el avance desde su teléfono. Datos de 1,2 millones de sesiones revelan que el 91% del uso de Cowork no es programar —operaciones de negocio y creación de contenido concentran el 50%—, lo que expande el mercado objetivo mucho más allá de los desarrolladores.",
-      "url": "https://claude.com/blog/cowork-web-mobile",
-      "fuente": "Anthropic",
-      "fecha": "2026-07-07",
-      "tags": ["Claude", "agentes IA", "automatización"]
-    },
-    {
-      "id": "anthropic-jspace-workspace-global-claude-julio-2026",
-      "titulo": "Anthropic descubre el J-Space: Claude tiene un espacio de trabajo interno silencioso que imita la conciencia humana",
-      "resumen": "Con una nueva herramienta de interpretabilidad llamada J-lens, investigadores de Anthropic identificaron un 'espacio de trabajo global' (J-Space) dentro de Claude donde el modelo sostiene y manipula conceptos sin verbalizarlos, análogo al acceso consciente humano al pensamiento según la teoría Global Workspace Theory. Bloquear el J-Space destruye la capacidad de Claude para razonamiento e inferencia, mientras que la recuperación factual y la clasificación simple sobreviven intactas.",
-      "url": "https://www.anthropic.com/research/global-workspace",
-      "fuente": "Anthropic",
-      "fecha": "2026-07-06",
+      "id": "claude-fable-5-creditos-pago-julio-13-2026",
+      "titulo": "Claude Fable 5 pasa a créditos de pago desde el 13 de julio: $10 por millón de tokens de entrada",
+      "resumen": "Anthropic extendió el acceso incluido a Claude Fable 5 hasta el 12 de julio para suscriptores Pro, Max, Team y Enterprise (hasta el 50% del límite semanal). A partir del 13 de julio el modelo solo es accesible mediante créditos de uso a $10 por millón de tokens de entrada y $50 por millón de salida, consolidando Fable 5 como el modelo premium de la plataforma.",
+      "url": "https://pasqualepillitteri.it/en/news/7531/claude-fable-5-access-extended-july-12",
+      "fuente": "Pasquale Pillitteri / Anthropic",
+      "fecha": "2026-07-13",
       "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "microsoft-frontier-company-ia-2500m-julio-2026",
-      "titulo": "Microsoft lanza Frontier Company con $2.500M y 6.000 expertos dedicados al despliegue de IA empresarial",
-      "resumen": "Microsoft presentó Microsoft Frontier Company, una nueva unidad de negocio que combina ingenieros de IA, especialistas sectoriales y expertos en gestión del cambio para diseñar, desplegar y mejorar continuamente sistemas de IA con resultados garantizados en empresas. La inversión de $2.500 millones con 6.000 empleados convierte a esta unidad en lo que Microsoft llama 'la mayor organización de ingenieria orientada a resultados de la industria'.",
-      "url": "https://www.hpcwire.com/bigdatawire/2026/07/06/microsoft-launches-new-2-5b-ai-initiative-with-6000-experts-to-help-enterprises-deploy-a/",
-      "fuente": "BigDATAwire",
-      "fecha": "2026-07-06",
-      "tags": ["automatización", "agentes IA"]
+      "id": "claude-code-auto-mode-bedrock-vertex-julio-2026",
+      "titulo": "Claude Code activa auto-mode por defecto en Bedrock, Vertex AI y Foundry con Opus 4.8 actualizado",
+      "resumen": "La actualización del 10 de julio de Claude Code habilita el modo automático de selección de modelo (auto mode) de forma predeterminada en Amazon Bedrock, Google Vertex AI y Microsoft Foundry, y actualiza el modelo base en Bedrock a Claude Opus 4.8. La versión también mejora la vista de agentes y Remote Control, y corrige congelaciones, credenciales y errores en worktrees y plugins.",
+      "url": "https://releasebot.io/updates/anthropic/claude-code",
+      "fuente": "Releasebot / Anthropic",
+      "fecha": "2026-07-10",
+      "tags": ["Claude", "agentes IA", "automatización"]
     },
     {
-      "id": "colombia-transformacion-digital-ia-lidera-latam-2026",
-      "titulo": "Colombia lidera LatAm en adopcion de IA generativa: 24,5% de la poblacion activa usa herramientas de inteligencia artificial",
-      "resumen": "El Tiempo reporta que Colombia supera a Brasil, Mexico, Argentina, Chile y Peru en adopcion de IA generativa, con el 24,5% de su poblacion en edad de trabajar usando herramientas de inteligencia artificial en el primer trimestre de 2026. La transformacion digital se acelera en habilidades de IA aplicada y pensamiento estrategico, aunque mas del 50% de las empresas aun carece de marcos formales de gobernanza de datos.",
-      "url": "https://www.eltiempo.com/amp/tecnosfera/novedades-tecnologia/colombia-acelera-su-transformacion-digital-con-fuerte-impulso-en-habilidades-de-ia-y-pensamiento-estrategico-3483372",
-      "fuente": "El Tiempo",
-      "fecha": "2026-07-06",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "claude-api-keys-expiracion-developer-julio-2026",
+      "titulo": "Anthropic añade expiración de API keys en Claude Console con alertas por email y reporting para admins",
+      "resumen": "La Claude Developer Platform permite ahora configurar fechas de expiración para las API keys al momento de crearlas, con presets predefinidos, duración personalizada o sin vencimiento, y envía recordatorios por email antes del vencimiento. Los administradores cuentan con un nuevo panel de reporte de expiración para auditar el estado de todas las claves activas en la organización.",
+      "url": "https://releasebot.io/updates/anthropic/claude-developer-platform",
+      "fuente": "Releasebot / Anthropic",
+      "fecha": "2026-07-10",
+      "tags": ["Claude", "automatización"]
     },
     {
-      "id": "glm-52-zai-open-weights-supera-gpt55-julio-2026",
-      "titulo": "GLM-5.2 de Z.ai: modelo open-weights con licencia MIT que supera a GPT-5.5 en coding a un sexto del costo",
-      "resumen": "Z.ai publico GLM-5.2, un modelo de 753.000 millones de parametros con licencia MIT y ventana de 1 millon de tokens que supera a GPT-5.5 en SWE-bench Pro (62.1 vs 58.6) y FrontierSWE (74.4% vs 72.6%), quedando casi a la par de Claude Opus 4.8 en tareas de codificacion agéntica larga. A $1,40 por millon de tokens de entrada frente a los $5 de GPT-5.5, es la opcion mas economica para pipelines de agentes de software de bajo costo.",
-      "url": "https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost",
+      "id": "google-gemini-agentic-rag-34pct-precision-2026",
+      "titulo": "Google lanza RAG agéntico en Gemini Enterprise Platform con +34% de precision frente al RAG clasico",
+      "resumen": "Google Research introdujo un framework de RAG agéntico en la Gemini Enterprise Agent Platform donde un agente de contexto suficiente planifica la recuperación de forma iterativa antes de generar respuestas, logrando un 90,1% de precisión en escenarios multi-corpus y mejorando un 34% respecto al RAG estándar en datasets de factualidad. El sistema es auditable y trazable, mostrando qué fuentes recuperó, qué faltaba y por qué se realizaron búsquedas adicionales.",
+      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
+      "fuente": "Google Research",
+      "fecha": "2026-07-10",
+      "tags": ["RAG", "agentes IA", "LLMs"]
+    },
+    {
+      "id": "claude-reflect-resumen-mensual-julio-2026",
+      "titulo": "Anthropic lanza resumen mensual en Claude Reflect: temas, dia mas activo y hora pico de cada usuario",
+      "resumen": "La nueva función de resumen mensual en Settings > Reflect muestra los temas en los que cada usuario invirtió más tiempo, su día más activo y su hora pico de uso durante el mes. Está disponible en beta para planes Free, Pro y Max en web y Claude Desktop con Memory activada, junto a la opción Settings > Time and focus para fijar pausas y horas de silencio.",
+      "url": "https://www.macrumors.com/2026/07/09/anthropic-reflect-claude-tracking/",
+      "fuente": "MacRumors",
+      "fecha": "2026-07-09",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "openai-chatgpt-work-agente-autonomo-julio-2026",
+      "titulo": "OpenAI lanza ChatGPT Work: agente que acepta un objetivo, conecta tus apps y entrega el trabajo terminado",
+      "resumen": "ChatGPT Work, lanzado el 9 de julio y potenciado por GPT-5.6, toma un objetivo, recopila contexto en apps y archivos conectados, lo divide en pasos y los ejecuta de forma autónoma durante horas, devolviendo hojas de cálculo, presentaciones, documentos e incluso apps web listas para usar. El lanzamiento incluye un directorio unificado de 15 integraciones (Google Drive, SharePoint, Slack, Teams, Gmail, Outlook y Salesforce), disponible inicialmente para usuarios Pro, Enterprise y Edu.",
+      "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/07/09/openai-launches-chatgpt-work/",
+      "fuente": "BNN Bloomberg",
+      "fecha": "2026-07-09",
+      "tags": ["agentes IA", "automatización", "LLMs"]
+    },
+    {
+      "id": "rag-era-ending-compilation-stage-venturebeat-2026",
+      "titulo": "VentureBeat: la era del RAG termina para la IA agentica y llega la capa de conocimiento en compilacion",
+      "resumen": "Un análisis de VentureBeat argumenta que el RAG en tiempo de ejecución ya no satisface las necesidades de la IA agéntica y que la ventaja competitiva se desplaza hacia una 'capa de conocimiento en compilación' que precarga el contexto relevante antes de la inferencia. La encuesta Q1 2026 Pulse muestra que la adopción de bases de datos vectoriales standalone cayó mientras que la intención de recuperación híbrida se triplicó hasta 33,3%, señalando el comienzo de esta transición arquitectónica.",
+      "url": "https://venturebeat.com/data/the-rag-era-is-ending-for-agentic-ai-a-new-compilation-stage-knowledge-layer-is-what-comes-next",
       "fuente": "VentureBeat",
-      "fecha": "2026-07-05",
+      "fecha": "2026-07-09",
+      "tags": ["RAG", "agentes IA", "LLMs"]
+    },
+    {
+      "id": "grok-45-xai-razonamiento-julio-8-2026",
+      "titulo": "xAI lanza Grok 4.5 el 8 de julio como nuevo referente de razonamiento y contexto en la familia Grok",
+      "resumen": "xAI publicó Grok 4.5 el 8 de julio de 2026, continuando la cadencia de lanzamientos de modelos que en este mes llega a un ritmo de una versión cada tres días en promedio en el ecosistema de IA. Grok 4.5 amplía las capacidades de razonamiento y la ventana de contexto del modelo anterior y compite directamente con Claude Sonnet 5 y GPT-5.6 en el segmento de modelos de segunda línea de alto rendimiento.",
+      "url": "https://llm-stats.com/ai-news",
+      "fuente": "LLM Stats",
+      "fecha": "2026-07-08",
       "tags": ["LLMs", "agentes IA"]
     },
     {
-      "id": "google-gemini-35-pro-2m-tokens-julio-17-2026",
-      "titulo": "Google apunta al 17 de julio para Gemini 3.5 Pro: ventana de 2 millones de tokens y razonamiento Deep Think",
-      "resumen": "Google confirma el lanzamiento de Gemini 3.5 Pro para mediados de julio, con una ventana de contexto de 2 millones de tokens, una capa de razonamiento Deep Think que mejora 2,5 veces sobre generaciones anteriores y capacidades de generacion autonoma de workflows. El modelo compite directamente con Claude Fable 5 y GPT-5.6 en el segmento de LLMs de frontera para tareas de razonamiento matematico y generacion de codigo complejo.",
-      "url": "https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a",
-      "fuente": "BigGo Finance",
-      "fecha": "2026-07-05",
-      "tags": ["LLMs", "RAG"]
+      "id": "cisco-agentes-ia-90000-empleados-julio-2026",
+      "titulo": "Cisco desplegara un agente de IA personal a sus 90.000 empleados antes de fin de julio con ruteo por costo",
+      "resumen": "Cisco anunció el despliegue de un asistente de IA personalizado para cada uno de sus aproximadamente 90.000 empleados antes del cierre de su ejercicio fiscal en julio, usando un sistema de ruteo que asigna cada tarea al modelo más eficiente en costo, con infraestructura on-premises para control y protección de datos. El rollout se produce en paralelo a un recorte de 4.000 empleos vinculado a la reestructuración impulsada por IA, generando debate sobre confianza y impacto en el empleo.",
+      "url": "https://fortune.com/2026/07/01/cisco-cfo-ai-agents-finance-employees-mark-patterson/",
+      "fuente": "Fortune",
+      "fecha": "2026-07-08",
+      "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "ia-nueva-fase-vertigo-tecnologico-julio-2026",
-      "titulo": "El 5 de julio de 2026: el dia que resume el vertigo tecnologico de la nueva fase de la IA",
-      "resumen": "DiarioBitcoin documenta como el 5 de julio de 2026 condenso la aceleracion del ecosistema: lanzamientos de modelos open-weights que igualan la frontera cerrada, expansion de agentes hacia el mundo fisico y debates regulatorios que ya no pueden seguir el ritmo de la innovacion. El analisis concluye que la ventaja competitiva se desplaza de tener el mejor modelo a saber orquestar agentes y sistemas de recuperacion de informacion.",
-      "url": "https://www.diariobitcoin.com/tecnologia/la-ia-entra-en-una-nueva-fase-y-el-5-de-julio-de-2026-resume-el-vertigo-tecnologico/",
-      "fuente": "DiarioBitcoin",
-      "fecha": "2026-07-05",
-      "tags": ["LLMs", "agentes IA", "automatización"]
+      "id": "agentes-ia-produccion-gartner-40pct-empresas-2026",
+      "titulo": "Gartner proyecta que el 40% de las apps empresariales tendran agentes embebidos a fin de 2026 frente al 5% de 2025",
+      "resumen": "Según Gartner, la adopción de agentes de IA en producción empresarial saltará del menos del 5% de aplicaciones con agentes embebidos en 2025 al 40% al cierre de 2026, impulsada por la caída drástica de costos de inferencia y la madurez de los frameworks de orquestación. La conferencia ICML 2026, celebrada en Seúl del 6 al 13 de julio con récord de 23.918 envíos, refleja el foco académico en gobernanza y seguridad de agentes autónomos en producción.",
+      "url": "https://www.hectorpincheira.com/en/news/technological-radar-july-2026-ai-agents-go-into-production-and-governance-doesnt-keep-up/",
+      "fuente": "Technology Radar / Hector Pincheira",
+      "fecha": "2026-07-10",
+      "tags": ["agentes IA", "automatización", "LLMs"]
     },
     {
-      "id": "deepseek-v4-oficial-julio-precios-pico-2026",
-      "titulo": "DeepSeek V4 prepara lanzamiento oficial en julio con precios pico/valle y deprecacion de modelos legacy el 24 de julio",
-      "resumen": "DeepSeek anuncio el lanzamiento oficial de V4 para mediados de julio con ventana de 1 millon de tokens mejorada y un esquema de precios inedito: tarifas dobles en horas pico (9 a.m.-12 p.m. y 2-6 p.m.) frente al precio estandar fuera de horario. Deepseek-chat y deepseek-reasoner quedan deprecados el 24 de julio, lo que obliga a los equipos que usan la API a migrar a V4 en las proximas semanas.",
-      "url": "https://technode.com/2026/06/30/deepseek-to-launch-v4-in-mid-july-with-new-peak-time-api-pricing/",
-      "fuente": "TechNode",
-      "fecha": "2026-07-05",
-      "tags": ["LLMs", "automatización"]
+      "id": "callbook-ai-colombia-ycombinator-s26-2026",
+      "titulo": "Callbook AI, startup colombiana de cobros con IA, entra al batch S26 de Y Combinator",
+      "resumen": "Callbook AI, plataforma de recuperación de deuda con agentes conversacionales de IA que automatizan y personalizan la cobranza a escala, fue seleccionada para el batch S26 de Y Combinator, convirtiéndose en una de las startups colombianas de IA más destacadas del ecosistema regional en 2026. La solución combina análisis predictivo del comportamiento de deudores con conversaciones naturales vía llamada, posicionando a Colombia como exportador de IA fintech hacia mercados internacionales.",
+      "url": "https://ecosistemastartup.com/callbook-ai-entra-a-y-combinator-startup-colombiana-de-ia/",
+      "fuente": "El Ecosistema Startup",
+      "fecha": "2026-07-11",
+      "tags": ["Colombia tech", "agentes IA", "automatización"]
     },
     {
-      "id": "minimax-m3-open-weight-multimodal-julio-2026",
-      "titulo": "MiniMax M3: modelo open-weight multimodal con codificacion de frontera y contexto de 1 millon de tokens",
-      "resumen": "MiniMax lanzo M3, un modelo open-weight que combina capacidades de codificacion de nivel frontera, ventana de contexto de 1 millon de tokens y multimodalidad nativa, mientras Mistral migraba sus modelos Large y Small a la licencia Apache 2.0. La llegada simultanea de M3 y GLM-5.2 en la misma semana marca un punto de inflexion: los modelos de codigo abierto ya compiten con los cerrados en las tareas de ingenieria de software mas complejas.",
-      "url": "https://llm-stats.com/llm-updates",
-      "fuente": "LLM Stats",
-      "fecha": "2026-07-05",
-      "tags": ["LLMs", "automatización"]
-    },
-    {
-      "id": "claude-sonnet-5-azure-ga-empresas-julio-2026",
-      "titulo": "Claude Sonnet 5 en disponibilidad general en Azure: Anthropic elimina la barrera de compras para empresas",
-      "resumen": "Anthropic puso Claude Sonnet 5 en disponibilidad general (GA) dentro de Azure AI Studio el 2 de julio, permitiendo que organizaciones con contratos Microsoft compren e integren el modelo sin los procesos de aprobacion especiales del periodo preview. El modelo, lanzado el 30 de junio como el Sonnet mas agéntico hasta la fecha con 80,5% en Terminal-bench 2.1, opera a precio introductorio de $2 por millon de tokens de entrada hasta el 31 de agosto.",
-      "url": "https://www.techtimes.com/articles/319533/20260702/claude-azure-hits-production-sonnet-5-ga-clears-procurement-barrier-enterprises.htm",
-      "fuente": "TechTimes",
-      "fecha": "2026-07-02",
-      "tags": ["Claude", "LLMs", "automatización"]
+      "id": "colombia-tech-report-2026-2295-startups-857m",
+      "titulo": "Colombia Tech Report 2026: 2.295 startups activas y $857M en inversion acumulada consolidan el ecosistema",
+      "resumen": "El Colombia Tech Report 2026 registra 2.295 startups activas y US$857 millones en inversión acumulada, con el 60% de los procesos operativos de empresas medianas ya automatizados total o parcialmente por IA. El informe destaca que la IA y la automatización son los principales motores de las nuevas empresas tecnológicas hispanohablantes en 2026, con Colombia liderando en LatAm junto a Brasil y México.",
+      "url": "https://ecosistemastartup.com/colombia-tech-2026-2-295-startups-y-us857m-en-inversion/",
+      "fuente": "El Ecosistema Startup",
+      "fecha": "2026-07-11",
+      "tags": ["Colombia tech", "automatización"]
     }
   ]
 }
