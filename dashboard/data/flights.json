@@ -1,5 +1,5 @@
 {
-  "generado": "2026-07-14T13:33:49.925977+00:00",
+  "generado": "2026-07-21T13:33:25.211077+00:00",
   "ruta": "BOG ↔ MTR",
   "pasajeros": "3 adultos + 1 niño",
   "error": null,
@@ -47,8 +47,8 @@
         "aerolinea": "LATAM",
         "salida": "05:05",
         "llegada": "06:25",
-        "precio_4pax": 2750170,
-        "precio_adulto_aprox": 887152
+        "precio_4pax": 3344100,
+        "precio_adulto_aprox": 1078742
       }
     ],
     "rango_tipico": [
