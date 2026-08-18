@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-11T13:29:21.783933+00:00",
+  "generado": "2026-08-18T13:39:38.279166+00:00",
   "ruta": "BOG ↔ MTR",
   "pasajeros": "3 adultos + 1 niño",
   "error": null,
@@ -9,18 +9,11 @@
     "total_encontrados": 14,
     "vuelos": [
       {
-        "aerolinea": "JetSMART",
-        "salida": "09:25",
-        "llegada": "10:55",
-        "precio_4pax": 1184950,
-        "precio_adulto_aprox": 382242
-      },
-      {
         "aerolinea": "LATAM",
         "salida": "09:05",
         "llegada": "10:30",
-        "precio_4pax": 2400300,
-        "precio_adulto_aprox": 774290
+        "precio_4pax": 2384610,
+        "precio_adulto_aprox": 769229
       },
       {
         "aerolinea": "Avianca",
@@ -47,8 +40,8 @@
         "aerolinea": "LATAM",
         "salida": "05:05",
         "llegada": "06:25",
-        "precio_4pax": 2917850,
-        "precio_adulto_aprox": 941242
+        "precio_4pax": 2471950,
+        "precio_adulto_aprox": 797403
       }
     ],
     "rango_tipico": [
@@ -84,15 +77,15 @@
       },
       {
         "aerolinea": "Avianca",
-        "salida": "19:40",
-        "llegada": "20:55",
-        "precio_4pax": 2649730,
-        "precio_adulto_aprox": 854752
+        "salida": "21:30",
+        "llegada": "22:55",
+        "precio_4pax": 2418270,
+        "precio_adulto_aprox": 780087
       },
       {
         "aerolinea": "Avianca",
-        "salida": "21:30",
-        "llegada": "22:55",
+        "salida": "19:40",
+        "llegada": "20:55",
         "precio_4pax": 2649730,
         "precio_adulto_aprox": 854752
       },
@@ -100,25 +93,25 @@
         "aerolinea": "LATAM",
         "salida": "16:25",
         "llegada": "17:45",
-        "precio_4pax": 2754570,
-        "precio_adulto_aprox": 888571
+        "precio_4pax": 2820970,
+        "precio_adulto_aprox": 909990
       },
       {
         "aerolinea": "LATAM",
         "salida": "21:30",
         "llegada": "22:50",
-        "precio_4pax": 2754570,
-        "precio_adulto_aprox": 888571
+        "precio_4pax": 2820970,
+        "precio_adulto_aprox": 909990
       }
     ]
   },
   "mejor_combinacion": {
     "ida": {
-      "aerolinea": "JetSMART",
-      "salida": "09:25",
-      "llegada": "10:55",
-      "precio_4pax": 1184950,
-      "precio_adulto_aprox": 382242
+      "aerolinea": "LATAM",
+      "salida": "09:05",
+      "llegada": "10:30",
+      "precio_4pax": 2384610,
+      "precio_adulto_aprox": 769229
     },
     "retorno": {
       "aerolinea": "Avianca",
@@ -127,8 +120,8 @@
       "precio_4pax": 2418270,
       "precio_adulto_aprox": 780087
     },
-    "total_4pax": 3603220,
-    "precio_adulto_aprox": 1162329,
+    "total_4pax": 4802880,
+    "precio_adulto_aprox": 1549316,
     "alerta": false
   }
 }
