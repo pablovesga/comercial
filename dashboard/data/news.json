@@ -1,96 +1,114 @@
 {
-  "generado": "2026-07-27T06:00:00Z",
-  "semana": "2026-W31",
+  "generado": "2026-09-22T06:00:00Z",
+  "semana": "2026-W39",
   "items": [
     {
-      "id": "redis-iris-plataforma-contexto-memoria-agentes-ia-2026",
-      "titulo": "Redis lanza Iris, la plataforma de contexto y memoria que reemplaza al RAG clasico para agentes de IA",
-      "resumen": "Redis Iris, lanzada esta semana, es una capa de contexto y memoria que se posiciona entre los agentes de IA y los datos que necesitan para actuar, respondiendo a la proliferacion de cargas de trabajo agenticas que exponen las limitaciones del pipeline RAG tradicional. Redis CEO Rowan Trollope advirtio que las empresas tendran ordenes de magnitud mas agentes que seres humanos, lo que impone una carga equivalente en los sistemas backend; la recuperacion hibrida ya representa el 33,3% del mercado enterprise, triplicando su participacion en un solo trimestre.",
-      "url": "https://venturebeat.com/data/context-architecture-is-replacing-rag-as-agentic-ai-pushes-enterprise-retrieval-to-its-limits",
-      "fuente": "VentureBeat",
-      "fecha": "2026-07-27",
-      "tags": ["RAG", "agentes IA"]
+      "id": "bancos-natwest-bofa-alertan-riesgos-bots-ia-compras-septiembre-2026",
+      "titulo": "NatWest y Bank of America advierten que los agentes de IA para compras amplifican el riesgo de fraude y violación de privacidad",
+      "resumen": "Varios bancos encabezados por NatWest y Bank of America alertaron el 22 de septiembre que el uso de agentes de inteligencia artificial para realizar compras en línea amplía la superficie de ataque para estafas, fraudes y violaciones de datos del usuario. Los bancos piden regulación específica para los agentes autónomos que manejan credenciales de pago y acceden a cuentas sin supervisión humana directa.",
+      "url": "https://gbm.com/media/noticia/los-bancos-advierten-que-bots-de-ia-para-compras-aumentan-riesgos-de-fraude-y-privacidad",
+      "fuente": "GBM Media",
+      "fecha": "2026-09-22",
+      "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "anthropic-reflect-dashboard-habitos-ia-usuarios-2026",
-      "titulo": "Anthropic lanza Reflect: el primer panel de autoseguimiento de habitos de IA integrado en Claude",
-      "resumen": "Anthropic introdujo Reflect, un dashboard integrado en Claude que permite a los usuarios visualizar como interactuan con la IA y rastrear sus patrones de uso a lo largo del tiempo, siendo la primera herramienta de automonitoreo de consumo de IA lanzada por una empresa frontier. La funcion llega en paralelo al Conector del Indice Economico de Anthropic, que permite explorar datos de uso de IA directamente desde el chat con respuestas fundamentadas en el indice de investigacion de la compania.",
-      "url": "https://www.anthropic.com/news",
-      "fuente": "Anthropic",
-      "fecha": "2026-07-25",
-      "tags": ["Claude", "LLMs"]
+      "id": "fortune-500-ia-agentiva-80-porciento-adopcion-obstaculos-escala-mit-2026",
+      "titulo": "MIT Technology Review: el 80% del Fortune 500 adoptó IA agéntica en modo experimental, pero la mayoría no puede escalarla a operaciones reales",
+      "resumen": "Un análisis de MIT Technology Review revela que aunque cuatro de cada cinco empresas Fortune 500 adoptaron IA agéntica en fase experimental, la mayoría enfrenta obstáculos serios para llevarla a producción: integraciones legacy, falta de gobernanza y ausencia de pipelines de datos confiables son los frenos más citados. El informe concluye que los ganadores de 2026 no son los equipos que producen más contenido con IA, sino los que combinan LLMs con revisión humana, datos privados y flujos de trabajo repetibles.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-20-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-09-20",
+      "tags": ["agentes IA", "LLMs", "automatización"]
     },
     {
-      "id": "venturebeat-fin-era-rag-capa-conocimiento-compilacion-agentes-2026",
-      "titulo": "VentureBeat: la era del RAG clasico esta terminando para la IA agentica y una nueva capa de conocimiento en compilacion toma su lugar",
-      "resumen": "Un analisis de VentureBeat argumenta que los agentes de IA ya no pueden depender del pipeline fragmento-vectores del RAG tradicional porque recuperan informacion en tiempo de ejecucion a traves de llamadas a herramientas, lo que exige una capa de conocimiento construida en fase de compilacion. El marcador de mercado VB Pulse Q1 2026 evidencio que la intencion de recuperacion hibrida se triplico de 10,3% a 33,3% entre enero y marzo, y la optimizacion de recuperacion supero por primera vez a la evaluacion como prioridad de inversion enterprise en IA.",
-      "url": "https://venturebeat.com/data/the-rag-era-is-ending-for-agentic-ai-a-new-compilation-stage-knowledge-layer-is-what-comes-next",
-      "fuente": "VentureBeat",
-      "fecha": "2026-07-25",
-      "tags": ["RAG", "agentes IA", "LLMs"]
+      "id": "claude-commerce-agent-blueprint-shopping-merchant-septiembre-2026",
+      "titulo": "Anthropic publica Claude Commerce Agent Blueprint con agentes de compras y merchant listos para producción",
+      "resumen": "Anthropic lanzó en septiembre su Commerce Agent Blueprint, una guía de referencia que incluye agentes de compra y de comerciante, guardrails preconfigurados y demos en vivo para que equipos construyan experiencias de compra potenciadas por IA sobre Claude. El blueprint incorpora un plugin para Claude Code y se complementa con una serie de webinars gratuitos de socios tecnológicos programados desde finales de septiembre hasta noviembre bajo el paraguas 'Claude for Small Business'.",
+      "url": "https://blog.mean.ceo/anthropic-claude-news-september-2026/",
+      "fuente": "Mean CEO Blog",
+      "fecha": "2026-09-19",
+      "tags": ["Claude", "agentes IA", "automatización"]
     },
     {
-      "id": "google-gemini-enterprise-agent-platform-vertex-rebrand-2026",
-      "titulo": "Google fusiona Vertex AI, Agentspace y Gemini Code Assist en la Gemini Enterprise Agent Platform con RAG agentico en vista previa",
-      "resumen": "Google consolido tres productos en la Gemini Enterprise Agent Platform con precios por agente, un constructor no-code Workspace Studio y un Model Garden de 200 modelos; simultaneamente lanzo en vista previa publica su funcion de RAG agentico dentro de la nueva plataforma. El movimiento, anunciado en Google Cloud Next 2026, posiciona la oferta de Google directamente frente a las plataformas agenticas de Microsoft Copilot Studio y Salesforce Agentforce en el mercado enterprise.",
-      "url": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/",
-      "fuente": "Google Research",
-      "fecha": "2026-07-25",
-      "tags": ["LLMs", "agentes IA", "RAG"]
+      "id": "claude-enterprise-smart-reports-beta-uso-equipos-septiembre-2026",
+      "titulo": "Claude Enterprise estrena Smart Reports en beta: analiza cómo usan la IA los equipos y detecta patrones de automatización rentables",
+      "resumen": "Anthropic lanzó Smart Reports en beta para clientes Enterprise, una función que analiza cómo utiliza Claude un equipo, cuánto cuesta por sesión, dónde aparecen fricciones y qué patrones repetidos merecen empaquetarse como skills compartidas. La herramienta convierte los logs de uso en inteligencia operativa para justificar el ROI de la IA interna.",
+      "url": "https://blog.mean.ceo/anthropic-claude-news-september-2026/",
+      "fuente": "Mean CEO Blog",
+      "fecha": "2026-09-15",
+      "tags": ["Claude", "LLMs", "automatización"]
     },
     {
-      "id": "propellerads-niko-mcp-connector-claude-chatgpt-campanas-2026",
-      "titulo": "PropellerAds lanza conector MCP para ejecutar campanas publicitarias directamente desde Claude y ChatGPT",
-      "resumen": "PropellerAds eleovo su agente NIKO a copiloto de campanas completo y publico un conector Model Context Protocol (MCP) que permite lanzar y optimizar campanas programaticas directamente desde Claude, ChatGPT y Cursor, uno de los primeros casos de integracion MCP en la industria publicitaria. En paralelo, Dstillery y Canvas Worldwide ejecutaron la primera optimizacion agentica en vuelo de una campana programatica en vivo, sentando precedente para la automatizacion total de medios digitales.",
-      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-07-25",
+      "id": "colombia-saas-supera-fintech-27-porciento-ecosistema-startups-2026",
+      "titulo": "Colombia: SaaS lidera por primera vez el ecosistema de startups con el 27% del total, impulsado por la adopción acelerada de IA",
+      "resumen": "Por primera vez, el modelo SaaS superó a fintech como categoría líder de startups colombianas, alcanzando el 27% del total de 2.295 empresas activas, un salto de 16 puntos porcentuales en un año, gracias a la aceleración de la adopción de IA que facilita el desarrollo de soluciones digitales escalables. Bogotá y Medellín siguen siendo los principales hubs, mientras Barranquilla y Bucaramanga ganan terreno en logística, sistemas alimentarios y servicios digitales.",
+      "url": "https://www.riotimesonline.com/kpmg-colombia-tech-report-2026-startups/",
+      "fuente": "Rio Times Online",
+      "fecha": "2026-09-12",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "sap-oxford-economics-ia-30-porciento-tareas-empresariales-2026",
+      "titulo": "SAP y Oxford Economics: la IA ya soporta el 30% de las tareas empresariales globales en 2026, convirtiendo la automatización inteligente en estándar operativo",
+      "resumen": "El informe 'The Value of AI 2026' de SAP y Oxford Economics constata que la inteligencia artificial respalda el 30% de las tareas empresariales a nivel global, frente al 25% de 2025, impulsado principalmente por procesos de back-office, análisis de datos y soporte al cliente en servicios financieros y manufactura. La automatización inteligente ya no se percibe como diferenciador sino como requisito mínimo de competitividad.",
+      "url": "https://ecosistemastartup.com/automatizacion-2026-cuando-la-productividad-no-se-reparte/",
+      "fuente": "El Ecosistema Startup",
+      "fecha": "2026-09-10",
+      "tags": ["automatización", "LLMs"]
+    },
+    {
+      "id": "microsoft-agent-harness-framework-copilot-claude-sdk-estable-build-2026",
+      "titulo": "Microsoft estabiliza el Agent Harness Framework con conectores para GitHub Copilot y Claude Agent SDK en Build 2026",
+      "resumen": "Microsoft presentó en Build 2026 el lanzamiento estable del Agent Harness, el runtime del Agent Framework que incluye conectores para GitHub Copilot y el Claude Agent SDK de Anthropic, junto con patrones de orquestación multi-agente listos para producción. La iniciativa convierte VS Code y GitHub en una plataforma de orquestación de agentes empresariales y consolida la integración entre el ecosistema Microsoft y los modelos de Anthropic.",
+      "url": "https://blog.mean.ceo/large-language-model-news-september-2026/",
+      "fuente": "Mean CEO Blog",
+      "fecha": "2026-09-08",
       "tags": ["agentes IA", "automatización", "Claude"]
     },
     {
-      "id": "claude-opus-5-lanzamiento-anthropic-julio-2026",
-      "titulo": "Anthropic lanza Claude Opus 5: nuevo estado del arte en codificacion y trabajo de conocimiento con esfuerzo ajustable",
-      "resumen": "Claude Opus 5, el cuarto modelo de la familia Claude 5, se lanza a $5/$25 por millon de tokens con niveles de esfuerzo configurables (bajo, medio o alto) que permiten al usuario equilibrar coste y capacidad; es el nuevo modelo por defecto en Claude Max y el mas potente en Claude Pro, superando a Fable 5 en varios benchmarks de Frontier-Bench y GDPval-AA aunque queda por detras de Mythos 5 en tareas de ciberseguridad. Anthropic prepara ademas su IPO para finales de 2026, posicionando Opus 5 como el producto ancla de ese proceso.",
-      "url": "https://www.anthropic.com/news/claude-opus-5",
-      "fuente": "Anthropic",
-      "fecha": "2026-07-24",
-      "tags": ["Claude", "LLMs", "agentes IA"]
+      "id": "rag-agentivo-mercado-global-1940-millones-crecimiento-38-cagr-2026",
+      "titulo": "El mercado global de RAG agéntico alcanza los 1.940 millones de dólares en 2026 con CAGR del 38% proyectado hasta 2030",
+      "resumen": "Los análisis del sector sitúan el mercado de RAG en 1.940 millones de dólares en 2026 con una tasa de crecimiento anual del 38,4% hasta 2030, impulsado por la convergencia de RAG con arquitecturas agénticas donde la recuperación ya no es un paso estático sino un proceso dinámico a cargo de agentes especializados. El patrón RAG-grafo contextualizado logra mejoras de hasta 5x en precisión frente al RAG clásico sobre esquemas crudos.",
+      "url": "https://dev.to/suraj_khaitan_f893c243958/-rag-in-2026-a-practical-blueprint-for-retrieval-augmented-generation-16pp",
+      "fuente": "DEV Community",
+      "fecha": "2026-09-05",
+      "tags": ["RAG", "agentes IA", "LLMs"]
     },
     {
-      "id": "colombia-tech-report-2026-2295-startups-857m-inversion",
-      "titulo": "Colombia Tech Report 2026: el ecosistema crece a 2.295 startups y US$857M en inversion, pero escalar sigue siendo el gran reto",
-      "resumen": "El informe elaborado por KPMG Colombia y BBVA Spark contabiliza 2.295 startups activas en el pais (9,3% mas que el ano anterior) con 131 transacciones de inversion por US$857 millones en 2025, donde fintech absorbiou el 60% del capital y Bogota concentro el 81%. Colombia ascendio al puesto 35 del Global Startup Ecosystem Index de StartupBlink y Bogota se consolido como el tercer ecosistema de startups mas solido de America Latina, aunque el reporte identifica como retos estructurales el colapso del pre-seed y la falta de liquidez para el ciclo de reinversion.",
-      "url": "https://ecosistemastartup.com/colombia-tech-report-2026-2-295-startups-y-el-reto-de-escalar/",
-      "fuente": "El Ecosistema Startup",
-      "fecha": "2026-07-24",
-      "tags": ["Colombia tech"]
+      "id": "caidas-globales-llms-chatgpt-claude-grok-copilot-simultaneous-septiembre-2026",
+      "titulo": "ChatGPT, Claude, Grok, Copilot y Gemini sufren interrupciones globales simultáneas que paralizan flujos de trabajo empresariales",
+      "resumen": "Durante la semana del 28 de agosto al 3 de septiembre, los cinco principales modelos de lenguaje sufrieron caídas de servicio casi simultáneas a nivel mundial que impidieron el acceso a las plataformas e interrumpieron flujos de trabajo críticos para empresas. El incidente evidenció la fragilidad operativa de las organizaciones que han integrado LLMs como piezas indispensables de sus procesos y reavivó el debate sobre resiliencia y redundancia en infraestructuras de IA.",
+      "url": "https://iabusiness.es/noticias-ia/2026-09-04/",
+      "fuente": "IA Business",
+      "fecha": "2026-09-04",
+      "tags": ["LLMs", "automatización"]
     },
     {
-      "id": "ccb-tech-day-bogota-2026-ia-robotica-3500-asistentes",
-      "titulo": "CCB Tech Day 2026 reune a mas de 3.500 lideres en Bogota con IA, robotica humanoide y hackeo en vivo como protagonistas",
-      "resumen": "La Camara de Comercio de Bogota celebro el CCB Tech Day 2026 el 23 de julio en el Centro Agora con 3.500 empresarios, emprendedores e inversores en un evento gratuito con ocho zonas tematicas que incluyeron una Sala de IA, demostraciones de robotica humanoide y un hackeo en vivo; mas de 120 conferencistas nacionales e internacionales abordaron inteligencia artificial, ciberseguridad, datos y talento como pilares de la competitividad empresarial. El evento consolida a Bogota como epicentro de innovacion digital en America Latina.",
-      "url": "https://www.ccb.org.co/de-interes/comunicados/ccb-tech-day-2026-el-mayor-encuentro-de-transformacion-digital-e-innovacion-de-la-region",
-      "fuente": "Camara de Comercio de Bogota",
-      "fecha": "2026-07-23",
-      "tags": ["Colombia tech", "agentes IA", "automatización"]
+      "id": "openai-gpt-6-astra-uso-computadora-agi-brockman-septiembre-2026",
+      "titulo": "OpenAI lanza GPT-6 Astra con uso autónomo de computadoras y Greg Brockman anuncia que podría marcar el inicio de la era AGI",
+      "resumen": "GPT-6 Astra, liberado el 3 de septiembre para usuarios de ChatGPT Plus, Pro, Business y Enterprise, navega interfaces gráficas, rellena formularios, actualiza CRMs, instala software y diagnostica problemas en pantalla con un contexto de hasta un millón de tokens; el equipo describe sus capacidades de uso de computadora como superiores a las humanas en tareas profesionales específicas. Greg Brockman declaró al presentarlo que 'personalmente creo que OpenAI ha alcanzado la AGI', desencadenando un intenso debate sobre qué criterios definen ese umbral.",
+      "url": "https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/",
+      "fuente": "Fortune",
+      "fecha": "2026-09-03",
+      "tags": ["agentes IA", "LLMs", "automatización"]
     },
     {
-      "id": "qoder-security-ia-revision-codigo-tiempo-real-julio-2026",
-      "titulo": "Qoder lanza Security: revision de vulnerabilidades con IA integrada durante la escritura del codigo, no despues",
-      "resumen": "Qoder Security, lanzado el 23 de julio, desplaza la deteccion de vulnerabilidades del analisis post-hoc hacia la proteccion en tiempo real durante la escritura del codigo, funcionando como un pair-programmer de ciberseguridad que combina analisis estatico, deteccion de patrones conocidos de vulnerabilidad y recomendaciones de mitigacion generadas por IA. La plataforma se integra en el flujo de desarrollo sin interrupciones y apunta a convertirse en el estandar de codificacion segura asistida por IA en 2026.",
-      "url": "https://aiagentstore.ai/ai-agent-news/2026-july",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-07-23",
-      "tags": ["automatización", "agentes IA"]
+      "id": "google-deepmind-gemini-3-8-flash-lanzamiento-septiembre-2026",
+      "titulo": "Google DeepMind lanza Gemini 3.8 Flash con razonamiento multimodal mejorado para cargas agénticas de alta frecuencia",
+      "resumen": "Google DeepMind publicó el 2 de septiembre Gemini 3.8 Flash, la versión liviana y económica de la familia Gemini 3.8 optimizada para flujos agénticos de alta frecuencia, con capacidades multimodales y de razonamiento mejoradas sobre su predecesor. El lanzamiento refuerza la competencia con Claude Fable 5.1 y GPT-6 Astra en el segmento de modelos de bajo costo para agentes.",
+      "url": "https://www.shakudo.io/blog/top-9-large-language-models",
+      "fuente": "Shakudo Blog",
+      "fecha": "2026-09-02",
+      "tags": ["LLMs", "agentes IA"]
     },
     {
-      "id": "ushur-agentforce-plataforma-agentes-ia-journeys-clientes-2026",
-      "titulo": "Ushur Agentic Platform: agentes de IA que completan journeys de clientes de punta a punta con continuidad multicanal",
-      "resumen": "Ushur presento la Ushur Agentic Platform (UAP) el 22 de julio, disenada para construir agentes que completan journeys de clientes desde el primer contacto hasta la resolucion final con continuidad entre SMS, correo, web, chat y voz sin que el usuario repita informacion; la arquitectura trust-native integra gobierno, seguridad, cumplimiento, auditabilidad y supervision humana como elementos centrales. Los primeros casos de uso cubren seguros de salud, rededeterminacion de Medicaid y logistica de transporte para miembros.",
-      "url": "https://www.globenewswire.com/news-release/2026/07/22/3331397/0/en/ushur-launches-the-ushur-agentic-platform-ai-agents-that-finish-the-job.html",
-      "fuente": "GlobeNewswire",
-      "fecha": "2026-07-22",
-      "tags": ["agentes IA", "automatización"]
+      "id": "anthropic-claude-fable-5-1-mythos-5-1-cache-ciberseguridad-septiembre-2026",
+      "titulo": "Anthropic lanza Claude Fable 5.1 y Mythos 5.1 con 75% de reducción en cache reads y capacidades de ciberseguridad de frontera",
+      "resumen": "Claude Fable 5.1 y Claude Mythos 5.1, publicados el 1 de septiembre, comparten la misma base pero con niveles de salvaguarda diferenciados: Fable 5.1 es de acceso general con un 75% de rebaja en cache reads, mientras que Mythos 5.1 está disponible solo a través del programa de acceso de confianza para ciberseguridad y ciencias de la vida, con ventana de contexto de 1 millón de tokens y pensamiento adaptativo siempre activo. Ambos modelos superan a Claude Opus 5 en casi todas las evaluaciones internas de ciberseguridad de Anthropic.",
+      "url": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
+      "fuente": "VentureBeat",
+      "fecha": "2026-09-01",
+      "tags": ["Claude", "LLMs"]
     }
   ]
 }
