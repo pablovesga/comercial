@@ -1,96 +1,114 @@
 {
-  "generado": "2026-09-25T13:18:28Z",
-  "semana": "2026-W39",
+  "generado": "2026-09-28T13:24:00Z",
+  "semana": "2026-W40",
   "items": [
     {
-      "id": "claude-tag-conectores-personales-canales-slack-septiembre-2026",
-      "titulo": "Claude Tag ahora soporta conectores personales en canales de Slack",
-      "resumen": "Anthropic actualizó Claude Tag para que, además de los conectores de canal configurados por el administrador, cada usuario pueda invocar sus propios conectores (calendario, drive, CRM) directamente desde el canal de Slack. Los usuarios pueden revisar la respuesta antes de publicarla o activar el modo automático con revisión de contenido sensible.",
-      "url": "https://claude.com/blog/claude-tag-now-supports-personal-connectors-in-channels",
-      "fuente": "Claude Blog",
-      "fecha": "2026-09-24",
-      "tags": ["Claude", "automatización", "agentes IA"]
+      "id": "agentes-ia-semana-septiembre-27-ando-dataiku-strada-2026",
+      "titulo": "Semana de agentes IA: Ando, Dataiku y Strada marcan el ritmo del 27 de septiembre",
+      "resumen": "El reporte de AI Agents Directory del 27 de septiembre destaca tres lanzamientos que consolidan la tendencia hacia agentes como infraestructura empresarial: Ando con chat nativo de equipos, Dataiku con inventario de agentes y Strada con automatización de portales web heredados. La semana también confirma que Anthropic, OpenAI, Meta y Google lanzaron nuevos modelos fundacionales en el mismo período de siete días.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-27-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-09-27",
+      "tags": ["agentes IA", "automatización", "LLMs"]
     },
     {
-      "id": "colombia-gobierno-modernizacion-estado-ia-de-la-espriella-septiembre-2026",
-      "titulo": "El gobierno de Colombia avanza en la modernización del Estado con inteligencia artificial",
-      "resumen": "El gobierno de Abelardo De La Espriella presentó su hoja de ruta para convertir a Colombia en el primer país nativo en IA de Latinoamérica, enfocada en reducir costos operativos del Estado, eliminar burocracia y poner al ciudadano en el centro de los servicios públicos digitales. La iniciativa tiene a David Vélez como asesor ad honorem y planea rediseñar trámites, políticas sociales y educación con modelos de lenguaje.",
-      "url": "https://www.elheraldo.co/colombia/2026/09/24/gobierno-avanza-en-la-modernizacion-del-estado-con-la-inteligencia-artificial/",
-      "fuente": "El Heraldo",
-      "fecha": "2026-09-24",
-      "tags": ["Colombia tech", "automatización", "agentes IA"]
+      "id": "colombia-ia-reducir-accidentes-laborales-intensificacion-2026",
+      "titulo": "Colombia planea intensificar el uso de IA para reducir accidentes laborales",
+      "resumen": "Expertos y empresas colombianas plantean ampliar la inteligencia artificial en programas de seguridad industrial para detectar riesgos, anticipar incidentes y personalizar protocolos de protección por trabajador. El enfoque se enmarca en proyecciones de mayor integración de IA, big data y simulaciones avanzadas en seguridad laboral colombiana para los próximos años.",
+      "url": "https://www.eltiempo.com/amp/tecnosfera/novedades-tecnologia/plantean-intensificar-el-uso-de-inteligencia-artificial-para-reducir-accidentes-laborales-en-colombia-3526045",
+      "fuente": "El Tiempo",
+      "fecha": "2026-09-27",
+      "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "claude-marketplace-plugins-agentes-conectores-septiembre-2026",
-      "titulo": "Anthropic lanza Claude Marketplace con más de 2.000 conectores, agentes y socios de servicio",
-      "resumen": "Claude Marketplace unifica en un solo lugar conectores y plugins (Atlassian, Google, Microsoft, Notion, Salesforce, entre más de 2.000), productos y agentes de empresas como CrowdStrike, Cursor, Harvey y Snowflake, y servicios de consultoría de Accenture, Deloitte y BCG. Los clientes pueden usar parte de su gasto comprometido con Anthropic para adquirir software de terceros alimentado por Claude.",
-      "url": "https://claude.com/blog/claude-marketplace",
-      "fuente": "Claude Blog",
+      "id": "colombia-ministerio-tic-datos-ecosistema-2026-ia-datos-abiertos",
+      "titulo": "MinTIC impulsa 269 equipos en 'Datos al Ecosistema 2026' para crear soluciones IA con datos públicos",
+      "resumen": "El Ministerio TIC de Colombia reunió a 269 equipos de estudiantes, emprendedores, investigadores y servidores públicos en la competencia 'Datos al Ecosistema 2026', orientada a desarrollar soluciones de inteligencia artificial sobre datos abiertos del Estado. Los participantes recibieron formación en calidad de datos, visualización e IA generativa aplicada a problemas colombianos.",
+      "url": "https://dplnews.com/colombia-a-traves-de-datos-al-ecosistema-2026-el-ministerio-tic-impulsa-soluciones-con-datos-abiertos-e-inteligencia-artificial/",
+      "fuente": "DPL News",
+      "fecha": "2026-09-26",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "openai-gpt-5-5-lanzamiento-septiembre-2026",
+      "titulo": "OpenAI lanza GPT-5.5 y presenta la serie GPT-5.6 Sol/Terra/Luna en vista previa limitada",
+      "resumen": "OpenAI presentó GPT-5.5 como su nuevo modelo insignia junto con la serie GPT-5.6 (Sol, Terra y Luna) en preview restringida, intensificando la competencia con Opus 5.5 y Fable 5.1 de Anthropic en la misma semana. Las nuevas versiones apuntan a razonamiento complejo y aplicaciones agénticas multi-paso en entornos empresariales.",
+      "url": "https://llm-stats.com/ai-news",
+      "fuente": "LLM Stats",
+      "fecha": "2026-09-26",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "colombia-mintic-futuro-tecnologico-acelerar-ia-claro-tech-summit-2026",
+      "titulo": "MinTIC declara en Cartagena que Colombia debe acelerar la adopción de IA sin demora",
+      "resumen": "La ministra de TIC Alexandra Falla afirmó en el Claro Tech Summit 2026 en Cartagena que 'el futuro tecnológico ya llegó' y que Colombia debe construir capacidades para capitalizar la transformación de la inteligencia artificial. La ministra destacó la necesidad de políticas públicas que acompañen la adopción empresarial y ciudadana de la IA a nivel nacional.",
+      "url": "https://dplnews.com/el-futuro-tecnologico-ya-llego-y-colombia-debe-acelerar-la-adopcion-de-ia-mintic/",
+      "fuente": "DPL News",
+      "fecha": "2026-09-25",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "cafe-con-ia-colombia-resumen-septiembre-25-2026",
+      "titulo": "'Café con IA' resume los hitos de la semana para el ecosistema colombiano de inteligencia artificial",
+      "resumen": "La newsletter colombiana Café con IA publicó su edición del 25 de septiembre con un recorrido por los hitos de la semana: los nuevos modelos de Anthropic, la apertura del MCP Server de Docusign y la carrera de Colombia por adoptar la IA a nivel institucional y productivo. El boletín se ha consolidado como referencia para la comunidad tech hispanohablante que sigue de cerca la evolución de la inteligencia artificial.",
+      "url": "https://cafeconia.substack.com/p/cafe-con-ia-25-de-septiembre-de-2026",
+      "fuente": "Café con IA",
+      "fecha": "2026-09-25",
+      "tags": ["Colombia tech", "agentes IA", "LLMs"]
+    },
+    {
+      "id": "anthropic-akamai-acuerdo-12000-millones-infraestructura-septiembre-2026",
+      "titulo": "Anthropic firma acuerdo de $12.000 millones con Akamai para infraestructura de cómputo IA",
+      "resumen": "Anthropic anunció un convenio de cómputo por 12.000 millones de dólares con Akamai Technologies para escalar la infraestructura que soporta Claude y sus modelos fundacionales. El acuerdo se suma a los compromisos de Google ($40.000 millones) y Amazon ($25.000 millones), que posicionan a Anthropic con una valoración estimada de 350.000 millones de cara a una posible OPI en octubre de 2026.",
+      "url": "https://aiweekly.co/ai-news-today/anthropic-news",
+      "fuente": "AI Weekly",
+      "fecha": "2026-09-24",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "ando-chat-equipos-agentes-ia-primera-clase-septiembre-2026",
+      "titulo": "Ando lanza chat de equipos nativo en IA donde los agentes participan como miembros de pleno derecho",
+      "resumen": "La startup Ando salió al mercado el 24 de septiembre con una plataforma de comunicación empresarial en la que los agentes de IA son miembros activos de los canales de chat, respaldada por $20 millones en financiación pre-semilla/semilla. La propuesta diferencia a Ando de herramientas como Slack al tratar a los agentes como participantes autónomos capaces de ejecutar tareas dentro del propio hilo de conversación.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-27-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-09-24",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "dataiku-agent-management-inventario-kpis-agentes-ia-septiembre-2026",
+      "titulo": "Dataiku lanza Agent Management para inventariar y gobernar agentes IA en toda la empresa",
+      "resumen": "Dataiku anunció Agent Management, una solución que centraliza el catálogo de agentes de inteligencia artificial desplegados en múltiples plataformas y rastrea sus KPIs de negocio y métricas técnicas de rendimiento. La herramienta responde a la necesidad de gobernanza y visibilidad que surge cuando las organizaciones operan decenas de agentes en sistemas heterogéneos.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-27-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-09-24",
+      "tags": ["agentes IA", "automatización", "LLMs"]
+    },
+    {
+      "id": "claude-biolab-descubre-enzima-crispr-bacteriofagos-septiembre-2026",
+      "titulo": "Claude descubre de forma autónoma un sistema enzimático similar a CRISPR en bacteriófagos",
+      "resumen": "Anthropic publicó que Claude, operando en un entorno de laboratorio automatizado, identificó de forma autónoma un sistema enzimático del tipo CRISPR no descrito anteriormente en bacteriófagos, abriendo posibilidades en edición genómica. El hallazgo es uno de los primeros casos documentados de un LLM realizando un descubrimiento científico original sin supervisión humana constante.",
+      "url": "https://www.anthropic.com/news",
+      "fuente": "Anthropic",
+      "fecha": "2026-09-23",
+      "tags": ["Claude", "LLMs", "agentes IA"]
+    },
+    {
+      "id": "claude-plugins-directorio-extensiones-terceros-septiembre-2026",
+      "titulo": "Anthropic lanza el directorio oficial de Plugins de Claude como canal estándar para extensiones de terceros",
+      "resumen": "Claude presenta Plugins como el mecanismo principal para construir extensiones de terceros, con un portal de envío, validación automática, controles de publicación y analítica post-lanzamiento; los plugins empaquetan conectores MCP, Agent Skills o ambos. Una vez aprobados, quedan listados en el directorio público de Claude accesible desde cualquier plan.",
+      "url": "https://releasebot.io/updates/anthropic/claude-developer-platform",
+      "fuente": "Releasebot / Anthropic",
       "fecha": "2026-09-23",
       "tags": ["Claude", "agentes IA", "automatización"]
     },
     {
-      "id": "colombia-moda-ia-automatizacion-medellin-septiembre-2026",
-      "titulo": "La industria de la moda colombiana adopta IA y automatización como eje estratégico en Medellín",
-      "resumen": "Empresas del sector textil y moda en Colombia comenzaron a integrar inteligencia artificial, análisis de datos y automatización en diseño, logística y ventas, con Medellín como epicentro del cambio. El movimiento refleja la transformación más amplia del ecosistema productivo colombiano hacia herramientas de IA aplicada en sectores tradicionales.",
-      "url": "https://www.publimetro.co/medellin/2026/09/23/la-moda-colombiana-entra-en-una-nueva-era-ia-automatizacion-y-tecnologia-llegan-a-medellin/",
-      "fuente": "Publimetro Colombia",
-      "fecha": "2026-09-23",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "amazon-seller-assistant-workflows-always-on-claude-septiembre-2026",
-      "titulo": "Amazon lanza workflows siempre activos para Seller Assistant e integra a Claude como plugin",
-      "resumen": "Amazon reportó que los vendedores aceptan las recomendaciones de Seller Assistant más del 90% de las veces, y anunció flujos de trabajo siempre activos junto con un plugin que lleva Seller Assistant a Amazon Quick y a Claude. La integración convierte al asistente de vendedores en un agente autónomo de comercio que puede actuar sin intervención humana constante.",
-      "url": "https://agilebrandguide.com/yesterdays-martech-ai-cx-news-september-24-2026/",
-      "fuente": "The Agile Brand Guide",
-      "fecha": "2026-09-23",
-      "tags": ["agentes IA", "automatización", "LLMs"]
-    },
-    {
-      "id": "reinventing-ai-paquetes-opensource-empleados-ia-septiembre-2026",
-      "titulo": "Reinventing.AI publica ocho paquetes open-source de 'empleados IA' con 59 rutinas de negocio bajo licencia MIT",
-      "resumen": "La empresa publicó en GitHub ocho paquetes de AI Employee bajo licencia MIT que cubren 59 rutinas de negocio programadas en 11 arneses de agentes, desde gestión de inbox y soporte hasta preparación de ventas e informes. La iniciativa democratiza el acceso a agentes empresariales preconstruidos y listos para personalizar sin costo de licencia.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-september-20-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-09-19",
-      "tags": ["agentes IA", "automatización", "LLMs"]
-    },
-    {
-      "id": "colombia-david-velez-asesor-ia-gobierno-de-la-espriella-septiembre-2026",
-      "titulo": "David Vélez, fundador de Nubank, es nombrado asesor principal de IA del Gobierno de Colombia",
-      "resumen": "El presidente Abelardo De La Espriella nombró a David Vélez asesor ad honorem para liderar la estrategia de inteligencia artificial del país, con el objetivo de reducir costos operativos del Estado, eliminar trámites innecesarios y modernizar educación y servicios sociales. La ambición declarada es convertir a Colombia en el primer país latinoamericano nativo en IA.",
-      "url": "https://www.pulzo.com/nacion/david-velez-asesorara-al-gobierno-en-inteligencia-artificial-para-la-modernizacion-de-colombia-PP5307034A",
-      "fuente": "Pulzo",
-      "fecha": "2026-09-18",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "docusign-mcp-server-todos-agentes-ia-acuerdo-empresarial-septiembre-2026",
-      "titulo": "Docusign abrirá su MCP Server a todos los agentes de IA el 30 de septiembre con controles empresariales",
-      "resumen": "Docusign anunció que el 30 de septiembre su servidor MCP oficial estará disponible para cualquier agente de IA (Claude, ChatGPT, Gemini, Copilot, Slack y cualquier cliente MCP), permitiendo enviar sobres, verificar estados de firma, consultar acuerdos via Navigator y disparar flujos Maestro desde agentes autónomos. El servidor incluye controles de administración a nivel de cuenta, infraestructura multirregión y soporte multilingüe.",
-      "url": "https://www.docusign.com/company/news-center/docusign-agreement-layer-for-the-agentic-enterprise-coming-to-every-agent",
-      "fuente": "Docusign Newsroom",
-      "fecha": "2026-09-04",
-      "tags": ["agentes IA", "automatización", "LLMs"]
-    },
-    {
-      "id": "agentic-rag-grafos-conocimiento-reduce-alucinaciones-produccion-2026",
-      "titulo": "Agentic RAG con grafos de conocimiento reduce alucinaciones un 62% en 47 despliegues de producción",
-      "resumen": "Un benchmark de la comunidad MLOps publicado en mayo de 2026 mostró que los pipelines RAG agénticos emparejados con grafos de conocimiento redujeron las alucinaciones un 62% en 47 despliegues empresariales frente a configuraciones básicas. El patrón combina recuperación híbrida, reranking, razonamiento multi-salto y validación en paralelo por agentes especializados, y se consolida como el estándar de facto para RAG en producción en 2026.",
-      "url": "https://sumatosoft.com/blog/blog-agentic-rag-enterprise-implementation-guide",
-      "fuente": "Sumatosoft Blog",
-      "fecha": "2026-09-03",
-      "tags": ["RAG", "agentes IA", "automatización"]
-    },
-    {
-      "id": "colombia-63-porciento-usuarios-ia-nuevas-tareas-posibles-septiembre-2026",
-      "titulo": "El 63% de los colombianos que usan IA ya realizan trabajos que antes no podían hacer, superando el promedio global",
-      "resumen": "Según un estudio publicado en septiembre de 2026, el 63% de los usuarios de inteligencia artificial en Colombia afirma completar tareas que hace un año eran imposibles para ellos, superando en cinco puntos el promedio global. El hallazgo refleja una adopción acelerada que está rediseñando roles, procesos y modelos de trabajo en organizaciones colombianas de todos los sectores.",
-      "url": "https://www.infobae.com/tecno/2026/09/03/6-de-cada-10-colombianos-que-usa-ia-ya-hace-trabajos-que-no-podia-hace-un-ano/",
-      "fuente": "Infobae",
-      "fecha": "2026-09-03",
-      "tags": ["Colombia tech", "automatización", "LLMs"]
+      "id": "claude-opus-5-5-nuevo-flagship-barato-septiembre-2026",
+      "titulo": "Claude Opus 5.5 reemplaza a Opus 5 como modelo general de referencia a un 40% menos de costo",
+      "resumen": "Anthropic lanzó Claude Opus 5.5 el 22 de septiembre como su nuevo modelo general de referencia, que iguala el rendimiento de Fable 5.1 en la mayoría de tareas y cuesta 40% menos en producción; los precios de API bajan 20% en tokens de entrada y salida, y 60% en lecturas de caché. Opus 5.5 incluye el mecanismo anti-destilación que protege el razonamiento interno del modelo frente a manipulaciones del contexto previo.",
+      "url": "https://releasebot.io/updates/anthropic/claude",
+      "fuente": "Releasebot / Anthropic",
+      "fecha": "2026-09-22",
+      "tags": ["Claude", "LLMs"]
     }
   ]
 }
