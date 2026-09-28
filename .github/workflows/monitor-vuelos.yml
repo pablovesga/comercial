@@ -1,33 +1,33 @@
-name: Monitor Tiquetes BOG-MTR
+name: Monitor Tiquetes BOG-MDE
 
 on:
   schedule:
     - cron: '0 13 * * 2'   # Martes 8:00 AM Bogotá (UTC-5 = 13:00 UTC)
   workflow_dispatch:         # Permite disparar manualmente desde GitHub UI, con parámetros opcionales
-                              # para probar otra ruta/fechas/pasajeros sin tocar el monitor BOG-MTR por defecto.
+                              # para probar otra ruta/fechas/pasajeros sin tocar el monitor por defecto.
     inputs:
       dep:
         description: 'Aeropuerto de origen (IATA)'
         default: 'BOG'
       arr:
         description: 'Aeropuerto de destino (IATA)'
-        default: 'MTR'
+        default: 'MDE'
       fecha_ida:
         description: 'Fecha de ida (YYYY-MM-DD)'
-        default: '2026-12-20'
+        default: '2026-12-04'
       fecha_retorno:
         description: 'Fecha de retorno (YYYY-MM-DD)'
-        default: '2027-01-03'
+        default: '2026-12-08'
       adultos:
         description: 'Número de adultos'
-        default: '3'
+        default: '2'
       ninos:
         description: 'Número de niños'
-        default: '1'
+        default: '2'
       sin_filtro_horario:
         description: 'Ignorar la restricción de horario (mostrar todos los vuelos)'
         type: boolean
-        default: false
+        default: true
       hora_llegada_max:
         description: 'Hora máxima de llegada en la ida, HH:MM (ignorado si sin_filtro_horario)'
         default: '11:00'
@@ -54,12 +54,12 @@ jobs:
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           DEP: ${{ github.event.inputs.dep || 'BOG' }}
-          ARR: ${{ github.event.inputs.arr || 'MTR' }}
-          FECHA_IDA: ${{ github.event.inputs.fecha_ida || '2026-12-20' }}
-          FECHA_RETORNO: ${{ github.event.inputs.fecha_retorno || '2027-01-03' }}
-          ADULTOS: ${{ github.event.inputs.adultos || '3' }}
-          NINOS: ${{ github.event.inputs.ninos || '1' }}
-          SIN_FILTRO_HORARIO: ${{ github.event.inputs.sin_filtro_horario || 'false' }}
+          ARR: ${{ github.event.inputs.arr || 'MDE' }}
+          FECHA_IDA: ${{ github.event.inputs.fecha_ida || '2026-12-04' }}
+          FECHA_RETORNO: ${{ github.event.inputs.fecha_retorno || '2026-12-08' }}
+          ADULTOS: ${{ github.event.inputs.adultos || '2' }}
+          NINOS: ${{ github.event.inputs.ninos || '2' }}
+          SIN_FILTRO_HORARIO: ${{ github.event.inputs.sin_filtro_horario || 'true' }}
           HORA_LLEGADA_MAX: ${{ github.event.inputs.hora_llegada_max || '11:00' }}
           HORA_SALIDA_MIN: ${{ github.event.inputs.hora_salida_min || '13:00' }}
         run: |
@@ -73,15 +73,15 @@ jobs:
               sys.exit(1)
 
           DEP = os.environ.get("DEP", "BOG")
-          ARR = os.environ.get("ARR", "MTR")
-          FECHA_IDA = os.environ.get("FECHA_IDA", "2026-12-20")
-          FECHA_RETORNO = os.environ.get("FECHA_RETORNO", "2027-01-03")
-          ADULTOS = os.environ.get("ADULTOS", "3")
-          NINOS = os.environ.get("NINOS", "1")
-          SIN_FILTRO_HORARIO = os.environ.get("SIN_FILTRO_HORARIO", "false").lower() == "true"
+          ARR = os.environ.get("ARR", "MDE")
+          FECHA_IDA = os.environ.get("FECHA_IDA", "2026-12-04")
+          FECHA_RETORNO = os.environ.get("FECHA_RETORNO", "2026-12-08")
+          ADULTOS = os.environ.get("ADULTOS", "2")
+          NINOS = os.environ.get("NINOS", "2")
+          SIN_FILTRO_HORARIO = os.environ.get("SIN_FILTRO_HORARIO", "true").lower() == "true"
           HORA_LLEGADA_MAX = os.environ.get("HORA_LLEGADA_MAX", "11:00")
           HORA_SALIDA_MIN = os.environ.get("HORA_SALIDA_MIN", "13:00")
-          ES_RUTA_DEFECTO = (DEP == "BOG" and ARR == "MTR")
+          ES_RUTA_DEFECTO = (DEP == "BOG" and ARR == "MDE")
 
           def hora_a_min(hhmm):
               h, m = hhmm.split(":")
