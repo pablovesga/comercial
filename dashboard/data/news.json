@@ -1,114 +1,114 @@
 {
-  "generado": "2026-10-07T13:19:00Z",
+  "generado": "2026-10-09T13:22:00Z",
   "semana": "2026-W41",
   "items": [
     {
-      "id": "gartner-40-pct-proyectos-ia-agentica-cancelados-2027",
-      "titulo": "Gartner predice que el 40% de los proyectos de IA agéntica se cancelarán antes de 2027",
-      "resumen": "Gartner publicó una proyección alertando que más del 40% de los proyectos de IA agéntica en grandes empresas serán cancelados antes de finales de 2027, principalmente por falta de resultados en producción. Actualmente solo el 5% de las empresas que experimentan con agentes ha llevado esta tecnología a entornos productivos.",
-      "url": "https://aiagentstore.ai/ai-agent-news/today",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-10-07",
-      "tags": ["agentes IA", "LLMs"]
+      "id": "intelcia-colombia-hub-ia-talento-oct-2026",
+      "titulo": "Intelcia anuncia transformación de talento en Colombia con foco en IA y automatización",
+      "resumen": "La multinacional Intelcia publicó sus planes de transformación de talento en Colombia, impulsados por la integración de IA y automatización en más de 180 proyectos activos. Colombia se consolida como hub regional de la compañía gracias a su cuarto lugar mundial en el Offshore CX Confidence Index.",
+      "url": "https://www.infobae.com/tecno/2026/10/09/este-es-el-anuncio-de-intelcia-sobre-cambios-en-talento-inteligencia-artificial-y-automatizacion-en-colombia/",
+      "fuente": "Infobae",
+      "fecha": "2026-10-09",
+      "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "google-gemini-limita-cuentas-gratuitas-oct-2026",
-      "titulo": "Google limitará Gemini gratuito a un solo modelo desde el 9 de octubre",
-      "resumen": "Google anunció que a partir del 9 de octubre las cuentas personales sin suscripción de IA solo tendrán acceso al modelo Gemini Flash-Lite, perdiendo el acceso a Flash y Pro. La restricción busca monetizar los niveles superiores del servicio y reducir los costos operativos de la capa gratuita.",
-      "url": "https://winbuzzer.com/2026/10/07/google-will-limit-free-gemini-to-one-ai-model-xcxwbn",
-      "fuente": "WinBuzzer",
-      "fecha": "2026-10-07",
+      "id": "colombia-segundo-latam-adopcion-ia-oct-2026",
+      "titulo": "Colombia sube al segundo lugar en LATAM en adopción de IA según Microsoft",
+      "resumen": "Un reporte de Microsoft posiciona a Colombia en el segundo lugar de Latinoamérica en adopción de inteligencia artificial, con una tasa del 25,9% en el segundo trimestre de 2026. El avance consolida al país como referente regional en transformación digital empresarial.",
+      "url": "https://impactotic.co/tecnologia/adopcion-de-ia-en-colombia-microsoft-2026/",
+      "fuente": "Impact TIC",
+      "fecha": "2026-10-09",
+      "tags": ["Colombia tech", "LLMs"]
+    },
+    {
+      "id": "ilia-2026-indice-ia-latinoamerica-oct",
+      "titulo": "CEPAL y CENIA presentarán el Índice Latinoamericano de IA el 20 de octubre",
+      "resumen": "La CEPAL y el Centro Nacional de Inteligencia Artificial de Chile realizarán el 20 de octubre la presentación virtual de la cuarta edición del Índice Latinoamericano de Inteligencia Artificial (ILIA 2026), herramienta clave para comparar el avance de los ecosistemas de IA en la región. La sesión puede seguirse desde Bogotá a las 7:15 a.m.",
+      "url": "https://bogota.gov.co/boletin-oferta-internacional/ilia-2026-conoce-el-nuevo-indice-latinoamericano-de-ia",
+      "fuente": "Alcaldía de Bogotá",
+      "fecha": "2026-10-09",
+      "tags": ["Colombia tech", "LLMs"]
+    },
+    {
+      "id": "claude-workspace-google-conector-oct-2026",
+      "titulo": "Claude se integra con Google Workspace para crear y editar documentos directamente",
+      "resumen": "Anthropic lanzó la integración de Claude con Google Workspace en beta pública, con conectores para Docs, Sheets y Slides que permiten crear y editar archivos sin salir de Claude. Docs, Slides y Design salen además de beta y quedan disponibles en todos los planes incluyendo el gratuito.",
+      "url": "https://www.anthropic.com/news",
+      "fuente": "Anthropic",
+      "fecha": "2026-10-08",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "anthropic-frontier-academy-ingenieros-ia-oct-2026",
+      "titulo": "Anthropic compromete $100 millones para formar 10.000 ingenieros de IA empresarial antes de 2027",
+      "resumen": "Anthropic anunció su Claude Frontier Academy, un programa de $100 millones de dólares para certificar 10.000 ingenieros especializados en IA empresarial antes de 2027. La iniciativa busca construir el ecosistema de talento necesario para la adopción masiva de Claude en entornos corporativos.",
+      "url": "https://www.anthropic.com/news",
+      "fuente": "Anthropic",
+      "fecha": "2026-10-08",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "claude-dashboards-motion-beta-oct-2026",
+      "titulo": "Claude Dashboards y Claude Motion entran en beta; Docs, Slides y Design llegan al plan gratuito",
+      "resumen": "Anthropic lanzó en beta Claude Dashboards para visualización de datos y Claude Motion para animaciones generativas, mientras Docs, Slides y Design salen de beta y quedan disponibles en todos los planes incluyendo el nivel gratuito. La expansión consolida a Claude como plataforma de productividad completa.",
+      "url": "https://releasebot.io/updates/anthropic/claude",
+      "fuente": "Releasebot",
+      "fecha": "2026-10-08",
+      "tags": ["Claude", "automatización"]
+    },
+    {
+      "id": "anthropic-politica-uso-actualizada-oct-2026",
+      "titulo": "Anthropic actualiza su Política de Uso Aceptable el 8 de octubre",
+      "resumen": "Anthropic publicó una versión revisada de su Política de Uso Aceptable de 2026 el 8 de octubre, ajustando lineamientos sobre el uso de Claude en contextos sensibles y de alto riesgo. La actualización refleja las lecciones aprendidas tras la proliferación de agentes autónomos y los incidentes de seguridad reportados esa semana.",
+      "url": "https://www.anthropic.com/news",
+      "fuente": "Anthropic",
+      "fecha": "2026-10-08",
+      "tags": ["Claude", "agentes IA"]
+    },
+    {
+      "id": "openai-gpt6-sol-luna-nuevos-modelos-oct-2026",
+      "titulo": "OpenAI amplía la familia GPT-6 con los modelos Sol y Luna y recorta precios de API un 50%",
+      "resumen": "OpenAI anunció dos nuevos modelos en la familia GPT-6: GPT-6 Sol y GPT-6 Luna, expandiendo su línea de modelos de frontera. La compañía acompañó el lanzamiento con una reducción del 50% en los precios de la API, intensificando la competencia de precios con Anthropic y Google.",
+      "url": "https://www.digitalapplied.com/blog/ai-model-releases-october-2026-tracker",
+      "fuente": "Digital Applied",
+      "fecha": "2026-10-08",
       "tags": ["LLMs", "automatización"]
     },
     {
-      "id": "mintic-colombia-32000-cupos-formacion-ia-oct-2026",
-      "titulo": "MinTIC oferta más de 32.000 cupos gratuitos para formación en IA, datos y ciberseguridad",
-      "resumen": "El Ministerio TIC de Colombia abrió inscripciones hasta el 13 de octubre para más de 32.000 cupos gratuitos en cursos de inteligencia artificial, ciencia de datos y ciberseguridad, en el marco de su programa de certificación digital. La iniciativa busca ampliar el talento técnico nacional para la transformación digital de empresas e instituciones públicas.",
-      "url": "https://www.infobae.com/colombia/2026/10/07/ministerio-tic-ofertara-mas-de-32000-cupos-gratuitos-hasta-el-13-de-octubre-para-cursos-de-inteligencia-artificial-datos-y-ciberseguridad/",
-      "fuente": "Infobae Colombia",
+      "id": "claude-haiku-55-modelo-economico-oct-2026",
+      "titulo": "Anthropic lanza Claude Haiku 5.5: 75% más barato y con ventana de 1 millón de tokens",
+      "resumen": "Anthropic publicó Claude Haiku 5.5 el 7 de octubre, con precios un 75% menores que Haiku 4.5, contexto de 1 millón de tokens y control de esfuerzo ajustable. Es el primer modelo Haiku con cursores de razonamiento, orientado a tareas masivas como resúmenes, clasificación y roles de subagente.",
+      "url": "https://aiweekly.co/alerts/introducing-claude-haiku-55",
+      "fuente": "AI Weekly",
       "fecha": "2026-10-07",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "anthropic-startups-claude-team-gratis-oct-2026",
-      "titulo": "Anthropic ofrece un año gratis de Claude Team y $1.000 en créditos de API a startups",
-      "resumen": "Anthropic amplió su programa Claude for Startups con un año gratuito de Claude Team (hasta 5 asientos premium) más $1.000 en créditos de API para equipos fundadores en etapa temprana. La oferta apunta a acelerar la adopción de Claude frente a la competencia directa de OpenAI y Google.",
-      "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/",
-      "fuente": "TechCrunch",
-      "fecha": "2026-10-06",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "ftc-investiga-riesgos-agentes-ia-oct-2026",
-      "titulo": "La FTC abre una investigación formal sobre los riesgos de los agentes de IA autónomos",
-      "resumen": "La Comisión Federal de Comercio de EE.UU. inició una investigación sobre los riesgos que representan los agentes de IA capaces de operar de forma continua en miles de aplicaciones, señalando a OpenAI entre los actores bajo escrutinio. La medida se produce tras la oleada de incidentes de seguridad reportados en la primera semana de octubre.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-6-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-10-06",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "sap-joule-agentes-empresa-autonoma-oct-2026",
-      "titulo": "SAP lanza nueva generación de agentes Joule para la empresa autónoma",
-      "resumen": "En SAP Connect de octubre, SAP presentó nuevos asistentes y agentes de IA bajo la plataforma Joule, cumpliendo su visión de 'empresa autónoma' anunciada en Sapphire. Los agentes tienen disponibilidad general desde este mes a través del portal SAP for Me.",
-      "url": "https://www.computerworld.es/article/4231675/sap-impulsa-su-estrategia-de-ia-autonoma-con-un-nuevo-grupo-de-joule-assistants-y-agentes.html",
-      "fuente": "Computerworld ES",
-      "fecha": "2026-10-06",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "jev-modelo-llm-toma-decisiones-oct-2026",
-      "titulo": "Jev: un nuevo tipo de LLM ultra-rápido especializado en toma de decisiones",
-      "resumen": "El modelo Jev introduce una arquitectura radicalmente diferente a los LLMs generativos, diseñada exclusivamente para roles de decisión con velocidades y costos muy inferiores. Abandona la generación de texto libre a favor de clasificación y decisión estructurada, abriéndose camino como capa de control en pipelines agénticos.",
-      "url": "https://hackaday.com/2026/10/06/a-new-type-of-llm-on-the-block-decision-making-models/",
-      "fuente": "Hackaday",
-      "fecha": "2026-10-06",
-      "tags": ["LLMs", "agentes IA"]
-    },
-    {
-      "id": "softic-2026-ia-agentica-reta-software-colombiano",
-      "titulo": "SOFTIC 2026 en Cartagena: la IA agéntica como reto central del software colombiano",
-      "resumen": "Del 14 al 16 de octubre, el Congreso Internacional de Software SOFTIC 2026 reunirá a la industria TI colombiana en Cartagena bajo el lema 'Software in motion: La fuerza que mueve industrias'. La IA agéntica ocupa el centro del debate sobre la transformación del desarrollo de software en Colombia y la región.",
-      "url": "https://ecosistemastartup.com/softic-2026-la-ia-agentica-reta-al-software-colombiano/",
-      "fuente": "Ecosistema Startup",
-      "fecha": "2026-10-06",
-      "tags": ["Colombia tech", "agentes IA"]
-    },
-    {
-      "id": "claude-fable-mythos-51-lanzamiento-oct-2026",
-      "titulo": "Anthropic lanza Claude Fable 5.1 y Claude Mythos 5.1 para codificación y trabajo del conocimiento",
-      "resumen": "Anthropic introdujo Claude Fable 5.1 y Claude Mythos 5.1, sus modelos más avanzados orientados a programación de alto rendimiento y trabajo intensivo con conocimiento respectivamente. Los lanzamientos refuerzan el posicionamiento de Anthropic en el segmento de herramientas de productividad empresarial.",
-      "url": "https://www.anthropic.com/news",
-      "fuente": "Anthropic",
-      "fecha": "2026-10-05",
       "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "claude-code-mods-typescript-plugins-oct-2026",
-      "titulo": "Claude Code 2.1.292 permite mods en TypeScript para personalizar la CLI y la app de escritorio",
-      "resumen": "La versión 2.1.292 de Claude Code introduce soporte para mods escritos en TypeScript que agregan comportamientos personalizados, nueva UI y reemplazos de funciones tanto en la CLI como en el escritorio. Los mods se distribuyen como plugins compartibles vía el directorio oficial de Claude Code.",
-      "url": "https://releasebot.io/updates/anthropic/claude-code",
-      "fuente": "Releasebot",
-      "fecha": "2026-10-05",
-      "tags": ["Claude", "automatización"]
+      "id": "progress-software-agentic-rag-oct-2026",
+      "titulo": "Progress Software expande su plataforma Agentic RAG con agente autónomo y app nativa para Teams",
+      "resumen": "Progress lanzó nuevas capacidades para su plataforma Agentic RAG: un Smart Agent para recuperación multistep autónoma, una app nativa de Microsoft Teams y un plugin de WordPress para ingesta de contenido. La actualización conecta el conocimiento empresarial disperso a través de una capa compartida de conocimiento agéntico.",
+      "url": "https://passionateinmarketing.com/progress-software-connects-enterprise-knowledge-across-business-systems-with-new-agentic-rag-capabilities",
+      "fuente": "Passionate in Marketing",
+      "fecha": "2026-10-07",
+      "tags": ["RAG", "agentes IA"]
     },
     {
-      "id": "vulnerabilidades-agentes-codificacion-ia-git-oct-2026",
-      "titulo": "Informe revela graves fallos en agentes de codificación IA: secuestros git, escapes de sandbox y 13.000 capturas filtradas",
-      "resumen": "Un análisis de seguridad publicado en octubre documentó vulnerabilidades críticas en agentes de codificación IA: secuestro de configuraciones git en siete agentes, pins de plugins intercambiados maliciosamente, escapes de sandbox y más de 13.000 capturas de pantalla filtradas. Los hallazgos presionan a la industria a establecer estándares de seguridad mínimos para agentes con acceso a repositorios.",
-      "url": "https://adversa.ai/blog/top-ai-agent-security-resources-october-2026/",
-      "fuente": "Adversa AI",
-      "fecha": "2026-10-05",
+      "id": "aws-bedrock-rag-control-acceso-oct-2026",
+      "titulo": "AWS publica guía para control de acceso sensible en sistemas RAG con Amazon Bedrock",
+      "resumen": "El blog técnico de AWS Machine Learning describe cómo diseñar control de acceso en arquitecturas RAG que manejan información sensible con permisos complejos, usando Amazon Quick y Bedrock. La guía garantiza que las respuestas generadas respeten los permisos de acceso definidos por usuario o rol.",
+      "url": "https://aws.amazon.com/blogs/machine-learning/rethinking-access-control-for-rag-with-amazon-quick-and-amazon-bedrock",
+      "fuente": "AWS Machine Learning Blog",
+      "fecha": "2026-10-07",
+      "tags": ["RAG", "automatización"]
+    },
+    {
+      "id": "jetbrains-90pct-devs-agentes-ia-oct-2026",
+      "titulo": "JetBrains: el 90% de los desarrolladores ya usa agentes de codificación con IA semanalmente",
+      "resumen": "Un estudio de JetBrains publicado en la primera semana de octubre revela que el 90% de los desarrolladores encuestados usa agentes de codificación con IA de forma semanal. El dato contrasta con el 5% de empresas que han llevado agentes a producción, señalando una brecha entre uso individual y despliegue organizacional.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-7-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-10-07",
       "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "conectatech-2026-bogota-ia-datos-oct",
-      "titulo": "Conectatech 2026 llega a Bogotá para analizar IA, datos y tecnología empresarial",
-      "resumen": "El 14 de octubre el Auditorio Universidad Compensar de Bogotá reunirá a empresarios y expertos en Conectatech 2026 para explorar cómo la inteligencia artificial y los datos impulsan el crecimiento empresarial. El evento es uno de los espacios clave del ecosistema tecnológico colombiano de este trimestre.",
-      "url": "https://www.agenciapi.co/noticia/api-ia-tics-telco/conectatech-2026-llega-bogota-ia-datos-y-tecnologia-para-impulsar-el-crecimiento-empresarial",
-      "fuente": "Agencia PI",
-      "fecha": "2026-10-05",
-      "tags": ["Colombia tech", "automatización"]
     }
   ]
 }
