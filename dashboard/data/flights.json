@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T18:45:16.815885+00:00",
+  "generado": "2026-10-13T19:43:40.413543+00:00",
   "ruta": "BOG ↔ MDE",
   "pasajeros": "2 adultos + 2 niños",
   "filtro_horario": false,
@@ -11,17 +11,31 @@
     "vuelos": [
       {
         "aerolinea": "Wingo",
-        "salida": "05:15",
-        "llegada": "06:17",
-        "precio_4pax": 644800,
-        "precio_adulto_aprox": 238815
+        "salida": "04:00",
+        "llegada": "05:02",
+        "precio_4pax": 452004,
+        "precio_adulto_aprox": 167409
       },
       {
         "aerolinea": "Wingo",
-        "salida": "04:00",
-        "llegada": "05:02",
-        "precio_4pax": 644800,
-        "precio_adulto_aprox": 238815
+        "salida": "05:15",
+        "llegada": "06:17",
+        "precio_4pax": 452004,
+        "precio_adulto_aprox": 167409
+      },
+      {
+        "aerolinea": "Wingo",
+        "salida": "23:00",
+        "llegada": "00:02",
+        "precio_4pax": 452004,
+        "precio_adulto_aprox": 167409
+      },
+      {
+        "aerolinea": "JetSMART",
+        "salida": "11:00",
+        "llegada": "12:12",
+        "precio_4pax": 525580,
+        "precio_adulto_aprox": 194659
       },
       {
         "aerolinea": "Wingo",
@@ -31,44 +45,44 @@
         "precio_adulto_aprox": 238815
       },
       {
-        "aerolinea": "Wingo",
-        "salida": "23:00",
-        "llegada": "00:02",
-        "precio_4pax": 644800,
-        "precio_adulto_aprox": 238815
-      },
-      {
         "aerolinea": "JetSMART",
-        "salida": "11:00",
-        "llegada": "12:12",
-        "precio_4pax": 699320,
-        "precio_adulto_aprox": 259007
-      },
-      {
-        "aerolinea": "JetSMART",
-        "salida": "13:00",
-        "llegada": "14:12",
-        "precio_4pax": 699320,
-        "precio_adulto_aprox": 259007
+        "salida": "06:50",
+        "llegada": "08:02",
+        "precio_4pax": 659820,
+        "precio_adulto_aprox": 244378
       },
       {
         "aerolinea": "JetSMART",
         "salida": "14:55",
         "llegada": "16:07",
-        "precio_4pax": 699320,
-        "precio_adulto_aprox": 259007
+        "precio_4pax": 659820,
+        "precio_adulto_aprox": 244378
       },
       {
         "aerolinea": "JetSMART",
         "salida": "15:50",
         "llegada": "17:02",
-        "precio_4pax": 699320,
-        "precio_adulto_aprox": 259007
+        "precio_4pax": 659820,
+        "precio_adulto_aprox": 244378
+      },
+      {
+        "aerolinea": "JetSMART",
+        "salida": "17:05",
+        "llegada": "18:17",
+        "precio_4pax": 659820,
+        "precio_adulto_aprox": 244378
       },
       {
         "aerolinea": "JetSMART",
         "salida": "21:40",
         "llegada": "22:52",
+        "precio_4pax": 659820,
+        "precio_adulto_aprox": 244378
+      },
+      {
+        "aerolinea": "JetSMART",
+        "salida": "13:00",
+        "llegada": "14:12",
         "precio_4pax": 699320,
         "precio_adulto_aprox": 259007
       },
@@ -87,37 +101,37 @@
         "precio_adulto_aprox": 268704
       },
       {
-        "aerolinea": "JetSMART",
-        "salida": "06:50",
-        "llegada": "08:02",
-        "precio_4pax": 741680,
-        "precio_adulto_aprox": 274696
-      },
-      {
-        "aerolinea": "JetSMART",
-        "salida": "17:05",
-        "llegada": "18:17",
-        "precio_4pax": 741680,
-        "precio_adulto_aprox": 274696
-      },
-      {
         "aerolinea": "LATAM",
-        "salida": "07:00",
-        "llegada": "08:05",
+        "salida": "06:15",
+        "llegada": "07:20",
         "precio_4pax": 766680,
         "precio_adulto_aprox": 283956
       },
       {
         "aerolinea": "LATAM",
-        "salida": "09:40",
-        "llegada": "10:45",
+        "salida": "12:20",
+        "llegada": "13:25",
         "precio_4pax": 766680,
         "precio_adulto_aprox": 283956
       },
       {
         "aerolinea": "LATAM",
-        "salida": "17:00",
-        "llegada": "18:05",
+        "salida": "13:15",
+        "llegada": "14:20",
+        "precio_4pax": 766680,
+        "precio_adulto_aprox": 283956
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "14:50",
+        "llegada": "15:55",
+        "precio_4pax": 766680,
+        "precio_adulto_aprox": 283956
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "16:40",
+        "llegada": "17:45",
         "precio_4pax": 766680,
         "precio_adulto_aprox": 283956
       },
@@ -136,13 +150,6 @@
         "precio_adulto_aprox": 283956
       },
       {
-        "aerolinea": "LATAM",
-        "salida": "13:15",
-        "llegada": "14:20",
-        "precio_4pax": 767400,
-        "precio_adulto_aprox": 284222
-      },
-      {
         "aerolinea": "Wingo",
         "salida": "16:40",
         "llegada": "17:42",
@@ -153,48 +160,20 @@
         "aerolinea": "LATAM",
         "salida": "05:05",
         "llegada": "06:05",
-        "precio_4pax": 902100,
-        "precio_adulto_aprox": 334111
+        "precio_4pax": 893760,
+        "precio_adulto_aprox": 331022
       },
       {
         "aerolinea": "LATAM",
         "salida": "18:50",
         "llegada": "19:55",
-        "precio_4pax": 909960,
-        "precio_adulto_aprox": 337022
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "06:15",
-        "llegada": "07:20",
-        "precio_4pax": 949460,
-        "precio_adulto_aprox": 351652
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "12:20",
-        "llegada": "13:25",
-        "precio_4pax": 949460,
-        "precio_adulto_aprox": 351652
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "16:40",
-        "llegada": "17:45",
-        "precio_4pax": 949460,
-        "precio_adulto_aprox": 351652
+        "precio_4pax": 1040380,
+        "precio_adulto_aprox": 385326
       },
       {
         "aerolinea": "Avianca",
         "salida": "04:35",
         "llegada": "05:35",
-        "precio_4pax": 1072740,
-        "precio_adulto_aprox": 397311
-      },
-      {
-        "aerolinea": "Avianca",
-        "salida": "08:55",
-        "llegada": "10:00",
         "precio_4pax": 1072740,
         "precio_adulto_aprox": 397311
       },
@@ -216,13 +195,6 @@
         "aerolinea": "Avianca",
         "salida": "10:20",
         "llegada": "11:20",
-        "precio_4pax": 1072740,
-        "precio_adulto_aprox": 397311
-      },
-      {
-        "aerolinea": "Avianca",
-        "salida": "11:40",
-        "llegada": "12:40",
         "precio_4pax": 1072740,
         "precio_adulto_aprox": 397311
       },
@@ -277,13 +249,6 @@
       },
       {
         "aerolinea": "Avianca",
-        "salida": "20:30",
-        "llegada": "21:30",
-        "precio_4pax": 1072740,
-        "precio_adulto_aprox": 397311
-      },
-      {
-        "aerolinea": "Avianca",
         "salida": "20:55",
         "llegada": "21:55",
         "precio_4pax": 1072740,
@@ -318,32 +283,67 @@
         "precio_adulto_aprox": 397311
       },
       {
+        "aerolinea": "Avianca",
+        "salida": "08:55",
+        "llegada": "10:00",
+        "precio_4pax": 1136280,
+        "precio_adulto_aprox": 420844
+      },
+      {
+        "aerolinea": "Avianca",
+        "salida": "11:40",
+        "llegada": "12:40",
+        "precio_4pax": 1136280,
+        "precio_adulto_aprox": 420844
+      },
+      {
+        "aerolinea": "Avianca",
+        "salida": "20:30",
+        "llegada": "21:30",
+        "precio_4pax": 1136280,
+        "precio_adulto_aprox": 420844
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "07:00",
+        "llegada": "08:05",
+        "precio_4pax": 1157720,
+        "precio_adulto_aprox": 428785
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "09:40",
+        "llegada": "10:45",
+        "precio_4pax": 1157720,
+        "precio_adulto_aprox": 428785
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "17:00",
+        "llegada": "18:05",
+        "precio_4pax": 1157720,
+        "precio_adulto_aprox": 428785
+      },
+      {
         "aerolinea": "LATAM",
         "salida": "17:35",
         "llegada": "18:40",
-        "precio_4pax": 1082280,
-        "precio_adulto_aprox": 400844
+        "precio_4pax": 1157720,
+        "precio_adulto_aprox": 428785
       },
       {
         "aerolinea": "LATAM",
         "salida": "20:00",
         "llegada": "21:05",
-        "precio_4pax": 1121060,
-        "precio_adulto_aprox": 415207
+        "precio_4pax": 1157720,
+        "precio_adulto_aprox": 428785
       },
       {
         "aerolinea": "LATAM",
         "salida": "21:45",
         "llegada": "22:50",
-        "precio_4pax": 1121060,
-        "precio_adulto_aprox": 415207
-      },
-      {
-        "aerolinea": "Avianca",
-        "salida": "16:10",
-        "llegada": "17:15",
-        "precio_4pax": 1136280,
-        "precio_adulto_aprox": 420844
+        "precio_4pax": 1157720,
+        "precio_adulto_aprox": 428785
       },
       {
         "aerolinea": "Avianca",
@@ -361,31 +361,31 @@
       },
       {
         "aerolinea": "Avianca",
-        "salida": "08:05",
-        "llegada": "09:10",
-        "precio_4pax": 1378820,
-        "precio_adulto_aprox": 510674
+        "salida": "16:10",
+        "llegada": "17:15",
+        "precio_4pax": 1207680,
+        "precio_adulto_aprox": 447289
       },
       {
         "aerolinea": "Avianca",
         "salida": "13:35",
         "llegada": "14:35",
-        "precio_4pax": 1378820,
-        "precio_adulto_aprox": 510674
+        "precio_4pax": 1287180,
+        "precio_adulto_aprox": 476733
       },
       {
-        "aerolinea": "LATAM",
-        "salida": "14:50",
-        "llegada": "15:55",
-        "precio_4pax": 1496860,
-        "precio_adulto_aprox": 554393
+        "aerolinea": "Avianca",
+        "salida": "08:05",
+        "llegada": "09:10",
+        "precio_4pax": 2114000,
+        "precio_adulto_aprox": 782963
       },
       {
         "aerolinea": "LATAM",
         "salida": "22:50",
         "llegada": "23:55",
-        "precio_4pax": 1496860,
-        "precio_adulto_aprox": 554393
+        "precio_4pax": 2431480,
+        "precio_adulto_aprox": 900548
       }
     ],
     "rango_tipico": [
@@ -402,8 +402,15 @@
         "aerolinea": "Wingo",
         "salida": "05:32",
         "llegada": "06:30",
-        "precio_4pax": 649200,
-        "precio_adulto_aprox": 240444
+        "precio_4pax": 456404,
+        "precio_adulto_aprox": 169039
+      },
+      {
+        "aerolinea": "Wingo",
+        "salida": "07:57",
+        "llegada": "08:55",
+        "precio_4pax": 570480,
+        "precio_adulto_aprox": 211289
       },
       {
         "aerolinea": "Wingo",
@@ -413,44 +420,30 @@
         "precio_adulto_aprox": 240444
       },
       {
-        "aerolinea": "Wingo",
-        "salida": "07:57",
-        "llegada": "08:55",
-        "precio_4pax": 649200,
-        "precio_adulto_aprox": 240444
-      },
-      {
-        "aerolinea": "Wingo",
-        "salida": "13:42",
-        "llegada": "14:40",
-        "precio_4pax": 649200,
-        "precio_adulto_aprox": 240444
-      },
-      {
         "aerolinea": "JetSMART",
-        "salida": "13:17",
-        "llegada": "14:20",
-        "precio_4pax": 703720,
-        "precio_adulto_aprox": 260637
+        "salida": "08:37",
+        "llegada": "09:40",
+        "precio_4pax": 664220,
+        "precio_adulto_aprox": 246007
       },
       {
         "aerolinea": "JetSMART",
         "salida": "05:02",
         "llegada": "06:05",
-        "precio_4pax": 703720,
-        "precio_adulto_aprox": 260637
-      },
-      {
-        "aerolinea": "JetSMART",
-        "salida": "08:37",
-        "llegada": "09:40",
-        "precio_4pax": 703720,
-        "precio_adulto_aprox": 260637
+        "precio_4pax": 664220,
+        "precio_adulto_aprox": 246007
       },
       {
         "aerolinea": "JetSMART",
         "salida": "09:12",
         "llegada": "10:15",
+        "precio_4pax": 703720,
+        "precio_adulto_aprox": 260637
+      },
+      {
+        "aerolinea": "JetSMART",
+        "salida": "13:17",
+        "llegada": "14:20",
         "precio_4pax": 703720,
         "precio_adulto_aprox": 260637
       },
@@ -476,9 +469,23 @@
         "precio_adulto_aprox": 260637
       },
       {
+        "aerolinea": "Wingo",
+        "salida": "13:42",
+        "llegada": "14:40",
+        "precio_4pax": 729900,
+        "precio_adulto_aprox": 270333
+      },
+      {
         "aerolinea": "LATAM",
-        "salida": "05:05",
-        "llegada": "06:10",
+        "salida": "05:30",
+        "llegada": "06:35",
+        "precio_4pax": 771080,
+        "precio_adulto_aprox": 285585
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "07:10",
+        "llegada": "08:10",
         "precio_4pax": 771080,
         "precio_adulto_aprox": 285585
       },
@@ -486,6 +493,13 @@
         "aerolinea": "LATAM",
         "salida": "07:55",
         "llegada": "08:55",
+        "precio_4pax": 771080,
+        "precio_adulto_aprox": 285585
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "17:35",
+        "llegada": "18:40",
         "precio_4pax": 771080,
         "precio_adulto_aprox": 285585
       },
@@ -500,22 +514,36 @@
         "aerolinea": "LATAM",
         "salida": "23:25",
         "llegada": "00:30",
-        "precio_4pax": 771080,
-        "precio_adulto_aprox": 285585
+        "precio_4pax": 806780,
+        "precio_adulto_aprox": 298807
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "21:40",
+        "llegada": "22:45",
+        "precio_4pax": 850560,
+        "precio_adulto_aprox": 315022
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "05:05",
+        "llegada": "06:10",
+        "precio_4pax": 898160,
+        "precio_adulto_aprox": 332652
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "19:55",
+        "llegada": "21:00",
+        "precio_4pax": 898160,
+        "precio_adulto_aprox": 332652
       },
       {
         "aerolinea": "Wingo",
         "salida": "16:32",
         "llegada": "17:30",
-        "precio_4pax": 797540,
-        "precio_adulto_aprox": 295385
-      },
-      {
-        "aerolinea": "Wingo",
-        "salida": "21:52",
-        "llegada": "22:50",
-        "precio_4pax": 797540,
-        "precio_adulto_aprox": 295385
+        "precio_4pax": 910320,
+        "precio_adulto_aprox": 337156
       },
       {
         "aerolinea": "Wingo",
@@ -525,72 +553,37 @@
         "precio_adulto_aprox": 337156
       },
       {
-        "aerolinea": "LATAM",
-        "salida": "11:10",
-        "llegada": "12:10",
-        "precio_4pax": 914360,
-        "precio_adulto_aprox": 338652
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "05:30",
-        "llegada": "06:35",
-        "precio_4pax": 953860,
-        "precio_adulto_aprox": 353281
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "07:10",
-        "llegada": "08:10",
-        "precio_4pax": 953860,
-        "precio_adulto_aprox": 353281
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "19:55",
-        "llegada": "21:00",
-        "precio_4pax": 953860,
-        "precio_adulto_aprox": 353281
-      },
-      {
-        "aerolinea": "LATAM",
-        "salida": "21:40",
-        "llegada": "22:45",
-        "precio_4pax": 953860,
-        "precio_adulto_aprox": 353281
+        "aerolinea": "Wingo",
+        "salida": "21:52",
+        "llegada": "22:50",
+        "precio_4pax": 910320,
+        "precio_adulto_aprox": 337156
       },
       {
         "aerolinea": "LATAM",
         "salida": "11:30",
         "llegada": "12:30",
-        "precio_4pax": 971720,
-        "precio_adulto_aprox": 359896
+        "precio_4pax": 953860,
+        "precio_adulto_aprox": 353281
       },
       {
         "aerolinea": "LATAM",
         "salida": "18:40",
         "llegada": "19:45",
-        "precio_4pax": 971720,
-        "precio_adulto_aprox": 359896
+        "precio_4pax": 953860,
+        "precio_adulto_aprox": 353281
       },
       {
         "aerolinea": "LATAM",
         "salida": "14:55",
         "llegada": "15:55",
-        "precio_4pax": 1013360,
-        "precio_adulto_aprox": 375319
+        "precio_4pax": 1044780,
+        "precio_adulto_aprox": 386956
       },
       {
         "aerolinea": "Avianca",
         "salida": "01:55",
         "llegada": "02:55",
-        "precio_4pax": 1077140,
-        "precio_adulto_aprox": 398941
-      },
-      {
-        "aerolinea": "Avianca",
-        "salida": "04:30",
-        "llegada": "05:30",
         "precio_4pax": 1077140,
         "precio_adulto_aprox": 398941
       },
@@ -647,13 +640,6 @@
         "aerolinea": "Avianca",
         "salida": "10:20",
         "llegada": "11:20",
-        "precio_4pax": 1077140,
-        "precio_adulto_aprox": 398941
-      },
-      {
-        "aerolinea": "Avianca",
-        "salida": "10:45",
-        "llegada": "11:40",
         "precio_4pax": 1077140,
         "precio_adulto_aprox": 398941
       },
@@ -749,18 +735,18 @@
         "precio_adulto_aprox": 398941
       },
       {
-        "aerolinea": "LATAM",
-        "salida": "12:45",
-        "llegada": "13:45",
-        "precio_4pax": 1125460,
-        "precio_adulto_aprox": 416837
+        "aerolinea": "Avianca",
+        "salida": "04:30",
+        "llegada": "05:30",
+        "precio_4pax": 1140680,
+        "precio_adulto_aprox": 422474
       },
       {
-        "aerolinea": "LATAM",
-        "salida": "17:35",
-        "llegada": "18:40",
-        "precio_4pax": 1125460,
-        "precio_adulto_aprox": 416837
+        "aerolinea": "Avianca",
+        "salida": "10:45",
+        "llegada": "11:40",
+        "precio_4pax": 1140680,
+        "precio_adulto_aprox": 422474
       },
       {
         "aerolinea": "Avianca",
@@ -787,35 +773,49 @@
         "aerolinea": "LATAM",
         "salida": "06:40",
         "llegada": "07:40",
-        "precio_4pax": 1144260,
-        "precio_adulto_aprox": 423800
+        "precio_4pax": 1162120,
+        "precio_adulto_aprox": 430415
       },
       {
         "aerolinea": "LATAM",
         "salida": "08:45",
         "llegada": "09:45",
-        "precio_4pax": 1198520,
-        "precio_adulto_aprox": 443896
+        "precio_4pax": 1162120,
+        "precio_adulto_aprox": 430415
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "11:10",
+        "llegada": "12:10",
+        "precio_4pax": 1162120,
+        "precio_adulto_aprox": 430415
+      },
+      {
+        "aerolinea": "LATAM",
+        "salida": "12:45",
+        "llegada": "13:45",
+        "precio_4pax": 1162120,
+        "precio_adulto_aprox": 430415
       }
     ]
   },
   "mejor_combinacion": {
     "ida": {
       "aerolinea": "Wingo",
-      "salida": "05:15",
-      "llegada": "06:17",
-      "precio_4pax": 644800,
-      "precio_adulto_aprox": 238815
+      "salida": "04:00",
+      "llegada": "05:02",
+      "precio_4pax": 452004,
+      "precio_adulto_aprox": 167409
     },
     "retorno": {
       "aerolinea": "Wingo",
       "salida": "05:32",
       "llegada": "06:30",
-      "precio_4pax": 649200,
-      "precio_adulto_aprox": 240444
+      "precio_4pax": 456404,
+      "precio_adulto_aprox": 169039
     },
-    "total_4pax": 1294000,
-    "precio_adulto_aprox": 479259,
+    "total_4pax": 908408,
+    "precio_adulto_aprox": 336447,
     "alerta": false
   }
 }
