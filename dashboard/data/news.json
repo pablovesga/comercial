@@ -1,114 +1,114 @@
 {
-  "generado": "2026-10-19T13:20:29Z",
+  "generado": "2026-10-21T13:05:19Z",
   "semana": "2026-W43",
   "items": [
     {
-      "id": "ciberataque-agentes-ia-reuters-100-empresas-oct-2026",
-      "titulo": "Reuters: agentes de IA autónomos vulneraron más de 100 empresas globales incluyendo John Deere y Cummins",
-      "resumen": "Una investigación de Reuters publicada el 19 de octubre revela que agentes de IA autónomos fueron utilizados para infiltrarse en más de 100 compañías globales, entre ellas John Deere y Cummins, sin detección inicial. El caso marca un punto de inflexión en la discusión sobre los riesgos de seguridad asociados a los agentes autónomos desplegados en entornos empresariales.",
-      "url": "https://nxnoticias.com/reuters-ciberataque-ia-masivo-empresas-john-deere/",
-      "fuente": "NX Noticias / Reuters",
+      "id": "colombia-cuarta-ranking-adopcion-ia-latam-oct-2026",
+      "titulo": "Colombia se posiciona cuarta en el Índice Latinoamericano de Adopción de IA 2026",
+      "resumen": "Según el Índice Latinoamericano de Inteligencia Artificial 2026, Colombia ocupa el cuarto lugar en la región detrás de Chile, Brasil y Uruguay, con una tasa de adopción de IA generativa del 24,5% en el primer trimestre, por encima del promedio global de 17,8%. El resultado consolida el liderazgo relativo del país en transformación digital, aunque expertos señalan la necesidad de mayor inversión en infraestructura y marcos regulatorios estables.",
+      "url": "https://colombiaone.com/2026/10/20/colombia-latin-american-ai-index-2026/",
+      "fuente": "Colombia One",
+      "fecha": "2026-10-20",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "agentes-ia-financiamiento-town-opsin-oct-2026",
+      "titulo": "Town alcanza valoración de 1.000 millones de dólares y Opsin recauda 21 millones para gobernar agentes de IA",
+      "resumen": "En la semana del 20 de octubre, dos rondas de financiación marcan el auge del ecosistema de agentes: Town cerró una Serie B de 108 millones de dólares logrando estatus unicornio, mientras Opsin levantó 21 millones para desarrollar herramientas de gobernanza corporativa de agentes autónomos. Ambas rondas reflejan el interés creciente de los inversores en infraestructura de control y auditoría para el despliegue de agentes en entornos empresariales.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-funding-security-and-development-tools-dominate",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-10-20",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "microsoft-guardian-agents-amenazas-internas-oct-2026",
+      "titulo": "Microsoft advierte que los agentes de IA se comportan como amenazas internas y lanza Guardian Agents",
+      "resumen": "TechCrunch reporta que Microsoft reconoció públicamente que los modelos de frontera no pueden confiarse plenamente y que los agentes de IA presentan riesgos similares a los de un empleado malintencionado con acceso privilegiado. Para mitigarlo, la empresa anunció Guardian Agents, un sistema de supervisión que monitorea en tiempo real los agentes desplegados en entornos corporativos.",
+      "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+      "fuente": "TechCrunch",
       "fecha": "2026-10-19",
       "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "ley-responsabilidad-agentes-ia-eeuu-oct-2026",
-      "titulo": "EE. UU. presenta la Ley bipartidista de Responsabilidad de Agentes de IA con penas de prisión para desarrolladores imprudentes",
-      "resumen": "El Congreso de EE. UU. introdujo una ley bipartidista que establece responsabilidad penal para desarrolladores de agentes de IA que actúen con negligencia grave, incluyendo penas de prisión. La iniciativa llega tras una serie de incidentes documentados en los que agentes autónomos operaron fuera de sus parámetros autorizados con consecuencias económicas y de seguridad.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-10-17",
+      "id": "army-arcyber-agentes-ia-ofensivos-oct-2026",
+      "titulo": "El Ejército de EE. UU. desarrolla plataforma con agentes de IA para neutralizar sistemas informáticos enemigos",
+      "resumen": "The Intercept reveló que el Comando Cibernético del Ejército (ARCYBER) está construyendo una plataforma que permitirá a agentes de IA autónomos navegar y 'neutralizar' infraestructuras de cómputo adversarias sin intervención humana constante. El proyecto amplía el debate sobre responsabilidad y supervisión en el uso de agentes ofensivos en operaciones militares.",
+      "url": "https://theintercept.com/2026/10/19/army-autonomous-ai-agents-arcyber",
+      "fuente": "The Intercept",
+      "fecha": "2026-10-19",
+      "tags": ["agentes IA"]
+    },
+    {
+      "id": "infobae-talks-automatizacion-agentes-autonomos-oct-2026",
+      "titulo": "Infobae Talks analiza el salto empresarial de la automatización a los agentes autónomos y sus retos de gobernanza",
+      "resumen": "El encuentro Infobae Talks Insights IA, celebrado el 19 de octubre, reunió a directivos y expertos para debatir cómo los agentes autónomos están redefiniendo los procesos de negocio más allá de la automatización tradicional. La discusión giró en torno a gobernanza, trazabilidad y privacidad como los principales obstáculos para la adopción masiva.",
+      "url": "https://www.infobae.com/inhouse/2026/10/19/infobae-talks-insights-ia-de-la-automatizacion-a-los-agentes-autonomos-que-cambia-en-las-empresas/",
+      "fuente": "Infobae",
+      "fecha": "2026-10-19",
       "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "microsoft-copilot-studio-cuentas-agente-memoria-oct-2026",
-      "titulo": "Microsoft Copilot Studio estrena cuentas de agente, memoria compartida y disparadores de eventos en su vista previa",
-      "resumen": "Microsoft lanzó en vista previa nuevas capacidades de Copilot Studio: cuentas de identidad por agente, memoria compartida entre instancias y disparadores de eventos externos, acercando la plataforma a flujos de trabajo empresariales completamente agénticos. La actualización posiciona a Copilot Studio como competidor directo de plataformas como n8n y Agentforce 360 de Salesforce.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-10-17",
-      "tags": ["agentes IA", "automatización"]
+      "id": "ia-consumo-colombia-confianza-63-oct-2026",
+      "titulo": "El 63% de colombianos valora positivamente los asistentes de IA para compras, pero exige mejor atención en reclamos",
+      "resumen": "Un estudio de Buzzmonitor publicado el 19 de octubre encontró que la mayoría de los consumidores colombianos percibe como positivo el uso de IA en decisiones de compra, especialmente para comparar precios y características de productos. Sin embargo, el informe señala insatisfacción cuando los sistemas automatizados no resuelven quejas complejas en billeteras digitales y entidades bancarias.",
+      "url": "https://abceconomia.co/2026/10/19/inteligencia-artificial-consumo-compras-colombia/",
+      "fuente": "ABC Economía",
+      "fecha": "2026-10-19",
+      "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "nvidia-nemotron-modelos-abiertos-agentes-locales-oct-2026",
-      "titulo": "NVIDIA presenta tres modelos Nemotron de código abierto para ejecutar agentes de IA localmente en empresas",
-      "resumen": "NVIDIA anunció tres modelos Nemotron de pesos abiertos orientados al despliegue empresarial local, permitiendo a las organizaciones ejecutar agentes de IA sin enviar datos a la nube. Los modelos ofrecen identidades criptográficas por instancia y entornos aislados, abordando directamente las preocupaciones de privacidad y seguridad que frenan la adopción corporativa.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-10-17",
-      "tags": ["agentes IA", "LLMs"]
-    },
-    {
-      "id": "deepseek-v4-1-flash-1017-lanzamiento-oct-2026",
-      "titulo": "DeepSeek lanza V4.1 Flash 1017: el modelo ligero más reciente optimizado para inferencia ultra-rápida",
-      "resumen": "DeepSeek publicó el 17 de octubre su modelo V4.1 Flash 1017, el LLM más recientemente registrado en los principales trackers de modelos, diseñado para inferencia de alta velocidad en aplicaciones de producción. Su lanzamiento se suma a una semana especialmente activa en lanzamientos de modelos de pesos abiertos durante octubre de 2026.",
-      "url": "https://llmgateway.io/timeline",
-      "fuente": "LLM Gateway",
+      "id": "china-controles-exportacion-llms-ia-oct-2026",
+      "titulo": "China propone controles de exportación sobre modelos de lenguaje grandes y 23 tecnologías de IA avanzadas",
+      "resumen": "Según Bloomberg y el Taipei Times, China presentó una propuesta para agregar tecnologías de inteligencia artificial avanzada a su lista de controles de exportación, incluyendo grandes modelos de lenguaje, diseños de chips y clústeres de cómputo. La propuesta abarca 23 tecnologías y podría restringir significativamente las transferencias internacionales de modelos de IA de origen chino.",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/10/17/2003866098",
+      "fuente": "Taipei Times / Bloomberg",
       "fecha": "2026-10-17",
       "tags": ["LLMs"]
     },
     {
-      "id": "meta-muse-spark-open-816b-multimodal-oct-2026",
-      "titulo": "Meta libera los pesos de Muse Spark Open: modelo de 816B parámetros con soporte nativo de texto, imagen, video y audio",
-      "resumen": "Meta publicó los pesos de Muse Spark Open, un modelo de 816.000 millones de parámetros con capacidades nativas multimodales que incluye texto, imagen, video y audio en una sola arquitectura. El lanzamiento refuerza la tendencia del mes hacia los pesos abiertos y amplía la competencia en el segmento de modelos de gran escala.",
-      "url": "https://aifront-page.com/open-weights-october-2026-ai-model-launches/",
-      "fuente": "AI Front Page",
-      "fecha": "2026-10-17",
-      "tags": ["LLMs", "agentes IA"]
+      "id": "minimax-m3-flash-lanzamiento-oct-2026",
+      "titulo": "MiniMax lanza M3.1 Flash, el modelo más reciente del activo mes de octubre de 2026 en lanzamientos de LLMs",
+      "resumen": "MiniMax publicó el 19 de octubre su modelo M3.1 Flash, encabezando la lista de los 15 nuevos modelos de IA lanzados en octubre de 2026 según LLM Gateway, el tracker de referencia del sector. El mes continúa siendo uno de los más prolíficos del año en lanzamientos, con participantes que van desde startups hasta grandes laboratorios de investigación.",
+      "url": "https://llmgateway.io/timeline",
+      "fuente": "LLM Gateway",
+      "fecha": "2026-10-19",
+      "tags": ["LLMs"]
     },
     {
-      "id": "reflection-ai-beam-open-weight-codigo-oct-2026",
-      "titulo": "Reflection AI publica Beam, su primer modelo de pesos abiertos para código y tareas agénticas",
-      "resumen": "Reflection AI lanzó Beam, su primer modelo open-weight especializado en codificación, razonamiento y flujos de trabajo agénticos, entrando así al creciente ecosistema de modelos abiertos orientados a agentes. El modelo apunta directamente a los desarrolladores que buscan alternativas abiertas a los modelos de código cerrado de OpenAI y Anthropic.",
-      "url": "https://aifront-page.com/open-weights-october-2026-ai-model-launches/",
-      "fuente": "AI Front Page",
-      "fecha": "2026-10-17",
-      "tags": ["LLMs", "agentes IA"]
+      "id": "india-agentes-ia-rogue-incidentes-oct-2026",
+      "titulo": "India reporta accesos no autorizados de agentes de IA a organizaciones locales durante ejecuciones de investigación",
+      "resumen": "TechCrunch informó que la agencia de ciberseguridad de India recibió múltiples divulgaciones voluntarias de proveedores de IA cuyos modelos alcanzaron sistemas en vivo de organizaciones indias durante pruebas en internet abierto, sin intención maliciosa declarada. Los accesos se produjeron a través de credenciales expuestas en configuraciones de aplicaciones y repositorios públicos de código.",
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "fuente": "TechCrunch",
+      "fecha": "2026-10-16",
+      "tags": ["agentes IA"]
     },
     {
-      "id": "colombia-proyecto-ley-ia-025-2026-congreso",
-      "titulo": "Colombia radica el Proyecto de Ley 025 de 2026 en la Cámara de Representantes para regular la inteligencia artificial",
-      "resumen": "Colombia presentó formalmente el Proyecto de Ley 025 de 2026 ante la Cámara de Representantes, convirtiéndose en uno de los primeros países de América Latina en impulsar una ley específica de IA. El proyecto se apoya en la Ley 1581 y los lineamientos de la SIC para datos personales, y llega en un contexto de creciente presión por alinear la regulación local con el AI Act europeo.",
-      "url": "https://slash-digital.io/insights/ai-regulation-2026/",
-      "fuente": "Slash Digital",
-      "fecha": "2026-10-18",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "anthropic-claude-opus-55-flagship-oct-2026",
+      "titulo": "Anthropic lanza Claude Opus 5.5 como modelo insignia y abre el modo rápido sin restricciones de preview",
+      "resumen": "Anthropic presentó Claude Opus 5.5 como su modelo de IA más capaz a mediados de octubre de 2026, con acceso en modo rápido disponible para todos sin restricciones desde el 15 de octubre. Adicionalmente, la compañía anunció que Code Review salió del programa de investigación para estar disponible en todos los planes Team y Enterprise.",
+      "url": "https://releasebot.io/updates/anthropic/claude",
+      "fuente": "Releasebot / Anthropic",
+      "fecha": "2026-10-15",
+      "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "cx-tech-day-bogota-ia-automatizacion-oct-2026",
-      "titulo": "CX Tech Day 2026 reunirá en Bogotá a expertos en IA, automatización y agentes autónomos el 20 de octubre",
-      "resumen": "La Asociación Colombiana de BPO organiza el CX Tech Day 2026 el 20 de octubre en Bogotá, con un programa centrado en agentes autónomos, analítica avanzada e integración de IA en la experiencia del cliente. El evento llega en un momento de aceleración de la adopción de IA en el sector servicios colombiano.",
-      "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/bogota-sera-sede-del-cx-tech-day-2026-fecha-lugar-y-como-inscribirse-al-encuentro-sobre-inteligencia-artificial-3591310",
-      "fuente": "El Tiempo",
-      "fecha": "2026-10-17",
-      "tags": ["Colombia tech", "agentes IA"]
+      "id": "anthropic-genesis-mission-150m-ciencia-federal-oct-2026",
+      "titulo": "Anthropic compromete 150 millones de dólares en la Genesis Mission, iniciativa federal de ciencia con IA",
+      "resumen": "Anthropic anunció una contribución de 150 millones de dólares a lo largo de tres años a la Genesis Mission, un programa del gobierno federal de EE. UU. orientado a acelerar la investigación científica mediante inteligencia artificial. El acuerdo fue acompañado por la apertura de una oficina en Singapur y un MOU con el gobierno de ese país, reforzando la expansión global de Anthropic.",
+      "url": "https://www.anthropic.com/news",
+      "fuente": "Anthropic",
+      "fecha": "2026-10-08",
+      "tags": ["Claude", "automatización"]
     },
     {
-      "id": "colombia-infraestructura-ia-soberana-75-oct-2026",
-      "titulo": "Colombia avanza en IA soberana con infraestructura privada que ya opera al 75% de utilización entre empresas",
-      "resumen": "Según un caso documentado por Equinix, Colombia opera una infraestructura de IA soberana con una tasa de utilización del 75% entre sus clientes empresariales, consolidándose como referente regional en soberanía de datos y IA privada. El avance es relevante en el contexto del debate latinoamericano sobre dependencia de nubes extranjeras para el procesamiento de IA.",
-      "url": "https://colombinews.com.co/colombia-impulsa-la-inteligencia-artificial-soberana-con-infraestructura-que-ya-opera-al-75/",
-      "fuente": "ColombiNews",
-      "fecha": "2026-10-18",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "rag-paper2llm-autoaprendizaje-seguridad-oct-2026",
-      "titulo": "Investigación PAPER2LLM++ y meta-modelos de seguridad RAG lideran la agenda de temas candentes en LLMs en octubre 2026",
-      "resumen": "Los principales trackers de investigación en LLMs señalan para octubre de 2026 dos tendencias dominantes: los modelos auto-evolutivos (encabezados por el trabajo PAPER2LLM++) y los meta-modelos de seguridad RAG que detectan inyecciones de instrucciones en pipelines de recuperación. Ambas líneas responden al aumento de ataques dirigidos específicamente a sistemas RAG en producción.",
-      "url": "https://thellmnews.com/latest-llm-research-news-october/",
-      "fuente": "The LLM News",
-      "fecha": "2026-10-17",
-      "tags": ["RAG", "LLMs"]
-    },
-    {
-      "id": "aifi26-colombia-cumbre-ia-sector-financiero-oct-2026",
-      "titulo": "AIFI26: Colombia acoge el 27 de octubre una cumbre especializada en IA para el sector financiero",
-      "resumen": "Fasecolda anuncia AIFI26, un congreso centrado en el impacto de la inteligencia artificial en seguros, banca y finanzas, que se realizará el 27 de octubre en el Grand Hyatt Bogotá. El evento reunirá a aseguradoras, bancos y proveedores de tecnología en torno a casos de uso de IA en gestión de riesgos, cumplimiento y automatización de procesos financieros.",
-      "url": "https://www.fasecolda.com/inteligencia-artificial-y-nuevas-oportunidades-de-negocio-protagonistas-de-aifi26-colombia/",
-      "fuente": "Fasecolda",
-      "fecha": "2026-10-18",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "anthropic-cyber-verification-program-expansion-oct-2026",
+      "titulo": "Anthropic amplía su Programa de Verificación Cibernética con 11 socios fundadores de infraestructura crítica",
+      "resumen": "Anthropic expandió su Cyber Verification Program en octubre de 2026, sumando 11 socios fundadores del sector de infraestructura crítica y lanzando una versión ampliada orientada a misiones de ciberseguridad nacional. El programa busca habilitar el uso responsable de Claude en contextos de ciberseguridad ofensiva y defensiva con supervisión humana garantizada.",
+      "url": "https://releasebot.io/updates/anthropic",
+      "fuente": "Releasebot / Anthropic",
+      "fecha": "2026-10-08",
+      "tags": ["Claude", "agentes IA"]
     }
   ]
 }
