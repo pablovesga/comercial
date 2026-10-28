@@ -1,96 +1,105 @@
 {
-  "generado": "2026-10-26T13:21:00Z",
+  "generado": "2026-10-28T13:10:00Z",
   "semana": "2026-W44",
   "items": [
     {
-      "id": "tokengate-stanford-berkeley-rag-prefill-oct-2026",
-      "titulo": "Stanford y Berkeley crean TokenGate para reducir hasta 11 veces el costo de prefill en RAG y agentes",
-      "resumen": "Investigadores de Stanford y UC Berkeley presentaron TokenGate, una técnica que reduce el tiempo de prefill de contextos largos hasta 11,3 veces mediante la poda de tokens de bajo valor. El método impacta especialmente los flujos de RAG y agentes de IA de múltiples pasos, donde los contextos extensos son la norma.",
-      "url": "https://startupfortune.com/stanford-and-berkeley-researchers-build-tokengate-to-cut-llm-prefill-costs",
-      "fuente": "Startup Fortune",
-      "fecha": "2026-10-26",
+      "id": "nvidia-oracle-vera-rubin-cloud-agentes-ia-oct-2026",
+      "titulo": "NVIDIA y Oracle despliegan chips Vera Rubin en Oracle Cloud para escalar infraestructura de agentes de IA",
+      "resumen": "NVIDIA y Oracle anunciaron la expansión de Oracle Cloud Infrastructure con sistemas Vera Rubin capaces de manejar cargas de trabajo de varios gigavatios orientadas a IA agentica. La colaboración separa los recursos intensivos en GPU para entrenamiento de los recursos de CPU para tareas de agentes, optimizando el costo operativo de flotas de agentes autónomos.",
+      "url": "https://riorundown.substack.com/p/ai-news-oct-28-2026-agentic-ai-risks",
+      "fuente": "Rio Rundown",
+      "fecha": "2026-10-28",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "ibm-herramientas-gobernanza-agentes-ia-oct-2026",
+      "titulo": "IBM lanza herramientas de gobernanza para auditar y controlar agentes de IA en entornos empresariales",
+      "resumen": "IBM presentó un conjunto de soluciones diseñadas para monitorear, auditar y limitar el comportamiento de agentes de IA en producción, incluyendo entornos aislados, registros de auditoría y sistemas de permisos granulares. Las herramientas apuntan a sectores regulados como banca y salud, donde el control de agentes autónomos es una exigencia crítica.",
+      "url": "https://aidapted.ro/en/articles/ai-news-of-october-28-2026",
+      "fuente": "AIdapted",
+      "fecha": "2026-10-28",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "delaware-ley-agentes-ia-empresas-autonomas-oct-2026",
+      "titulo": "Delaware evalúa legislación que permitiría a agentes de IA dirigir empresas enteras sin supervisión humana",
+      "resumen": "Legisladores de Delaware debaten una propuesta que habilitaría a agentes de inteligencia artificial para tomar decisiones ejecutivas y operar compañías de forma autónoma, sin requerir supervisión humana permanente. La iniciativa abre un debate sin precedentes sobre responsabilidad legal, gobernanza corporativa y los límites éticos de la autonomía de los sistemas de IA.",
+      "url": "https://riorundown.substack.com/p/ai-news-oct-28-2026-agentic-ai-risks",
+      "fuente": "Rio Rundown",
+      "fecha": "2026-10-28",
+      "tags": ["agentes IA"]
+    },
+    {
+      "id": "google-gemini-coworker-workspace-oct-2026",
+      "titulo": "Google convierte a Gemini en un 'coworker' con identidad propia dentro de Google Workspace",
+      "resumen": "Google presentó un nuevo modo de Gemini en Workspace donde el agente de IA obtiene su propia dirección de correo electrónico, acceso a Google Calendar y Drive, y puede colaborar en proyectos como un miembro más del equipo. El modo 'coworker' marca un paso concreto hacia la integración de agentes autónomos en el flujo de trabajo empresarial cotidiano.",
+      "url": "https://aidapted.ro/en/articles/ai-news-of-october-28-2026",
+      "fuente": "AIdapted",
+      "fecha": "2026-10-28",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "leann-vector-index-berkeley-rag-oct-2026",
+      "titulo": "LEANN: nuevo índice vectorial de Berkeley reduce un índice RAG de 201 GB a 6 GB sin perder precisión",
+      "resumen": "Investigadores de UC Berkeley presentaron LEANN en MLSys 2026, un índice vectorial de código abierto que recomputa embeddings en tiempo de consulta en lugar de almacenarlos, logrando reducir un índice de 60 millones de fragmentos de 201 GB a solo 6 GB. El proyecto está disponible bajo licencia MIT y acumuló más de 11.000 estrellas en GitHub desde su publicación.",
+      "url": "https://marktechpost.com/2026/10/27/leann-vector-index-mlsys-2026",
+      "fuente": "MarkTechPost",
+      "fecha": "2026-10-27",
       "tags": ["RAG", "LLMs"]
     },
     {
-      "id": "cloudflare-migra-rust-agentes-ia-oct-2026",
-      "titulo": "Cloudflare migra parte de su código a Rust con agentes de IA que escriben código optimizado para agentes",
-      "resumen": "Cloudflare anunció que está desarrollando un puerto de parte de su base de código en Rust, redactado íntegramente por agentes de IA y diseñado para que esa nueva base también sea más eficiente al servir cargas de trabajo agénticas. El proyecto muestra cómo las empresas comienzan a apostar por infraestructura generada y optimizada por IA de extremo a extremo.",
-      "url": "https://llm-stats.com/ai-news",
-      "fuente": "LLM Stats",
-      "fecha": "2026-10-25",
+      "id": "aifi26-colombia-ia-sector-financiero-oct-2026",
+      "titulo": "AIFI26 reúne en Bogotá a líderes del sector financiero colombiano para debatir el impacto de los agentes de IA",
+      "resumen": "El evento AIFI26 Colombia se realizó el 27 de octubre en Bogotá con la participación de bancos, fintech y reguladores para discutir cómo los agentes de inteligencia artificial transformarán la industria financiera. Los debates se centraron en automatización de procesos, detección de fraude y los marcos regulatorios necesarios para operar agentes autónomos en el sector.",
+      "url": "https://colombinews.com.co/aifi26-colombia-reune-a-expertos-para-debatir-el-futuro-de-la-inteligencia-artificial-en-el-sistema-financiero/",
+      "fuente": "Colombinews",
+      "fecha": "2026-10-27",
+      "tags": ["Colombia tech", "agentes IA"]
+    },
+    {
+      "id": "lloyds-bank-agentes-ia-fraude-90-precision-oct-2026",
+      "titulo": "Lloyds Bank amplía su plataforma de agentes de IA para investigación de fraudes con más del 90% de precisión",
+      "resumen": "Lloyds Bank anunció la expansión de su sistema de agentes de inteligencia artificial para investigación de fraudes financieros, alcanzando una precisión superior al 90% en decisiones automáticas. La plataforma permite que los agentes reúnan evidencia, correlacionen patrones sospechosos y escalen casos complejos a analistas humanos solo cuando es estrictamente necesario.",
+      "url": "https://riorundown.substack.com/p/ai-news-oct-28-2026-agentic-ai-risks",
+      "fuente": "Rio Rundown",
+      "fecha": "2026-10-27",
       "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "walmart-agentes-ia-compras-autonomas-oct-2026",
-      "titulo": "Walmart abre sus plataformas a agentes de IA para que realicen compras en nombre de los usuarios",
-      "resumen": "Walmart presentó herramientas que permiten a agentes de inteligencia artificial comprar productos en su plataforma en representación de los clientes, incluyendo capacidades para gestionar listas, comparar precios y completar órdenes automáticamente. El anuncio posiciona a Walmart como uno de los primeros grandes retailers en adoptar un modelo de comercio mediado por agentes autónomos.",
-      "url": "https://es-us.finanzas.yahoo.com/noticias/walmart-bienvenida-agentes-ia-compras-094132063.html",
-      "fuente": "Yahoo Finanzas",
-      "fecha": "2026-10-24",
-      "tags": ["agentes IA", "automatización"]
+      "id": "anthropic-claude-security-beta-empresa-oct-2026",
+      "titulo": "Anthropic abre en beta pública Claude Security para detectar vulnerabilidades en código empresarial",
+      "resumen": "Anthropic anunció la disponibilidad en beta pública de Claude Security, una herramienta especializada en identificar vulnerabilidades de seguridad en bases de código empresariales, inicialmente para clientes Enterprise. La solución aprovecha las capacidades de razonamiento extendido de los modelos Claude para analizar patrones de riesgo y generar reportes accionables para equipos de seguridad.",
+      "url": "https://releasebot.io/updates/anthropic/claude",
+      "fuente": "Releasebot / Anthropic",
+      "fecha": "2026-10-26",
+      "tags": ["Claude", "automatización"]
     },
     {
-      "id": "openai-gpt6-sol-luna-50-reduccion-costos-oct-2026",
-      "titulo": "OpenAI presenta GPT-6 Sol y GPT-6 Luna con reducción del 50% en costos de tokens",
-      "resumen": "OpenAI lanzó dos nuevos modelos de la familia GPT-6 —Sol y Luna— con una reducción reportada del 50% en el costo por token respecto a generaciones anteriores. El movimiento intensifica la guerra de precios entre los grandes proveedores de LLMs y amplía el acceso a modelos de frontera para empresas de menor tamaño.",
-      "url": "https://aicoverage.org/topic/models",
-      "fuente": "AI Coverage",
-      "fecha": "2026-10-24",
-      "tags": ["LLMs"]
-    },
-    {
-      "id": "notion-agente-autonomo-tareas-24-horas-oct-2026",
-      "titulo": "Notion despliega agente de IA capaz de ejecutar tareas durante más de 24 horas de forma autónoma",
-      "resumen": "Notion anunció un nuevo modo de agente que permite a su IA mantener el contexto y ejecutar flujos de trabajo durante más de 24 horas sin supervisión constante del usuario. La funcionalidad apunta a proyectos complejos con múltiples pasos, como análisis de documentos extensos, generación de reportes o gestión de contenidos a lo largo del tiempo.",
-      "url": "https://icenico.es/blog/noticias-ia-octubre-2026-resumen/",
-      "fuente": "Icenico Tech News",
-      "fecha": "2026-10-24",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "kimi-k31-pro-highspeed-moonshot-oct-2026",
-      "titulo": "Moonshot AI lanza Kimi K3.1 Pro Highspeed, nuevo LLM optimizado para agentes y baja latencia",
-      "resumen": "Moonshot AI publicó Kimi K3.1 Pro Highspeed el 23 de octubre, un modelo diseñado para ofrecer alta velocidad de respuesta en tareas de programación, uso de computadoras y agentes autónomos. El lanzamiento suma una nueva alternativa en el creciente mercado de LLMs especializados en flujos de trabajo agénticos con bajo tiempo de latencia.",
-      "url": "https://llmgateway.io/timeline",
-      "fuente": "LLM Gateway",
-      "fecha": "2026-10-23",
-      "tags": ["LLMs", "agentes IA"]
-    },
-    {
-      "id": "colombia-cuarta-indice-latinoamericano-ia-ilia-oct-2026",
-      "titulo": "Colombia se consolida cuarta en el Índice Latinoamericano de IA 2026 con 56,8 puntos",
-      "resumen": "Según el ILIA 2026, Colombia obtuvo 56,8 puntos sobre 100 y quedó en el cuarto lugar entre 20 países de la región, manteniéndose en el grupo de adoptantes pero con brechas pendientes en formación de profesionales especializados. El estudio evalúa capacidad institucional, infraestructura, talento y regulación en inteligencia artificial a nivel latinoamericano.",
-      "url": "https://www.larepublica.co/globoeconomia/colombia-se-mantiene-cuarta-en-adopcion-de-inteligencia-artificial-en-la-region-4507275",
-      "fuente": "La República",
-      "fecha": "2026-10-23",
+      "id": "colombia-ia-soberana-infraestructura-bogota-oct-2026",
+      "titulo": "Colombia impulsa IA soberana con plataforma empresarial en Bogotá que opera ya al 75% de utilización",
+      "resumen": "Engineering System, en alianza con HPE y Equinix, puso en operación una plataforma de inteligencia artificial soberana alojada en Bogotá que alcanza el 75% de utilización entre clientes empresariales colombianos. La iniciativa busca reducir la dependencia de infraestructura extranjera y garantizar que los datos de las empresas colombianas permanezcan bajo regulación nacional.",
+      "url": "https://colombinews.com.co/colombia-impulsa-la-inteligencia-artificial-soberana-con-infraestructura-que-ya-opera-al-75/",
+      "fuente": "Colombinews",
+      "fecha": "2026-10-26",
       "tags": ["Colombia tech"]
     },
     {
-      "id": "colombia-gobierno-inversion-479000-ia-2030-oct-2026",
-      "titulo": "Colombia destina $479.000 millones para fortalecer la inteligencia artificial hasta 2030",
-      "resumen": "El Gobierno colombiano anunció una inversión de $479.000 millones de pesos para impulsar la adopción, desarrollo y regulación de la IA en el país hasta 2030. Los recursos cubrirán infraestructura tecnológica, formación de talento humano y el fortalecimiento del ecosistema de empresas de base tecnológica que trabajan con inteligencia artificial.",
-      "url": "https://colombinews.com.co/gobierno-de-colombia-destina-479-000-millones-para-potenciar-inteligencia-artificial-hasta-2030/",
+      "id": "colombia-dos-tercios-empresas-software-ia-oct-2026",
+      "titulo": "Dos de cada tres empresas de software en Colombia ya incorporan inteligencia artificial en sus procesos",
+      "resumen": "Un nuevo informe revela que el 66% de las empresas del sector de software en Colombia han integrado alguna forma de inteligencia artificial en sus operaciones, un salto notable frente al 34% registrado el año anterior. El crecimiento se concentra en automatización de soporte al cliente, análisis de datos y generación de código asistida por IA.",
+      "url": "https://colombinews.com.co/dos-de-cada-tres-empresas-de-software-en-colombia-incorporan-inteligencia-artificial-en-sus-procesos/",
       "fuente": "Colombinews",
-      "fecha": "2026-10-23",
+      "fecha": "2026-10-26",
       "tags": ["Colombia tech", "automatización"]
     },
     {
-      "id": "anthropic-claude-duet-agente-proactivo-oct-2026",
-      "titulo": "Anthropic lanza Claude Duet, agente proactivo que monitorea apps y actúa con aprobación del usuario",
-      "resumen": "Anthropic presentó Claude Duet en vista previa de investigación para suscriptores Pro y Max: un agente que actúa como asistente personal proactivo, revisa aplicaciones conectadas cada pocas horas, envía un resumen matutino y solicita aprobación explícita antes de tomar acciones como enviar mensajes, realizar pagos o eliminar archivos. El agente corre sobre Claude Opus 5.5 y está disponible en iOS, Android y claude.ai.",
-      "url": "https://ecosistemastartup.com/anthropic-lanza-claude-duet-su-agente-de-ia-para-pymes/",
-      "fuente": "Ecosistema Startup",
-      "fecha": "2026-10-21",
-      "tags": ["Claude", "agentes IA"]
-    },
-    {
-      "id": "colombia-google-15000-becas-ia-educacion-oct-2026",
-      "titulo": "Colombia y Google lanzan alianza con 15.000 becas y hasta 7 millones de licencias educativas en IA",
-      "resumen": "El Ministerio de Educación, MinTIC y el SENA firmaron con Google una nueva fase de cooperación que incluye 15.000 becas en inteligencia artificial, hasta siete millones de licencias educativas para instituciones públicas y un programa con potencial de llegar a un millón de personas vía el SENA. El acuerdo surgió del World Governments Summit 2026 y prioriza zonas afectadas por desastres naturales en Colombia.",
-      "url": "https://www.eltiempo.com/tecnosfera/inteligencia-artificial/gobierno-nacional-y-google-anuncian-alianza-estrategica-para-transformar-la-educacion-en-colombia-con-inteligencia-artificial-3593226",
-      "fuente": "El Tiempo",
-      "fecha": "2026-10-16",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "ue-ley-ia-primer-estandar-tecnico-oct-2026",
+      "titulo": "La Comisión Europea publica el primer estándar técnico vinculante de la Ley de IA de la UE",
+      "resumen": "La Comisión Europea publicó la primera norma técnica armonizada derivada de la Ley de IA, que establece requisitos de transparencia, trazabilidad y evaluación de riesgos para sistemas de alto riesgo desplegados en la UE. El estándar aplica a sistemas usados en empleo, educación, infraestructura crítica y justicia, con plazos de cumplimiento escalonados hasta 2027.",
+      "url": "https://zalenagency.com/blog/novedades-ia-finales-octubre-2026/",
+      "fuente": "Zalen Agency",
+      "fecha": "2026-10-25",
+      "tags": ["automatización", "LLMs"]
     }
   ]
 }
