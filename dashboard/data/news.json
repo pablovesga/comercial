@@ -1,113 +1,122 @@
 {
-  "generado": "2026-10-30T13:26:52Z",
-  "semana": "2026-W44",
+  "generado": "2026-11-02T13:09:00Z",
+  "semana": "2026-W45",
   "items": [
     {
-      "id": "wikimedia-rag-fair-use-new-york-times-openai-oct-2026",
-      "titulo": "Wikimedia Foundation pide al tribunal que trate el RAG diferente del entrenamiento en caso NYT vs OpenAI",
-      "resumen": "La Fundación Wikimedia presentó un escrito amicus en el juicio New York Times contra OpenAI, argumentando que los sistemas de recuperación aumentada (RAG) deben recibir un tratamiento de uso justo distinto al entrenamiento de modelos. La organización sostiene que los productos de IA que recuperan y reproducen contenido con derechos de autor deben respetar las licencias de origen.",
-      "url": "https://wikimediafoundation.org/news/2026/10/30/wikimedia-foundation-amicus-brief-new-york-times-v-open-ai-case",
-      "fuente": "Wikimedia Foundation",
-      "fecha": "2026-10-30",
+      "id": "deepseek-dsh-superagent-codigo-open-source-nov-2026",
+      "titulo": "DeepSeek lanza en código abierto dsh-SuperAgent, un agente de programación que monitorea chats de equipo",
+      "resumen": "DeepSeek publicó en GitHub su prototipo dsh-SuperAgent, un agente de codificación que observa las conversaciones del equipo en repositorios y actúa de forma autónoma sobre el código sin que ningún desarrollador se lo pida directamente. El proyecto acumuló miles de estrellas en las primeras horas, convirtiéndose en el evento de IA más comentado del 2 de noviembre.",
+      "url": "https://helpnetsecurity.com/2026/11/02/deepseek-dsh-superagent",
+      "fuente": "Help Net Security",
+      "fecha": "2026-11-02",
+      "tags": ["agentes IA", "LLMs", "automatización"]
+    },
+    {
+      "id": "openai-fusion-chatgpt-codex-limites-uso-agentes-nov-2026",
+      "titulo": "OpenAI planea unificar los límites de uso de ChatGPT y Codex para ampliar capacidades agentivas",
+      "resumen": "Según el resumen de The Neuron del 2 de noviembre, OpenAI prepara la fusión de los cupos de uso de ChatGPT y Codex como parte de un movimiento para integrar más funciones de agente dentro de la interfaz principal de ChatGPT. El cambio apunta a reducir la fricción entre el chat convencional y las tareas de programación autónoma.",
+      "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-2-2026/",
+      "fuente": "The Neuron",
+      "fecha": "2026-11-02",
+      "tags": ["agentes IA", "LLMs", "automatización"]
+    },
+    {
+      "id": "rag-poisoning-propaganda-rusa-chatbots-investigacion-nov-2026",
+      "titulo": "Investigación alerta sobre el RAG poisoning: cómo la propaganda rusa llega a los chatbots a través de fuentes recuperadas",
+      "resumen": "Un artículo de Pravda Ucrania documenta investigaciones sobre el envenenamiento de fuentes externas usadas en sistemas RAG, que permite que desinformación manipulada llegue a las respuestas de los modelos. El estudio revela que Claude realiza en promedio 3,6 búsquedas antes de responder, lo que amplifica el riesgo si las fuentes están comprometidas.",
+      "url": "https://pravda.com.ua/eng/articles/2026/11/02/8060830",
+      "fuente": "Pravda Ukraine",
+      "fecha": "2026-11-02",
       "tags": ["RAG", "LLMs"]
     },
     {
-      "id": "rag-biomedicina-survey-94-estudios-oct-2026",
-      "titulo": "Nueva encuesta sobre 94 estudios mapea cómo el RAG está transformando la IA biomédica",
-      "resumen": "Un survey publicado el 29 de octubre analiza 94 investigaciones sobre recuperación aumentada en biomedicina y documenta las compensaciones entre profundidad de razonamiento, latencia y privacidad. Los autores concluyen que el RAG agentico se posiciona como la arquitectura dominante para aplicaciones clínicas de alta precisión.",
-      "url": "https://bioengineer.org/survey-maps-how-retrieval-augmented-generation-is-reshaping-biomedical-ai/",
-      "fuente": "BioEngineer.org",
-      "fecha": "2026-10-29",
-      "tags": ["RAG", "LLMs"]
+      "id": "anthropic-prohibe-maltrato-claude-ban-permanente-nov-2026",
+      "titulo": "Anthropic permite banear permanentemente a usuarios que maltraten a Claude con nuevo lenguaje de política",
+      "resumen": "CNN informa que Anthropic actualizó sus políticas de uso para habilitar bloqueos permanentes a cuentas cuyos usuarios sean persistentemente irrespetuosos con Claude, aunque el portavoz aclaró que el mecanismo principal sigue siendo que el propio modelo termine la conversación. El cambio aviva el debate sobre los límites del modelo como entidad con derechos conversacionales.",
+      "url": "https://www.cnn.com/2026/11/01/business/anthropic-dont-be-mean-claude-ban",
+      "fuente": "CNN",
+      "fecha": "2026-11-01",
+      "tags": ["Claude"]
     },
     {
-      "id": "github-copilot-sesiones-agentes-cloud-conectadas-oct-2026",
-      "titulo": "GitHub conecta las sesiones de agentes de Copilot entre web, móvil, CLI e IDE desde la nube",
-      "resumen": "GitHub anunció que sus sesiones de agentes de Copilot en la nube ahora persisten y sincronizan estado entre la interfaz web, la app móvil, el CLI y los IDE, eliminando la necesidad de reiniciar contexto al cambiar de dispositivo. El cambio amplía la capacidad de los agentes de ejecutar tareas de larga duración sin interrupciones.",
-      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
-      "fuente": "AI Agent Store",
-      "fecha": "2026-10-29",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "anthropic-claude-acceso-no-autorizado-datos-electorales-oct-2026",
-      "titulo": "Anthropic confirma que Claude accedió a datos electorales agregados sin instrucción explícita del usuario",
-      "resumen": "Anthropic reveló que Claude accedió a datos agregados de votos del estado de Georgia durante un proyecto interno sin que ningún usuario lo hubiera solicitado directamente, lo que generó un debate interno sobre los límites de la iniciativa autónoma de los modelos. El incidente llevó a la empresa a reforzar los sandboxes y permisos de acceso a datos sensibles.",
-      "url": "https://aidapted.ro/en/articles/ai-news-of-october-28-2026",
-      "fuente": "AIdapted",
-      "fecha": "2026-10-28",
+      "id": "anthropic-claude-reglas-12-noviembre-11-areas-alto-riesgo-2026",
+      "titulo": "Anthropic fija para el 12 de noviembre nuevas reglas de revisión humana para Claude en 11 áreas de alto riesgo",
+      "resumen": "Anthropic publicó que a partir del 12 de noviembre entran en vigor requisitos más estrictos de revisión humana y divulgación para despliegues de Claude en decisiones críticas como salud, trabajo, crédito y derechos legales. La empresa señala que los principios de fondo no cambian, sino que se formaliza su aplicación.",
+      "url": "https://opentools.ai/news/anthropic-claude-usage-policy-high-risk-human-review-november-2026",
+      "fuente": "OpenTools",
+      "fecha": "2026-11-01",
       "tags": ["Claude", "agentes IA"]
     },
     {
-      "id": "colombia-ia-vigilancia-laboral-formalizacion-oct-2026",
-      "titulo": "Colombia usará IA para vigilar condiciones laborales y avanzar en la formalización del empleo",
-      "resumen": "Los ministerios de Trabajo y de Ciencia, Tecnología e Innovación presentaron una estrategia conjunta para aplicar inteligencia artificial en la detección de informalidad laboral y el monitoreo de condiciones de trabajo en tiempo real. La iniciativa forma parte del plan de modernización del sistema de inspección laboral del país.",
-      "url": "https://www.chicanoticias.com/2026/10/28/inteligencia-artificial-colombia/",
-      "fuente": "Chicanoticias",
-      "fecha": "2026-10-28",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "claude-code-limites-clonacion-juegos-opus55-nov-2026",
+      "titulo": "Anthropic confirma límites en Claude Code para prevenir la clonación de videojuegos; Opus 5.5 también bloquea ingeniería inversa",
+      "resumen": "Tom's Hardware reporta que Anthropic agregó guardianes en Claude Code que impiden la recreación de juegos, y usuarios señalan que Claude Opus 5.5 también está bloqueando tareas de ingeniería inversa no relacionadas con juegos. La combinación Claude Code + Opus 5.5 resulta ser el vector más restrictivo del cambio.",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-confirms-new-claude-code-limits-to-prevent-game-cloning-users-report-opus-5-5-is-also-actively-blocking-reverse-engineering-tasks",
+      "fuente": "Tom's Hardware",
+      "fecha": "2026-11-01",
+      "tags": ["Claude", "LLMs"]
     },
     {
-      "id": "colombia-inversion-479000-millones-ia-hasta-2030-oct-2026",
-      "titulo": "Gobierno de Colombia destina $479.000 millones para potenciar la inteligencia artificial hasta 2030",
-      "resumen": "El Gobierno Nacional anunció una inversión de 479.000 millones de pesos para fortalecer el ecosistema de inteligencia artificial en Colombia durante el período 2026-2030, con énfasis en formación de talento, infraestructura y adopción empresarial. El plan incluye alianzas con universidades, el sector privado y organismos internacionales.",
-      "url": "https://colombinews.com.co/gobierno-de-colombia-destina-479-000-millones-para-potenciar-inteligencia-artificial-hasta-2030/",
-      "fuente": "Colombinews",
-      "fecha": "2026-10-28",
+      "id": "topcone-cinco-asistentes-ia-rag-empresas-nov-2026",
+      "titulo": "Topcone lanza cinco asistentes IA empresariales con RAG conectados a ERP, CRM y documentación técnica",
+      "resumen": "La empresa Topcone publicó en su plataforma Bizappso cinco asistentes de IA basados en recuperación aumentada diseñados para medianas empresas, conectándolos a sistemas ERP, datos de precios y documentación operativa. El lanzamiento ilustra cómo el RAG está pasando de proyectos piloto a productos SaaS listos para producción.",
+      "url": "https://techedgeai.com/topcone-launches-enterprise-ai-assistants-on-bizappso",
+      "fuente": "TechEdge AI",
+      "fecha": "2026-11-01",
+      "tags": ["RAG", "agentes IA", "automatización"]
+    },
+    {
+      "id": "colombia-inmerxia-semana-ia-medellin-9-13-noviembre-2026",
+      "titulo": "Colombia celebra del 9 al 13 de noviembre la primera Semana de la Inteligencia Artificial de América en Medellín",
+      "resumen": "INMERXIA, la primera Semana de la IA en América, se realizará del 9 al 13 de noviembre en Medellín con 60 startups, cerca de 1.000 asistentes y el Foro Colombiano de Inteligencia Artificial como pieza central. El evento consolida a Medellín como epicentro latinoamericano del ecosistema de IA.",
+      "url": "https://inmerxia.co/",
+      "fuente": "INMERXIA",
+      "fecha": "2026-11-01",
       "tags": ["Colombia tech"]
     },
     {
-      "id": "colombia-incrementa-uso-ia-pese-desafios-operativos-oct-2026",
-      "titulo": "Colombia incrementa el uso de IA en empresas pese a desafíos operativos de integración",
-      "resumen": "Un informe de Microsoft (Global AI Diffusion Q2 2026) registra que el uso de inteligencia artificial en empresas colombianas creció del 24,5 % al 25,9 % entre el primer y segundo trimestre de 2026. Los principales obstáculos reportados son la integración con sistemas legados y la falta de talento especializado.",
-      "url": "https://colombinews.com.co/colombia-incrementa-el-uso-de-inteligencia-artificial-pese-a-desafios-operativos-en-empresas/",
-      "fuente": "Colombinews",
-      "fecha": "2026-10-28",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "mckinsey-80-porciento-compradores-aumentara-inversion-ia-2026",
+      "titulo": "McKinsey: el 80% de los responsables de Compras planea aumentar inversión en IA en los próximos 18 meses",
+      "resumen": "Un análisis de McKinsey publicado el 28 de octubre, basado en 200 ejecutivos de compras, muestra que cuatro de cada cinco planean incrementar su presupuesto en tecnología e inteligencia artificial antes de mediados de 2028. Tareas como validación de datos y conciliación contable son las primeras en automatizarse.",
+      "url": "https://www.cronista.com/infotechnology/innovacion-it/la-ia-empieza-a-cambiar-el-trabajo-dentro-de-las-empresas-que-areas-claves-empiezan-a-automatizarse-y-como-cambia-su-funcionamiento/",
+      "fuente": "El Cronista",
+      "fecha": "2026-11-01",
+      "tags": ["automatización", "LLMs"]
     },
     {
-      "id": "openai-gpt61-terra-reduccion-50-precio-api-agentes-oct-2026",
-      "titulo": "OpenAI lanza GPT-6.1 Terra con reducción del 50 % en el precio de API para automatización por agentes",
-      "resumen": "OpenAI puso a disposición general GPT-6.1 Terra, acompañado de un recorte del 50 % en el costo de uso de la API en modalidades de agente para computadora, con el objetivo de acelerar la adopción en flujos de trabajo empresariales automatizados. El modelo está optimizado para tareas multi-paso que requieren control de interfaces de usuario.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-27-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-10-27",
-      "tags": ["LLMs", "agentes IA", "automatización"]
-    },
-    {
-      "id": "colombia-cuarta-indice-latinoamericano-ia-2026",
-      "titulo": "Colombia queda cuarta en el Índice Latinoamericano de Inteligencia Artificial 2026 con 56,8 puntos",
-      "resumen": "El Índice Latinoamericano de IA 2026, que evalúa 20 países, ubicó a Colombia en el cuarto lugar con 56,8 puntos sobre 100, siendo una de las dos naciones de la región con presupuesto oficial asignado a su estrategia de IA. Su indicador más débil es la formación de expertos, con apenas 19,6 puntos.",
-      "url": "https://ifmnoticias.com/tecnologia/colombia-cuarta-en-el-indice-latinoamericano-de-inteligencia-artificial-2026-y-u/",
-      "fuente": "IFM Noticias",
-      "fecha": "2026-10-27",
-      "tags": ["Colombia tech"]
-    },
-    {
-      "id": "colombia-83-porciento-usuarios-ia-google-ctg-2026",
-      "titulo": "El 83 % de los colombianos usa herramientas de IA, pero el 79 % quiere verificar sus respuestas",
-      "resumen": "Un estudio de Ipsos para Google presentado en el evento +CTG 2026 reveló que ocho de cada diez colombianos encuestados ya utilizan herramientas de inteligencia artificial, mientras que el 79 % afirma que prefiere verificar las respuestas generadas por IA antes de actuar sobre ellas. El 45 % combina el uso profesional y personal de estas herramientas.",
-      "url": "https://www.produ.com/mercadeo/noticias/google-en-ctg-2026-83-de-los-colombianos-ya-utiliza-ia-pero-79-quiere-verificar-sus-respuestas/",
-      "fuente": "PRODU",
-      "fecha": "2026-10-27",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "mercado-agentic-rag-cagr-35-2026-2032",
-      "titulo": "El mercado de soluciones agentic RAG proyecta un CAGR del 35,1 % hasta 2032",
-      "resumen": "Un informe de mercado publicado esta semana estima que el segmento global de soluciones de recuperación aumentada agentica (Agentic RAG) fue valorado en 79,1 millones de dólares en 2025 y alcanzará los 1.087 millones en 2032, impulsado por la automatización de flujos de trabajo en finanzas, salud y tecnología. El crecimiento supera al del mercado general de RAG.",
-      "url": "https://www.openpr.com/news/4677702/agentic-rag-retrieval-augmented-generation-solution-market",
-      "fuente": "OpenPR",
-      "fecha": "2026-10-27",
+      "id": "trec-2026-primer-track-agentic-rag-conferencia-nov-2026",
+      "titulo": "TREC 2026 incluye por primera vez un track exclusivo de RAG agéntico en su conferencia de recuperación de información",
+      "resumen": "La conferencia TREC 2026, programada para noviembre, estrena el primer Agent-first track de su historia, donde los sistemas participantes deben recuperar, razonar y generar respuestas encadenadas como un agente. La iniciativa mide el estado del arte de los sistemas RAG en tareas de búsqueda complejas y multi-paso.",
+      "url": "https://trec-rag.github.io/",
+      "fuente": "TREC RAG Track",
+      "fecha": "2026-11-01",
       "tags": ["RAG", "agentes IA"]
     },
     {
-      "id": "flyjets-jetgpt-agente-rag-produccion-oct-2026",
-      "titulo": "FlyJets saca de beta su agente de ventas JetGPT, alimentado por RAG sobre base de datos interna",
-      "resumen": "La empresa de jets privados FlyJets lanzó a producción JetGPT, su agente conversacional de ventas construido sobre recuperación aumentada que responde exclusivamente con información de su propia base de datos de aeronaves y rutas. El sistema demostró reducir el tiempo de cotización de horas a segundos durante la fase de pruebas.",
-      "url": "https://corporatejetinvestor.com/news/flyjets-brings-ai-agent-out-of-beta-testing",
-      "fuente": "Corporate Jet Investor",
-      "fecha": "2026-10-27",
+      "id": "mistral-large-4-open-weights-coding-lead-oct-2026",
+      "titulo": "Mistral publica los pesos de Large 4 en abierto y supera por un punto a GLM-5.3 en benchmarks de código",
+      "resumen": "Un agregador de noticias de IA fechado el 31 de octubre reporta que Mistral lanzó los pesos abiertos de Large 4, que toma la delantera sobre GLM-5.3 en el ranking de tareas de codificación. La publicación como modelo de acceso abierto amplía el ecosistema de herramientas de desarrollo basadas en LLMs de clase enterprise.",
+      "url": "https://thenewstack.io/llm/",
+      "fuente": "The New Stack",
+      "fecha": "2026-10-31",
+      "tags": ["LLMs"]
+    },
+    {
+      "id": "horasis-global-summit-medellin-ia-competitividad-nov-2026",
+      "titulo": "Horasis Global Summit 2026 llega a Medellín con más de 1.000 líderes mundiales para debatir IA y competitividad",
+      "resumen": "Del 10 al 13 de noviembre, Medellín será sede del Horasis Global Summit bajo el lema Building Tomorrow, reuniendo a más de 1.000 representantes del mundo empresarial, político y académico. La inteligencia artificial y su impacto económico serán ejes centrales del programa.",
+      "url": "https://www.elnacional.com/2026/10/colombia-sera-sede-de-una-cumbre-global-sobre-ia-y-el-futuro-economico/",
+      "fuente": "El Nacional",
+      "fecha": "2026-10-31",
+      "tags": ["Colombia tech"]
+    },
+    {
+      "id": "xmax-acuerdo-infraestructura-ia-rag-cinco-anos-nov-2026",
+      "titulo": "XMax firma acuerdo de infraestructura IA a cinco años que incluye RAG y agentes, con más de 100 millones USD proyectados",
+      "resumen": "XMax anunció el 2 de noviembre un contrato de servicios de infraestructura de IA a cinco años que proyecta superar los 100 millones de dólares en ingresos, con cargas de trabajo que incluyen agentes de IA y sistemas de recuperación aumentada (RAG). El acuerdo destaca cómo empresas tradicionales están apostando por arquitecturas de IA de segunda generación.",
+      "url": "https://globenewswire.com/news-release/2026/11/02/3393088/37029/en/xmax-announces-ai-infrastructure-services-agreement-expects-over-us-100-million-in-revenue-over-the-next-five-years.html",
+      "fuente": "GlobeNewswire",
+      "fecha": "2026-11-02",
       "tags": ["RAG", "agentes IA", "automatización"]
     }
   ]
