@@ -1,114 +1,114 @@
 {
-  "generado": "2026-11-11T13:06:11Z",
+  "generado": "2026-11-13T14:50:00Z",
   "semana": "2026-W46",
   "items": [
     {
-      "id": "claude-meetings-beta-video-calls-tareas-nov-2026",
-      "titulo": "Anthropic lanza Claude Meetings en beta: se une a videollamadas y ejecuta tareas durante la reunión",
-      "resumen": "Anthropic presentó Claude Meetings, una funcionalidad en beta para planes Team y Enterprise que permite a Claude ingresar como participante en videollamadas y trabajar en tareas en tiempo real. La herramienta se complementa con Claude Whiteboards y Claude Sheets, expandiendo el arsenal de productividad en el lugar de trabajo.",
-      "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
-      "fuente": "TechCrunch",
-      "fecha": "2026-11-11",
-      "tags": ["Claude", "agentes IA", "automatización"]
+      "id": "ny-ley-seguridad-ia-registro-openai-anthropic-nov-2026",
+      "titulo": "Ley de seguridad de IA de Nueva York entra en vigor y exige registro de OpenAI y Anthropic",
+      "resumen": "La legislación de seguridad de inteligencia artificial del estado de Nueva York entró en vigor en noviembre de 2026, obligando a OpenAI, Anthropic y otros proveedores de modelos de gran escala a registrarse ante las autoridades estatales y presentar auditorías de seguridad. La norma se convierte en el primer marco regulatorio subnacional de IA con requerimientos de registro en Estados Unidos.",
+      "url": "https://cafeconia.substack.com/p/cafe-con-ia-13-de-noviembre-de-2026",
+      "fuente": "Café con IA",
+      "fecha": "2026-11-13",
+      "tags": ["LLMs", "agentes IA"]
     },
     {
-      "id": "adobe-max-2026-agentes-ia-firefly-mcp-creative-cloud-nov-2026",
-      "titulo": "Adobe MAX 2026: Firefly y Creative Cloud abren sus herramientas a agentes de IA vía integraciones MCP",
-      "resumen": "En Adobe MAX (Miami, 10-12 de noviembre), Adobe presentó agentes de IA integrados en Firefly y Creative Cloud, con soporte MCP que permite a agentes externos interactuar con Photoshop, Illustrator, Premiere y After Effects. Las nuevas funciones quedan disponibles desde el 10 de noviembre para suscriptores activos.",
-      "url": "https://ecosistemastartup.com/adobe-max-2026-agentes-de-ia-en-firefly-y-creative-cloud/",
-      "fuente": "Ecosistema Startup",
-      "fecha": "2026-11-10",
-      "tags": ["agentes IA", "automatización"]
+      "id": "claude-meetings-google-meet-beta-nov-2026",
+      "titulo": "Anthropic integra Claude Meetings con Google Meet en beta",
+      "resumen": "Anthropic anunció el 13 de noviembre que Claude Meetings está disponible en beta dentro de Google Meet para usuarios de planes Team y Enterprise. La integración permite a Claude participar como asistente visible en reuniones y convertir discusiones en planes y tareas accionables.",
+      "url": "https://dataconomy.com/2026/11/13/anthropic-brings-claude-meetings-to-google-meet-in-beta",
+      "fuente": "Dataconomy",
+      "fecha": "2026-11-13",
+      "tags": ["Claude", "automatización", "agentes IA"]
     },
     {
-      "id": "snowflake-agentes-ia-produccion-cortex-gateway-nov-2026",
-      "titulo": "Snowflake impulsa el paso de agentes de IA de piloto a producción con Cortex AI Gateway",
-      "resumen": "En Snowflake Expedition 2026, la compañía anunció Cortex AI Gateway, una capa que aplica un conjunto uniforme de políticas a las conexiones de agentes entre nubes, frameworks y proveedores de IA. La propuesta busca resolver el principal obstáculo que enfrenta la empresa al escalar proyectos piloto de agentes.",
-      "url": "https://www.muycomputerpro.com/2026/11/10/snowflake-impulsa-paso-agentes-ia-piloto-produccion",
-      "fuente": "MuyComputerPRO",
-      "fecha": "2026-11-10",
-      "tags": ["agentes IA", "automatización"]
+      "id": "google-alloydb-ai-swap-embeddings-rag-produccion-nov-2026",
+      "titulo": "Google Cloud lanza arquitectura sin tiempo de inactividad para cambiar modelos de embedding en RAG",
+      "resumen": "Google Cloud describió una solución para AlloyDB AI que permite intercambiar modelos de embedding vectorial en producción sin interrumpir los pipelines de RAG, eliminando uno de los principales cuellos de botella al actualizar infraestructura de recuperación aumentada. La novedad apunta directamente a las necesidades de equipos empresariales que mantienen sistemas RAG en operación continua.",
+      "url": "https://dev.to/vuhung16au/australia-daily-ai-llm-briefing-november-13-2026-26d4",
+      "fuente": "DEV Community / Google Cloud",
+      "fecha": "2026-11-13",
+      "tags": ["RAG", "LLMs", "automatización"]
     },
     {
-      "id": "akai-deel-agentes-automatizacion-procesos-nov-2026",
-      "titulo": "Deel lanza Akai: plataforma para crear agentes de IA que automatizan procesos entre sistemas a partir de una demo",
-      "resumen": "Deel presentó en Ciudad de México Akai, una plataforma que permite construir agentes de automatización de procesos entre sistemas a partir de una demostración del usuario. La herramienta apunta a que las empresas puedan crear agentes sin necesidad de programación especializada.",
-      "url": "https://edomexaldia.com/akai-by-deel-impulsa-una-nueva-forma-de-automatizar-procesos-empresariales-con-inteligencia-artificial/",
-      "fuente": "Edomex al Día",
-      "fecha": "2026-11-10",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "graphon-labs-35m-memoria-persistente-agentes-ia-rag-nov-2026",
-      "titulo": "Graphon Labs recauda 35 millones de dólares para dar a los agentes de IA memoria relacional persistente",
-      "resumen": "La startup Graphon Labs anunció una Serie A de 35 M USD liderada por RRE Ventures para construir una memoria relacional de largo plazo para agentes de IA, como alternativa a RAG que, según la compañía, pierde contexto y relaciones a medida que crece el volumen de datos. The Next Web destaca el anuncio como una de las apuestas de infraestructura agéntica más relevantes de noviembre.",
-      "url": "https://thenextweb.com/news/graphon-labs-35m-series-a-ai-agent-memory",
-      "fuente": "The Next Web",
-      "fecha": "2026-11-10",
-      "tags": ["RAG", "agentes IA"]
-    },
-    {
-      "id": "claude-fable-52-mythos-52-modelos-razonamiento-nov-2026",
-      "titulo": "Anthropic lanza Claude Fable 5.2 y Claude Mythos 5.2 para razonamiento complejo y agentes de larga duración",
-      "resumen": "El 9 de noviembre, Anthropic liberó Claude Fable 5.2 de acceso general y Claude Mythos 5.2 en acceso restringido, diseñado este último para tareas de razonamiento exigente y flujos agénticos de varios pasos. Releasebot reporta que Mythos 5.2 está orientado a casos de uso que requieren ejecución prolongada y alta fiabilidad.",
-      "url": "https://releasebot.io/updates/anthropic/claude",
-      "fuente": "Releasebot / Anthropic",
-      "fecha": "2026-11-09",
-      "tags": ["Claude", "LLMs", "agentes IA"]
-    },
-    {
-      "id": "inmerxia-semana-ia-medellin-colombia-nov-2026",
-      "titulo": "INMERXIA 2026: Medellín es sede de la Semana de la Inteligencia Artificial en Colombia (9-13 nov)",
-      "resumen": "Del 9 al 13 de noviembre, Medellín alberga INMERXIA, el primer evento tipo 'Semana de la IA' en Colombia, con más de 60 startups y compañías, y el Foro Colombiano de IA como cierre esperado por cerca de 1.000 asistentes. La iniciativa reúne a empresas, academia, Estado y emprendimientos en torno al ecosistema de inteligencia artificial del país.",
-      "url": "https://inmerxia.co/",
-      "fuente": "INMERXIA",
-      "fecha": "2026-11-09",
+      "id": "horasis-global-summit-medellin-gobernanza-ia-nov-2026",
+      "titulo": "Horasis Global Summit 2026 en Medellín: líderes internacionales debaten gobernanza de IA",
+      "resumen": "Del 10 al 13 de noviembre, Medellín albergó el Horasis Global Meeting con más de 1.000 representantes del mundo empresarial, político y académico para discutir la gobernanza de la IA y el futuro económico global. Colombia consolida su posición como sede de eventos internacionales de primer nivel sobre inteligencia artificial.",
+      "url": "https://www.elnacional.com/2026/10/colombia-sera-sede-de-una-cumbre-global-sobre-ia-y-el-futuro-economico/",
+      "fuente": "El Nacional",
+      "fecha": "2026-11-13",
       "tags": ["Colombia tech", "agentes IA"]
     },
     {
-      "id": "claude-data-ga-dashboards-ia-nov-2026",
-      "titulo": "Anthropic lleva Claude Data a disponibilidad general: análisis de datos con IA ya disponible para todos los planes",
-      "resumen": "Anthropic anunció la disponibilidad general de Claude Data, antes conocido como Claude Dashboards, que permite a los equipos realizar análisis de datos asistido por IA directamente desde la interfaz de Claude. La herramienta se suma a Meetings, Whiteboards y Sheets como parte del nuevo paquete de productividad empresarial de Anthropic.",
-      "url": "https://benzinga.com/markets/tech/26/11/63132158/anthropic-claude-workplace-tools-google-microsoft",
-      "fuente": "Benzinga",
-      "fecha": "2026-11-09",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "perplexity-teammates-agentes-ia-24-7-slack-nov-2026",
-      "titulo": "Perplexity lanza Teammates: agentes de IA que trabajan 24/7 y se integran a Slack para colaborar con equipos",
-      "resumen": "Perplexity presentó Teammates, agentes de IA de operación continua que pueden colaborar con equipos humanos a través de Slack, encargarse de búsquedas, síntesis de información y tareas repetitivas sin necesidad de intervención manual. La propuesta compite directamente con los asistentes agénticos de Google y Microsoft para el entorno laboral.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-8-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-11-08",
+      "id": "parallel-100m-serie-a-infraestructura-web-agentes-ia-nov-2026",
+      "titulo": "Parallel levanta $100 millones en Serie A para infraestructura web de agentes IA",
+      "resumen": "Parallel anunció una Serie A de 100 M USD liderada por Kleiner Perkins e Index Ventures (valoración 740 M USD) para desarrollar infraestructura web especializada que permita a los agentes de IA navegar y ejecutar tareas en la web de forma autónoma. La ronda destaca como una apuesta clave en la capa de ejecución agéntica.",
+      "url": "https://aiweekly.co/ai-news-today",
+      "fuente": "AI Weekly",
+      "fecha": "2026-11-12",
       "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "deepmind-agentes-ia-rsa-1024-bits-vulnerabilidad-nov-2026",
-      "titulo": "Agentes de Google DeepMind descubren debilidades en cifrado RSA de 1024 bits, aunque claves más largas permanecen seguras",
-      "resumen": "Un equipo de Google DeepMind utilizó agentes de IA para identificar vulnerabilidades en el cifrado RSA legado de 1024 bits, aunque los expertos aclararon que las claves de mayor longitud actuales no están en riesgo. El hallazgo reaviva el debate sobre el impacto de los agentes de IA en la ciberseguridad y la gestión de infraestructura criptográfica.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-8-2026",
+      "id": "robinhood-16b-trading-agentes-ia-automatizacion-nov-2026",
+      "titulo": "Clientes de Robinhood han movido $1.6 mil millones a agentes de IA para trading automatizado",
+      "resumen": "Robinhood reveló que sus usuarios han trasladado 1.600 millones de dólares hacia estrategias de trading gestionadas por agentes de IA, señal del crecimiento acelerado de la automatización financiera. En paralelo, un banco reportó que sus agentes de IA le ahorraron 76.000 horas de trabajo humano en el año.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-11-12",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "mercor-750m-desarrollo-evaluacion-agentes-ia-nov-2026",
+      "titulo": "Mercor recauda 750 millones de dólares para desarrollar y evaluar agentes de IA",
+      "resumen": "La startup Mercor cerró una ronda de 750 millones USD enfocada en crear agentes de IA especializados y en construir infraestructura de evaluación para medir su desempeño en tareas del mundo real. La cifra convierte a Mercor en una de las apuestas de mayor capital en la carrera por la infraestructura agéntica de noviembre de 2026.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-12-2026",
       "fuente": "AI Agents Directory",
-      "fecha": "2026-11-08",
+      "fecha": "2026-11-12",
       "tags": ["agentes IA", "LLMs"]
     },
     {
-      "id": "nvidia-estudio-texto-irrelevante-precision-rag-nov-2026",
-      "titulo": "Estudio de Nvidia muestra que una pequeña cantidad de texto irrelevante puede reducir drásticamente la precisión de los LLMs en RAG",
-      "resumen": "Una investigación vinculada a Nvidia encontró que incluso un porcentaje pequeño de pasajes poco relevantes en los resultados de recuperación puede desviar significativamente la respuesta de modelos abiertos, afectando la fiabilidad de sistemas RAG en producción. Los autores recomiendan aplicar el filtrado de relevancia antes de que los documentos lleguen al modelo.",
-      "url": "https://cryptobriefing.com/nvidia-study-irrelevant-text-model-accuracy",
-      "fuente": "CryptoBriefing",
-      "fecha": "2026-11-08",
-      "tags": ["RAG", "LLMs"]
+      "id": "gemini-for-healthcare-agentes-flujos-clinicos-nov-2026",
+      "titulo": "Google Cloud lanza Gemini for Healthcare: plataforma agéntica para flujos clínicos complejos",
+      "resumen": "Google Cloud presentó Gemini for Healthcare, una plataforma de IA agéntica que conecta fuentes de datos clínicos dispares y asiste a médicos en flujos de trabajo multi-paso, desde diagnóstico de apoyo hasta coordinación de atención. La propuesta compite directamente con Azure Health AI de Microsoft en el mercado de salud.",
+      "url": "https://aiweekly.co/ai-news-today",
+      "fuente": "AI Weekly",
+      "fecha": "2026-11-12",
+      "tags": ["agentes IA", "LLMs", "automatización"]
     },
     {
-      "id": "govtech-summit-bogota-ia-compras-publicas-140-entidades-nov-2026",
-      "titulo": "GovTech Summit Bogotá 2026: líderes de 11 países buscan acelerar la adopción de IA en más de 140 entidades públicas colombianas",
-      "resumen": "Cerca de 1.000 líderes tecnológicos y directivos de gobierno de 11 países se reunieron en el Centro Felicidad Chapinero de Bogotá para el GovTech Summit 2026, enfocado en acelerar la contratación de soluciones de IA y transformación digital en más de 140 entidades estatales colombianas. El evento posiciona a Bogotá como hub de innovación pública para América Latina.",
-      "url": "https://bogota.gov.co/mi-ciudad/gestion-publica/2026-11/bogota-sede-govtech-summit-2026-inteligencia-artificial-e-innovacion",
-      "fuente": "Bogotá.gov.co",
-      "fecha": "2026-11-10",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "anthropic-enterprise-security-center-inference-hooks-ga-nov-2026",
+      "titulo": "Anthropic lanza Enterprise Security Center e Inference Hooks en disponibilidad general",
+      "resumen": "Anthropic liberó en disponibilidad general los Inference Hooks para escaneo de prompts y llamadas a herramientas, junto con un Enterprise Security Center para controlar y auditar el uso de Claude en entornos corporativos. Las novedades amplían las capacidades de gobernanza para empresas que despliegan agentes de IA a escala.",
+      "url": "https://aiweekly.co/ai-news-today/anthropic-news",
+      "fuente": "AI Weekly",
+      "fecha": "2026-11-11",
+      "tags": ["Claude", "automatización", "agentes IA"]
+    },
+    {
+      "id": "google-gemini-4-carbon-enjambre-agentes-nov-2026",
+      "titulo": "Google lanza Gemini 4 Carbon con función de «enjambre» de agentes al público general",
+      "resumen": "El 10 de noviembre Google puso a disposición del público Gemini 4 Carbon, que incluye una función de enjambre (swarm) que permite a múltiples agentes coordinarse para resolver tareas complejas de forma colaborativa. El lanzamiento refuerza la competencia directa con los ecosistemas agénticos de Anthropic y OpenAI.",
+      "url": "https://cafeconia.substack.com/p/cafe-con-ia-11-de-noviembre-de-2026",
+      "fuente": "Café con IA",
+      "fecha": "2026-11-11",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "openai-business-agents-chatgpt-business-hub-nov-2026",
+      "titulo": "OpenAI lanza Business Agents verificados en ChatGPT y Business Hub para empresas y comercios",
+      "resumen": "OpenAI presentó Business Agents verificados que convierten a ChatGPT en un buscador de comercios y servicios, y habilitó el Business Hub para que emprendedores y dueños de negocios reclamen su empresa directamente en la plataforma. La iniciativa apunta a posicionar a ChatGPT como punto de entrada para transacciones y servicios locales.",
+      "url": "https://cafeconia.substack.com/p/cafe-con-ia-11-de-noviembre-de-2026",
+      "fuente": "Café con IA",
+      "fecha": "2026-11-11",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "anthropic-ipo-roadshow-nasdaq-ant-nov-2026",
+      "titulo": "Anthropic lanza roadshow para su IPO en Nasdaq bajo el símbolo ANT",
+      "resumen": "Anthropic inició el 10 de noviembre el roadshow para su oferta pública inicial en el Nasdaq con el símbolo ANT, poniendo en oferta más de 825 millones de acciones. El anuncio posiciona a la compañía como uno de los principales lanzamientos bursátiles del sector IA en 2026.",
+      "url": "https://claudelog.com/claude-news/",
+      "fuente": "ClaudeLog / Anthropic",
+      "fecha": "2026-11-11",
+      "tags": ["Claude", "LLMs"]
     }
   ]
 }
