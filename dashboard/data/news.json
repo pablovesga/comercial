@@ -1,7 +1,79 @@
 {
-  "generado": "2026-11-16T13:06:00Z",
+  "generado": "2026-11-18T10:00:00Z",
   "semana": "2026-W47",
   "items": [
+    {
+      "id": "openai-gpt62-astra-sol-modelos-trabajo-profesional-nov-2026",
+      "titulo": "OpenAI lanza GPT-6.2 Astra y GPT-6.2 Sol para trabajo profesional y cotidiano",
+      "resumen": "OpenAI presentó GPT-6.2 Astra, diseñado para trabajo profesional complejo y con 5,2 puntos más que GPT-6 Astra en el benchmark Agents' Last Exam, y GPT-6.2 Sol, orientado a tareas cotidianas. Los nuevos modelos refuerzan la familia GPT-6 con capacidades agénticas mejoradas.",
+      "url": "https://riorundown.substack.com/p/ai-news-nov-18-2026-ai-infrastructure",
+      "fuente": "Rio Rundown / OpenAI",
+      "fecha": "2026-11-18",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
+      "id": "microsoft-ignite-2026-plataforma-agentes-cloud-nov-2026",
+      "titulo": "Microsoft Ignite 2026 apuesta por la capa de infraestructura de agentes en la nube",
+      "resumen": "En su conferencia Ignite 2026, Microsoft presentó una plataforma orientada a la orquestación y despliegue de agentes de IA en la nube, sin anunciar nuevos modelos base. La estrategia refleja el viraje del sector hacia construir el sustrato de infraestructura sobre el que corren los agentes autónomos.",
+      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-18-2026-microsoft-builds-the-agent-cloud-openai-agents-enter-the-2eia",
+      "fuente": "DEV Community / Microsoft Ignite",
+      "fecha": "2026-11-18",
+      "tags": ["agentes IA", "automatización", "LLMs"]
+    },
+    {
+      "id": "att-500-flujos-trabajo-agentes-ia-produccion-nov-2026",
+      "titulo": "AT&T opera casi 500 flujos de trabajo autónomos con agentes de IA y planea triplicarlos",
+      "resumen": "AT&T reveló que ya tiene cerca de 500 flujos de trabajo agénticos desplegados en sus operaciones centrales y anunció planes para triplicar esa cifra en el próximo año. El caso es uno de los ejemplos más concretos de adopción industrial de agentes de IA a escala empresarial.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-11-17",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "colombia-sic-restricciones-ia-entrenamiento-datos-internet-nov-2026",
+      "titulo": "Colombia exige justificación legal para entrenar IA con datos de internet, según la SIC",
+      "resumen": "La Superintendencia de Industria y Comercio (SIC) de Colombia estableció que las empresas deben acreditar una base legal válida para usar información pública de internet en el entrenamiento de modelos de IA. La medida refuerza el marco de protección de datos y generará cambios en la industria tecnológica nacional.",
+      "url": "https://www.infobae.com/colombia/2026/11/17/empresas-en-colombia-tendran-nuevas-restricciones-para-entrenar-inteligencia-artificial-con-informacion-de-internet-esto-exige-la-sic/",
+      "fuente": "Infobae / SIC",
+      "fecha": "2026-11-17",
+      "tags": ["Colombia tech", "automatización"]
+    },
+    {
+      "id": "genesis-ai-500m-robots-fabricas-destreza-nov-2026",
+      "titulo": "Genesis AI recauda 500 millones de dólares para robots industriales con destreza avanzada",
+      "resumen": "La startup Genesis AI cerró una ronda de 500 millones de dólares destinada a desarrollar robots de fábrica con capacidades de destreza avanzada impulsadas por inteligencia artificial. La inversión marca un nuevo hito en la convergencia entre IA generativa y robótica industrial.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store / Forbes",
+      "fecha": "2026-11-17",
+      "tags": ["automatización", "agentes IA"]
+    },
+    {
+      "id": "dreamteam-53m-crm-nativo-ia-salesforce-nov-2026",
+      "titulo": "Dreamteam levanta 53M USD para construir un CRM nativo de IA que compite con Salesforce",
+      "resumen": "La startup Dreamteam captó 53 millones de dólares para desarrollar un CRM construido desde cero sobre inteligencia artificial, compitiendo directamente con Salesforce. La propuesta central es un sistema que aprende y actúa de forma autónoma para gestionar relaciones con clientes sin configuración manual.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-11-17",
+      "tags": ["agentes IA", "automatización", "LLMs"]
+    },
+    {
+      "id": "openai-agentes-ia-salud-healthcare-api-chatgpt-nov-2026",
+      "titulo": "OpenAI abre sus agentes de uso del computador a equipos de salud vía API",
+      "resumen": "OpenAI habilitó el acceso de sus agentes de computer use para equipos de salud a través de su API y de ChatGPT for Healthcare, permitiendo automatizar flujos clínicos y administrativos de forma autónoma. El movimiento consolida la incursión de los agentes de IA en uno de los sectores más regulados del mundo.",
+      "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-18-2026-microsoft-builds-the-agent-cloud-openai-agents-enter-the-2eia",
+      "fuente": "DEV Community / OpenAI",
+      "fecha": "2026-11-16",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "bancos-ai-finops-equipos-costos-agentes-ia-nov-2026",
+      "titulo": "Grandes bancos crean equipos de IA FinOps para controlar el costo creciente de los agentes",
+      "resumen": "Varios bancos de primer nivel están formando equipos especializados en IA FinOps para gestionar y optimizar el gasto en infraestructura de agentes de IA, que crece de forma acelerada con su adopción masiva. La tendencia refleja la madurez del sector financiero en la gestión estratégica de sus inversiones en inteligencia artificial.",
+      "url": "https://aiweekly.co/ai-news-today",
+      "fuente": "AI Weekly",
+      "fecha": "2026-11-16",
+      "tags": ["agentes IA", "automatización"]
+    },
     {
       "id": "fed-barr-agentes-ia-riesgo-bancario-nov-2026",
       "titulo": "La Fed advierte que los agentes de IA podrían acelerar corridas bancarias",
@@ -10,6 +82,24 @@
       "fuente": "Bloomberg",
       "fecha": "2026-11-16",
       "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "colombia-lidera-adopcion-ia-generativa-sudamerica-microsoft-nov-2026",
+      "titulo": "Colombia lidera la adopción de IA generativa en Sudamérica, según Microsoft AI Economy Institute",
+      "resumen": "Un informe del Microsoft AI Economy Institute posiciona a Colombia como el país de Sudamérica con mayor nivel de adopción de inteligencia artificial generativa en empresas y educación durante 2026. El liderazgo regional se apoya en iniciativas gubernamentales, crecimiento del ecosistema de startups y programas de formación en IA.",
+      "url": "http://hsbnoticias.com/noticias/colombia-lidera-la-adopcion-de-inteligencia-artificial-generativa-en-sudamerica",
+      "fuente": "HSB Noticias / Microsoft",
+      "fecha": "2026-11-15",
+      "tags": ["Colombia tech", "LLMs", "automatización"]
+    },
+    {
+      "id": "colombia-proyecto-ley-regulacion-ia-congreso-nov-2026",
+      "titulo": "Colombia avanza con proyecto de ley de regulación de IA en el Congreso",
+      "resumen": "El proyecto de ley de inteligencia artificial colombiano retomó su trámite en el Congreso con mensaje de urgencia, aunque aún enfrenta obstáculos en primer debate. En paralelo, la Superintendencia de Industria y Comercio reafirmó que la Ley 1581 de 2012 ya aplica al tratamiento de datos en sistemas de IA.",
+      "url": "https://ciberlatam.com/noticias/colombia-avanza-ley-ia",
+      "fuente": "CiberLATAM",
+      "fecha": "2026-11-15",
+      "tags": ["Colombia tech", "agentes IA"]
     },
     {
       "id": "cloudflare-kitesurf-navegador-agentes-ia-open-source-nov-2026",
@@ -48,6 +138,15 @@
       "tags": ["agentes IA", "automatización"]
     },
     {
+      "id": "google-gemini-4-hydrogen-trabajo-agentico-multipasos-nov-2026",
+      "titulo": "Google lanza Gemini 4 Hydrogen para tareas agénticas de múltiples pasos",
+      "resumen": "Google presentó Gemini 4 Hydrogen, un modelo diseñado para trabajo agéntico complejo como investigación, análisis de datos y programación, complementando a Gemini 4 Carbon lanzado el 10 de noviembre. La familia Gemini 4 compite directamente con los modelos Claude 5 de Anthropic y GPT-6 de OpenAI en capacidades agénticas.",
+      "url": "https://aiweekly.co/",
+      "fuente": "AI Weekly / Google",
+      "fecha": "2026-11-12",
+      "tags": ["LLMs", "agentes IA"]
+    },
+    {
       "id": "aws-emulador-local-200-servicios-escrito-agentes-ia-nov-2026",
       "titulo": "AWS lanza emulador local gratuito de más de 200 servicios escrito íntegramente por agentes de IA",
       "resumen": "Amazon Web Services publicó un emulador local que cubre más de 200 servicios de AWS sin costo, con la particularidad de que todo su código fue generado y no revisado por humanos, sino escrito exclusivamente por agentes autónomos de IA. El proyecto es uno de los primeros artefactos de ingeniería de escala empresarial producidos sin intervención humana directa.",
@@ -66,6 +165,15 @@
       "tags": ["Claude", "agentes IA", "automatización"]
     },
     {
+      "id": "claude-meetings-video-llamadas-tareas-planes-nov-2026",
+      "titulo": "Anthropic lanza Claude Meetings para convertir videollamadas en planes y tareas",
+      "resumen": "Anthropic lanzó en beta Claude Meetings, una funcionalidad que permite a Claude participar en videollamadas y comenzar a construir planes, pizarras y tareas mientras los participantes siguen hablando. Disponible en planes Team y Enterprise, amplía el conjunto de herramientas colaborativas de Claude junto con Whiteboards y Sheets.",
+      "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+      "fuente": "TechCrunch / Anthropic",
+      "fecha": "2026-11-10",
+      "tags": ["Claude", "automatización"]
+    },
+    {
       "id": "claude-whiteboards-sheets-herramientas-colaborativas-beta-nov-2026",
       "titulo": "Anthropic lanza Claude Whiteboards y Sheets en beta para equipos y empresas",
       "resumen": "Anthropic presentó el 10 de noviembre Claude Whiteboards y Claude Sheets en beta, dos herramientas colaborativas que permiten a equipos trabajar con Claude en lienzos visuales y hojas de datos estructuradas. Ambas están activas por defecto en planes Team y se suman a Claude Data, ya disponible de forma general.",
@@ -82,24 +190,6 @@
       "fuente": "Releasebot / Anthropic",
       "fecha": "2026-11-09",
       "tags": ["Claude", "LLMs", "agentes IA"]
-    },
-    {
-      "id": "colombia-lidera-adopcion-ia-generativa-sudamerica-microsoft-nov-2026",
-      "titulo": "Colombia lidera la adopción de IA generativa en Sudamérica, según Microsoft AI Economy Institute",
-      "resumen": "Un informe del Microsoft AI Economy Institute posiciona a Colombia como el país de Sudamérica con mayor nivel de adopción de inteligencia artificial generativa en empresas y educación durante 2026. El liderazgo regional se apoya en iniciativas gubernamentales, crecimiento del ecosistema de startups y programas de formación en IA.",
-      "url": "http://hsbnoticias.com/noticias/colombia-lidera-la-adopcion-de-inteligencia-artificial-generativa-en-sudamerica",
-      "fuente": "HSB Noticias / Microsoft",
-      "fecha": "2026-11-15",
-      "tags": ["Colombia tech", "LLMs", "automatización"]
-    },
-    {
-      "id": "colombia-proyecto-ley-regulacion-ia-congreso-nov-2026",
-      "titulo": "Colombia avanza con proyecto de ley de regulación de IA en el Congreso",
-      "resumen": "El proyecto de ley de inteligencia artificial colombiano retomó su trámite en el Congreso con mensaje de urgencia, aunque aún enfrenta obstáculos en primer debate. En paralelo, la Superintendencia de Industria y Comercio reafirmó que la Ley 1581 de 2012 ya aplica al tratamiento de datos en sistemas de IA.",
-      "url": "https://ciberlatam.com/noticias/colombia-avanza-ley-ia",
-      "fuente": "CiberLATAM",
-      "fecha": "2026-11-15",
-      "tags": ["Colombia tech", "agentes IA"]
     },
     {
       "id": "meta-adquiere-conductor-orquestacion-agentes-codigo-paralelo-nov-2026",
