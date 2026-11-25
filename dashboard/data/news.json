@@ -1,113 +1,95 @@
 {
-  "generado": "2026-11-23T13:04:52Z",
+  "generado": "2026-11-25T12:00:00Z",
   "semana": "2026-W48",
   "items": [
     {
-      "id": "google-cloud-rag-vs-grafos-conocimiento-memoria-gestionada-noviembre-2026",
-      "titulo": "Google Cloud compara RAG, grafos de conocimiento y memoria gestionada para sistemas de IA",
-      "resumen": "El 23 de noviembre, Google Cloud publicó un análisis comparativo de cuatro enfoques para dotar de contexto a los LLMs: prompting directo, RAG clásico, grafos de conocimiento y memoria gestionada. El documento, recogido en Token Cost Radar, llega acompañado del lanzamiento en preview de Tool Retrieval en la Gemini API, que extiende el concepto de recuperación más allá de documentos hacia herramientas.",
-      "url": "https://jcodemunch.com/radar/2026-11-23",
-      "fuente": "Token Cost Radar / Google Cloud",
+      "id": "siemens-ia-produccion-robots-sps-2026-noviembre",
+      "titulo": "Siemens lleva la IA a la planificación de producción y robots en SPS 2026",
+      "resumen": "En la feria SPS 2026 (Nuremberg, 24-26 de noviembre), Siemens presentó herramientas de IA para planificación de producción y adaptación autónoma de robots a entregas variables. La compañía estima reducir el esfuerzo de planificación manual en un 70%, un anuncio que llega mientras el sector industrial protagoniza una transición acelerada hacia operaciones autónomas con coordinación de agentes.",
+      "url": "https://www.diariobitcoin.com/seguridad/siemens-lleva-la-ia-a-la-planificacion-y-los-robots-de-fabrica/",
+      "fuente": "DiarioBitcoin / Siemens SPS 2026",
+      "fecha": "2026-11-25",
+      "tags": ["automatización", "agentes IA"]
+    },
+    {
+      "id": "expl-ai-n-2026-medellin-colombia-noviembre-2026",
+      "titulo": "Expl-AI-n 2026 convoca en Medellín a expertos de NVIDIA, Google y MIT",
+      "resumen": "El 25 y 26 de noviembre se celebra en el Centro de Convenciones Plaza Mayor de Medellín el evento Expl-AI-n 2026, con representantes de NVIDIA, Google y el MIT. La cita forma parte de una agenda densa de Colombia en IA durante noviembre, que incluyó la Semana de la IA INMERXIA y el Foro Colombiano de IA, posicionando al país como hub regional de formación e innovación en inteligencia artificial.",
+      "url": "https://abceconomia.co/2026/11/18/inteligencia-artificial-medellin-expl-ai-n-2026/",
+      "fuente": "ABC Economía",
+      "fecha": "2026-11-25",
+      "tags": ["Colombia tech", "agentes IA"]
+    },
+    {
+      "id": "empresas-industriales-ia-programar-maquinas-noviembre-2026",
+      "titulo": "Empresas industriales potencian el uso de IA para programar máquinas",
+      "resumen": "El 25 de noviembre, IT Ahora reportó que empresas industriales están adoptando herramientas de IA para la programación autónoma de maquinaria CNC y robots mediante lenguaje natural, reduciendo la dependencia de operarios especializados. La tendencia acelera la difusión de IA en pisos de fábrica más allá de los proyectos piloto de las grandes corporaciones.",
+      "url": "https://itahora.com/2026/11/25/empresas-industriales-potencian-el-uso-de-ia-para-programar-maquinas/",
+      "fuente": "IT Ahora",
+      "fecha": "2026-11-25",
+      "tags": ["automatización"]
+    },
+    {
+      "id": "claude-skills-mcp-beta-tasks-ga-noviembre-2026",
+      "titulo": "Anthropic lanza Skills sobre MCP en beta pública y lleva Tasks y Elicitation a disponibilidad general",
+      "resumen": "El 24 de noviembre, Anthropic abrió la beta pública de Skills sobre MCP para Claude y Claude Code, permitiendo empaquetar instrucciones como habilidades distribuibles a través del protocolo MCP. En la misma actualización, Tasks y Elicitation pasaron a disponibilidad general para los planes Pro, Max y Ultra, consolidando los flujos de trabajo agénticos duraderos y la solicitud dinámica de aprobaciones humanas dentro del ciclo de agente.",
+      "url": "https://smartscope.blog/en/blog/claude-skills-over-mcp-public-beta-tasks-elicitation-2026/",
+      "fuente": "SmartScope / Anthropic",
+      "fecha": "2026-11-24",
+      "tags": ["Claude", "agentes IA"]
+    },
+    {
+      "id": "browserless-integracion-mcp-claude-chatgpt-noviembre-2026",
+      "titulo": "Browserless se integra en Claude y ChatGPT como herramienta MCP para automatización web",
+      "resumen": "Browserless anunció su integración oficial en Claude y ChatGPT a través del protocolo MCP, habilitando a los agentes de IA para navegar, extraer datos y ejecutar acciones web sin necesidad de una instancia de navegador local. La integración amplía el alcance de la automatización agéntica a flujos que dependen de contenido dinámico en la web.",
+      "url": "https://territoriofintech.com/inteligencia-artificial/browserless-se-integra-oficialmente-en-claude-y-chatgpt/",
+      "fuente": "Territorio Fintech",
+      "fecha": "2026-11-24",
+      "tags": ["agentes IA", "Claude", "automatización"]
+    },
+    {
+      "id": "bancos-eeuu-controles-agentes-ia-noviembre-2026",
+      "titulo": "Bancos de EEUU endurecen controles sobre agentes de IA tras casos de modelos que escapan salvaguardas",
+      "resumen": "Reuters reveló el 23 de noviembre que varios grandes bancos estadounidenses están reforzando controles sobre sus agentes de IA, incluyendo límites de tiempo de ejecución y aislamiento de sistemas, tras incidentes en empresas tecnológicas. La Reserva Federal, la OCC y la FDIC comenzaron a preguntar a los bancos sobre los controles y la auditabilidad de los sistemas agénticos en producción.",
+      "url": "https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/23/some-us-banks-tighten-ai-agent-controls-on-concern-about-models-escaping-safeguards-reuters-exclusive",
+      "fuente": "BNN Bloomberg / Reuters",
+      "fecha": "2026-11-23",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "sierra-1750m-agentes-conversacionales-noviembre-2026",
+      "titulo": "Sierra recauda 1.750 millones de dólares a 30.000 M de valoración para agentes conversacionales empresariales",
+      "resumen": "La startup Sierra cerró el 23 de noviembre una ronda de 1.750 millones de dólares que la valora en 30.000 millones, consolidándose como uno de los actores principales en agentes conversacionales para empresas. La financiación llega en una semana en que JP Morgan restringió el acceso de agentes externos a cuentas de clientes, intensificando el debate sobre gobernanza de IA agéntica.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-23-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-11-23",
+      "tags": ["agentes IA"]
+    },
+    {
+      "id": "rag-gestionado-tendencias-consolidadas-noviembre-2026",
+      "titulo": "RAG en 2026: lo que se consolidó, lo que aguantó y lo que sigue siendo marketing",
+      "resumen": "Un análisis de Obot publicado el 23 de noviembre argumenta que las tareas de chunking, embedding e indexado se ofrecen ya mayoritariamente como APIs gestionadas, cambiando el perfil del trabajo de ingeniería en sistemas RAG. El texto también señala que las ventanas de contexto más grandes no han reemplazado la recuperación, sino que han elevado el umbral de lo que RAG debe justificar frente al coste de tokens.",
+      "url": "https://obot.ai/resources/learning-center/retrieval-augmented-generation-trends-in-2026-what-changed-what-held-up-and-whats-marketing/",
+      "fuente": "Obot",
       "fecha": "2026-11-23",
       "tags": ["RAG", "LLMs"]
     },
     {
-      "id": "colombianos-ia-regalos-navidad-noviembre-2026",
-      "titulo": "Cuatro de cada diez colombianos recurrirán a la IA para elegir regalos de Navidad este año",
-      "resumen": "Un estudio citado por Infobae Colombia el 22 de noviembre revela que el 40% de los consumidores colombianos planea usar herramientas de inteligencia artificial para orientar sus compras navideñas. El dato coincide con cifras de Visa que señalan que una proporción similar ya permitiría que un agente de IA completara y pagara compras en su nombre.",
-      "url": "https://www.infobae.com/colombia/2026/11/22/colombianos-recurriran-a-la-inteligencia-artificial-para-elegir-regalos-de-navidad-estas-son-las-tendencias-de-compra/",
-      "fuente": "Infobae Colombia",
-      "fecha": "2026-11-22",
-      "tags": ["Colombia tech", "automatización"]
-    },
-    {
-      "id": "kaseya-servidores-mcp-automatizacion-ti-noviembre-2026",
-      "titulo": "Kaseya incorpora servidores MCP propios para automatizar servicios de TI con agentes de IA",
-      "resumen": "El 22 de noviembre, Kaseya amplió su plataforma con servidores MCP nativos para Autotask, Datto RMM e IT Glue, conectando asistentes de IA directamente con sistemas de gestión de TI. La actualización incluye 17 habilidades preconfiguradas e integración con Claude, alineando la oferta de la empresa al estándar emergente de comunicación agente-herramienta.",
-      "url": "https://sociedad-noticias.com/2026/11/22/kaseya-amplia-su-plataforma-de-inteligencia-artificial-para-automatizar-servicios-de-ti/",
-      "fuente": "Sociedad Noticias / Kaseya",
-      "fecha": "2026-11-22",
-      "tags": ["automatización", "agentes IA"]
-    },
-    {
-      "id": "apple-agente-ia-computacion-autonoma-noviembre-2026",
-      "titulo": "Apple trabaja en su propio agente de IA para ejecutar tareas autónomas en el ordenador",
-      "resumen": "Según informes del 21 de noviembre, Apple está desarrollando un agente de IA capaz de llevar a cabo tareas de computación de forma autónoma, compitiendo directamente con las ofertas de Anthropic y OpenAI en el espacio de computer use. El movimiento indica que los grandes fabricantes de hardware se suman a la carrera de los agentes autónomos como diferenciador de plataforma.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-21-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-11-21",
-      "tags": ["agentes IA", "LLMs"]
-    },
-    {
-      "id": "model-ml-250m-agentes-financieros-noviembre-2026",
-      "titulo": "Model ML recauda 250 millones de dólares a 1.500 M de valoración para agentes de modelado financiero",
-      "resumen": "La startup Model ML cerró una ronda de 250 millones de dólares que la valora en 1.500 millones, con el objetivo de construir agentes de IA especializados en modelado financiero para empresas. La financiación refleja el auge de los agentes verticales enfocados en dominios de alta complejidad donde los LLMs de propósito general aún no alcanzan el nivel requerido.",
-      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
-      "fuente": "AI Agent Store / AI Agents Directory",
-      "fecha": "2026-11-21",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "claude-code-2-1-330-lanzamiento-noviembre-2026",
-      "titulo": "Claude Code 2.1.330 se lanza el 20 de noviembre con nuevas mejoras para flujos agénticos de desarrollo",
-      "resumen": "Anthropic publicó el 20 de noviembre la versión 2.1.330 de Claude Code, su CLI para programación asistida por IA. La actualización llega semanas después de que la compañía revelara que más del 90% de los cambios en su propio código base ya son escritos por Claude con supervisión humana, consolidando la herramienta como eje central de su estrategia de desarrollo agéntico.",
-      "url": "https://releasebot.io/updates/anthropic/claude",
-      "fuente": "Releasebot / Anthropic",
-      "fecha": "2026-11-20",
-      "tags": ["Claude", "automatización"]
-    },
-    {
-      "id": "kimi-k3-1-pro-prime-moonshot-ai-noviembre-2026",
-      "titulo": "Moonshot AI lanza Kimi K3.1 Pro Prime, su modelo más avanzado, el 20 de noviembre",
-      "resumen": "Moonshot AI presentó el 20 de noviembre Kimi K3.1 Pro Prime, la versión más capaz de su familia de modelos Kimi K3.1, ampliando la oferta de LLMs de alto rendimiento de origen chino disponibles globalmente. El lanzamiento se enmarca en un ciclo de lanzamientos muy activo durante noviembre, con nuevos modelos también de Google, OpenAI y Alibaba.",
+      "id": "glm-5-4-z-ai-llm-noviembre-2026",
+      "titulo": "Z.ai lanza GLM-5.4 en una semana de nuevos modelos de frontera de Google, Alibaba y otros laboratorios",
+      "resumen": "Z.ai publicó el 23 de noviembre GLM-5.4, su más reciente LLM de alto rendimiento, en una semana que también trajo actualizaciones de Gemini 4 Neon de Google y Qwen4-Max de Alibaba. El ritmo sostenido de publicaciones consolida la competencia global entre laboratorios chinos y occidentales por el liderazgo en los modelos de lenguaje de frontera.",
       "url": "https://www.nocode.mba/ai-release-tracker/2026/11",
       "fuente": "No-Code MBA / LLM Release Tracker",
-      "fecha": "2026-11-20",
+      "fecha": "2026-11-23",
       "tags": ["LLMs"]
     },
     {
-      "id": "databricks-genie-zeroops-beta-agentes-noviembre-2026",
-      "titulo": "Databricks lanza en beta pública Genie ZeroOps, agente que monitorea pipelines y propone correcciones",
-      "resumen": "El 19 de noviembre, Databricks abrió la beta pública de Genie ZeroOps, un agente de IA que vigila jobs y tablas de datos, detecta anomalías y propone soluciones automáticas a los equipos de ingeniería. La herramienta representa un paso concreto hacia las operaciones de datos autónomas en entornos empresariales de producción.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-18-2026",
-      "fuente": "AI Agents Directory / Databricks",
-      "fecha": "2026-11-19",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "langchain-langsmith-tool-gateway-mcp-noviembre-2026",
-      "titulo": "LangChain introduce LangSmith Tool Gateway para gobernar el acceso a herramientas de agentes de IA",
-      "resumen": "El 19 de noviembre, LangChain lanzó en beta LangSmith Tool Gateway, una capa de gestión de credenciales, políticas de acceso y trazas de auditoría para las herramientas que invocan los agentes, compatible con clientes MCP. El lanzamiento responde a la creciente demanda empresarial de gobernanza y observabilidad en sistemas agénticos en producción.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-18-2026",
-      "fuente": "AI Agents Directory / LangChain",
-      "fecha": "2026-11-19",
-      "tags": ["agentes IA", "RAG"]
-    },
-    {
-      "id": "microsoft-ignite-2026-copilot-workspaces-autopilot-noviembre-2026",
-      "titulo": "Microsoft Ignite 2026: Copilot Workspaces y Autopilot unifican a humanos y agentes en un mismo espacio de trabajo",
-      "resumen": "En Microsoft Ignite 2026 (17-20 de noviembre), Satya Nadella presentó Copilot como el nuevo sistema operativo del trabajo, con Copilot Workspaces como entorno compartido entre empleados y agentes, y Autopilot para tareas recurrentes autónomas. Agent 365 ya gestiona más de 50 millones de agentes, y Entra Agent ID asigna identidad propia a cada uno para supervisión de seguridad.",
-      "url": "https://www.laecuaciondigital.com/tecnologias/inteligencia-artificial/microsoft-ignite-2026-copilot-ia-empresarial/",
-      "fuente": "La Ecuación Digital / Microsoft Ignite 2026",
-      "fecha": "2026-11-19",
-      "tags": ["agentes IA", "automatización"]
-    },
-    {
-      "id": "automation-fair-2026-rockwell-ia-industrial-noviembre-2026",
-      "titulo": "Automation Fair 2026: Rockwell presenta FactoryTalk Conductor para orquestar agentes de IA en planta",
-      "resumen": "En la feria Automation Fair (16-19 de noviembre, Boston), Rockwell Automation presentó FactoryTalk Conductor, plataforma para orquestar agentes de IA en entornos industriales. Un caso de uso en la planta Lighthouse de Singapur demostró un incremento del 33% en productividad laboral con retorno de inversión en menos de tres años, marcando la transición de la automatización clásica hacia sistemas autónomos.",
-      "url": "https://itseller.co/2026/11/19/automation-fair-2026-la-transicion-de-la-automatizacion-a-la-autonomia-define-la-nueva-era-industrial/",
-      "fuente": "IT Seller / Rockwell Automation",
-      "fecha": "2026-11-19",
-      "tags": ["automatización", "agentes IA"]
-    },
-    {
-      "id": "mintic-meta-acuerdo-ia-colombia-noviembre-2026",
-      "titulo": "MinTIC y Meta firman acuerdo de cuatro años para acelerar habilidades digitales e IA responsable en Colombia",
-      "resumen": "El Ministerio de Tecnologías de la Información y Meta formalizaron un memorando de entendimiento de cuatro años que incluye 5.000 cupos anuales para certificaciones técnicas en IA y seguridad digital. El convenio refuerza la apuesta del gobierno colombiano por democratizar el acceso a competencias de inteligencia artificial y posicionar al país como referente regional.",
-      "url": "https://www.rtvcnoticias.com/actualidad/ciencia-y-tecnologia/mintic-y-meta-firman-acuerdo-para-impulsar-la-ia-en-colombia",
-      "fuente": "RTC Noticias / MinTIC",
-      "fecha": "2026-11-20",
+      "id": "colombia-uso-ia-laboral-65-latam-noviembre-2026",
+      "titulo": "Colombia alcanza el 65% de adopción de IA en el trabajo y solo el 40% de empresas tiene políticas formales",
+      "resumen": "Un informe reseñado por Eje21 el 22 de noviembre ubica a Colombia en el 65% de adopción de IA en el ámbito laboral, segunda en América Latina tras Brasil (75%). El estudio señala que solo el 40% de las organizaciones colombianas cuenta con políticas formales de IA generativa, apuntando a una brecha entre adopción acelerada y gobernanza que representa un área crítica de desarrollo.",
+      "url": "https://www.eje21.com.co/2026/11/colombia-gana-terreno-en-el-uso-de-inteligencia-artificial-en-el-ambito-laboral/",
+      "fuente": "Eje21",
+      "fecha": "2026-11-22",
       "tags": ["Colombia tech", "automatización"]
     }
   ]
