@@ -1,96 +1,114 @@
 {
-  "generado": "2026-11-25T12:00:00Z",
+  "generado": "2026-11-27T05:00:00Z",
   "semana": "2026-W48",
   "items": [
     {
-      "id": "siemens-ia-produccion-robots-sps-2026-noviembre",
-      "titulo": "Siemens lleva la IA a la planificación de producción y robots en SPS 2026",
-      "resumen": "En la feria SPS 2026 (Nuremberg, 24-26 de noviembre), Siemens presentó herramientas de IA para planificación de producción y adaptación autónoma de robots a entregas variables. La compañía estima reducir el esfuerzo de planificación manual en un 70%, un anuncio que llega mientras el sector industrial protagoniza una transición acelerada hacia operaciones autónomas con coordinación de agentes.",
-      "url": "https://www.diariobitcoin.com/seguridad/siemens-lleva-la-ia-a-la-planificacion-y-los-robots-de-fabrica/",
-      "fuente": "DiarioBitcoin / Siemens SPS 2026",
-      "fecha": "2026-11-25",
-      "tags": ["automatización", "agentes IA"]
+      "id": "google-15-anos-colombia-inversion-ia-noviembre-2026",
+      "titulo": "Google celebra 15 años en Colombia con plan de formación en IA para 75.000 estudiantes",
+      "resumen": "El 26 de noviembre, Google conmemoró 15 años de operaciones en Colombia anunciando nuevos proyectos de formación en IA junto a la Fundación Raspberry Pi y la Fundación Pies Descalzos. El programa Impacto Maker ya ha capacitado a 75.000 estudiantes de los 32 departamentos del país en el uso de IA generativa.",
+      "url": "https://www.eluniversal.com.co/colombia/2026/11/26/google-cumple-15-anos-en-colombia-y-anuncia-inversion-en-inteligencia-artificial/",
+      "fuente": "El Universal Colombia",
+      "fecha": "2026-11-26",
+      "tags": ["Colombia tech"]
     },
     {
-      "id": "expl-ai-n-2026-medellin-colombia-noviembre-2026",
-      "titulo": "Expl-AI-n 2026 convoca en Medellín a expertos de NVIDIA, Google y MIT",
-      "resumen": "El 25 y 26 de noviembre se celebra en el Centro de Convenciones Plaza Mayor de Medellín el evento Expl-AI-n 2026, con representantes de NVIDIA, Google y el MIT. La cita forma parte de una agenda densa de Colombia en IA durante noviembre, que incluyó la Semana de la IA INMERXIA y el Foro Colombiano de IA, posicionando al país como hub regional de formación e innovación en inteligencia artificial.",
-      "url": "https://abceconomia.co/2026/11/18/inteligencia-artificial-medellin-expl-ai-n-2026/",
-      "fuente": "ABC Economía",
-      "fecha": "2026-11-25",
-      "tags": ["Colombia tech", "agentes IA"]
+      "id": "colombia-retrocede-ranking-ia-imd-noviembre-2026",
+      "titulo": "Colombia cae al puesto 62 en el IMD World Digital and AI Ranking 2026",
+      "resumen": "El IMD World Digital and AI Ranking 2026 ubicó a Colombia en el puesto 62 de 70 economías, cuatro posiciones por debajo del 58 registrado en 2025, aunque sigue siendo el quinto país de América Latina. El descenso se atribuye a rezagos en infraestructura tecnológica, pese a que el talento sigue siendo su área relativa más fuerte.",
+      "url": "https://www.larepublica.co/globoeconomia/colombia-retrocede-en-el-ranking-de-la-adopcion-de-la-inteligencia-artificial-4534718",
+      "fuente": "La República",
+      "fecha": "2026-11-26",
+      "tags": ["Colombia tech"]
     },
     {
-      "id": "empresas-industriales-ia-programar-maquinas-noviembre-2026",
-      "titulo": "Empresas industriales potencian el uso de IA para programar máquinas",
-      "resumen": "El 25 de noviembre, IT Ahora reportó que empresas industriales están adoptando herramientas de IA para la programación autónoma de maquinaria CNC y robots mediante lenguaje natural, reduciendo la dependencia de operarios especializados. La tendencia acelera la difusión de IA en pisos de fábrica más allá de los proyectos piloto de las grandes corporaciones.",
-      "url": "https://itahora.com/2026/11/25/empresas-industriales-potencian-el-uso-de-ia-para-programar-maquinas/",
-      "fuente": "IT Ahora",
-      "fecha": "2026-11-25",
-      "tags": ["automatización"]
+      "id": "microsoft-365-agentes-identidad-propia-50m-noviembre-2026",
+      "titulo": "Microsoft 365 supera 50 millones de agentes y los provisiona con identidad propia",
+      "resumen": "En Ignite 2026, Microsoft reveló que su plataforma Agent 365 supera los 50 millones de agentes activos y anunció la capacidad de aprovisionar agentes como miembros con identidad propia dentro de Microsoft 365. La actualización también incluyó la disponibilidad de GPT-6.2 en Azure AI Foundry, profundizando la alianza entre Microsoft y OpenAI en entornos empresariales.",
+      "url": "https://www.itsitio.com/inteligencia-artificial/microsoft-presento-en-ignite-2026-nuevas-herramientas-de-inteligencia-artificial-para-empresas-y-anuncio-gpt-6-2-en-foundry/",
+      "fuente": "ITSitio",
+      "fecha": "2026-11-26",
+      "tags": ["agentes IA", "automatización", "LLMs"]
     },
     {
-      "id": "claude-skills-mcp-beta-tasks-ga-noviembre-2026",
-      "titulo": "Anthropic lanza Skills sobre MCP en beta pública y lleva Tasks y Elicitation a disponibilidad general",
-      "resumen": "El 24 de noviembre, Anthropic abrió la beta pública de Skills sobre MCP para Claude y Claude Code, permitiendo empaquetar instrucciones como habilidades distribuibles a través del protocolo MCP. En la misma actualización, Tasks y Elicitation pasaron a disponibilidad general para los planes Pro, Max y Ultra, consolidando los flujos de trabajo agénticos duraderos y la solicitud dinámica de aprobaciones humanas dentro del ciclo de agente.",
-      "url": "https://smartscope.blog/en/blog/claude-skills-over-mcp-public-beta-tasks-elicitation-2026/",
-      "fuente": "SmartScope / Anthropic",
-      "fecha": "2026-11-24",
-      "tags": ["Claude", "agentes IA"]
-    },
-    {
-      "id": "browserless-integracion-mcp-claude-chatgpt-noviembre-2026",
-      "titulo": "Browserless se integra en Claude y ChatGPT como herramienta MCP para automatización web",
-      "resumen": "Browserless anunció su integración oficial en Claude y ChatGPT a través del protocolo MCP, habilitando a los agentes de IA para navegar, extraer datos y ejecutar acciones web sin necesidad de una instancia de navegador local. La integración amplía el alcance de la automatización agéntica a flujos que dependen de contenido dinámico en la web.",
-      "url": "https://territoriofintech.com/inteligencia-artificial/browserless-se-integra-oficialmente-en-claude-y-chatgpt/",
-      "fuente": "Territorio Fintech",
-      "fecha": "2026-11-24",
-      "tags": ["agentes IA", "Claude", "automatización"]
-    },
-    {
-      "id": "bancos-eeuu-controles-agentes-ia-noviembre-2026",
-      "titulo": "Bancos de EEUU endurecen controles sobre agentes de IA tras casos de modelos que escapan salvaguardas",
-      "resumen": "Reuters reveló el 23 de noviembre que varios grandes bancos estadounidenses están reforzando controles sobre sus agentes de IA, incluyendo límites de tiempo de ejecución y aislamiento de sistemas, tras incidentes en empresas tecnológicas. La Reserva Federal, la OCC y la FDIC comenzaron a preguntar a los bancos sobre los controles y la auditabilidad de los sistemas agénticos en producción.",
-      "url": "https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/23/some-us-banks-tighten-ai-agent-controls-on-concern-about-models-escaping-safeguards-reuters-exclusive",
-      "fuente": "BNN Bloomberg / Reuters",
-      "fecha": "2026-11-23",
+      "id": "model-ml-250m-banca-inversion-agentes-noviembre-2026",
+      "titulo": "Model ML recauda 250 millones de dólares para automatizar banca de inversión con agentes de IA",
+      "resumen": "La startup Model ML cerró una ronda de 250 millones de dólares para construir agentes que automatizan procesos complejos de banca de inversión, como modelos financieros y memorandos de oferta. La ronda es la mayor del mes en el segmento de automatización financiera con IA, y llega mientras el sector bancario global debate los límites de la delegación de tareas a agentes autónomos.",
+      "url": "https://cafeconia.substack.com/p/cafe-con-ia-24-de-noviembre-de-2026",
+      "fuente": "Café con IA",
+      "fecha": "2026-11-26",
       "tags": ["agentes IA", "automatización"]
     },
     {
-      "id": "sierra-1750m-agentes-conversacionales-noviembre-2026",
-      "titulo": "Sierra recauda 1.750 millones de dólares a 30.000 M de valoración para agentes conversacionales empresariales",
-      "resumen": "La startup Sierra cerró el 23 de noviembre una ronda de 1.750 millones de dólares que la valora en 30.000 millones, consolidándose como uno de los actores principales en agentes conversacionales para empresas. La financiación llega en una semana en que JP Morgan restringió el acceso de agentes externos a cuentas de clientes, intensificando el debate sobre gobernanza de IA agéntica.",
-      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-23-2026",
-      "fuente": "AI Agents Directory",
-      "fecha": "2026-11-23",
+      "id": "databricks-genie-zeroops-beta-noviembre-2026",
+      "titulo": "Databricks Genie ZeroOps entra en beta pública: agente que diagnostica fallos y propone correcciones",
+      "resumen": "Databricks abrió la beta pública de Genie ZeroOps, un agente que monitorea pipelines de datos, diagnostica fallos automáticamente y propone correcciones, requiriendo aprobación humana antes de modificar entornos de producción. El lanzamiento refuerza la apuesta de la industria por flujos agénticos con supervisión humana explícita en la capa de decisión final.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-11-25",
+      "tags": ["agentes IA", "automatización"]
+    },
+    {
+      "id": "langsmith-tool-gateway-beta-noviembre-2026",
+      "titulo": "LangChain lanza LangSmith Tool Gateway en beta: credenciales, identidad y auditoría para agentes",
+      "resumen": "LangChain publicó la beta pública de LangSmith Tool Gateway, una capa centralizada que gestiona credenciales, identidad, políticas de acceso, flujos de aprobación y trazas de auditoría para las llamadas a herramientas de agentes de IA. La herramienta apunta a resolver uno de los principales cuellos de botella en producción de sistemas agénticos complejos: la gobernanza del acceso a herramientas externas.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-11-25",
+      "tags": ["agentes IA", "LLMs"]
+    },
+    {
+      "id": "great-ormond-hospital-agentes-ia-admin-noviembre-2026",
+      "titulo": "Great Ormond Street Hospital lanza programa de 15 meses para agentes de IA en tareas administrativas",
+      "resumen": "El hospital infantil Great Ormond Street de Londres anunció un programa de 15 meses para desplegar agentes de IA en tareas administrativas, como coordinación de citas y gestión de documentación clínica, con protocolos de seguridad adaptados a entornos sanitarios. El proyecto se convierte en uno de los casos de referencia más visibles de adopción agéntica en salud pública en Europa.",
+      "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+      "fuente": "AI Agent Store",
+      "fecha": "2026-11-25",
       "tags": ["agentes IA"]
     },
     {
-      "id": "rag-gestionado-tendencias-consolidadas-noviembre-2026",
-      "titulo": "RAG en 2026: lo que se consolidó, lo que aguantó y lo que sigue siendo marketing",
-      "resumen": "Un análisis de Obot publicado el 23 de noviembre argumenta que las tareas de chunking, embedding e indexado se ofrecen ya mayoritariamente como APIs gestionadas, cambiando el perfil del trabajo de ingeniería en sistemas RAG. El texto también señala que las ventanas de contexto más grandes no han reemplazado la recuperación, sino que han elevado el umbral de lo que RAG debe justificar frente al coste de tokens.",
-      "url": "https://obot.ai/resources/learning-center/retrieval-augmented-generation-trends-in-2026-what-changed-what-held-up-and-whats-marketing/",
-      "fuente": "Obot",
-      "fecha": "2026-11-23",
+      "id": "nvidia-nemotron-35-parse-rag-noviembre-2026",
+      "titulo": "NVIDIA lanza Nemotron 3.5 Parse para extracción estructurada de documentos en pipelines RAG",
+      "resumen": "NVIDIA presentó Nemotron 3.5 Parse, un modelo especializado en extraer datos estructurados desde imágenes de páginas para aplicaciones de recuperación aumentada (RAG) y agentes. El modelo aborda la brecha entre documentos no estructurados y los sistemas de indexado vectorial, un eslabón crítico para la calidad de respuestas en pipelines RAG de producción.",
+      "url": "https://kblip.com/topic/retrieval-augmented%20generation",
+      "fuente": "KBlip / NVIDIA",
+      "fecha": "2026-11-25",
       "tags": ["RAG", "LLMs"]
     },
     {
-      "id": "glm-5-4-z-ai-llm-noviembre-2026",
-      "titulo": "Z.ai lanza GLM-5.4 en una semana de nuevos modelos de frontera de Google, Alibaba y otros laboratorios",
-      "resumen": "Z.ai publicó el 23 de noviembre GLM-5.4, su más reciente LLM de alto rendimiento, en una semana que también trajo actualizaciones de Gemini 4 Neon de Google y Qwen4-Max de Alibaba. El ritmo sostenido de publicaciones consolida la competencia global entre laboratorios chinos y occidentales por el liderazgo en los modelos de lenguaje de frontera.",
-      "url": "https://www.nocode.mba/ai-release-tracker/2026/11",
-      "fuente": "No-Code MBA / LLM Release Tracker",
-      "fecha": "2026-11-23",
-      "tags": ["LLMs"]
+      "id": "bytedance-agentes-personales-meta-muse-noviembre-2026",
+      "titulo": "ByteDance prepara su propio servicio de agentes personales para competir con Meta Muse",
+      "resumen": "Según reportes de la semana del 25 de noviembre, ByteDance estaría desarrollando un servicio de agentes personales de IA para consumidores, en respuesta directa al lanzamiento de Muse por parte de Meta. La movida amplía la competencia en el mercado de asistentes agénticos personales, que hasta ahora ha estado dominado por los ecosistemas de Google, Apple y Meta.",
+      "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-23-2026",
+      "fuente": "AI Agents Directory",
+      "fecha": "2026-11-25",
+      "tags": ["agentes IA", "LLMs"]
     },
     {
-      "id": "colombia-uso-ia-laboral-65-latam-noviembre-2026",
-      "titulo": "Colombia alcanza el 65% de adopción de IA en el trabajo y solo el 40% de empresas tiene políticas formales",
-      "resumen": "Un informe reseñado por Eje21 el 22 de noviembre ubica a Colombia en el 65% de adopción de IA en el ámbito laboral, segunda en América Latina tras Brasil (75%). El estudio señala que solo el 40% de las organizaciones colombianas cuenta con políticas formales de IA generativa, apuntando a una brecha entre adopción acelerada y gobernanza que representa un área crítica de desarrollo.",
-      "url": "https://www.eje21.com.co/2026/11/colombia-gana-terreno-en-el-uso-de-inteligencia-artificial-en-el-ambito-laboral/",
-      "fuente": "Eje21",
-      "fecha": "2026-11-22",
-      "tags": ["Colombia tech", "automatización"]
+      "id": "rag-era-agentica-arxiv-noviembre-2026",
+      "titulo": "arXiv: revisión sistemática de RAG en la era agéntica reposiciona indexado y orquestación como componentes centrales",
+      "resumen": "El paper \"Retrieval-Augmented Generation in the Agentic Era\" (arXiv 2611.30181), publicado el 23 de noviembre, ofrece una revisión sistemática de RAG desde la perspectiva de sistemas agénticos, reposicionando el indexado y la orquestación como componentes de primer nivel. Los autores argumentan que la proliferación de agentes redefine los requisitos de latencia, precisión y composabilidad de los sistemas RAG modernos.",
+      "url": "https://arcxiv.org/abs/2611.30181",
+      "fuente": "arXiv",
+      "fecha": "2026-11-23",
+      "tags": ["RAG", "LLMs", "agentes IA"]
+    },
+    {
+      "id": "anthropic-ipo-bolsa-noviembre-2026",
+      "titulo": "Anthropic completa su OPI y sale a bolsa en noviembre de 2026",
+      "resumen": "Anthropic, PBC cerró su oferta pública inicial (OPI) en noviembre de 2026, convirtiéndose en una compañía cotizada y marcando un hito en la industria de los LLMs de frontera. El evento se produce semanas después del lanzamiento de Claude Fable 5.2 y Claude Mythos 5.2, en un mes especialmente activo en anuncios de producto y expansión agéntica para la compañía.",
+      "url": "https://medium.com/@nevadayorkie/claude-ai-in-november-2026-fable-5-2-claude-duet-why-more-users-need-claude-pro-bfabae89cefb",
+      "fuente": "Medium / Anthropic",
+      "fecha": "2026-11-20",
+      "tags": ["Claude", "LLMs"]
+    },
+    {
+      "id": "claude-computer-use-beta-team-enterprise-noviembre-2026",
+      "titulo": "Claude Computer Use llega en beta a los planes Team y Enterprise de Anthropic",
+      "resumen": "El 20 de noviembre, Anthropic habilitó Computer Use en beta para sus planes Team y Enterprise, permitiendo a los agentes de Claude controlar escritorios, navegar por aplicaciones y ejecutar acciones sobre sistemas reales. La función amplía el alcance de la automatización de Claude más allá de las API de texto, abriendo una nueva clase de flujos de trabajo agénticos sobre interfaces gráficas.",
+      "url": "https://www.geeky-gadgets.com/anthropic-claude-november-2026-features/",
+      "fuente": "Geeky Gadgets / Anthropic",
+      "fecha": "2026-11-20",
+      "tags": ["Claude", "agentes IA", "automatización"]
     }
   ]
 }
